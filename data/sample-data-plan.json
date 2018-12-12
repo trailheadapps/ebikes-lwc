@@ -1,0 +1,23 @@
+[
+    {
+      "sobject": "Account__c",
+      "saveRefs": false,
+      "files": [
+        "Accounts.json"
+      ]
+    },
+    {
+      "sobject": "Product_Family__c",
+      "saveRefs": true,
+      "files": [
+        "Product_Family__cs.json"
+      ]
+    },
+    {
+      "sobject": "Product__c",
+      "resolveRefs": true,
+      "files": [
+        "Product__cs.json"
+      ]
+    }
+  ]

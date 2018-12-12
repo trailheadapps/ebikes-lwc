@@ -1,0 +1,31 @@
+header {
+    padding: 12px 16px;
+    background-color: rgba(194,51,53, 1);
+    color: #FFFFFF;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    display: flex;
+}
+
+header .right {
+    flex: 1;
+    text-align: right;
+}
+
+.order-total {
+    margin-left: 4px;
+}
+
+.drop-zone {
+    background: rgb(243, 242, 242);
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+c-placeholder,
+c-order-item-tile {
+    min-width: 250px;
+    flex: 1;
+}

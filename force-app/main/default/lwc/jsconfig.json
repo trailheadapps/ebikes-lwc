@@ -1,0 +1,54 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c-account-map": [
+                "accountMap/accountMap.js"
+            ],
+            "c-inline-message": [
+                "inlineMessage/inlineMessage.js"
+            ],
+            "c-order-builder": [
+                "orderBuilder/orderBuilder.js"
+            ],
+            "c-order-item-tile": [
+                "orderItemTile/orderItemTile.js"
+            ],
+            "c-paginator": [
+                "paginator/paginator.js"
+            ],
+            "c-placeholder": [
+                "placeholder/placeholder.js"
+            ],
+            "c-product-card": [
+                "productCard/productCard.js"
+            ],
+            "c-product-filter": [
+                "productFilter/productFilter.js"
+            ],
+            "c-product-list-item": [
+                "productListItem/productListItem.js"
+            ],
+            "c-product-tile": [
+                "productTile/productTile.js"
+            ],
+            "c-product-tile-list": [
+                "productTileList/productTileList.js"
+            ],
+            "c-pubsub": [
+                "pubsub/pubsub.js"
+            ],
+            "c-similar-products": [
+                "similarProducts/similarProducts.js"
+            ],
+            "c-lightning-card": [
+                "../../../test/jest-mocks/lightningCard/lightningCard.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ]
+}

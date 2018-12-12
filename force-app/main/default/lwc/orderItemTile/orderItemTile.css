@@ -1,0 +1,47 @@
+.content {
+    padding: 8px 8px 12px 8px;
+    background-color: #FFFFFF;
+    position: relative;
+    border-radius: 0.25rem;
+}
+
+img.product {
+    height: 120px;
+    max-width: initial;
+}
+
+.title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.quantity {
+    width: 58px;
+    margin: 0 2px;
+}
+
+.price {
+    width: 94px;
+    margin: 0 2px;
+}
+
+.form {
+    display: flex;
+}
+
+.save-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.delete-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: none;
+}
+
+.content:hover .delete-button {
+    display: inherit;
+}

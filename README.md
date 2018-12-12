@@ -1,0 +1,142 @@
+# E-Bikes Lightning Web Components Sample Application
+[![CircleCI](https://circleci.com/gh/trailheadapps/ebikes-lwc.svg?style=svg)](https://circleci.com/gh/trailheadapps/ebikes-lwc)
+
+![ebikes-logo](ebikes-logo.png)
+
+E-Bikes is a sample application that demonstrates how to build applications with Lightning Web Components.
+E-Bikes is a fictitious electric bicycle manufacturer. The application helps E-Bikes manage their products and reseller orders using a rich user experience. 
+
+## Installation Instructions
+
+There are two ways to install E-Bikes:
+
+- [Using Salesforce DX](#installing-recipes-using-salesforce-dx): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
+- [Using an Unlocked Package](#installing-recipes-using-an-unlocked-package): This option allows anybody to experience the sample app without installing a local development environment.
+
+## Installing E-Bikes using Salesforce DX
+
+1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
+    - Sign up for a Spring '19 prerelease org and enable Dev Hub
+    - Install the pre-release version of the Salesforce CLI
+    - Install Visual Studio Code
+    - Install the Visual Studio Code Salesforce extensions, including the LWC extension
+
+1. If you haven't already done so, authenticate with your Spring '19 hub org and provide it with an alias (spring19hub):
+    ```
+    sfdx force:auth:web:login -d -a spring19hub
+    ```
+
+1. Clone the repository:
+    ```
+    git clone https://github.com/trailheadapps/ebikes-lwc
+    cd ebikes-lwc
+    ```
+
+1. Create a scratch org and provide it with an alias (ebikes):
+    ```
+    sfdx force:org:create -s -f config/project-scratch-def.json -a ebikes
+    ```
+
+1. Push the app to your scratch org:
+    ```
+    sfdx force:source:push
+    ```
+
+1. Assign the **ebikes** permission set to the default user:
+    ```
+    sfdx force:user:permset:assign -n ebikes
+    ```
+
+1. Load sample data:
+    ```
+    sfdx force:data:tree:import --plan ./data/sample-data-plan.json
+    ```
+
+1. Open the scratch org:
+    ```
+    sfdx force:org:open
+    ```
+
+1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
+
+1. In App Launcher, select the **E-Bikes** app.
+
+## Installing E-Bikes using an Unlocked Package
+
+1. [Sign up](https://www.salesforce.com/form/signup/prerelease-spring19/) for a Spring '19 prerelease org, enable My Domain, and deploy it to all users.
+
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=TBD) to install the E-Bikes unlocked package in your Spring '19 org.
+
+1. Select **Install for All Users**
+
+1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
+
+1. In App Launcher, type **Import Sample Data** in the search box and click the **Import Sample Data** link. Click the **Import Data** button.
+
+1. In App Launcher, select the **E-Bikes** app.
+
+## Optional Installation Instructions
+
+This repository contains several files that are relevant if you want to integrate modern web development tooling to your Salesforce development processes, or to your continuous integration/continuous deployment processes.
+
+### Code formatting
+
+[Prettier](https://prettier.io (https://prettier.io/)) is a code formatter used to ensure consistent formatting across your code base. To use Prettier with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) from the Visual Studio Code Marketplace. The [.prettierignore](/.prettierignore) and [.prettierrc](/.prettierrc) files are provided as part of this repository to control the behavior of the Prettier formatter.
+
+### Code linting
+
+[ESLint](https://eslint.org/) is a popular JavaScript linting tool used to identify stylistic errors and erroneous constructs. To use ESLint with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-lwc) from the Visual Studio Code Marketplace. The [.eslintignore](/.eslintignore) file is provided as part of this repository to exclude specific files from the linting process in the context of Lighning Web Components development.
+
+### Pre-commit hook
+
+This repository also comes with a [package.json](package.json) file that makes it easy to set up a pre-commit hook that enforces code formatting and linting by running Prettier and ESLint every time you `git commit` changes.
+
+To set up the formatting and linting pre-commit hook:
+
+1. Install [Node.js](https://nodejs.org) if you haven't already done so
+2. Run `npm install` in your project's root folder to install the ESLint and Prettier modules (Note: Mac users should verify that Xcode command line tools are installed before running this command.)
+
+Prettier and ESLint will now run automatically every time you commit changes. The commit will fail if linting errors are detected. You can also run the formatting and linting from the command line using the following commands (check out [package.json](package.json) for the full list):
+```
+npm run lint:lwc
+npm run prettier
+```
+
+## Application Walkthrough
+
+### Product Explorer
+
+1. Click the **Product Explorer** tab.
+
+1. Filter the list using the filter component in the left sidebar.
+
+1. Click a product in the tile list to see the details in the product card.
+
+1. Click the expand icon in the product card to navigate to the product record page.
+
+### Product Record Page
+
+1. The product record page features a **Similar Products** component.
+
+1. Click the **View Details** button to navigate to a similar product record page.
+
+### Reseller Orders
+
+1. Click the down arrow on the **Reseller Order** tab and click **New Reseller Order**.
+
+1. Select an account, for example **Wheelworks** and click **Save**.
+
+1. Drag a product from the product list on the right onto the gray panel in the center. The product is automatically added to the order as an order item.
+
+1. Modify the ordered quantity for small (S), medium (M), and large (L) frames and click the save button (checkmark icon).
+
+1. Repeat steps 3 and 4 to add more products to the order.
+
+1. Mouse over an order item tile and click the trash can icon to delete an order item from the order.
+
+### Account Record Page
+
+The account record page features an **Account Map** component that locates the account on a map.
+
+
+

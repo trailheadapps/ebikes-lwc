@@ -1,0 +1,64 @@
+<template>
+    <lightning-card icon-name="standard:apex_plugin">
+        <template if:true={product.data}>
+            <span slot="title">{product.data.fields.Name.value}</span>
+            <lightning-button-icon icon-name="utility:expand_alt" slot="actions" onclick={handleNavigateToRecord}></lightning-button-icon>
+            <div class="slds-m-horizontal_medium">
+                <img src={product.data.fields.Picture_URL__c.value} class="product" alt="Product picture">
+                <div class="row">
+                    <div>Category:</div>
+                    <div>{product.data.fields.Category__c.value}</div>
+                </div>
+                <div class="row">
+                    <div>Level:</div>
+                    <div>{product.data.fields.Level__c.value}</div>
+                </div>
+                <div class="row">
+                    <div>MSRP:</div>
+                    <div>
+                        <lightning-formatted-number format-style="currency" currency-code="USD" value={product.data.fields.MSRP__c.value} class="price"></lightning-formatted-number>
+                    </div>
+                </div>
+                <section>Electric Components</section>
+                <div class="row">
+                    <div>Battery:</div>
+                    <div>500Wh</div>
+                </div>
+                <div class="row">
+                    <div>Charger:</div>
+                    <div>42V4A</div>
+                </div>
+                <div class="row">
+                    <div>Motor:</div>
+                    <div>250 watt, 75Nm</div>
+                </div>
+                <section>Frame</section>
+                <div class="row">
+                    <div>Frame:</div>
+                    <div>{product.data.fields.Material__c.value}</div>
+                </div>
+                <div class="row">
+                    <div>Fork:</div>
+                    <div>Air spring, adjustable rebound</div>
+                </div>
+                <section>Brakes</section>
+                <div class="row">
+                    <div>Front:</div>
+                    <div>Hydraulic disc, 200mm</div>
+                </div>
+                <div class="row">
+                    <div>Rear:</div>
+                    <div>Hydraulic disc, 200mm</div>
+                </div>
+            </div>
+        </template>                            
+
+        <template if:true={noData}>
+            <c-placeholder message="Select a product to see details"></c-placeholder>
+        </template>
+
+        <template if:true={product.error}>
+            <c-inline-message errors={product.error}></c-inline-message>
+        </template>                
+    </lightning-card>
+</template>

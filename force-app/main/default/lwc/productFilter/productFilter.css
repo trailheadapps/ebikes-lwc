@@ -1,0 +1,8 @@
+section {
+    margin-top: 16px;
+}
+
+section > h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+}

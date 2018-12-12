@@ -1,0 +1,14 @@
+{
+    "controllerValues": {},
+    "defaultValue": null,
+    "eTag": "57e25eb0b5ecf048c873387bdbd07b80",
+    "url": "/services/data/v45.0/ui-api/object-info/Product__c/picklist-values/012000000000000AAA/Category__c",
+    "values": [
+        {
+            "attributes": null,
+            "label": "Commuter",
+            "validFor": [],
+            "value": "Commuter"
+        }
+    ]
+}
