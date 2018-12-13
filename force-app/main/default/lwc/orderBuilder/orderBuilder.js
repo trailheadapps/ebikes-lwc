@@ -2,7 +2,11 @@ import { LightningElement, track, wire, api } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 /** Record DML operations. */
-import { createRecord, updateRecord, deleteRecord } from 'lightning/uiRecordApi';
+import {
+    createRecord,
+    updateRecord,
+    deleteRecord,
+} from 'lightning/uiRecordApi';
 
 /** Use Apex to fetch related records. */
 import { refreshApex, getSObjectValue } from '@salesforce/apex';
@@ -109,10 +113,15 @@ export default class OrderBuilder extends LightningElement {
         const fields = {};
         fields[ORDER_FIELD.fieldApiName] = this.recordId;
         fields[PRODUCT_FIELD.fieldApiName] = product.Id;
-        fields[PRICE_FIELD.fieldApiName] = Math.round(getSObjectValue(product, PRODUCT_MSRP_FIELD) * DISCOUNT);
+        fields[PRICE_FIELD.fieldApiName] = Math.round(
+            getSObjectValue(product, PRODUCT_MSRP_FIELD) * DISCOUNT,
+        );
 
         // create Order_Item__c record on server
-        const recordInput = { apiName: ORDER_ITEM_OBJECT.objectApiName, fields };
+        const recordInput = {
+            apiName: ORDER_ITEM_OBJECT.objectApiName,
+            fields,
+        };
         createRecord(recordInput)
             .then(() => {
                 // refresh the Order_Item__c SObjects
@@ -175,7 +184,9 @@ export default class OrderBuilder extends LightningElement {
 
         // optimistically make the change on the client
         const previousOrderItems = this.orderItems;
-        const orderItems = this.orderItems.filter(orderItem => orderItem.Id !== id);
+        const orderItems = this.orderItems.filter(
+            orderItem => orderItem.Id !== id,
+        );
         this.setOrderItems(orderItems);
 
         // delete Order_Item__c SObject on the server

@@ -7,7 +7,13 @@ import BILLING_POSTAL_CODE from '@salesforce/schema/Account.BillingPostalCode';
 import BILLING_STATE from '@salesforce/schema/Account.BillingState';
 import BILLING_STREET from '@salesforce/schema/Account.BillingStreet';
 
-const fields = [BILLING_CITY, BILLING_COUNTRY, BILLING_POSTAL_CODE, BILLING_STATE, BILLING_STREET];
+const fields = [
+    BILLING_CITY,
+    BILLING_COUNTRY,
+    BILLING_POSTAL_CODE,
+    BILLING_STATE,
+    BILLING_STREET,
+];
 
 export default class PropertyMap extends LightningElement {
     @api recordId;
@@ -30,7 +36,10 @@ export default class PropertyMap extends LightningElement {
                         location: {
                             City: getFieldValue(data, BILLING_CITY),
                             Country: getFieldValue(data, BILLING_COUNTRY),
-                            PostalCode: getFieldValue(data, BILLING_POSTAL_CODE),
+                            PostalCode: getFieldValue(
+                                data,
+                                BILLING_POSTAL_CODE,
+                            ),
                             State: getFieldValue(data, BILLING_STATE),
                             Street: street,
                         },

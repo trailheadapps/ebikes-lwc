@@ -46,7 +46,13 @@ export default class InlineMessage extends LightningElement {
         // this._errors = value.filter(error => error && error.message);
         // W-5644412 workaround
         this._errors = value
-            .filter(error => error && error.details && error.details.body && error.details.body.message)
+            .filter(
+                error =>
+                    error &&
+                    error.details &&
+                    error.details.body &&
+                    error.details.body.message,
+            )
             .map(error => ({ message: error.details.body.message }));
     }
 

@@ -16,11 +16,16 @@ export default class SimilarProducts extends LightningElement {
     @wire(getRecord, { recordId: '$recordId', fields })
     product;
 
-    @wire(getSimilarProducts, { productId: '$recordId', familyId: '$product.data.fields.Product_Family__c.value' })
+    @wire(getSimilarProducts, {
+        productId: '$recordId',
+        familyId: '$product.data.fields.Product_Family__c.value',
+    })
     similarProducts;
 
     get errors() {
-        const errors = [this.product.error, this.similarProducts.error].filter(error => error);
+        const errors = [this.product.error, this.similarProducts.error].filter(
+            error => error,
+        );
         return errors.length ? errors : undefined;
     }
 }
