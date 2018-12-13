@@ -4,7 +4,7 @@
 ![ebikes-logo](ebikes-logo.png)
 
 E-Bikes is a sample application that demonstrates how to build applications with Lightning Web Components.
-E-Bikes is a fictitious electric bicycle manufacturer. The application helps E-Bikes manage their products and reseller orders using a rich user experience. 
+E-Bikes is a fictitious electric bicycle manufacturer. The application helps E-Bikes manage their products and reseller orders using a rich user experience.
 
 ## Installation Instructions
 
@@ -71,7 +71,36 @@ There are two ways to install E-Bikes:
 
 1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
-1. In App Launcher, type **Import Sample Data** in the search box and click the **Import Sample Data** link. Click the **Import Data** button.
+1. From the command line, enter to following commands to clone this repository. You need to do this to get the files with sample data on your computer:
+
+    ```zsh
+    git clone https://github.com/trailheadapps/ebikes-lwc
+    cd ebikes-lwc
+    ```
+
+1. Import Account data:
+
+    - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
+    - Click **Launch Wizard**.
+    - Click the **Standard objects** tab, click **Accounts and Contacts**, and click **Add New Records**.
+    - Drag **accounts.csv** from the data folder of this project to the upload area.
+    - Click **Next**, **Next**, and **Start Import**.
+
+1. Import Product Family data:
+
+    - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
+    - Click **Launch Wizard**.
+    - Click the **Custom objects** tab, click **Product Families**, and click **Add New Records**.
+    - Drag **product_families.csv** from the data folder of this project to the upload area.
+    - Click **Next**, **Next**, and **Start Import**.
+
+1. Import Product data:
+    - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
+    - Click **Launch Wizard**.
+    - Click the **Custom objects** tab, click **Product**, and click **Add New Records**.
+    - In the **Add New Records** menu, under _Which Product Family field in your file do you want to match against to set the Product Family lookup field?_ select **Product Family Name** in the dropdown menu.
+    - Drag **products.csv** from the data folder of this project to the upload area.
+    - Click **Next**, **Next**, and **Start Import**.
 
 1. In App Launcher, select the **E-Bikes** app.
 

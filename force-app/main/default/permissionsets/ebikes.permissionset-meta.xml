@@ -105,7 +105,7 @@
         <readable>true</readable>
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>bikes</label>
+    <label>ebikes</label>
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>
@@ -166,6 +166,10 @@
     </tabSettings>
     <tabSettings>
         <tab>Product_Explorer</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>Product_Family__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
     <tabSettings>
