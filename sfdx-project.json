@@ -1,10 +1,17 @@
 {
-  "packageDirectories": [
-    {
-      "path": "force-app",
-      "default": true
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "EBikesLWC",
+            "versionName": "ver 0.1",
+            "versionNumber": "1.0.0.NEXT"
+        }
+    ],
+    "namespace": "",
+    "sourceApiVersion": "45.0",
+    "packageAliases": {
+        "EBikesLWC": "0HoB0000000GmiYKAS",
+        "EBikesLWC@1.0.0-1": "04tB0000000cPFVIA2"
     }
-  ],
-  "namespace": "",
-  "sourceApiVersion": "45.0"
 }

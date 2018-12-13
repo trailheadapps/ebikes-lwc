@@ -15,5 +15,6 @@
     <tabs>standard-Contact</tabs>
     <tabs>Product__c</tabs>
     <tabs>Order__c</tabs>
+    <tabs>Product_Family__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>
