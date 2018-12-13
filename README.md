@@ -71,7 +71,7 @@ There are two ways to install E-Bikes:
 
 1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
-1. From the command line, enter to following commands to clone this repository. You need to do this to get the files with sample data on your computer:
+1. From the command line, enter the following commands to clone this repository. You need to do this to get the files with sample data on your computer:
 
     ```zsh
     git clone https://github.com/trailheadapps/ebikes-lwc
