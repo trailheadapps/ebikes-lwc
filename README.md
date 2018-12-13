@@ -1,4 +1,5 @@
 # E-Bikes Lightning Web Components Sample Application
+
 [![CircleCI](https://circleci.com/gh/trailheadapps/ebikes-lwc.svg?style=svg)](https://circleci.com/gh/trailheadapps/ebikes-lwc)
 
 ![ebikes-logo](ebikes-logo.png)
@@ -6,53 +7,69 @@
 E-Bikes is a sample application that demonstrates how to build applications with Lightning Web Components.
 E-Bikes is a fictitious electric bicycle manufacturer. The application helps E-Bikes manage their products and reseller orders using a rich user experience.
 
+## Table of contents
+
+-   Installation Instructions
+    -   [Installing E-Bikes using Salesforce DX](#installing-e-bikes-using-salesforce-dx)
+    -   [Installing E-Bikes using an unlocked package](#installing-e-bikes-using-an-unlocked-package)
+-   [Optional installation instructions](#optional-installation-instructions)
+-   [Application Walkthrough](#application-walkthrough)
+
 ## Installation Instructions
 
 There are two ways to install E-Bikes:
 
-- [Using Salesforce DX](#installing-recipes-using-salesforce-dx): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
-- [Using an Unlocked Package](#installing-recipes-using-an-unlocked-package): This option allows anybody to experience the sample app without installing a local development environment.
+-   [Using Salesforce DX](#installing-e-bikes-using-salesforce-dx): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
+-   [Using an Unlocked Package](#installing-e-bikes-using-an-unlocked-package): This option allows anybody to experience the sample app without installing a local development environment.
 
 ## Installing E-Bikes using Salesforce DX
 
 1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
-    - Sign up for a Spring '19 prerelease org and enable Dev Hub
+
+    - Sign up for a Spring '19 pre-release org and enable Dev Hub
     - Install the pre-release version of the Salesforce CLI
     - Install Visual Studio Code
-    - Install the Visual Studio Code Salesforce extensions, including the LWC extension
+    - Install the Visual Studio Code Salesforce extensions, including the Lightning Web Components extension
 
 1. If you haven't already done so, authenticate with your Spring '19 hub org and provide it with an alias (spring19hub):
+
     ```
     sfdx force:auth:web:login -d -a spring19hub
     ```
 
 1. Clone the repository:
+
     ```
     git clone https://github.com/trailheadapps/ebikes-lwc
     cd ebikes-lwc
     ```
 
 1. Create a scratch org and provide it with an alias (ebikes):
+
     ```
     sfdx force:org:create -s -f config/project-scratch-def.json -a ebikes
     ```
 
 1. Push the app to your scratch org:
+
     ```
     sfdx force:source:push
     ```
 
 1. Assign the **ebikes** permission set to the default user:
+
     ```
     sfdx force:user:permset:assign -n ebikes
     ```
 
 1. Load sample data:
+
     ```
     sfdx force:data:tree:import --plan ./data/sample-data-plan.json
     ```
 
 1. Open the scratch org:
+
     ```
     sfdx force:org:open
     ```
@@ -63,9 +80,9 @@ There are two ways to install E-Bikes:
 
 ## Installing E-Bikes using an Unlocked Package
 
-1. [Sign up](https://www.salesforce.com/form/signup/prerelease-spring19/) for a Spring '19 prerelease org, enable My Domain, and deploy it to all users.
+1. [Sign up](https://www.salesforce.com/form/signup/prerelease-spring19/) for a Spring '19 pre-release org, enable My Domain, and deploy it to all users.
 
-1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=TBD) to install the E-Bikes unlocked package in your Spring '19 org.
+1. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB0000000cPFVIA2) to install the E-Bikes unlocked package in your Spring '19 org.
 
 1. Select **Install for All Users**
 
@@ -82,7 +99,7 @@ There are two ways to install E-Bikes:
 
     - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
     - Click **Launch Wizard**.
-    - Click the **Standard objects** tab, click **Accounts and Contacts**, and click **Add New Records**.
+    - Click the **Standard objects** tab, click **Accounts and Contacts**, and click **Add new records**.
     - Drag **accounts.csv** from the data folder of this project to the upload area.
     - Click **Next**, **Next**, and **Start Import**.
 
@@ -90,15 +107,16 @@ There are two ways to install E-Bikes:
 
     - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
     - Click **Launch Wizard**.
-    - Click the **Custom objects** tab, click **Product Families**, and click **Add New Records**.
+    - Click the **Custom objects** tab, click **Product Families**, and click **Add new records**.
     - Drag **product_families.csv** from the data folder of this project to the upload area.
     - Click **Next**, **Next**, and **Start Import**.
 
 1. Import Product data:
+
     - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
     - Click **Launch Wizard**.
-    - Click the **Custom objects** tab, click **Product**, and click **Add New Records**.
-    - In the **Add New Records** menu, under _Which Product Family field in your file do you want to match against to set the Product Family lookup field?_ select **Product Family Name** in the dropdown menu.
+    - Click the **Custom objects** tab, click **Products**, and click **Add new records**.
+    - In the **Add new records** menu, under _Which Product Family field in your file do you want to match against to set the Product Family lookup field?_ select **Product Family Name** in the dropdown menu.
     - Drag **products.csv** from the data folder of this project to the upload area.
     - Click **Next**, **Next**, and **Start Import**.
 
@@ -110,7 +128,7 @@ This repository contains several files that are relevant if you want to integrat
 
 ### Code formatting
 
-[Prettier](https://prettier.io (https://prettier.io/)) is a code formatter used to ensure consistent formatting across your code base. To use Prettier with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) from the Visual Studio Code Marketplace. The [.prettierignore](/.prettierignore) and [.prettierrc](/.prettierrc) files are provided as part of this repository to control the behavior of the Prettier formatter.
+[Prettier](https://prettier.io/) is a code formatter used to ensure consistent formatting across your code base. To use Prettier with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) from the Visual Studio Code Marketplace. The [.prettierignore](/.prettierignore) and [.prettierrc](/.prettierrc) files are provided as part of this repository to control the behavior of the Prettier formatter.
 
 ### Code linting
 
@@ -126,6 +144,7 @@ To set up the formatting and linting pre-commit hook:
 2. Run `npm install` in your project's root folder to install the ESLint and Prettier modules (Note: Mac users should verify that Xcode command line tools are installed before running this command.)
 
 Prettier and ESLint will now run automatically every time you commit changes. The commit will fail if linting errors are detected. You can also run the formatting and linting from the command line using the following commands (check out [package.json](package.json) for the full list):
+
 ```
 npm run lint:lwc
 npm run prettier
@@ -166,6 +185,3 @@ npm run prettier
 ### Account Record Page
 
 The account record page features an **Account Map** component that locates the account on a map.
-
-
-
