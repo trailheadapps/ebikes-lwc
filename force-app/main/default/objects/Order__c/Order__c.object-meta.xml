@@ -63,7 +63,7 @@
     </nameField>
     <pluralLabel>Reseller Orders</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
     <startsWith>Vowel</startsWith>
+    <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
