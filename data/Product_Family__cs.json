@@ -30,11 +30,11 @@
     {
       "attributes": {
         "type": "Product_Family__c",
-        "referenceId": "ModelARef"
+        "referenceId": "VoltRef"
       },
-      "Name": "ModelA",
-      "Description__c": "Top of the line electric mountain bikes for racers and serious enthusiasts.",
-      "Category__c": "Mountain"
+      "Name": "Volt",
+      "Description__c": "Fun and Foldable electric bicycles.",
+      "Category__c": "Commuter"
     }
   ]
 }

@@ -5,252 +5,224 @@
                 "type": "Product__c",
                 "referenceId": "Product__cRef1"
             },
-            "Name": "MODEL A",
-            "Product_Family__c": "@ModelARef",
+            "Name": "FUSE X1",
+            "Product_Family__c": "@FuseRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 10000,
-            "Level__c": "Racer",
-            "Category__c": "Mountain",
-            "Material__c": "Carbon",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike0.jpeg"
+            "MSRP__c": 2500,
+            "Level__c": "Beginner",
+            "Category__c": "Commuter",
+            "Material__c": "Aluminum",
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex1.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef2"
             },
-            "Name": "DYNAMO X1",
-            "Product_Family__c": "@DynamoRef",
+            "Name": "FUSE X2",
+            "Product_Family__c": "@FuseRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 7800,
-            "Level__c": "Racer",
-            "Category__c": "Mountain",
-            "Material__c": "Carbon",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike1.jpeg"
+            "MSRP__c": 2600,
+            "Level__c": "Beginner",
+            "Category__c": "Commuter",
+            "Material__c": "Aluminum",
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex2.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef3"
             },
-            "Name": "FUSE",
+            "Name": "FUSE X3",
             "Product_Family__c": "@FuseRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 7500,
-            "Level__c": "Racer",
-            "Category__c": "Mountain",
-            "Material__c": "Carbon",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike2.jpeg"
+            "MSRP__c": 2700,
+            "Level__c": "Beginner",
+            "Category__c": "Commuter",
+            "Material__c": "Aluminum",
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex3.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef4"
             },
-            "Name": "DYNAMO X2",
-            "Product_Family__c": "@DynamoRef",
+            "Name": "FUSE X4",
+            "Product_Family__c": "@FuseRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 6800,
-            "Level__c": "Racer",
-            "Category__c": "Mountain",
+            "MSRP__c": 2800,
+            "Level__c": "Beginner",
+            "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike3.jpeg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex4.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef5"
             },
-            "Name": "DYNAMO X3",
+            "Name": "DYNAMO X1",
             "Product_Family__c": "@DynamoRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 5600,
-            "Level__c": "Enthusiast",
+            "MSRP__c": 7000,
+            "Level__c": "Racer",
             "Category__c": "Mountain",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike4.jpeg"
+            "Material__c": "Carbon",
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox1.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef6"
             },
-            "Name": "DYNAMO X4",
+            "Name": "DYNAMO X2",
             "Product_Family__c": "@DynamoRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 5500,
-            "Level__c": "Enthusiast",
+            "MSRP__c": 7200,
+            "Level__c": "Racer",
             "Category__c": "Mountain",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike5.jpeg"
+            "Material__c": "Carbon",
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox2.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef7"
             },
-            "Name": "FUSE X1",
-            "Product_Family__c": "@FuseRef",
+            "Name": "DYNAMO X3",
+            "Product_Family__c": "@DynamoRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 5000,
-            "Level__c": "Enthusiast",
-            "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike6.jpeg"
+            "MSRP__c": 7400,
+            "Level__c": "Racer",
+            "Category__c": "Mountain",
+            "Material__c": "Carbon",
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox3.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef8"
             },
-            "Name": "FUSE X2",
-            "Product_Family__c": "@FuseRef",
+            "Name": "DYNAMO X4",
+            "Product_Family__c": "@DynamoRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 5000,
-            "Level__c": "Enthusiast",
-            "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike7.jpeg"
+            "MSRP__c": 7800,
+            "Level__c": "Racer",
+            "Category__c": "Mountain",
+            "Material__c": "Carbon",
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox4.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef9"
             },
-            "Name": "FUSE X3",
-            "Product_Family__c": "@FuseRef",
+            "Name": "ELECTRA X1",
+            "Product_Family__c": "@ElectraRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 4600,
+            "MSRP__c": 4000,
             "Level__c": "Enthusiast",
-            "Category__c": "Commuter",
+            "Category__c": "Mountain",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike8.jpeg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax1.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef10"
             },
-            "Name": "DYNAMO X5",
-            "Product_Family__c": "@DynamoRef",
+            "Name": "ELECTRA X2",
+            "Product_Family__c": "@ElectraRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 4600,
+            "MSRP__c": 4300,
             "Level__c": "Enthusiast",
             "Category__c": "Mountain",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike9.jpeg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax2.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef11"
             },
-            "Name": "FUSE X4",
-            "Product_Family__c": "@FuseRef",
+            "Name": "ELECTRA X3",
+            "Product_Family__c": "@ElectraRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 3400,
-            "Level__c": "Beginner",
-            "Category__c": "Commuter",
+            "MSRP__c": 4600,
+            "Level__c": "Enthusiast",
+            "Category__c": "Mountain",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike10.jpeg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax3.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef12"
             },
-            "Name": "FUSE X5",
-            "Product_Family__c": "@FuseRef",
+            "Name": "ELECTRA X4",
+            "Product_Family__c": "@ElectraRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 3400,
-            "Level__c": "Beginner",
-            "Category__c": "Commuter",
+            "MSRP__c": 4900,
+            "Level__c": "Enthusiast",
+            "Category__c": "Mountain",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike11.jpeg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax4.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef13"
             },
-            "Name": "ELECTRA X1",
-            "Product_Family__c": "@ElectraRef",
+            "Name": "VOLT X1",
+            "Product_Family__c": "@VoltRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 3200,
+            "MSRP__c": 1200,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike12.jpeg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx1.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef14"
             },
-            "Name": "ELECTRA X2",
-            "Product_Family__c": "@ElectraRef",
+            "Name": "VOLT X2",
+            "Product_Family__c": "@VoltRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 3200,
+            "MSRP__c": 1400,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike13.jpeg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx2.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef15"
             },
-            "Name": "FUSE X6",
-            "Product_Family__c": "@FuseRef",
+            "Name": "VOLT X3",
+            "Product_Family__c": "@VoltRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 2700,
+            "MSRP__c": 1800,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike14.jpeg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx3.jpg"
         },
         {
             "attributes": {
                 "type": "Product__c",
                 "referenceId": "Product__cRef16"
             },
-            "Name": "FUSE X7",
-            "Product_Family__c": "@FuseRef",
+            "Name": "VOLT X4",
+            "Product_Family__c": "@VoltRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 2700,
+            "MSRP__c": 1900,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike15.jpeg"
-        },
-        {
-            "attributes": {
-                "type": "Product__c",
-                "referenceId": "Product__cRef17"
-            },
-            "Name": "ELECTRA X3",
-            "Product_Family__c": "@ElectraRef",
-            "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 2700,
-            "Level__c": "Beginner",
-            "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike16.jpeg"
-        },
-        {
-            "attributes": {
-                "type": "Product__c",
-                "referenceId": "Product__cRef18"
-            },
-            "Name": "ELECTRA X4",
-            "Product_Family__c": "@ElectraRef",
-            "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            "MSRP__c": 2700,
-            "Level__c": "Beginner",
-            "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/bikes/bike17.jpeg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx4.jpg"
         }
     ]
 }
