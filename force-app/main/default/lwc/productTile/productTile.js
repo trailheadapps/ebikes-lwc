@@ -27,7 +27,9 @@ export default class ProductTile extends LightningElement {
     @track msrp;
 
     handleClick() {
-        const selectedEvent = new CustomEvent('selected', { detail: this.product.Id });
+        const selectedEvent = new CustomEvent('selected', {
+            detail: this.product.Id,
+        });
         this.dispatchEvent(selectedEvent);
     }
 

@@ -18,7 +18,14 @@ import MSRP_FIELD from '@salesforce/schema/Product__c.MSRP__c';
 import PICTURE_URL_FIELD from '@salesforce/schema/Product__c.Picture_URL__c';
 
 /** Record fields to load. */
-const fields = [NAME_FIELD, LEVEL_FIELD, CATEGORY_FIELD, MATERIAL_FIELD, MSRP_FIELD, PICTURE_URL_FIELD];
+const fields = [
+    NAME_FIELD,
+    LEVEL_FIELD,
+    CATEGORY_FIELD,
+    MATERIAL_FIELD,
+    MSRP_FIELD,
+    PICTURE_URL_FIELD,
+];
 
 /**
  * Component to display details of a Product__c.
