@@ -88,36 +88,32 @@ There are two ways to install E-Bikes:
 
 1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
-1. From the command line, enter the following commands to clone this repository. You need to do this to get the files with sample data on your computer:
-
-    ```zsh
-    git clone https://github.com/trailheadapps/ebikes-lwc
-    cd ebikes-lwc
-    ```
-
 1. Import Account data:
 
+    - Click [here](https://raw.githubusercontent.com/trailheadapps/ebikes-lwc/master/data/accounts.csv) to acccess the **accounts.csv** file. Right click in the browser window and save the file as **accounts.csv**.
     - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
     - Click **Launch Wizard**.
     - Click the **Standard objects** tab, click **Accounts and Contacts**, and click **Add new records**.
-    - Drag **accounts.csv** from the data folder of this project to the upload area.
+    - Drag the **accounts.csv** file you just saved and drop it in the upload area.
     - Click **Next**, **Next**, and **Start Import**.
 
 1. Import Product Family data:
 
+    - Click [here](https://raw.githubusercontent.com/trailheadapps/ebikes-lwc/master/data/product_families.csv) to acccess the **product_families.csv** file. Right click in the browser window and save the file as **product_families.csv**.
     - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
     - Click **Launch Wizard**.
     - Click the **Custom objects** tab, click **Product Families**, and click **Add new records**.
-    - Drag **product_families.csv** from the data folder of this project to the upload area.
+    - Drag the **product_families.csv** file you just saved and drop it in the upload area.
     - Click **Next**, **Next**, and **Start Import**.
 
 1. Import Product data:
 
+    - Click [here](https://raw.githubusercontent.com/trailheadapps/ebikes-lwc/master/data/products.csv) to acccess the **products.csv** file. Right click in the browser window and save the file as **products.csv**.
     - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
     - Click **Launch Wizard**.
     - Click the **Custom objects** tab, click **Products**, and click **Add new records**.
     - In the **Add new records** menu, under _Which Product Family field in your file do you want to match against to set the Product Family lookup field?_ select **Product Family Name** in the dropdown menu.
-    - Drag **products.csv** from the data folder of this project to the upload area.
+    - Drag the **products.csv** file you just saved and drop it in the upload area.
     - Click **Next**, **Next**, and **Start Import**.
 
 1. In App Launcher, select the **E-Bikes** app.
