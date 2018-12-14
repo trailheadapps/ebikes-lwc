@@ -94,7 +94,7 @@ There are two ways to install E-Bikes:
     - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
     - Click **Launch Wizard**.
     - Click the **Standard objects** tab, click **Accounts and Contacts**, and click **Add new records**.
-    - Drag the **accounts.csv** file you just saved and drop in the upload area.
+    - Drag the **accounts.csv** file you just saved and drop it in the upload area.
     - Click **Next**, **Next**, and **Start Import**.
 
 1. Import Product Family data:
@@ -103,7 +103,7 @@ There are two ways to install E-Bikes:
     - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
     - Click **Launch Wizard**.
     - Click the **Custom objects** tab, click **Product Families**, and click **Add new records**.
-    - Drag the **product_families.csv** file you just saved and drop in the upload area.
+    - Drag the **product_families.csv** file you just saved and drop it in the upload area.
     - Click **Next**, **Next**, and **Start Import**.
 
 1. Import Product data:
@@ -113,7 +113,7 @@ There are two ways to install E-Bikes:
     - Click **Launch Wizard**.
     - Click the **Custom objects** tab, click **Products**, and click **Add new records**.
     - In the **Add new records** menu, under _Which Product Family field in your file do you want to match against to set the Product Family lookup field?_ select **Product Family Name** in the dropdown menu.
-    - Drag the **products.csv** file you just saved and drop in the upload area.
+    - Drag the **products.csv** file you just saved and drop it in the upload area.
     - Click **Next**, **Next**, and **Start Import**.
 
 1. In App Launcher, select the **E-Bikes** app.
