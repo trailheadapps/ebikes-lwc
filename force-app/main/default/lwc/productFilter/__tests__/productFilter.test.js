@@ -132,4 +132,52 @@ describe('c-product-filter', () => {
             );
         }
     });
+
+    describe('getPicklistValues @wire error', () => {
+        it('shows error message elements', () => {
+            const error = {
+                details: {
+                    body: {
+                        message: 'error from test',
+                    },
+                },
+            };
+            const element = createElement('c-product-filter', {
+                is: ProductFilter,
+            });
+            document.body.appendChild(element);
+            getPicklistValuesAdapter.error(error);
+            return Promise.resolve().then(() => {
+                const messages = element.shadowRoot.querySelectorAll(
+                    'c-inline-message',
+                );
+                // one error message per @wire
+                expect(messages).toHaveLength(3);
+            });
+        });
+
+        it.each(['categories', 'materials', 'levels'])(
+            'does not render %s input options',
+            type => {
+                const error = {
+                    details: {
+                        body: {
+                            message: 'error from test',
+                        },
+                    },
+                };
+                const element = createElement('c-product-filter', {
+                    is: ProductFilter,
+                });
+                document.body.appendChild(element);
+                getPicklistValuesAdapter.error(error);
+                return Promise.resolve().then(() => {
+                    const input = element.shadowRoot.querySelector(
+                        `[data-filter="${type}"]`,
+                    );
+                    expect(input).toBeNull();
+                });
+            },
+        );
+    });
 });
