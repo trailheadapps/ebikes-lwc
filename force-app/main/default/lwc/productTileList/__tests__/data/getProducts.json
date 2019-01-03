@@ -1,6 +1,7 @@
 {
   "pageNumber":1,
   "pageSize":9,
+  "totalItemCount":12,
   "records":[
     {
       "Id":"a039A000000lqLbQAI",
@@ -92,6 +93,5 @@
       "Picture_URL__c":"https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex1.jpg",
       "Material__c":"Aluminum"
     }
-  ],
-  "totalItemCount":16
+  ]
 }
