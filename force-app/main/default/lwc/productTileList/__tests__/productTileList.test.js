@@ -107,6 +107,28 @@ describe('c-product-tile-list', () => {
                 });
         });
 
+        it('updates getProducts @wire with new pageNumber', () => {
+            const element = createElement('c-product-tile-list', {
+                is: ProductTileList,
+            });
+            document.body.appendChild(element);
+            getProductsAdapter.emit(mockGetProducts);
+
+            // Return a promise to wait for any asynchronous DOM updates.
+            return Promise.resolve()
+                .then(() => {
+                    const paginator = element.shadowRoot.querySelector(
+                        'c-paginator',
+                    );
+                    paginator.dispatchEvent(new CustomEvent('next'));
+                })
+                .then(() => {
+                    const { pageNumber } = getProductsAdapter.getLastConfig();
+                    // pageNumber defaults to 1 as verified in other tests
+                    expect(pageNumber).toBe(2);
+                });
+        });
+
         it('displays one c-product-tile per record', () => {
             const recordCount = 9;
             const element = createElement('c-product-tile-list', {
@@ -202,14 +224,28 @@ describe('c-product-tile-list', () => {
     });
 
     describe('with search bar visible', () => {
-        it('renders lightning-input as search bar', () => {
+        it('updates getProducts @wire with searchKey as filter when search bar changes', () => {
+            const searchKey = 'foo';
+            const expected = JSON.stringify({ searchKey });
             const element = createElement('c-product-tile-list', {
                 is: ProductTileList,
             });
             element.searchBarIsVisible = true;
             document.body.appendChild(element);
-            const searchBar = element.shadowRoot.querySelector('.search-bar');
-            expect(searchBar.tagName.toLowerCase()).toBe('lightning-input');
+            getProductsAdapter.emit(mockGetProducts);
+
+            return Promise.resolve()
+                .then(() => {
+                    const searchBar = element.shadowRoot.querySelector(
+                        '.search-bar',
+                    );
+                    searchBar.value = searchKey;
+                    searchBar.dispatchEvent(new CustomEvent('change'));
+                })
+                .then(() => {
+                    const { filters } = getProductsAdapter.getLastConfig();
+                    expect(filters).toBe(expected);
+                });
         });
     });
 });
