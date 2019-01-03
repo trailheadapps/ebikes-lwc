@@ -35,7 +35,7 @@ const mockGetPicklistValues = require('./data/getPicklistValues.json');
 const getPicklistValuesAdapter = registerLdsTestWireAdapter(getPicklistValues);
 
 // Register as a standard wire adapter because the component under test requires this adapter.
-// We don't exercise this wire adpater in the tests.
+// We don't exercise this wire adapter in the tests.
 registerTestWireAdapter(CurrentPageReference);
 
 describe('c-product-filter', () => {

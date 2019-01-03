@@ -23,14 +23,15 @@ describe('c-product-list-item', () => {
         };
         element.product = product;
         document.body.appendChild(element);
+
         const lightningButton = element.shadowRoot.querySelector(
             'lightning-button',
         );
-
         lightningButton.click();
 
         const { pageReference } = getNavigateCalledWith();
-
+        // verify the component under test called the correct navigate event
+        // type and sent the expected recordId defined above
         expect(pageReference.type).toBe('standard__recordPage');
         expect(pageReference.attributes.recordId).toBe(expectedId);
     });

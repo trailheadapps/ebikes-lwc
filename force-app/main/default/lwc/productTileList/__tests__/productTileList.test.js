@@ -8,7 +8,7 @@ import {
 import getProducts from '@salesforce/apex/ProductController.getProducts';
 import { CurrentPageReference } from 'lightning/navigation';
 
-// Mock out the event firing function to verify it was called with expected parameters.
+// Mock out the pubsub lib and use these mocks to verify how functions were called
 jest.mock('c/pubsub', () => {
     return {
         fireEvent: jest.fn(),
@@ -18,7 +18,8 @@ jest.mock('c/pubsub', () => {
 });
 
 // TODO(tbliss): the default resolution for @salesforce/apex/foo.bar is a function that returns a resolved Promise.
-//               that errors when it's used as an @wire id
+//               that errors when it's used as an @wire id. The import needs to have object identity in the component
+//               and the test.
 jest.mock(
     '@salesforce/apex/ProductController.getProducts',
     () => {
@@ -27,14 +28,17 @@ jest.mock(
     { virtual: true },
 );
 
+// realistic data with multiple records
 const mockGetProducts = require('./data/getProducts.json');
+// an empty list of records to verify the component does something reasonable
+// when there is no data ato display
 const mockGetProductsNoRecords = require('./data/getProductsNoRecords.json');
 
 // Register as an LDS wire adapter. Some tests verify the provisioned values trigger desired behavior.
 const getProductsAdapter = registerLdsTestWireAdapter(getProducts);
 
 // Register as a standard wire adapter because the component under test requires this adapter.
-// We don't exercise this wire adpater in the tests.
+// We don't exercise this wire adapter in the tests.
 registerTestWireAdapter(CurrentPageReference);
 
 describe('c-product-tile-list', () => {
@@ -53,12 +57,12 @@ describe('c-product-tile-list', () => {
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProducts);
 
+            // Return a promise to wait for any asynchronous DOM updates.
             return Promise.resolve().then(() => {
                 const paginator = element.shadowRoot.querySelector(
                     'c-paginator',
                 );
                 expect(paginator).not.toBeNull();
-
                 // we know from the mock data (./data/getProducts.json) we
                 // should have 12 total items and a page size of 9
                 expect(paginator.shadowRoot.textContent).toMatch(
@@ -73,6 +77,7 @@ describe('c-product-tile-list', () => {
             });
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProducts);
+
             return Promise.resolve()
                 .then(() => {
                     const paginator = element.shadowRoot.querySelector(
@@ -109,6 +114,7 @@ describe('c-product-tile-list', () => {
             });
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProducts);
+
             return Promise.resolve().then(() => {
                 const productTiles = element.shadowRoot.querySelectorAll(
                     'c-product-tile',
@@ -123,6 +129,7 @@ describe('c-product-tile-list', () => {
             });
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProducts);
+
             return Promise.resolve().then(() => {
                 const productTile = element.shadowRoot.querySelector(
                     'c-product-tile',
@@ -145,8 +152,12 @@ describe('c-product-tile-list', () => {
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProductsNoRecords);
 
-            const paginator = element.shadowRoot.querySelector('c-paginator');
-            expect(paginator).toBeNull();
+            return Promise.resolve().then(() => {
+                const paginator = element.shadowRoot.querySelector(
+                    'c-paginator',
+                );
+                expect(paginator).toBeNull();
+            });
         });
 
         it('renders placeholder with no products message', () => {
@@ -190,7 +201,6 @@ describe('c-product-tile-list', () => {
         });
     });
 
-    // TODO(tbliss): how to verify search bar? filters is non-API and only connected to wire
     describe('with search bar visible', () => {
         it('renders lightning-input as search bar', () => {
             const element = createElement('c-product-tile-list', {
