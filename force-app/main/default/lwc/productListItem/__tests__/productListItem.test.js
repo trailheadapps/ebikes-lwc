@@ -1,6 +1,6 @@
 import { createElement } from 'lwc';
 import ProductListItem from 'c/productListItem';
-import { NavigationMixin } from 'lightning/navigation';
+import { getNavigateCalledWith } from 'lightning/navigation';
 
 describe('c-product-list-item', () => {
     afterEach(() => {
@@ -10,12 +10,13 @@ describe('c-product-list-item', () => {
         }
     });
 
-    it('foo', () => {
+    it('clicking View Details calls method to navigate to record page', () => {
+        const expectedId = 'expectedId';
         const element = createElement('c-product-list-item', {
             is: ProductListItem,
         });
         const product = {
-            Id: 1,
+            Id: expectedId,
             Picture_URL__c: 'https://example.com',
             Name: 'Foo',
             MSRP__c: 1000,
@@ -25,9 +26,12 @@ describe('c-product-list-item', () => {
         const lightningButton = element.shadowRoot.querySelector(
             'lightning-button',
         );
+
         lightningButton.click();
 
-        // TODO(tbliss): how to validate calls against the mixin?
-        console.log('NavigationMixin: ', NavigationMixin);
+        const { pageReference } = getNavigateCalledWith();
+
+        expect(pageReference.type).toBe('standard__recordPage');
+        expect(pageReference.attributes.recordId).toBe(expectedId);
     });
 });
