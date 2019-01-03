@@ -10,18 +10,17 @@ describe('c-product-list-item', () => {
         }
     });
 
-    it('clicking View Details calls method to navigate to record page', () => {
+    it('navigates to record page when View Details button clicked', () => {
         const expectedId = 'expectedId';
         const element = createElement('c-product-list-item', {
             is: ProductListItem,
         });
-        const product = {
+        element.product = {
             Id: expectedId,
             Picture_URL__c: 'https://example.com',
             Name: 'Foo',
             MSRP__c: 1000,
         };
-        element.product = product;
         document.body.appendChild(element);
 
         const lightningButton = element.shadowRoot.querySelector(

@@ -31,6 +31,6 @@ describe('c-placeholder', () => {
         });
         document.body.appendChild(element);
         const img = element.shadowRoot.querySelector('img');
-        expect(img.src).toMatch(/url_from_test/);
+        expect(img.src).toMatch(/\/url_from_test\//);
     });
 });

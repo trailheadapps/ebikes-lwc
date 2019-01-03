@@ -60,11 +60,13 @@ describe('c-product-filter', () => {
                 is: ProductFilter,
             });
             document.body.appendChild(element);
+
             const slider = element.shadowRoot.querySelector('lightning-slider');
             slider.value = expectedPrice;
             slider.dispatchEvent(new CustomEvent('change'));
             // Run timers eg setTimeout()
             jest.runAllTimers();
+
             // Only verify the relevant params
             expect(fireEvent).toHaveBeenCalledWith(
                 undefined,
@@ -79,6 +81,7 @@ describe('c-product-filter', () => {
                 is: ProductFilter,
             });
             document.body.appendChild(element);
+
             const searchInput = element.shadowRoot.querySelector(
                 'lightning-input',
             );
@@ -86,6 +89,7 @@ describe('c-product-filter', () => {
             searchInput.dispatchEvent(new CustomEvent('change'));
             // Run timers eg setTimeout()
             jest.runAllTimers();
+
             // Only verify the relevant params
             expect(fireEvent).toHaveBeenCalledWith(
                 undefined,
@@ -100,7 +104,9 @@ describe('c-product-filter', () => {
             });
             element.commuter = false;
             document.body.appendChild(element);
+
             getPicklistValuesAdapter.emit(mockGetPicklistValues);
+
             // Return a promise to wait for any asynchronous DOM updates. Jest
             // will automatically wait for the Promise chain to complete before
             // ending the test and fail the test if the promise ends in the
@@ -146,7 +152,9 @@ describe('c-product-filter', () => {
                 is: ProductFilter,
             });
             document.body.appendChild(element);
+
             getPicklistValuesAdapter.error(error);
+
             return Promise.resolve().then(() => {
                 const messages = element.shadowRoot.querySelectorAll(
                     'c-inline-message',
@@ -170,7 +178,9 @@ describe('c-product-filter', () => {
                     is: ProductFilter,
                 });
                 document.body.appendChild(element);
+
                 getPicklistValuesAdapter.error(error);
+
                 return Promise.resolve().then(() => {
                     const input = element.shadowRoot.querySelector(
                         `[data-filter="${type}"]`,

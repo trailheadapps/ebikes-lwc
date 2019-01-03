@@ -42,13 +42,12 @@ describe('c-product-tile', () => {
             is: ProductTile,
         });
         element.addEventListener('selected', listener);
-        const product = {
+        element.product = {
             Id: 1,
             Picture_URL__c: 'https://example.com',
             Name: 'Foo',
             MSRP__c: 1000,
         };
-        element.product = product;
         document.body.appendChild(element);
 
         const anchor = element.shadowRoot.querySelector('a');
