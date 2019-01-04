@@ -31,10 +31,10 @@ jest.mock(
 // realistic data with multiple records
 const mockGetProducts = require('./data/getProducts.json');
 // an empty list of records to verify the component does something reasonable
-// when there is no data ato display
+// when there is no data to display
 const mockGetProductsNoRecords = require('./data/getProductsNoRecords.json');
 
-// Register as an LDS wire adapter. Some tests verify the provisioned values trigger desired behavior.
+// Register as an LDS wire adapter. Some tests verify that provisioned values trigger desired behavior.
 const getProductsAdapter = registerLdsTestWireAdapter(getProducts);
 
 // Register as a standard wire adapter because the component under test requires this adapter.
@@ -49,7 +49,7 @@ describe('c-product-tile-list', () => {
         }
     });
 
-    describe('with records', () => {
+    describe('getProduct @wire emits records', () => {
         it('renders paginator with correct item counts', () => {
             const element = createElement('c-product-tile-list', {
                 is: ProductTileList,
@@ -63,15 +63,24 @@ describe('c-product-tile-list', () => {
                     'c-paginator',
                 );
                 expect(paginator).not.toBeNull();
-                // we know from the mock data (./data/getProducts.json) we
-                // should have 12 total items and a page size of 9
-                expect(paginator.shadowRoot.textContent).toMatch(
-                    /12 items(.*)page 1 of 2/,
+
+                // paginator text will look something like: "12 items • page 1 of 2"
+                const totalPages = Math.ceil(
+                    mockGetProducts.totalItemCount / mockGetProducts.pageSize,
                 );
+                const regex = new RegExp(
+                    `${mockGetProducts.totalItemCount} items(.*)page ${
+                        mockGetProducts.pageNumber
+                    } of ${totalPages}`,
+                );
+                expect(paginator.shadowRoot.textContent).toMatch(regex);
             });
         });
 
         it('increments/decrements page number when "next" and "previous" events fired', () => {
+            const totalPages = Math.ceil(
+                mockGetProducts.totalItemCount / mockGetProducts.pageSize,
+            );
             const element = createElement('c-product-tile-list', {
                 is: ProductTileList,
             });
@@ -91,9 +100,12 @@ describe('c-product-tile-list', () => {
                     const paginator = element.shadowRoot.querySelector(
                         'c-paginator',
                     );
-                    expect(paginator.shadowRoot.textContent).toMatch(
-                        /page 2 of 2/,
+                    const currentPage =
+                        parseInt(mockGetProducts.pageNumber, 10) + 1;
+                    const regex = new RegExp(
+                        `page ${currentPage} of ${totalPages}$`,
                     );
+                    expect(paginator.shadowRoot.textContent).toMatch(regex);
 
                     paginator.dispatchEvent(new CustomEvent('previous'));
                 })
@@ -101,9 +113,11 @@ describe('c-product-tile-list', () => {
                     const paginator = element.shadowRoot.querySelector(
                         'c-paginator',
                     );
-                    expect(paginator.shadowRoot.textContent).toMatch(
-                        /page 1 of 2/,
+                    // we're back to the original page number now
+                    const regex = new RegExp(
+                        `page ${mockGetProducts.pageNumber} of ${totalPages}$`,
                     );
+                    expect(paginator.shadowRoot.textContent).toMatch(regex);
                 });
         });
 
@@ -124,13 +138,13 @@ describe('c-product-tile-list', () => {
                 })
                 .then(() => {
                     const { pageNumber } = getProductsAdapter.getLastConfig();
-                    // pageNumber defaults to 1 as verified in other tests
-                    expect(pageNumber).toBe(2);
+                    // we've fired a single 'next' event so increment the original pageNumber
+                    expect(pageNumber).toBe(mockGetProducts.pageNumber + 1);
                 });
         });
 
         it('displays one c-product-tile per record', () => {
-            const recordCount = 9;
+            const recordCount = mockGetProducts.records.length;
             const element = createElement('c-product-tile-list', {
                 is: ProductTileList,
             });
@@ -166,7 +180,7 @@ describe('c-product-tile-list', () => {
         });
     });
 
-    describe('without records', () => {
+    describe('getProduct @wire emits empty list of records', () => {
         it('does not render paginator', () => {
             const element = createElement('c-product-tile-list', {
                 is: ProductTileList,
