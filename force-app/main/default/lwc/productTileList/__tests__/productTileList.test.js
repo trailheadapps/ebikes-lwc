@@ -17,17 +17,6 @@ jest.mock('c/pubsub', () => {
     };
 });
 
-// TODO(tbliss): the default resolution for @salesforce/apex/foo.bar is a function that returns a resolved Promise.
-//               that errors when it's used as an @wire id. The import needs to have object identity in the component
-//               and the test.
-jest.mock(
-    '@salesforce/apex/ProductController.getProducts',
-    () => {
-        return { default: jest.fn() };
-    },
-    { virtual: true },
-);
-
 // realistic data with multiple records
 const mockGetProducts = require('./data/getProducts.json');
 // an empty list of records to verify the component does something reasonable
