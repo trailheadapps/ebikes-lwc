@@ -1,32 +1,33 @@
 @isTest
 public class TestOrderController {
 
-    public static Order__c createOrder() {
+    @testSetup
+    static void setup() {
         Account acc = new Account(
-            Name='Sample Account'
+            Name = 'Sample Account'
         );
         insert acc;
 
         Order__c newOrder = new Order__c(
-            Account__c=acc.Id
+            Account__c = acc.Id
         );
         insert newOrder;
-        return newOrder;
-    }
 
-    public static void createOrderItem(Id orderId) {
         Product__c p = new Product__c(
-            Name='Sample Product'
+            Name = 'Sample Product'
         );
         insert p;
+
         Order_Item__c orderItem = new Order_Item__c(
-            Order__c=orderId,
-            Product__c=p.Id
+            Order__c = newOrder.Id,
+            Product__c = p.Id
         );
         insert orderItem;
+
     }
 
-    static testMethod void testGetOrderItems() {
+    @isTest
+    static void testGetOrderItems() {
         Order__c newOrder = TestOrderController.createOrder();
         Id orderId = newOrder.Id;
         TestOrderController.createOrderItem(orderId);

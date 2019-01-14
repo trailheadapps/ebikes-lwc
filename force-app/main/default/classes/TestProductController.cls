@@ -1,7 +1,8 @@
 @isTest
 public class TestProductController {
 
-    public static void createProducts() {
+    @testSetup
+    static void createProducts() {
         List<Product__c> products = new List<Product__c>();
 
         products.add(new Product__c(
@@ -21,17 +22,15 @@ public class TestProductController {
         insert products;
     }
 
-    static testMethod void testGetProducts() {
-        TestProductController.createProducts();
+    @isTest
+    static void testGetProducts() {
         String filters = '{"searchKey":"Sample", "maxPrice":2000, "categories": ["Mountain"], "levels": ["Beginner"], "materials":["Carbon"]}, 1';
-        Test.startTest();
         PagedResult result = ProductController.getProducts(filters, 1);
-        Test.stopTest();
         System.assertEquals(result.records.size(), 2);
     }
-    static testMethod void testGetSimilarProducts() {
-        TestProductController.createProducts();
-        Test.startTest();
+
+    @isTest
+    static void testGetSimilarProducts() {
         String filters = '{"searchKey":"Sample", "maxPrice":2000, "categories": ["Mountain"], "levels": ["Beginner"], "materials":["Carbon"]}, 1';
         PagedResult result = ProductController.getProducts(filters, 1);
         Product__c productToCompare = (Product__c)result.records[0];
