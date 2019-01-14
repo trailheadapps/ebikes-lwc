@@ -1,38 +1,35 @@
 @isTest
 public class TestOrderController {
 
-    public static Order__c createOrder() {
+    @testSetup
+    static void setup() {
         Account acc = new Account(
-            Name='Sample Account'
+            Name = 'Sample Account'
         );
         insert acc;
 
-        Order__c newOrder = new Order__c(
-            Account__c=acc.Id
+        Order__c order = new Order__c(
+            Account__c = acc.Id
         );
-        insert newOrder;
-        return newOrder;
-    }
+        insert order;
 
-    public static void createOrderItem(Id orderId) {
         Product__c p = new Product__c(
-            Name='Sample Product'
+            Name = 'Sample Product'
         );
         insert p;
+
         Order_Item__c orderItem = new Order_Item__c(
-            Order__c=orderId,
-            Product__c=p.Id
+            Order__c = order.Id,
+            Product__c = p.Id
         );
         insert orderItem;
+
     }
 
-    static testMethod void testGetOrderItems() {
-        Order__c newOrder = TestOrderController.createOrder();
-        Id orderId = newOrder.Id;
-        TestOrderController.createOrderItem(orderId);
-        Test.startTest();
-        List<Order_Item__c> orderItems = OrderController.getOrderItems(orderId);
-        Test.stopTest();
+    @isTest
+    static void testGetOrderItems() {
+        Order__c testOrder = [SELECT Id from Order__c];
+        List<Order_Item__c> orderItems = OrderController.getOrderItems(testOrder.Id);
         System.assertEquals(orderItems.size(), 1);
     }
 
