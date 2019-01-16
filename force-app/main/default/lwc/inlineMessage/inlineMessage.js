@@ -4,7 +4,7 @@ const VARIANTS = {
     info: 'utility:info',
     success: 'utility:success',
     warning: 'utility:warning',
-    error: 'utility:error',
+    error: 'utility:error'
 };
 
 export default class InlineMessage extends LightningElement {
@@ -51,7 +51,7 @@ export default class InlineMessage extends LightningElement {
                     error &&
                     error.details &&
                     error.details.body &&
-                    error.details.body.message,
+                    error.details.body.message
             )
             .map(error => ({ message: error.details.body.message }));
     }

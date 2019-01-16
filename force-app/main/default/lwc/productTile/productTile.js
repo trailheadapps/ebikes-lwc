@@ -28,7 +28,7 @@ export default class ProductTile extends LightningElement {
 
     handleClick() {
         const selectedEvent = new CustomEvent('selected', {
-            detail: this.product.Id,
+            detail: this.product.Id
         });
         this.dispatchEvent(selectedEvent);
     }

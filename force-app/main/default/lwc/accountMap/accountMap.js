@@ -12,7 +12,7 @@ const fields = [
     BILLING_COUNTRY,
     BILLING_POSTAL_CODE,
     BILLING_STATE,
-    BILLING_STREET,
+    BILLING_STREET
 ];
 
 export default class PropertyMap extends LightningElement {
@@ -38,12 +38,12 @@ export default class PropertyMap extends LightningElement {
                             Country: getFieldValue(data, BILLING_COUNTRY),
                             PostalCode: getFieldValue(
                                 data,
-                                BILLING_POSTAL_CODE,
+                                BILLING_POSTAL_CODE
                             ),
                             State: getFieldValue(data, BILLING_STATE),
-                            Street: street,
-                        },
-                    },
+                            Street: street
+                        }
+                    }
                 ];
             }
         } else if (error) {

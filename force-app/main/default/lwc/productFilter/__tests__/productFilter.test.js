@@ -3,7 +3,7 @@ import ProductFilter from 'c/productFilter';
 import { fireEvent } from 'c/pubsub';
 import {
     registerLdsTestWireAdapter,
-    registerTestWireAdapter,
+    registerTestWireAdapter
 } from '@salesforce/wire-service-jest-util';
 import { CurrentPageReference } from 'lightning/navigation';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
@@ -11,7 +11,7 @@ import { getPicklistValues } from 'lightning/uiObjectInfoApi';
 // Mock out the event firing function to verify it was called with expected parameters.
 jest.mock('c/pubsub', () => {
     return {
-        fireEvent: jest.fn(),
+        fireEvent: jest.fn()
     };
 });
 
@@ -57,7 +57,7 @@ describe('c-product-filter', () => {
         it('fired when slider value changes', () => {
             const expectedPrice = 500;
             const element = createElement('c-product-filter', {
-                is: ProductFilter,
+                is: ProductFilter
             });
             document.body.appendChild(element);
             const slider = element.shadowRoot.querySelector('lightning-slider');
@@ -69,18 +69,18 @@ describe('c-product-filter', () => {
             expect(fireEvent).toHaveBeenCalledWith(
                 undefined,
                 'filterChange',
-                expect.objectContaining({ maxPrice: expectedPrice }),
+                expect.objectContaining({ maxPrice: expectedPrice })
             );
         });
 
         it('fired when search value changes', () => {
             const expectedSearchKey = 'search string';
             const element = createElement('c-product-filter', {
-                is: ProductFilter,
+                is: ProductFilter
             });
             document.body.appendChild(element);
             const searchInput = element.shadowRoot.querySelector(
-                'lightning-input',
+                'lightning-input'
             );
             searchInput.value = expectedSearchKey;
             searchInput.dispatchEvent(new CustomEvent('change'));
@@ -90,13 +90,13 @@ describe('c-product-filter', () => {
             expect(fireEvent).toHaveBeenCalledWith(
                 undefined,
                 'filterChange',
-                expect.objectContaining({ searchKey: expectedSearchKey }),
+                expect.objectContaining({ searchKey: expectedSearchKey })
             );
         });
 
         it('fired when checkbox is toggled', () => {
             const element = createElement('c-product-filter', {
-                is: ProductFilter,
+                is: ProductFilter
             });
             element.commuter = false;
             document.body.appendChild(element);
@@ -119,7 +119,7 @@ describe('c-product-filter', () => {
 
         function verifyFilterToggle(element, filter) {
             const checkbox = element.shadowRoot.querySelector(
-                `[data-filter="${filter}"]`,
+                `[data-filter="${filter}"]`
             );
             checkbox.checked = false;
             checkbox.dispatchEvent(new CustomEvent('change'));
@@ -128,7 +128,7 @@ describe('c-product-filter', () => {
             expect(fireEvent).toHaveBeenCalledWith(
                 undefined,
                 'filterChange',
-                expect.objectContaining({ [filter]: [] }),
+                expect.objectContaining({ [filter]: [] })
             );
         }
     });

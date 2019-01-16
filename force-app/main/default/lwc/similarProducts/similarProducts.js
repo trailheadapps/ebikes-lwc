@@ -18,13 +18,13 @@ export default class SimilarProducts extends LightningElement {
 
     @wire(getSimilarProducts, {
         productId: '$recordId',
-        familyId: '$product.data.fields.Product_Family__c.value',
+        familyId: '$product.data.fields.Product_Family__c.value'
     })
     similarProducts;
 
     get errors() {
         const errors = [this.product.error, this.similarProducts.error].filter(
-            error => error,
+            error => error
         );
         return errors.length ? errors : undefined;
     }
