@@ -16,8 +16,8 @@ export default class ProductListItem extends NavigationMixin(LightningElement) {
             attributes: {
                 recordId: this.product.Id,
                 objectApiName: PRODUCT_OBJECT.objectApiName,
-                actionName: 'view',
-            },
+                actionName: 'view'
+            }
         });
     }
 }

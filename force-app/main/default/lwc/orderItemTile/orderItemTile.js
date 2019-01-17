@@ -31,7 +31,7 @@ export default class OrderItemTile extends LightningElement {
     /** Fires event to update the Order_Item__c SObject.  */
     saveOrderItem() {
         const event = new CustomEvent('orderitemchange', {
-            detail: Object.assign({}, { Id: this.orderItem.Id }, this.form),
+            detail: Object.assign({}, { Id: this.orderItem.Id }, this.form)
         });
         this.dispatchEvent(event);
         this.isModified = false;
@@ -40,7 +40,7 @@ export default class OrderItemTile extends LightningElement {
     /** Fires event to delete the Order_Item__c SObject.  */
     deleteOrderItem() {
         const event = new CustomEvent('orderitemdelete', {
-            detail: { id: this.orderItem.Id },
+            detail: { id: this.orderItem.Id }
         });
         this.dispatchEvent(event);
     }

@@ -5,7 +5,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import {
     createRecord,
     updateRecord,
-    deleteRecord,
+    deleteRecord
 } from 'lightning/uiRecordApi';
 
 /** Use Apex to fetch related records. */
@@ -57,7 +57,7 @@ function calculateOrderSummary(orderItems) {
             acc.price += price;
             return acc;
         },
-        { quantity: 0, price: 0 },
+        { quantity: 0, price: 0 }
     );
     return summary;
 }
@@ -114,13 +114,13 @@ export default class OrderBuilder extends LightningElement {
         fields[ORDER_FIELD.fieldApiName] = this.recordId;
         fields[PRODUCT_FIELD.fieldApiName] = product.Id;
         fields[PRICE_FIELD.fieldApiName] = Math.round(
-            getSObjectValue(product, PRODUCT_MSRP_FIELD) * DISCOUNT,
+            getSObjectValue(product, PRODUCT_MSRP_FIELD) * DISCOUNT
         );
 
         // create Order_Item__c record on server
         const recordInput = {
             apiName: ORDER_ITEM_OBJECT.objectApiName,
-            fields,
+            fields
         };
         createRecord(recordInput)
             .then(() => {
@@ -132,8 +132,8 @@ export default class OrderBuilder extends LightningElement {
                     new ShowToastEvent({
                         title: 'An error has occurred',
                         message: "Couldn't add order item",
-                        variant: 'error',
-                    }),
+                        variant: 'error'
+                    })
                 );
             });
     }
@@ -172,8 +172,8 @@ export default class OrderBuilder extends LightningElement {
                     new ShowToastEvent({
                         title: 'Error updating order item',
                         message: e.message,
-                        variant: 'error',
-                    }),
+                        variant: 'error'
+                    })
                 );
             });
     }
@@ -185,7 +185,7 @@ export default class OrderBuilder extends LightningElement {
         // optimistically make the change on the client
         const previousOrderItems = this.orderItems;
         const orderItems = this.orderItems.filter(
-            orderItem => orderItem.Id !== id,
+            orderItem => orderItem.Id !== id
         );
         this.setOrderItems(orderItems);
 
@@ -202,8 +202,8 @@ export default class OrderBuilder extends LightningElement {
                     new ShowToastEvent({
                         title: 'Error deleting order item',
                         message: e.message,
-                        variant: 'error',
-                    }),
+                        variant: 'error'
+                    })
                 );
             });
     }
