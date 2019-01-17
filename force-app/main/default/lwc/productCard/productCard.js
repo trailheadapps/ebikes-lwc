@@ -24,7 +24,7 @@ const fields = [
     CATEGORY_FIELD,
     MATERIAL_FIELD,
     MSRP_FIELD,
-    PICTURE_URL_FIELD,
+    PICTURE_URL_FIELD
 ];
 
 /**
@@ -62,8 +62,8 @@ export default class ProductCard extends NavigationMixin(LightningElement) {
             attributes: {
                 recordId: this.recordId,
                 objectApiName: PRODUCT_OBJECT.objectApiName,
-                actionName: 'view',
-            },
+                actionName: 'view'
+            }
         });
     }
 

@@ -20,26 +20,26 @@ export default class ProductFilter extends LightningElement {
 
     filters = {
         searchKey: '',
-        maxPrice: 10000,
+        maxPrice: 10000
     };
 
     @wire(CurrentPageReference) pageRef;
 
     @wire(getPicklistValues, {
         recordTypeId: '012000000000000AAA',
-        fieldApiName: CATEGORY_FIELD,
+        fieldApiName: CATEGORY_FIELD
     })
     categories;
 
     @wire(getPicklistValues, {
         recordTypeId: '012000000000000AAA',
-        fieldApiName: LEVEL_FIELD,
+        fieldApiName: LEVEL_FIELD
     })
     levels;
 
     @wire(getPicklistValues, {
         recordTypeId: '012000000000000AAA',
-        fieldApiName: MATERIAL_FIELD,
+        fieldApiName: MATERIAL_FIELD
     })
     materials;
 
@@ -58,13 +58,13 @@ export default class ProductFilter extends LightningElement {
         if (!this.filters.categories) {
             // Lazy initialize filters with all values initially set
             this.filters.categories = this.categories.data.values.map(
-                item => item.value,
+                item => item.value
             );
             this.filters.levels = this.levels.data.values.map(
-                item => item.value,
+                item => item.value
             );
             this.filters.materials = this.materials.data.values.map(
-                item => item.value,
+                item => item.value
             );
         }
         const value = event.target.dataset.value;
@@ -75,7 +75,7 @@ export default class ProductFilter extends LightningElement {
             }
         } else {
             this.filters[event.target.dataset.filter] = filterArray.filter(
-                item => item !== value,
+                item => item !== value
             );
         }
         fireEvent(this.pageRef, 'filterChange', this.filters);
