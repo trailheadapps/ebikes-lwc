@@ -22,9 +22,9 @@ NavigationMixin.Navigate = Navigate;
 NavigationMixin.GenerateUrl = GenerateUrl;
 
 /*
- * Tests will not have access to the internals of this mixin used by the
- * component under test so we save a reference to what the Navigate method is
- * called with and provide access to the params in the test via this function.
+ * Tests do not have access to the internals of this mixin used by the
+ * component under test so save a reference to the arguments the Navigate method is
+ * invoked with and provide access with this function.
  */
 export const getNavigateCalledWith = () => {
     return {

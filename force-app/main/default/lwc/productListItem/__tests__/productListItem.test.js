@@ -17,7 +17,7 @@ describe('c-product-list-item', () => {
         });
         element.product = {
             Id: expectedId,
-            Picture_URL__c: 'https://example.com',
+            Picture_URL__c: 'https://salesforce.com',
             Name: 'Foo',
             MSRP__c: 1000,
         };
@@ -29,7 +29,7 @@ describe('c-product-list-item', () => {
         lightningButton.click();
 
         const { pageReference } = getNavigateCalledWith();
-        // verify the component under test called the correct navigate event
+        // Verify the component under test called the correct navigate event
         // type and sent the expected recordId defined above
         expect(pageReference.type).toBe('standard__recordPage');
         expect(pageReference.attributes.recordId).toBe(expectedId);

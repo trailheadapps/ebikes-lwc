@@ -152,7 +152,7 @@ describe('c-product-filter', () => {
                 const messages = element.shadowRoot.querySelectorAll(
                     'c-inline-message',
                 );
-                // one error message per @wire
+                // One error message per @wire
                 expect(messages).toHaveLength(3);
             });
         });

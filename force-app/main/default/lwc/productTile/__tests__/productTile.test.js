@@ -13,14 +13,14 @@ describe('c-product-tile', () => {
         const element = createElement('c-product-tile', {
             is: ProductTile,
         });
-        // emulate a DragEvent, jsdom does not implement this class yet
+        // Emulate a DragEvent, jsdom does not implement this class yet
         const dragstartEvent = new CustomEvent('dragstart');
         dragstartEvent.dataTransfer = {
             setData: jest.fn(),
         };
         const product = {
             Id: 1,
-            Picture_URL__c: 'https://example.com',
+            Picture_URL__c: 'https://salesforce.com',
             Name: 'Foo',
             MSRP__c: 1000,
         };
@@ -44,7 +44,7 @@ describe('c-product-tile', () => {
         element.addEventListener('selected', listener);
         element.product = {
             Id: 1,
-            Picture_URL__c: 'https://example.com',
+            Picture_URL__c: 'https://salesforce.com',
             Name: 'Foo',
             MSRP__c: 1000,
         };

@@ -17,9 +17,9 @@ jest.mock('c/pubsub', () => {
     };
 });
 
-// realistic data with multiple records
+// Realistic data with multiple records
 const mockGetProducts = require('./data/getProducts.json');
-// an empty list of records to verify the component does something reasonable
+// An empty list of records to verify the component does something reasonable
 // when there is no data to display
 const mockGetProductsNoRecords = require('./data/getProductsNoRecords.json');
 
