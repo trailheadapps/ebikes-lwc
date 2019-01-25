@@ -2,14 +2,14 @@
     <div class="slds-p-around_medium">
         <lightning-icon icon-name={iconName}></lightning-icon>
         <div class="slds-p-around_small">
-            <p>{message}</p>
-            <template if:true={errors.length}>
+            <p>{friendlyMessage}</p>
+            <template if:true={errorMessages.length}>
                 <div class="slds-p-vertical_x-small">
                     <lightning-input label="Show Details" type="checkbox" onchange={handleCheckboxChange}></lightning-input>
                 </div>
                 <template if:true={viewDetails}>
-                    <template for:each={errors} for:item="error">
-                        <p key={error.message}>{error.message}</p>
+                    <template for:each={errorMessages} for:item="message">
+                        <p key={message}>{message}</p>
                     </template>
                 </template>
             </template>
