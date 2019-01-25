@@ -205,18 +205,11 @@ describe('c-product-tile-list', () => {
 
     describe('getProducts @wire error', () => {
         it('shows error message element', () => {
-            const error = {
-                details: {
-                    body: {
-                        message: 'error from test',
-                    },
-                },
-            };
             const element = createElement('c-product-tile-list', {
                 is: ProductTileList,
             });
             document.body.appendChild(element);
-            getProductsAdapter.error(error);
+            getProductsAdapter.error();
             return Promise.resolve().then(() => {
                 const inlineMessage = element.shadowRoot.querySelector(
                     'c-inline-message',

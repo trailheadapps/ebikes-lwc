@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@salesforce/eslint-config-lwc": "^0.3.0",
-    "@salesforce/lwc-jest": "^0.4.6",
+    "@salesforce/lwc-jest": "^0.4.7",
     "eslint": "^5.0.0",
     "husky": "^1.2.0",
     "lint-staged": "^8.1.0",
