@@ -35,7 +35,7 @@ const mockGetPicklistValues = require('./data/getPicklistValues.json');
 const getPicklistValuesAdapter = registerLdsTestWireAdapter(getPicklistValues);
 
 // Register as a standard wire adapter because the component under test requires this adapter.
-// We don't exercise this wire adpater in the tests.
+// We don't exercise this wire adapter in the tests.
 registerTestWireAdapter(CurrentPageReference);
 
 describe('c-product-filter', () => {
@@ -60,11 +60,13 @@ describe('c-product-filter', () => {
                 is: ProductFilter
             });
             document.body.appendChild(element);
+
             const slider = element.shadowRoot.querySelector('lightning-slider');
             slider.value = expectedPrice;
             slider.dispatchEvent(new CustomEvent('change'));
             // Run timers eg setTimeout()
             jest.runAllTimers();
+
             // Only verify the relevant params
             expect(fireEvent).toHaveBeenCalledWith(
                 undefined,
@@ -79,6 +81,7 @@ describe('c-product-filter', () => {
                 is: ProductFilter
             });
             document.body.appendChild(element);
+
             const searchInput = element.shadowRoot.querySelector(
                 'lightning-input'
             );
@@ -86,6 +89,7 @@ describe('c-product-filter', () => {
             searchInput.dispatchEvent(new CustomEvent('change'));
             // Run timers eg setTimeout()
             jest.runAllTimers();
+
             // Only verify the relevant params
             expect(fireEvent).toHaveBeenCalledWith(
                 undefined,
@@ -100,7 +104,9 @@ describe('c-product-filter', () => {
             });
             element.commuter = false;
             document.body.appendChild(element);
+
             getPicklistValuesAdapter.emit(mockGetPicklistValues);
+
             // Return a promise to wait for any asynchronous DOM updates. Jest
             // will automatically wait for the Promise chain to complete before
             // ending the test and fail the test if the promise ends in the
@@ -131,5 +137,43 @@ describe('c-product-filter', () => {
                 expect.objectContaining({ [filter]: [] })
             );
         }
+    });
+
+    describe('getPicklistValues @wire error', () => {
+        it('shows error message elements', () => {
+            const element = createElement('c-product-filter', {
+                is: ProductFilter,
+            });
+            document.body.appendChild(element);
+
+            getPicklistValuesAdapter.error();
+
+            return Promise.resolve().then(() => {
+                const messages = element.shadowRoot.querySelectorAll(
+                    'c-inline-message',
+                );
+                // One error message per @wire
+                expect(messages).toHaveLength(3);
+            });
+        });
+
+        it.each(['categories', 'materials', 'levels'])(
+            'does not render %s input options',
+            type => {
+                const element = createElement('c-product-filter', {
+                    is: ProductFilter,
+                });
+                document.body.appendChild(element);
+
+                getPicklistValuesAdapter.error();
+
+                return Promise.resolve().then(() => {
+                    const input = element.shadowRoot.querySelector(
+                        `[data-filter="${type}"]`,
+                    );
+                    expect(input).toBeNull();
+                });
+            },
+        );
     });
 });

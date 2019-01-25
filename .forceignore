@@ -12,5 +12,6 @@ package.xml
 
 
 **/__tests__/**
+**/test/jest-mocks/**
 **/jsconfig.json
 **/.eslintrc.json
