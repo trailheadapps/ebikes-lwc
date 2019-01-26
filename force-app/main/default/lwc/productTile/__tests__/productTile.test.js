@@ -11,18 +11,18 @@ describe('c-product-tile', () => {
 
     it('dragging sets product as dataTransfer data', () => {
         const element = createElement('c-product-tile', {
-            is: ProductTile,
+            is: ProductTile
         });
         // Emulate a DragEvent, jsdom does not implement this class yet
         const dragstartEvent = new CustomEvent('dragstart');
         dragstartEvent.dataTransfer = {
-            setData: jest.fn(),
+            setData: jest.fn()
         };
         const product = {
             Id: 1,
             Picture_URL__c: 'https://salesforce.com',
             Name: 'Foo',
-            MSRP__c: 1000,
+            MSRP__c: 1000
         };
         element.product = product;
         document.body.appendChild(element);
@@ -32,21 +32,21 @@ describe('c-product-tile', () => {
 
         expect(dragstartEvent.dataTransfer.setData).toHaveBeenCalledWith(
             'product',
-            JSON.stringify(product),
+            JSON.stringify(product)
         );
     });
 
     it('clicking fires selected event', () => {
         const listener = jest.fn();
         const element = createElement('c-product-tile', {
-            is: ProductTile,
+            is: ProductTile
         });
         element.addEventListener('selected', listener);
         element.product = {
             Id: 1,
             Picture_URL__c: 'https://salesforce.com',
             Name: 'Foo',
-            MSRP__c: 1000,
+            MSRP__c: 1000
         };
         document.body.appendChild(element);
 

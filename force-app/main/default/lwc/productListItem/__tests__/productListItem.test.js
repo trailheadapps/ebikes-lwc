@@ -13,18 +13,18 @@ describe('c-product-list-item', () => {
     it('navigates to record page when View Details button clicked', () => {
         const expectedId = 'expectedId';
         const element = createElement('c-product-list-item', {
-            is: ProductListItem,
+            is: ProductListItem
         });
         element.product = {
             Id: expectedId,
             Picture_URL__c: 'https://salesforce.com',
             Name: 'Foo',
-            MSRP__c: 1000,
+            MSRP__c: 1000
         };
         document.body.appendChild(element);
 
         const lightningButton = element.shadowRoot.querySelector(
-            'lightning-button',
+            'lightning-button'
         );
         lightningButton.click();
 
