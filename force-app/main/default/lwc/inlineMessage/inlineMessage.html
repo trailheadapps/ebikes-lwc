@@ -2,7 +2,7 @@
     <div class="slds-p-around_medium">
         <lightning-icon icon-name={iconName}></lightning-icon>
         <div class="slds-p-around_small">
-            <p>{friendlyMessage}</p>
+            <p>{message}</p>
             <template if:true={errorMessages.length}>
                 <div class="slds-p-vertical_x-small">
                     <lightning-input label="Show Details" type="checkbox" onchange={handleCheckboxChange}></lightning-input>
