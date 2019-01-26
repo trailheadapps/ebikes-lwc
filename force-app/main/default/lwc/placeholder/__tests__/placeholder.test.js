@@ -11,7 +11,7 @@ describe('c-placeholder', () => {
 
     it('sets img url to be bike_assets resource', () => {
         const element = createElement('c-placeholder', {
-            is: Placeholder,
+            is: Placeholder
         });
         document.body.appendChild(element);
         const img = element.shadowRoot.querySelector('img');

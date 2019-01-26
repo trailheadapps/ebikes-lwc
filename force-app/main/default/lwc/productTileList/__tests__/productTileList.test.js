@@ -3,7 +3,7 @@ import ProductTileList from 'c/productTileList';
 import { fireEvent } from 'c/pubsub';
 import {
     registerTestWireAdapter,
-    registerLdsTestWireAdapter,
+    registerLdsTestWireAdapter
 } from '@salesforce/wire-service-jest-util';
 import getProducts from '@salesforce/apex/ProductController.getProducts';
 import { CurrentPageReference } from 'lightning/navigation';
@@ -13,7 +13,7 @@ jest.mock('c/pubsub', () => {
     return {
         fireEvent: jest.fn(),
         registerListener: jest.fn(),
-        unregisterAllListeners: jest.fn(),
+        unregisterAllListeners: jest.fn()
     };
 });
 
@@ -41,7 +41,7 @@ describe('c-product-tile-list', () => {
     describe('getProduct @wire emits records', () => {
         it('renders paginator with correct item counts', () => {
             const element = createElement('c-product-tile-list', {
-                is: ProductTileList,
+                is: ProductTileList
             });
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProducts);
@@ -49,18 +49,18 @@ describe('c-product-tile-list', () => {
             // Return a promise to wait for any asynchronous DOM updates.
             return Promise.resolve().then(() => {
                 const paginator = element.shadowRoot.querySelector(
-                    'c-paginator',
+                    'c-paginator'
                 );
                 expect(paginator).not.toBeNull();
 
                 // paginator text will look something like: "12 items • page 1 of 2"
                 const totalPages = Math.ceil(
-                    mockGetProducts.totalItemCount / mockGetProducts.pageSize,
+                    mockGetProducts.totalItemCount / mockGetProducts.pageSize
                 );
                 const regex = new RegExp(
                     `${mockGetProducts.totalItemCount} items(.*)page ${
                         mockGetProducts.pageNumber
-                    } of ${totalPages}`,
+                    } of ${totalPages}`
                 );
                 expect(paginator.shadowRoot.textContent).toMatch(regex);
             });
@@ -68,10 +68,10 @@ describe('c-product-tile-list', () => {
 
         it('increments/decrements page number when "next" and "previous" events fired', () => {
             const totalPages = Math.ceil(
-                mockGetProducts.totalItemCount / mockGetProducts.pageSize,
+                mockGetProducts.totalItemCount / mockGetProducts.pageSize
             );
             const element = createElement('c-product-tile-list', {
-                is: ProductTileList,
+                is: ProductTileList
             });
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProducts);
@@ -79,7 +79,7 @@ describe('c-product-tile-list', () => {
             return Promise.resolve()
                 .then(() => {
                     const paginator = element.shadowRoot.querySelector(
-                        'c-paginator',
+                        'c-paginator'
                     );
                     paginator.dispatchEvent(new CustomEvent('next'));
                 })
@@ -87,12 +87,12 @@ describe('c-product-tile-list', () => {
                     // DOM is updated after event is fired so need to wait
                     // another microtask for the rerender
                     const paginator = element.shadowRoot.querySelector(
-                        'c-paginator',
+                        'c-paginator'
                     );
                     const currentPage =
                         parseInt(mockGetProducts.pageNumber, 10) + 1;
                     const regex = new RegExp(
-                        `page ${currentPage} of ${totalPages}$`,
+                        `page ${currentPage} of ${totalPages}$`
                     );
                     expect(paginator.shadowRoot.textContent).toMatch(regex);
 
@@ -100,11 +100,11 @@ describe('c-product-tile-list', () => {
                 })
                 .then(() => {
                     const paginator = element.shadowRoot.querySelector(
-                        'c-paginator',
+                        'c-paginator'
                     );
                     // we're back to the original page number now
                     const regex = new RegExp(
-                        `page ${mockGetProducts.pageNumber} of ${totalPages}$`,
+                        `page ${mockGetProducts.pageNumber} of ${totalPages}$`
                     );
                     expect(paginator.shadowRoot.textContent).toMatch(regex);
                 });
@@ -112,7 +112,7 @@ describe('c-product-tile-list', () => {
 
         it('updates getProducts @wire with new pageNumber', () => {
             const element = createElement('c-product-tile-list', {
-                is: ProductTileList,
+                is: ProductTileList
             });
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProducts);
@@ -121,7 +121,7 @@ describe('c-product-tile-list', () => {
             return Promise.resolve()
                 .then(() => {
                     const paginator = element.shadowRoot.querySelector(
-                        'c-paginator',
+                        'c-paginator'
                     );
                     paginator.dispatchEvent(new CustomEvent('next'));
                 })
@@ -135,14 +135,14 @@ describe('c-product-tile-list', () => {
         it('displays one c-product-tile per record', () => {
             const recordCount = mockGetProducts.records.length;
             const element = createElement('c-product-tile-list', {
-                is: ProductTileList,
+                is: ProductTileList
             });
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProducts);
 
             return Promise.resolve().then(() => {
                 const productTiles = element.shadowRoot.querySelectorAll(
-                    'c-product-tile',
+                    'c-product-tile'
                 );
                 expect(productTiles).toHaveLength(recordCount);
             });
@@ -150,20 +150,20 @@ describe('c-product-tile-list', () => {
 
         it('fires productSelected event when c-product-tile selected', () => {
             const element = createElement('c-product-tile-list', {
-                is: ProductTileList,
+                is: ProductTileList
             });
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProducts);
 
             return Promise.resolve().then(() => {
                 const productTile = element.shadowRoot.querySelector(
-                    'c-product-tile',
+                    'c-product-tile'
                 );
                 productTile.dispatchEvent(new CustomEvent('selected'));
                 expect(fireEvent).toHaveBeenCalledWith(
                     undefined,
                     'productSelected',
-                    null,
+                    null
                 );
             });
         });
@@ -172,14 +172,14 @@ describe('c-product-tile-list', () => {
     describe('getProduct @wire emits empty list of records', () => {
         it('does not render paginator', () => {
             const element = createElement('c-product-tile-list', {
-                is: ProductTileList,
+                is: ProductTileList
             });
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProductsNoRecords);
 
             return Promise.resolve().then(() => {
                 const paginator = element.shadowRoot.querySelector(
-                    'c-paginator',
+                    'c-paginator'
                 );
                 expect(paginator).toBeNull();
             });
@@ -189,14 +189,14 @@ describe('c-product-tile-list', () => {
             const expected =
                 'There are no products matching your current selection';
             const element = createElement('c-product-tile-list', {
-                is: ProductTileList,
+                is: ProductTileList
             });
             document.body.appendChild(element);
             getProductsAdapter.emit(mockGetProductsNoRecords);
 
             return Promise.resolve().then(() => {
                 const placeholder = element.shadowRoot.querySelector(
-                    'c-placeholder',
+                    'c-placeholder'
                 );
                 expect(placeholder.shadowRoot.textContent).toBe(expected);
             });
@@ -206,13 +206,13 @@ describe('c-product-tile-list', () => {
     describe('getProducts @wire error', () => {
         it('shows error message element', () => {
             const element = createElement('c-product-tile-list', {
-                is: ProductTileList,
+                is: ProductTileList
             });
             document.body.appendChild(element);
             getProductsAdapter.error();
             return Promise.resolve().then(() => {
                 const inlineMessage = element.shadowRoot.querySelector(
-                    'c-inline-message',
+                    'c-inline-message'
                 );
                 expect(inlineMessage).not.toBeNull();
             });
@@ -224,7 +224,7 @@ describe('c-product-tile-list', () => {
             const searchKey = 'foo';
             const expected = JSON.stringify({ searchKey });
             const element = createElement('c-product-tile-list', {
-                is: ProductTileList,
+                is: ProductTileList
             });
             element.searchBarIsVisible = true;
             document.body.appendChild(element);
@@ -233,7 +233,7 @@ describe('c-product-tile-list', () => {
             return Promise.resolve()
                 .then(() => {
                     const searchBar = element.shadowRoot.querySelector(
-                        '.search-bar',
+                        '.search-bar'
                     );
                     searchBar.value = searchKey;
                     searchBar.dispatchEvent(new CustomEvent('change'));

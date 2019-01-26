@@ -1,5 +1,6 @@
 import { LightningElement, track, wire, api } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import { reduceErrors } from 'c/ldsUtils';
 
 /** Record DML operations. */
 import {
@@ -127,11 +128,11 @@ export default class OrderBuilder extends LightningElement {
                 // refresh the Order_Item__c SObjects
                 return refreshApex(this.wiredOrderItems);
             })
-            .catch(() => {
+            .catch(e => {
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'An error has occurred',
-                        message: "Couldn't add order item",
+                        title: 'Error creating order',
+                        message: reduceErrors(e).join(', '),
                         variant: 'error'
                     })
                 );
@@ -171,7 +172,7 @@ export default class OrderBuilder extends LightningElement {
                 this.dispatchEvent(
                     new ShowToastEvent({
                         title: 'Error updating order item',
-                        message: e.message,
+                        message: reduceErrors(e).join(', '),
                         variant: 'error'
                     })
                 );
@@ -201,7 +202,7 @@ export default class OrderBuilder extends LightningElement {
                 this.dispatchEvent(
                     new ShowToastEvent({
                         title: 'Error deleting order item',
-                        message: e.message,
+                        message: reduceErrors(e).join(', '),
                         variant: 'error'
                     })
                 );

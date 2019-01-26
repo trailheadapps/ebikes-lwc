@@ -142,7 +142,7 @@ describe('c-product-filter', () => {
     describe('getPicklistValues @wire error', () => {
         it('shows error message elements', () => {
             const element = createElement('c-product-filter', {
-                is: ProductFilter,
+                is: ProductFilter
             });
             document.body.appendChild(element);
 
@@ -150,7 +150,7 @@ describe('c-product-filter', () => {
 
             return Promise.resolve().then(() => {
                 const messages = element.shadowRoot.querySelectorAll(
-                    'c-inline-message',
+                    'c-inline-message'
                 );
                 // One error message per @wire
                 expect(messages).toHaveLength(3);
@@ -161,7 +161,7 @@ describe('c-product-filter', () => {
             'does not render %s input options',
             type => {
                 const element = createElement('c-product-filter', {
-                    is: ProductFilter,
+                    is: ProductFilter
                 });
                 document.body.appendChild(element);
 
@@ -169,11 +169,11 @@ describe('c-product-filter', () => {
 
                 return Promise.resolve().then(() => {
                     const input = element.shadowRoot.querySelector(
-                        `[data-filter="${type}"]`,
+                        `[data-filter="${type}"]`
                     );
                     expect(input).toBeNull();
                 });
-            },
+            }
         );
     });
 });
