@@ -128,11 +128,11 @@ export default class OrderBuilder extends LightningElement {
                 // refresh the Order_Item__c SObjects
                 return refreshApex(this.wiredOrderItems);
             })
-            .catch(() => {
+            .catch(e => {
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'An error has occurred',
-                        message: "Couldn't add order item",
+                        title: 'Error creating order',
+                        message: reduceErrors(e).join(', '),
                         variant: 'error'
                     })
                 );

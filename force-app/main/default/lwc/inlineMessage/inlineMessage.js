@@ -10,7 +10,7 @@ const VARIANTS = {
 
 export default class InlineMessage extends LightningElement {
     /** Generic / user-friendly message */
-    @api friendlyMessage = 'Error retrieving data';
+    @api message = 'Error retrieving data';
 
     @track iconName = VARIANTS.info;
 
