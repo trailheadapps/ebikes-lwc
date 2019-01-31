@@ -5,21 +5,36 @@
                 "type": "Account",
                 "referenceId": "AccountRef1"
             },
-            "Name": "Wheelworks"
+            "Name": "Wheelworks",
+            "BillingStreet": "480 Trapelo Road",
+            "BillingCity": "Belmont",
+            "BillingState": "MA",
+            "BillingPostalCode": "02478",
+            "BillingCountry": "USA"
         },
         {
             "attributes": {
                 "type": "Account",
                 "referenceId": "AccountRef2"
             },
-            "Name": "Northern Trail Cycling"
+            "Name": "Northern Trail Cycling",
+            "BillingStreet": "415 Mission St",
+            "BillingCity": "San Francisco",
+            "BillingState": "CA",
+            "BillingPostalCode": "94105",
+            "BillingCountry": "USA"
         },
         {
             "attributes": {
                 "type": "Account",
                 "referenceId": "AccountRef3"
             },
-            "Name": "Boston Sporting Goods"
+            "Name": "Trailblazers",
+            "BillingStreet": "1095 Avenue of the Americas",
+            "BillingCity": "New York",
+            "BillingState": "NY",
+            "BillingPostalCode": "10036",
+            "BillingCountry": "USA"
         }
     ]
 }
