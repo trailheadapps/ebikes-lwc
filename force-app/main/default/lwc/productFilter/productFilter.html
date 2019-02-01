@@ -1,44 +1,91 @@
 <template>
     <lightning-card title="Filters" icon-name="standard:calibration">
         <div class="slds-m-horizontal_medium">
-            <lightning-input label="Search Key" type="search" onchange={handleSearchKeyChange}></lightning-input>
+            <lightning-input
+                label="Search Key"
+                type="search"
+                onchange={handleSearchKeyChange}
+            ></lightning-input>
             <section>
-                <lightning-slider label="Max Price" step="100" min="0" max="10000" value={maxPrice} onchange={handleMaxPriceChange}></lightning-slider>
+                <lightning-slider
+                    label="Max Price"
+                    step="100"
+                    min="0"
+                    max="10000"
+                    value={maxPrice}
+                    onchange={handleMaxPriceChange}
+                ></lightning-slider>
             </section>
             <section>
                 <h1>Category</h1>
                 <template if:true={categories.data}>
-                    <template for:each={categories.data.values} for:item="category">
-                        <lightning-input key={category.value} label={category.label} data-filter="categories"
-                            data-value={category.value} type="checkbox" checked onchange={handleCheckboxChange}></lightning-input>
+                    <template
+                        for:each={categories.data.values}
+                        for:item="category"
+                    >
+                        <lightning-input
+                            key={category.value}
+                            label={category.label}
+                            data-filter="categories"
+                            data-value={category.value}
+                            type="checkbox"
+                            checked
+                            onchange={handleCheckboxChange}
+                        ></lightning-input>
                     </template>
                 </template>
                 <template if:true={categories.error}>
-                    <c-inline-message message="Error loading categories" errors={categories.error}></c-inline-message>
+                    <c-inline-message
+                        message="Error loading categories"
+                        errors={categories.error}
+                    ></c-inline-message>
                 </template>
             </section>
             <section>
                 <h1>Material</h1>
                 <template if:true={materials.data}>
-                    <template for:each={materials.data.values} for:item="material">
-                        <lightning-input key={material.value} label={material.label} data-filter="materials"
-                            data-value={material.value} type="checkbox" checked onchange={handleCheckboxChange}></lightning-input>
+                    <template
+                        for:each={materials.data.values}
+                        for:item="material"
+                    >
+                        <lightning-input
+                            key={material.value}
+                            label={material.label}
+                            data-filter="materials"
+                            data-value={material.value}
+                            type="checkbox"
+                            checked
+                            onchange={handleCheckboxChange}
+                        ></lightning-input>
                     </template>
                 </template>
                 <template if:true={materials.error}>
-                    <c-inline-message message="Error loading materials" errors={materials.error}></c-inline-message>
+                    <c-inline-message
+                        message="Error loading materials"
+                        errors={materials.error}
+                    ></c-inline-message>
                 </template>
             </section>
             <section>
                 <h1>Level</h1>
                 <template if:true={levels.data}>
                     <template for:each={levels.data.values} for:item="level">
-                        <lightning-input key={level.value} label={level.label} data-filter="levels" data-value={level.value}
-                            type="checkbox" checked onchange={handleCheckboxChange}></lightning-input>
+                        <lightning-input
+                            key={level.value}
+                            label={level.label}
+                            data-filter="levels"
+                            data-value={level.value}
+                            type="checkbox"
+                            checked
+                            onchange={handleCheckboxChange}
+                        ></lightning-input>
                     </template>
                 </template>
                 <template if:true={levels.error}>
-                    <c-inline-message message="Error loading levels" errors={levels.error}></c-inline-message>
+                    <c-inline-message
+                        message="Error loading levels"
+                        errors={levels.error}
+                    ></c-inline-message>
                 </template>
             </section>
         </div>

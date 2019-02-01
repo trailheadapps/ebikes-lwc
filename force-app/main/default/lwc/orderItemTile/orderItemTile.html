@@ -1,20 +1,75 @@
 <template>
     <div class="content">
-        <img src={orderItem.Product__r.Picture_URL__c} class="product slds-align_absolute-center" alt="Product picture">
-        <p class="title slds-align_absolute-center">{orderItem.Product__r.Name}</p>
+        <img
+            src={orderItem.Product__r.Picture_URL__c}
+            class="product slds-align_absolute-center"
+            alt="Product picture"
+        />
+        <p class="title slds-align_absolute-center">
+            {orderItem.Product__r.Name}
+        </p>
         <p class="slds-align_absolute-center">
-            MSRP: <lightning-formatted-number value={orderItem.Product__r.MSRP__c} format-style="currency" currency-code="USD"></lightning-formatted-number>
+            MSRP:
+            <lightning-formatted-number
+                value={orderItem.Product__r.MSRP__c}
+                format-style="currency"
+                currency-code="USD"
+            ></lightning-formatted-number>
         </p>
         <div class="form slds-align_absolute-center">
-            <lightning-input onchange={handleFormChange} value={orderItem.Price__c} data-field-name="Price__c" label="Price" type="number" formatter="currency" class="price"></lightning-input>
-            <lightning-input onchange={handleFormChange} value={orderItem.Qty_S__c} data-field-name="Qty_S__c" label="Small" type="number" max-length="3" class="quantity"></lightning-input>
-            <lightning-input onchange={handleFormChange} value={orderItem.Qty_M__c} data-field-name="Qty_M__c" label="Medium" type="number" max-length="3" class="quantity"></lightning-input>
-            <lightning-input onchange={handleFormChange} value={orderItem.Qty_L__c} data-field-name="Qty_L__c" label="Large" type="number" max-length="3" class="quantity"></lightning-input>
+            <lightning-input
+                onchange={handleFormChange}
+                value={orderItem.Price__c}
+                data-field-name="Price__c"
+                label="Price"
+                type="number"
+                formatter="currency"
+                class="price"
+            ></lightning-input>
+            <lightning-input
+                onchange={handleFormChange}
+                value={orderItem.Qty_S__c}
+                data-field-name="Qty_S__c"
+                label="Small"
+                type="number"
+                max-length="3"
+                class="quantity"
+            ></lightning-input>
+            <lightning-input
+                onchange={handleFormChange}
+                value={orderItem.Qty_M__c}
+                data-field-name="Qty_M__c"
+                label="Medium"
+                type="number"
+                max-length="3"
+                class="quantity"
+            ></lightning-input>
+            <lightning-input
+                onchange={handleFormChange}
+                value={orderItem.Qty_L__c}
+                data-field-name="Qty_L__c"
+                label="Large"
+                type="number"
+                max-length="3"
+                class="quantity"
+            ></lightning-input>
         </div>
         <div class="action-buttons slds-align_absolute-center">
-            <lightning-button-icon onclick={deleteOrderItem} icon-name="utility:delete" variant="bare" size="large" class="delete-button"></lightning-button-icon>
+            <lightning-button-icon
+                onclick={deleteOrderItem}
+                icon-name="utility:delete"
+                variant="bare"
+                size="large"
+                class="delete-button"
+            ></lightning-button-icon>
             <template if:true={isModified}>
-                <lightning-button-icon onclick={saveOrderItem} icon-name="utility:check" variant="bare" size="large" class="save-button"></lightning-button-icon>
+                <lightning-button-icon
+                    onclick={saveOrderItem}
+                    icon-name="utility:check"
+                    variant="bare"
+                    size="large"
+                    class="save-button"
+                ></lightning-button-icon>
             </template>
         </div>
     </div>

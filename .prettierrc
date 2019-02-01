@@ -1,5 +1,11 @@
 {
     "singleQuote": true,
     "tabWidth": 4,
-    "trailingComma" : "none"
+    "trailingComma": "none",
+    "overrides": [
+        {
+            "files": "**/lwc/**/*.html",
+            "options": { "parser": "lwc" }
+        }
+    ]
 }

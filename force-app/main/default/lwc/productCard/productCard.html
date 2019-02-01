@@ -2,9 +2,17 @@
     <lightning-card icon-name="standard:apex_plugin">
         <template if:true={product.data}>
             <span slot="title">{product.data.fields.Name.value}</span>
-            <lightning-button-icon icon-name="utility:expand_alt" slot="actions" onclick={handleNavigateToRecord}></lightning-button-icon>
+            <lightning-button-icon
+                icon-name="utility:expand_alt"
+                slot="actions"
+                onclick={handleNavigateToRecord}
+            ></lightning-button-icon>
             <div class="slds-m-horizontal_medium">
-                <img src={product.data.fields.Picture_URL__c.value} class="product" alt="Product picture">
+                <img
+                    src={product.data.fields.Picture_URL__c.value}
+                    class="product"
+                    alt="Product picture"
+                />
                 <div class="row">
                     <div>Category:</div>
                     <div>{product.data.fields.Category__c.value}</div>
@@ -16,7 +24,12 @@
                 <div class="row">
                     <div>MSRP:</div>
                     <div>
-                        <lightning-formatted-number format-style="currency" currency-code="USD" value={product.data.fields.MSRP__c.value} class="price"></lightning-formatted-number>
+                        <lightning-formatted-number
+                            format-style="currency"
+                            currency-code="USD"
+                            value={product.data.fields.MSRP__c.value}
+                            class="price"
+                        ></lightning-formatted-number>
                     </div>
                 </div>
                 <section>Electric Components</section>
@@ -51,14 +64,16 @@
                     <div>Hydraulic disc, 200mm</div>
                 </div>
             </div>
-        </template>                            
+        </template>
 
         <template if:true={noData}>
-            <c-placeholder message="Select a product to see details"></c-placeholder>
+            <c-placeholder
+                message="Select a product to see details"
+            ></c-placeholder>
         </template>
 
         <template if:true={product.error}>
             <c-inline-message errors={product.error}></c-inline-message>
-        </template>                
+        </template>
     </lightning-card>
 </template>
