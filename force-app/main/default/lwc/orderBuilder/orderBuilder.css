@@ -1,9 +1,9 @@
 header {
     padding: 12px 16px;
-    background-color: rgba(194,51,53, 1);
-    color: #FFFFFF;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
+    background-color: rgba(194, 51, 53, 1);
+    color: #ffffff;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
     display: flex;
 }
 
@@ -20,8 +20,8 @@ header .right {
     background: rgb(243, 242, 242);
     display: flex;
     flex-wrap: wrap;
-    border-bottom-left-radius: .25rem;
-    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 }
 
 c-placeholder,

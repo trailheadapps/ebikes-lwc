@@ -5,7 +5,7 @@ img.product {
 
 .row {
     display: flex;
-    border-bottom: solid 1px #F3F2F2;
+    border-bottom: solid 1px #f3f2f2;
 }
 
 .row div:first-child {
@@ -24,5 +24,5 @@ section {
 }
 
 .price {
-    color: #C23335;
+    color: #c23335;
 }
