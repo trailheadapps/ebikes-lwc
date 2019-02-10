@@ -4,18 +4,34 @@
             <header class="slds-text-heading_small">
                 <div>
                     Order Total:
-                    <lightning-formatted-number value={orderPrice} format-style="currency" currency-code="USD" class="order-total"></lightning-formatted-number>
+                    <lightning-formatted-number
+                        value={orderPrice}
+                        format-style="currency"
+                        currency-code="USD"
+                        class="order-total"
+                    ></lightning-formatted-number>
                 </div>
                 <div class="right">Total Items: {orderQuantity}</div>
             </header>
-            <div class="drop-zone slds-p-around_x-small" ondrop={handleDrop} ondragover={handleDragOver}>
+            <div
+                class="drop-zone slds-p-around_x-small"
+                ondrop={handleDrop}
+                ondragover={handleDragOver}
+            >
                 <template for:each={orderItems} for:item="orderItem">
-                    <c-order-item-tile key={orderItem.Id} order-item={orderItem} class="slds-m-around_x-small"
-                        onorderitemchange={handleOrderItemChange} onorderitemdelete={handleOrderItemDelete}>
+                    <c-order-item-tile
+                        key={orderItem.Id}
+                        order-item={orderItem}
+                        class="slds-m-around_x-small"
+                        onorderitemchange={handleOrderItemChange}
+                        onorderitemdelete={handleOrderItemDelete}
+                    >
                     </c-order-item-tile>
                 </template>
                 <template if:false={orderItems.length}>
-                    <c-placeholder message="Drag products here to add items to the order"></c-placeholder>
+                    <c-placeholder
+                        message="Drag products here to add items to the order"
+                    ></c-placeholder>
                 </template>
             </div>
         </template>

@@ -2,11 +2,22 @@
     <div draggable={draggable} ondragstart={handleDragStart}>
         <a onclick={handleClick}>
             <div class="content">
-                <img src={pictureUrl} class="product slds-align_absolute-center" alt="Product picture">
+                <img
+                    src={pictureUrl}
+                    class="product slds-align_absolute-center"
+                    alt="Product picture"
+                />
                 <div>
                     <p class="title slds-align_absolute-center">{name}</p>
-                    <p class="slds-align_absolute-center">MSRP:&nbsp;
-                        <lightning-formatted-number format-style="currency" currency-code="USD" value={msrp} class="price" maximum-fraction-digits="0"></lightning-formatted-number>
+                    <p class="slds-align_absolute-center">
+                        MSRP:&nbsp;
+                        <lightning-formatted-number
+                            format-style="currency"
+                            currency-code="USD"
+                            value={msrp}
+                            class="price"
+                            maximum-fraction-digits="0"
+                        ></lightning-formatted-number>
                     </p>
                 </div>
             </div>

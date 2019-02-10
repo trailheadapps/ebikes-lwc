@@ -1,10 +1,31 @@
 <template>
     <lightning-layout vertical-align="center">
-        <lightning-layout-item><img src={product.Picture_URL__c} class="product" alt="Product picture"></lightning-layout-item>
-        <lightning-layout-item flexibility="grow" class="slds-p-horizontal_small">
+        <lightning-layout-item
+            ><img
+                src={product.Picture_URL__c}
+                class="product"
+                alt="Product picture"
+        /></lightning-layout-item>
+        <lightning-layout-item
+            flexibility="grow"
+            class="slds-p-horizontal_small"
+        >
             <p>{product.Name}</p>
-            <p><lightning-formatted-number format-style="currency" currency-code="USD" value={product.MSRP__c} class="price" maximum-fraction-digits="0"></lightning-formatted-number></p>
+            <p>
+                <lightning-formatted-number
+                    format-style="currency"
+                    currency-code="USD"
+                    value={product.MSRP__c}
+                    class="price"
+                    maximum-fraction-digits="0"
+                ></lightning-formatted-number>
+            </p>
         </lightning-layout-item>
-        <lightning-layout-item><lightning-button label="View Details" onclick={handleViewDetailsClick}></lightning-button></lightning-layout-item>
+        <lightning-layout-item
+            ><lightning-button
+                label="View Details"
+                onclick={handleViewDetailsClick}
+            ></lightning-button
+        ></lightning-layout-item>
     </lightning-layout>
 </template>
