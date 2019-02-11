@@ -3,17 +3,28 @@
         <div class="slds-m-horizontal_medium">
             <template if:true={similarProducts.data}>
                 <template if:true={similarProducts.data}>
-                    <template for:each={similarProducts.data} for:item="product">
-                        <c-product-list-item key={product.Id} product={product}></c-product-list-item>
+                    <template
+                        for:each={similarProducts.data}
+                        for:item="product"
+                    >
+                        <c-product-list-item
+                            key={product.Id}
+                            product={product}
+                        ></c-product-list-item>
                     </template>
-                </template>    
+                </template>
                 <template if:false={similarProducts.data.length}>
-                    <c-placeholder message="No similar products"></c-placeholder>
+                    <c-placeholder
+                        message="No similar products"
+                    ></c-placeholder>
                 </template>
             </template>
             <template if:true={errors}>
-                <c-inline-message message="An error has occurred while retrieving similar products" errors={errors}></c-inline-message>
-            </template>                
+                <c-inline-message
+                    message="An error has occurred while retrieving similar products"
+                    errors={errors}
+                ></c-inline-message>
+            </template>
         </div>
     </lightning-card>
 </template>

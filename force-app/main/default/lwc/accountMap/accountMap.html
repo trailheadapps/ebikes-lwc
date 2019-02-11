@@ -1,15 +1,23 @@
 <template>
-
-        <div class="slds-card">
-            <template if:true={markers.length}>
-                <lightning-map map-markers={markers} zoom-level={zoomLevel}></lightning-map>
-            </template>
-            <template if:false={markers.length}>
-                <c-inline-message variant="info" message="No address to map"></c-inline-message>
-            </template>    
-            <template if:true={error}>
-                <c-inline-message variant="error" message="Error retrieving map data" errors={error}></c-inline-message>
-            </template>
-        </div>            
-
+    <div class="slds-card">
+        <template if:true={markers.length}>
+            <lightning-map
+                map-markers={markers}
+                zoom-level={zoomLevel}
+            ></lightning-map>
+        </template>
+        <template if:false={markers.length}>
+            <c-inline-message
+                variant="info"
+                message="No address to map"
+            ></c-inline-message>
+        </template>
+        <template if:true={error}>
+            <c-inline-message
+                variant="error"
+                message="Error retrieving map data"
+                errors={error}
+            ></c-inline-message>
+        </template>
+    </div>
 </template>

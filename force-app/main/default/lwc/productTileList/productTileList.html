@@ -1,22 +1,42 @@
 <template>
     <div class="slds-card slds-p-around_x-small">
         <template if:true={searchBarIsVisible}>
-            <lightning-input label="Search Key" type="text" onchange={handleSearchKeyChange} class="search-bar"></lightning-input>
+            <lightning-input
+                label="Search Key"
+                type="text"
+                onchange={handleSearchKeyChange}
+                class="search-bar"
+            ></lightning-input>
         </template>
         <template if:true={products.data}>
             <template if:true={products.data.records.length}>
                 <div class="content">
-                    <template for:each={products.data.records} for:item="product">
-                        <c-product-tile key={product.Id} product={product} draggable={tilesAreDraggable} onselected={handleProductSelected}
-                            class="slds-m-around_x-small">
+                    <template
+                        for:each={products.data.records}
+                        for:item="product"
+                    >
+                        <c-product-tile
+                            key={product.Id}
+                            product={product}
+                            draggable={tilesAreDraggable}
+                            onselected={handleProductSelected}
+                            class="slds-m-around_x-small"
+                        >
                         </c-product-tile>
                     </template>
                 </div>
-                <c-paginator page-number={pageNumber} page-size={products.data.pageSize} total-item-count={products.data.totalItemCount}
-                    onprevious={handlePreviousPage} onnext={handleNextPage}></c-paginator>
+                <c-paginator
+                    page-number={pageNumber}
+                    page-size={products.data.pageSize}
+                    total-item-count={products.data.totalItemCount}
+                    onprevious={handlePreviousPage}
+                    onnext={handleNextPage}
+                ></c-paginator>
             </template>
             <template if:false={products.data.records.length}>
-                <c-placeholder message="There are no products matching your current selection"></c-placeholder>
+                <c-placeholder
+                    message="There are no products matching your current selection"
+                ></c-placeholder>
             </template>
         </template>
         <template if:true={products.error}>
