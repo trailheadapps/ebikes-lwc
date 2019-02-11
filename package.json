@@ -40,13 +40,13 @@
         }
     },
     "lint-staged": {
-        "**/lwc/**": [
-            "prettier --write",
-            "eslint",
-            "git add"
+        "**/*.{html,js,json,yaml,yml,md,cmp,page,component}": [
+            "prettier --write"
         ],
-        "**/aura/**": [
-            "prettier --write",
+        "**/lwc/**": [
+            "eslint"
+        ],
+        "*": [
             "git add"
         ]
     }
