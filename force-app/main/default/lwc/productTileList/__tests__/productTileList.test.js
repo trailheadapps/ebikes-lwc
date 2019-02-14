@@ -3,7 +3,7 @@ import ProductTileList from 'c/productTileList';
 import { fireEvent } from 'c/pubsub';
 import {
     registerTestWireAdapter,
-    registerLdsTestWireAdapter
+    registerApexTestWireAdapter
 } from '@salesforce/wire-service-jest-util';
 import getProducts from '@salesforce/apex/ProductController.getProducts';
 import { CurrentPageReference } from 'lightning/navigation';
@@ -23,8 +23,8 @@ const mockGetProducts = require('./data/getProducts.json');
 // when there is no data to display
 const mockGetProductsNoRecords = require('./data/getProductsNoRecords.json');
 
-// Register as an LDS wire adapter. Some tests verify that provisioned values trigger desired behavior.
-const getProductsAdapter = registerLdsTestWireAdapter(getProducts);
+// Register the Apex wire adapter. Some tests verify that provisioned values trigger desired behavior.
+const getProductsAdapter = registerApexTestWireAdapter(getProducts);
 
 // Register as a standard wire adapter because the component under test requires this adapter.
 // We don't exercise this wire adapter in the tests.
@@ -214,6 +214,7 @@ describe('c-product-tile-list', () => {
                 const inlineMessage = element.shadowRoot.querySelector(
                     'c-inline-message'
                 );
+                // TODO - validate more detail
                 expect(inlineMessage).not.toBeNull();
             });
         });
