@@ -8,73 +8,73 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 ## Table of contents
 
-- Installation Instructions
+-   Installation Instructions
 
-  - [Installing E-Bikes using Salesforce DX](#installing-e-bikes-using-salesforce-dx)
-  - [Installing E-Bikes using an unlocked package](#installing-e-bikes-using-an-unlocked-package)
+    -   [Installing E-Bikes using Salesforce DX](#installing-e-bikes-using-salesforce-dx)
+    -   [Installing E-Bikes using an unlocked package](#installing-e-bikes-using-an-unlocked-package)
 
-- [Optional installation instructions](#optional-installation-instructions)
+-   [Optional installation instructions](#optional-installation-instructions)
 
-- [Application Walkthrough](#application-walkthrough)
+-   [Application Walkthrough](#application-walkthrough)
 
 ## Installation Instructions
 
 There are two ways to install E-Bikes:
 
-- [Using Salesforce DX](#installing-e-bikes-using-salesforce-dx): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
-- [Using an Unlocked Package](#installing-e-bikes-using-an-unlocked-package): This option allows anybody to experience the sample app without installing a local development environment.
+-   [Using Salesforce DX](#installing-e-bikes-using-salesforce-dx): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
+-   [Using an Unlocked Package](#installing-e-bikes-using-an-unlocked-package): This option allows anybody to experience the sample app without installing a local development environment.
 
 ## Installing E-Bikes using Salesforce DX
 
 1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
 
-  - Enable Dev Hub in your Trailhead Playground
-  - Install Salesforce CLI
-  - Install Visual Studio Code
-  - Install the Visual Studio Code Salesforce extensions, including the Lightning Web Components extension
+-   Enable Dev Hub in your Trailhead Playground
+-   Install Salesforce CLI
+-   Install Visual Studio Code
+-   Install the Visual Studio Code Salesforce extensions, including the Lightning Web Components extension
 
 2. If you haven't already done so, authenticate with your hub org and provide it with an alias (**myhuborg** in the command below):
 
-  ```
-  sfdx force:auth:web:login -d -a myhuborg
-  ```
+```
+sfdx force:auth:web:login -d -a myhuborg
+```
 
 3. Clone the repository:
 
-  ```
-  git clone https://github.com/trailheadapps/ebikes-lwc
-  cd ebikes-lwc
-  ```
+```
+git clone https://github.com/trailheadapps/ebikes-lwc
+cd ebikes-lwc
+```
 
 4. Create a scratch org and provide it with an alias (**ebikes** in the command below):
 
-  ```
-  sfdx force:org:create -s -f config/project-scratch-def.json -a ebikes
-  ```
+```
+sfdx force:org:create -s -f config/project-scratch-def.json -a ebikes
+```
 
 5. Push the app to your scratch org:
 
-  ```
-  sfdx force:source:push
-  ```
+```
+sfdx force:source:push
+```
 
 6. Assign the **ebikes** permission set to the default user:
 
-  ```
-  sfdx force:user:permset:assign -n ebikes
-  ```
+```
+sfdx force:user:permset:assign -n ebikes
+```
 
 7. Load sample data:
 
-  ```
-  sfdx force:data:tree:import --plan ./data/sample-data-plan.json
-  ```
+```
+sfdx force:data:tree:import --plan ./data/sample-data-plan.json
+```
 
 8. Open the scratch org:
 
-  ```
-  sfdx force:org:open
-  ```
+```
+sfdx force:org:open
+```
 
 9. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
@@ -94,31 +94,31 @@ There are two ways to install E-Bikes:
 
 6. Import Account data:
 
-  - Click [here](https://raw.githubusercontent.com/trailheadapps/ebikes-lwc/master/data/accounts.csv) to acccess the **accounts.csv** file. Right click in the browser window and save the file as **accounts.csv**.
-  - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
-  - Click **Launch Wizard**.
-  - Click the **Standard objects** tab, click **Accounts and Contacts**, and click **Add new records**.
-  - Drag the **accounts.csv** file you just saved and drop it in the upload area.
-  - Click **Next**, **Next**, and **Start Import**.
+-   Click [here](https://raw.githubusercontent.com/trailheadapps/ebikes-lwc/master/data/accounts.csv) to acccess the **accounts.csv** file. Right click in the browser window and save the file as **accounts.csv**.
+-   In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
+-   Click **Launch Wizard**.
+-   Click the **Standard objects** tab, click **Accounts and Contacts**, and click **Add new records**.
+-   Drag the **accounts.csv** file you just saved and drop it in the upload area.
+-   Click **Next**, **Next**, and **Start Import**.
 
 7. Import Product Family data:
 
-  - Click [here](https://raw.githubusercontent.com/trailheadapps/ebikes-lwc/master/data/product_families.csv) to acccess the **product_families.csv** file. Right click in the browser window and save the file as **product_families.csv**.
-  - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
-  - Click **Launch Wizard**.
-  - Click the **Custom objects** tab, click **Product Families**, and click **Add new records**.
-  - Drag the **product_families.csv** file you just saved and drop it in the upload area.
-  - Click **Next**, **Next**, and **Start Import**.
+-   Click [here](https://raw.githubusercontent.com/trailheadapps/ebikes-lwc/master/data/product_families.csv) to acccess the **product_families.csv** file. Right click in the browser window and save the file as **product_families.csv**.
+-   In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
+-   Click **Launch Wizard**.
+-   Click the **Custom objects** tab, click **Product Families**, and click **Add new records**.
+-   Drag the **product_families.csv** file you just saved and drop it in the upload area.
+-   Click **Next**, **Next**, and **Start Import**.
 
 8. Import Product data:
 
-  - Click [here](https://raw.githubusercontent.com/trailheadapps/ebikes-lwc/master/data/products.csv) to acccess the **products.csv** file. Right click in the browser window and save the file as **products.csv**.
-  - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
-  - Click **Launch Wizard**.
-  - Click the **Custom objects** tab, click **Products**, and click **Add new records**.
-  - In the **Add new records** menu, under _Which Product Family field in your file do you want to match against to set the Product Family lookup field?_ select **Product Family Name** in the dropdown menu.
-  - Drag the **products.csv** file you just saved and drop it in the upload area.
-  - Click **Next**, **Next**, and **Start Import**.
+-   Click [here](https://raw.githubusercontent.com/trailheadapps/ebikes-lwc/master/data/products.csv) to acccess the **products.csv** file. Right click in the browser window and save the file as **products.csv**.
+-   In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
+-   Click **Launch Wizard**.
+-   Click the **Custom objects** tab, click **Products**, and click **Add new records**.
+-   In the **Add new records** menu, under _Which Product Family field in your file do you want to match against to set the Product Family lookup field?_ select **Product Family Name** in the dropdown menu.
+-   Drag the **products.csv** file you just saved and drop it in the upload area.
+-   Click **Next**, **Next**, and **Start Import**.
 
 9. In App Launcher, select the **E-Bikes** app.
 

@@ -1,40 +1,40 @@
 {
-  "records": [
-    {
-      "attributes": {
-        "type": "Product_Family__c",
-        "referenceId": "DynamoRef"
-      },
-      "Name": "Dynamo",
-      "Description__c": "Performance and reliability. The best choice for hobbyists and enthusiasts.",
-      "Category__c": "Mountain"
-    },
-    {
-      "attributes": {
-        "type": "Product_Family__c",
-        "referenceId": "FuseRef"
-      },
-      "Name": "Fuse",
-      "Description__c": "Commute and off-road? The Fuse bikes do it all!",
-      "Category__c": "Hybrid"
-    },
-    {
-      "attributes": {
-        "type": "Product_Family__c",
-        "referenceId": "ElectraRef"
-      },
-      "Name": "Electra",
-      "Description__c": "Top of the line commuter bikes that can handle long and challenging commutes.",
-      "Category__c": "Commuter"
-    },
-    {
-      "attributes": {
-        "type": "Product_Family__c",
-        "referenceId": "VoltRef"
-      },
-      "Name": "Volt",
-      "Description__c": "Fun and Foldable electric bicycles.",
-      "Category__c": "Commuter"
-    }
-  ]
+    "records": [
+        {
+            "attributes": {
+                "type": "Product_Family__c",
+                "referenceId": "DynamoRef"
+            },
+            "Name": "Dynamo",
+            "Description__c": "Performance and reliability. The best choice for hobbyists and enthusiasts.",
+            "Category__c": "Mountain"
+        },
+        {
+            "attributes": {
+                "type": "Product_Family__c",
+                "referenceId": "FuseRef"
+            },
+            "Name": "Fuse",
+            "Description__c": "Commute and off-road? The Fuse bikes do it all!",
+            "Category__c": "Hybrid"
+        },
+        {
+            "attributes": {
+                "type": "Product_Family__c",
+                "referenceId": "ElectraRef"
+            },
+            "Name": "Electra",
+            "Description__c": "Top of the line commuter bikes that can handle long and challenging commutes.",
+            "Category__c": "Commuter"
+        },
+        {
+            "attributes": {
+                "type": "Product_Family__c",
+                "referenceId": "VoltRef"
+            },
+            "Name": "Volt",
+            "Description__c": "Fun and Foldable electric bicycles.",
+            "Category__c": "Commuter"
+        }
+    ]
 }
