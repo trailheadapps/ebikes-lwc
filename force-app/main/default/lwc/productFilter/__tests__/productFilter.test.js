@@ -4,7 +4,7 @@ import { fireEvent } from 'c/pubsub';
 import {
     registerLdsTestWireAdapter,
     registerTestWireAdapter
-} from '@salesforce/wire-service-jest-util';
+} from '@salesforce/lwc-jest';
 import { CurrentPageReference } from 'lightning/navigation';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
 

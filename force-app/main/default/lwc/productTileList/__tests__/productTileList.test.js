@@ -3,8 +3,8 @@ import ProductTileList from 'c/productTileList';
 import { fireEvent } from 'c/pubsub';
 import {
     registerTestWireAdapter,
-    registerLdsTestWireAdapter
-} from '@salesforce/wire-service-jest-util';
+    registerApexTestWireAdapter
+} from '@salesforce/lwc-jest';
 import getProducts from '@salesforce/apex/ProductController.getProducts';
 import { CurrentPageReference } from 'lightning/navigation';
 
@@ -23,8 +23,8 @@ const mockGetProducts = require('./data/getProducts.json');
 // when there is no data to display
 const mockGetProductsNoRecords = require('./data/getProductsNoRecords.json');
 
-// Register as an LDS wire adapter. Some tests verify that provisioned values trigger desired behavior.
-const getProductsAdapter = registerLdsTestWireAdapter(getProducts);
+// Register the Apex wire adapter. Some tests verify that provisioned values trigger desired behavior.
+const getProductsAdapter = registerApexTestWireAdapter(getProducts);
 
 // Register as a standard wire adapter because the component under test requires this adapter.
 // We don't exercise this wire adapter in the tests.
@@ -204,18 +204,34 @@ describe('c-product-tile-list', () => {
     });
 
     describe('getProducts @wire error', () => {
-        it('shows error message element', () => {
+        it('shows error message element with error details populated', () => {
+            // This is the default error message that gets emitted from apex
+            // adapters. See @salesforce/wire-service-jest-util for the source.
+            const defaultError = 'An internal server error has occurred';
             const element = createElement('c-product-tile-list', {
                 is: ProductTileList
             });
             document.body.appendChild(element);
             getProductsAdapter.error();
-            return Promise.resolve().then(() => {
-                const inlineMessage = element.shadowRoot.querySelector(
-                    'c-inline-message'
-                );
-                expect(inlineMessage).not.toBeNull();
-            });
+            return Promise.resolve()
+                .then(() => {
+                    const inlineMessage = element.shadowRoot.querySelector(
+                        'c-inline-message'
+                    );
+                    // check the "Show Details" checkbox to render additional error messages
+                    const lightningInput = inlineMessage.shadowRoot.querySelector(
+                        'lightning-input'
+                    );
+                    lightningInput.checked = true;
+                    lightningInput.dispatchEvent(new CustomEvent('change'));
+                })
+                .then(() => {
+                    const inlineMessage = element.shadowRoot.querySelector(
+                        'c-inline-message'
+                    );
+                    const text = inlineMessage.shadowRoot.textContent;
+                    expect(text).toContain(defaultError);
+                });
         });
     });
 
