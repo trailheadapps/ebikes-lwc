@@ -21,7 +21,6 @@ public with sharing class ProductController {
         Decimal maxPrice;
         String[] categories, materials, levels, criteria = new String[]{};
         if (filters != null) {
-            // Filters filters = (Filters) JSON.deserializeStrict(filters, ProductController.Filters.class);
             maxPrice = filters.maxPrice;
             materials = filters.materials;
             levels = filters.levels;
