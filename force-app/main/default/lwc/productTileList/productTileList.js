@@ -36,7 +36,7 @@ export default class ProductTileList extends LightningElement {
     @track totalItemCount = 0;
 
     /** JSON.stringified version of filters to pass to apex */
-    filters = '{}';
+    filters = {};
 
     @wire(CurrentPageReference) pageRef;
 
@@ -59,12 +59,11 @@ export default class ProductTileList extends LightningElement {
     }
 
     handleSearchKeyChange(event) {
-        const searchKey = event.target.value.toLowerCase();
-        this.handleFilterChange({ searchKey });
+        this.filters.searchKey = event.target.value.toLowerCase();
     }
 
     handleFilterChange(filters) {
-        this.filters = JSON.stringify(filters);
+        this.filters = filters;
         this.pageNumber = 1;
     }
 
