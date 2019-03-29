@@ -10,7 +10,7 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 -   Installation Instructions
 
-    -   [Installing E-Bikes using Salesforce DX](#installing-e-bikes-using-salesforce-dx)
+    -   [Installing E-Bikes using a scratch org](#installing-e-bikes-using-a-scratch-org)
     -   [Installing E-Bikes using an unlocked package](#installing-e-bikes-using-an-unlocked-package)
 
 -   [Optional installation instructions](#optional-installation-instructions)
@@ -21,10 +21,10 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 There are two ways to install E-Bikes:
 
--   [Using Salesforce DX](#installing-e-bikes-using-salesforce-dx): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
+-   [Using a Scratch Org](#installing-e-bikes-using-a-scratch-org): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
 -   [Using an Unlocked Package](#installing-e-bikes-using-an-unlocked-package): This option allows anybody to experience the sample app without installing a local development environment.
 
-## Installing E-Bikes using Salesforce DX
+## Installing E-Bikes using a Scratch Org
 
 1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
 
