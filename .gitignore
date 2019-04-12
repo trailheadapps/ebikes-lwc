@@ -17,6 +17,7 @@ yarn-error.log*
 
 # Dependency directories
 node_modules/
+yarn.lock
 
 # Eslint cache
 .eslintcache
@@ -32,3 +33,4 @@ $RECYCLE.BIN/
 
 # VS Code project settings
 .vscode/
+
