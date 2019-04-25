@@ -6,6 +6,8 @@
 
 E-Bikes is a sample application that demonstrates how to build applications with Lightning Web Components. E-Bikes is a fictitious electric bicycle manufacturer. The application helps E-Bikes manage their products and reseller orders using a rich user experience.
 
+> If you want to experience Salesforce Communities with Lightning Web Components, check out the [E-Bikes Communities repository](https://github.com/trailheadapps/ebikes-communities-lwc).
+
 ## Table of contents
 
 -   Installation Instructions
