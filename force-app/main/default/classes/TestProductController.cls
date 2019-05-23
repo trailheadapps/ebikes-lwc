@@ -3,7 +3,7 @@ public class TestProductController {
 
     @testSetup
     static void createProducts() {
-        List<Product__c> products = new List<Product__c>();
+        List<Product__c> products =new List<Product__c>();
 
         products.add(new Product__c(
                         Name='Sample Bike 1',
@@ -24,17 +24,27 @@ public class TestProductController {
 
     @isTest
     static void testGetProducts() {
-        String filters = '{"searchKey":"Sample", "maxPrice":2000, "categories": ["Mountain"], "levels": ["Beginner"], "materials":["Carbon"]}, 1';
-        PagedResult result = ProductController.getProducts(filters, 1);
+        ProductController.Filters filters =new ProductController.Filters();
+        filters.searchKey = 'Sample';
+        filters.maxPrice = 2000;
+        filters.categories = new List<String> {'Mountain'};
+        filters.levels = new List<String> {'Beginner'};
+        filters.materials = new List<String> {'Carbon'};
+        PagedResult result =ProductController.getProducts(filters, 1);
         System.assertEquals(result.records.size(), 2);
     }
 
     @isTest
     static void testGetSimilarProducts() {
-        String filters = '{"searchKey":"Sample", "maxPrice":2000, "categories": ["Mountain"], "levels": ["Beginner"], "materials":["Carbon"]}, 1';
-        PagedResult result = ProductController.getProducts(filters, 1);
-        Product__c productToCompare = (Product__c)result.records[0];
-        Product__c[] products = ProductController.getSimilarProducts(productToCompare.Id, null);
+        ProductController.Filters filters =new ProductController.Filters();
+        filters.searchKey = 'Sample';
+        filters.maxPrice = 2000;
+        filters.categories = new List<String> {'Mountain'};
+        filters.levels = new List<String> {'Beginner'};
+        filters.materials = new List<String> {'Carbon'};
+        PagedResult result =ProductController.getProducts(filters, 1);
+        Product__c productToCompare =(Product__c)result.records[0];
+        Product__c[] products =ProductController.getSimilarProducts(productToCompare.Id, null);
         System.assertEquals(products.size(), 1);
     }
 

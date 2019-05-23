@@ -237,8 +237,8 @@ describe('c-product-tile-list', () => {
 
     describe('with search bar visible', () => {
         it('updates getProducts @wire with searchKey as filter when search bar changes', () => {
-            const searchKey = 'foo';
-            const expected = JSON.stringify({ searchKey });
+            const input = 'foo';
+            const expected = { searchKey: input };
             const element = createElement('c-product-tile-list', {
                 is: ProductTileList
             });
@@ -251,12 +251,12 @@ describe('c-product-tile-list', () => {
                     const searchBar = element.shadowRoot.querySelector(
                         '.search-bar'
                     );
-                    searchBar.value = searchKey;
+                    searchBar.value = input;
                     searchBar.dispatchEvent(new CustomEvent('change'));
                 })
                 .then(() => {
                     const { filters } = getProductsAdapter.getLastConfig();
-                    expect(filters).toBe(expected);
+                    expect(filters).toEqual(expected);
                 });
         });
     });
