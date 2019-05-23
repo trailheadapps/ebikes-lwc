@@ -23,9 +23,6 @@ export default class ProductTileList extends LightningElement {
      */
     @api tilesAreDraggable = false;
 
-    /** All available Product__c[]. */
-    @track products = [];
-
     /** Current page in the product list. */
     @track pageNumber = 1;
 
