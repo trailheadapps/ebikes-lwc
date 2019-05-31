@@ -8,6 +8,8 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 > If you want to experience Salesforce Communities with Lightning Web Components, check out the [E-Bikes Communities repository](https://github.com/trailheadapps/ebikes-communities-lwc).
 
+> This sample application is designed to run on Salesforce Platform. If you want to experience Lightning Web Components on any platform, please visit https://lwc.dev, and try out our Lightning Web Components sample application [LWC Recipes OSS](https://github.com/trailheadapps/lwc-recipes-oss).
+
 ## Table of contents
 
 -   Installation Instructions
