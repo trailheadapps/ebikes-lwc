@@ -58,9 +58,7 @@ describe('c-product-tile-list', () => {
                     mockGetProducts.totalItemCount / mockGetProducts.pageSize
                 );
                 const regex = new RegExp(
-                    `${mockGetProducts.totalItemCount} items(.*)page ${
-                        mockGetProducts.pageNumber
-                    } of ${totalPages}`
+                    `${mockGetProducts.totalItemCount} items(.*)page ${mockGetProducts.pageNumber} of ${totalPages}`
                 );
                 expect(paginator.shadowRoot.textContent).toMatch(regex);
             });
