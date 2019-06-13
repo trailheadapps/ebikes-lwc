@@ -56,7 +56,7 @@ export default class ProductTileList extends LightningElement {
     }
 
     handleSearchKeyChange(event) {
-        this.filters.searchKey = {
+        this.filters = {
             searchKey: event.target.value.toLowerCase()
         };
         this.pageNumber = 1;
