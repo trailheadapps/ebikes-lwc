@@ -1,0 +1,12 @@
+<aura:component
+    implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+    access="global"
+>
+    <lightning:container
+        aura:id="jsApp"
+        src="{!$Resource.lccEbikes + '/index.html'}"
+    />
+    <c:bikeCustomizerButtonBar
+        onchange="{!c.handleChange}"
+    ></c:bikeCustomizerButtonBar>
+</aura:component>

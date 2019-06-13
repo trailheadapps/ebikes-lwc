@@ -1,0 +1,28 @@
+.topPanelContainer {
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.topPanel {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.poweredByImage {
+    vertical-align: middle;
+    margin: 12px 8px 8px 0;
+}
+
+img {
+    border: none;
+}

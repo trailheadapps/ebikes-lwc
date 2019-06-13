@@ -2,8 +2,10 @@
     "orgName": "Ebikes",
     "edition": "Developer",
     "hasSampleData": false,
+    "features": ["Communities", "Sites"],
     "settings": {
         "orgPreferenceSettings": {
+            "networksEnabled": true,
             "s1DesktopEnabled": true,
             "selfSetPasswordInApi": true,
             "s1EncryptedStoragePref2": false

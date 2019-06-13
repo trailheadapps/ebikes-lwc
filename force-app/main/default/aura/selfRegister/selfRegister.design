@@ -1,0 +1,12 @@
+<design:component label="Custom Self Register">
+    <design:attribute name="startUrl"/>
+    <design:attribute name="regConfirmUrl" default="./CheckPasswordResetEmail"/>
+    <design:attribute name="firstnameLabel" default="First Name"/>
+    <design:attribute name="lastnameLabel" default="Last Name"/>
+    <design:attribute name="emailLabel" default="Email"/>
+    <design:attribute name="passwordLabel" default="Create Password"/>
+    <design:attribute name="confirmPasswordLabel" default="Confirm Password"/>
+    <design:attribute name="submitButtonLabel" default="Sign Up"/>
+    <design:attribute name="includePasswordField" default="false"/>
+    <design:attribute name="extraFieldsFieldSet"/>
+</design:component>

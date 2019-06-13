@@ -1,0 +1,45 @@
+<apex:page
+    showHeader="false"
+    title="{!$Label.site.site_under_construction}"
+    id="StdExceptionTemplate"
+    cache="false"
+>
+    <apex:stylesheet
+        value="{!URLFOR($Resource.SiteSamples, 'SiteStyles.css')}"
+    />
+    <center>
+        <apex:panelGrid bgcolor="white" columns="1">
+            <br />
+            <br />
+            <apex:panelGrid
+                width="758"
+                cellpadding="0"
+                cellspacing="0"
+                bgcolor="white"
+                columns="1"
+                styleClass="topPanelContainer"
+            >
+                <br />
+                <apex:outputPanel layout="block" styleClass="topPanel">
+                    <apex:panelGrid
+                        width="758"
+                        cellpadding="0"
+                        cellspacing="0"
+                        bgcolor="white"
+                        columns="3"
+                    >
+                        <apex:image
+                            url="{!URLFOR($Resource.SiteSamples, 'img/clock.png')}"
+                        />
+                        <apex:insert name="icon" />
+                        <apex:insert name="error" />
+                    </apex:panelGrid>
+                </apex:outputPanel>
+                <c:SitePoweredBy />
+            </apex:panelGrid>
+            <br />
+            <site:previewAsAdmin />
+            <br />
+        </apex:panelGrid>
+    </center>
+</apex:page>
