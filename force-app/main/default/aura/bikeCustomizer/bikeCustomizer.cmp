@@ -2,11 +2,14 @@
     implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
     access="global"
 >
-    <aura:handler event="c:messageJsApp" action="{!c.handleEvent}" />
+    <c:bikeCustomizerSelector
+        onchange="{!c.handleChange}"
+    ></c:bikeCustomizerSelector>
     <lightning:container
         aura:id="jsApp"
         src="{!$Resource.lccEbikes + '/index.html'}"
-        onmessage="{!c.handleMessage}"
-        onerror="{!c.handleError}"
     />
+    <c:bikeCustomizerButtonBar
+        onchange="{!c.handleChange}"
+    ></c:bikeCustomizerButtonBar>
 </aura:component>

@@ -1,14 +1,5 @@
 ({
-    handleMessage: function(component, event, helper) {
-        var message = event.getParams();
-    },
-
-    handleError: function(component, event, helper) {
-        var error = event.getParams();
-        console.log(error);
-    },
-
-    handleEvent: function(component, event) {
+    handleChange: function(component, event) {
         var bikePart = event.getParam('bikePart');
         var color = event.getParam('color');
 
@@ -30,7 +21,6 @@
                 detail: bikePart
             }
         };
-
         component.find('jsApp').message(moveCameraMsg);
     }
 });
