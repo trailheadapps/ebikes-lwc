@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CspTrustedSite xmlns="http://soap.sforce.com/2006/04/metadata">
+    <context>Communities</context>
+    <description>www_cannondale_com Trusted Site Added Via Community Builder</description>
+    <endpointUrl>https://www.cannondale.com</endpointUrl>
+    <isActive>true</isActive>
+</CspTrustedSite>

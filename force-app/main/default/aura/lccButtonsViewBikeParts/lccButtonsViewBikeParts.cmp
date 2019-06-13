@@ -1,0 +1,29 @@
+<aura:component
+    implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
+    access="global"
+>
+    <lightning:button
+        variant="success"
+        label="View Frame"
+        title="frameView"
+        onclick="{!c.viewBikePart}"
+    />
+    <lightning:button
+        variant="brand"
+        label="View Seat"
+        title="seatView"
+        onclick="{!c.viewBikePart}"
+    />
+    <lightning:button
+        variant="destructive"
+        label="View Handlebars"
+        title="handlebarsView"
+        onclick="{!c.viewBikePart}"
+    />
+    <lightning:button
+        variant="neutral"
+        label="View Waterbottle"
+        title="waterbottleView"
+        onclick="{!c.viewBikePart}"
+    />
+</aura:component>

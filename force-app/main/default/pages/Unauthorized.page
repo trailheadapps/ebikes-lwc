@@ -1,0 +1,70 @@
+<apex:page
+    showHeader="false"
+    title="{!$Label.site.authorization_required}"
+    id="Unauthorized"
+    cache="false"
+>
+    <apex:composition template="{!$Site.Template}">
+        <apex:define name="body">
+            <center>
+                <apex:panelGrid bgcolor="white" columns="1">
+                    <br />
+                    <br />
+                    <apex:panelGrid
+                        width="758"
+                        cellpadding="0"
+                        cellspacing="0"
+                        bgcolor="white"
+                        columns="1"
+                        styleClass="topPanelContainer"
+                    >
+                        <br />
+                        <apex:outputPanel layout="block" styleClass="topPanel">
+                            <apex:panelGrid
+                                width="758"
+                                cellpadding="0"
+                                cellspacing="0"
+                                bgcolor="white"
+                                columns="3"
+                            >
+                                <apex:image
+                                    url="{!URLFOR($Resource.SiteSamples, 'img/clock.png')}"
+                                />
+                                <apex:image
+                                    url="{!URLFOR($Resource.SiteSamples, 'img/unauthorized.png')}"
+                                />
+                                <apex:panelGroup>
+                                    <apex:outputText
+                                        styleClass="title"
+                                        value="{!$Label.site.authorization_required}"
+                                    />
+                                    <br />
+                                    <br />
+                                    <apex:outputText
+                                        value="{!$Label.site.login_or_register_first}"
+                                    />
+                                    <br />
+                                    <apex:outputText
+                                        value="{!$Label.site.click_forget_password}"
+                                    />
+                                    <br />
+                                    <br />
+                                </apex:panelGroup>
+                                <apex:outputText value="" />
+                                <apex:outputText value="" />
+                                <c:SiteLogin
+                                    rendered="{!$Site.LoginEnabled && ISPICKVAL($User.UserType,'Guest')}"
+                                    id="siteLogin"
+                                />
+                                <br />
+                            </apex:panelGrid>
+                        </apex:outputPanel>
+                        <c:SitePoweredBy />
+                    </apex:panelGrid>
+                </apex:panelGrid>
+            </center>
+            <br />
+        </apex:define>
+    </apex:composition>
+    <site:previewAsAdmin />
+</apex:page>

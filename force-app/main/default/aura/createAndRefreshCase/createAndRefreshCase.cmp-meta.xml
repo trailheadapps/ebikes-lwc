@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AuraDefinitionBundle xmlns="urn:metadata.tooling.soap.sforce.com" fqn="createAndRefreshCase">
+    <apiVersion>46.0</apiVersion>
+    <description>A Lightning Component Bundle</description>
+    <masterLabel>Create and Refresh Case (Aura)</masterLabel>
+</AuraDefinitionBundle>

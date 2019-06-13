@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event to message the JS app">
+    <aura:attribute name="bikePart" type="String"/>
+    <aura:attribute name="color" type="String" />
+</aura:event>

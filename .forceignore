@@ -16,3 +16,6 @@ package.xml
 
 # LWC Jest
 **/__tests__/**
+
+# Allowing EBikes profile for source push/pull
+!**/E-Bikes Profile.profile-meta.xml
