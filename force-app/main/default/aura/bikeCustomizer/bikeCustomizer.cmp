@@ -2,9 +2,6 @@
     implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes"
     access="global"
 >
-    <c:bikeCustomizerSelector
-        onchange="{!c.handleChange}"
-    ></c:bikeCustomizerSelector>
     <lightning:container
         aura:id="jsApp"
         src="{!$Resource.lccEbikes + '/index.html'}"
