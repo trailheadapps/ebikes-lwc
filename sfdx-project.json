@@ -2,16 +2,9 @@
     "packageDirectories": [
         {
             "path": "force-app",
-            "default": true,
-            "package": "EBikesLWC",
-            "versionName": "Spring '19",
-            "versionNumber": "1.0.0.NEXT"
+            "default": true
         }
     ],
     "namespace": "",
-    "sourceApiVersion": "46.0",
-    "packageAliases": {
-        "EBikesLWC": "0HoB0000000GmiYKAS",
-        "EBikesLWC@1.0.0-3": "04tB0000000KAfOIAW"
-    }
+    "sourceApiVersion": "46.0"
 }
