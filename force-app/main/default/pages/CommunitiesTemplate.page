@@ -1,0 +1,8 @@
+<apex:page showHeader="false" sidebar="false" id="CommunitiesTemplate">
+    <apex:stylesheet
+        value="{!$Site.Prefix}/communities/CommunitiesStyles.css"
+    />
+    <apex:insert name="header" />
+    <apex:insert name="body" />
+    <apex:insert name="footer" />
+</apex:page>

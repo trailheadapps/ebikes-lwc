@@ -1,0 +1,8 @@
+<template>
+    <h1>{title}</h1>
+    <p class="slds-text-heading_large">{slogan}</p>
+    <a href={hrefUrl} class="slds-button slds-button_brand">
+        <!-- <a onclick={onButtonClickHandler} class="slds-button slds-button_brand"> -->
+        <slot name="button"></slot>
+    </a>
+</template>

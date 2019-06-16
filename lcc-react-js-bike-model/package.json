@@ -1,0 +1,20 @@
+{
+    "name": "lcc-bike-3d-model",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": ".",
+    "dependencies": {
+        "babylonjs": "^3.1.0-alpha3.7",
+        "gsap": "1.20.4",
+        "lightning-container": "^1.0.0",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0",
+        "react-scripts": "1.0.14"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    }
+}

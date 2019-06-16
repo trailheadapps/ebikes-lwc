@@ -134,6 +134,16 @@ jobs:
                   name: Push Source
                   command: |
                       node_modules/sfdx-cli/bin/run force:source:push -u ciorg
+    deploy_community_metadata:
+        # This deploys the non-source metadata to the ci scratch org.
+        <<: *defaults
+        steps:
+            - attach_workspace:
+                  at: ~/
+            - run:
+                  name: Push Source
+                  command: |
+                      node_modules/sfdx-cli/bin/run force:mdapi:deploy -u ciorg --deploydir mdapiDeploy/unpackaged -w 1
     create_and_test_package:
         <<: *defaults
         steps:
@@ -217,6 +227,12 @@ workflows:
                   filters:
                       branches:
                           ignore: master
+            - deploy_community_metadata:
+                  requires:
+                      - deploy_source
+                  filters:
+                      branches:
+                          ignore: master
             - create_and_test_package:
                   requires:
                       - setup_dx_orgs
@@ -225,7 +241,7 @@ workflows:
                           only: master
             - run_apex_tests:
                   requires:
-                      - deploy_source
+                      - deploy_community_metadata
                   filters:
                       branches:
                           ignore: master

@@ -1,0 +1,7 @@
+<aura:component
+    access="global"
+    implements="forceCommunity:availableForAllPageTypes"
+    description="Aura Component wrapper around LWC to handle refreshView event. Create Case is the LWC component handling the create case form."
+>
+    <c:createCase onrefresh="{!c.handleRefresh}" />
+</aura:component>

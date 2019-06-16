@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>46.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Hero</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="internalResource" type="Boolean" label="Internal Resource" description="Whether external or internal resource" default="true" />
+            <property name="resourceUrl" type="String" label="Resource URL" description="Where to get resource from" default="/CyclingGrass.jpg" />
+            <property name="imgOrVideo" type="String" label="Resource Type" description="Whether to show an image or a video." datasource="Image,Video" default="Image" />
+            <property name="title" type="String" label="Title" default="Electra Series" />
+            <property name="slogan" type="String" label="Slogan" default="Ride With Power" />
+            <property name="buttonText" type="String" label="Button Text" default="See Electra Bikes" />
+            <property name="heroDetailsPosition" type="String" label="Hero Text Block Position" datasource="apex://HeroDetailsPositionCustomPicklist" />
+            <property name="overlay" type="Boolean" label="Overlay" description="Apply dark overlay over hero" default="true" />
+            <property name="opacity" type="Integer" label="Overlay Opacity" description="How dark the overlay should be. 0 (no overlay) - 1 (completely dark)" min="0" max="10" default="5" />
+            <property name="buttonClickProductOrFamilyName" type="String" label="Button Click Product or Family Name" description="What Record To Navigate To. Either a Product or Product Family Name." default="Electra" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

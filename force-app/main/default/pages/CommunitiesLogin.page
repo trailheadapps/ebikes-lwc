@@ -1,0 +1,7 @@
+<apex:page
+    id="loginPage"
+    controller="CommunitiesLoginController"
+    action="{!forwardToAuthPage}"
+    title="{!$Label.site.site_login}"
+>
+</apex:page>

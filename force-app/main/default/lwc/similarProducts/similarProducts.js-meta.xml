@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
-    <apiVersion>45.0</apiVersion>
+    <apiVersion>46.0</apiVersion>
     <isExposed>true</isExposed>
+    <masterLabel>Similar Products</masterLabel>
     <targets>
         <target>lightning__RecordPage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__RecordPage">
@@ -11,6 +14,8 @@
                 <object>Product__c</object>
             </objects>
         </targetConfig>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="recordId" type="String" label="Record Id To find similarities" description="Default uses the current page's record id. Modify if you want a specific record to use." default="{!recordId}" />
+        </targetConfig>
     </targetConfigs>
-
 </LightningComponentBundle>

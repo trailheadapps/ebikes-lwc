@@ -23,9 +23,6 @@ export default class ProductTileList extends LightningElement {
      */
     @api tilesAreDraggable = false;
 
-    /** All available Product__c[]. */
-    @track products = [];
-
     /** Current page in the product list. */
     @track pageNumber = 1;
 
@@ -36,7 +33,7 @@ export default class ProductTileList extends LightningElement {
     @track totalItemCount = 0;
 
     /** JSON.stringified version of filters to pass to apex */
-    filters = '{}';
+    @track filters = {};
 
     @wire(CurrentPageReference) pageRef;
 
@@ -59,12 +56,14 @@ export default class ProductTileList extends LightningElement {
     }
 
     handleSearchKeyChange(event) {
-        const searchKey = event.target.value.toLowerCase();
-        this.handleFilterChange({ searchKey });
+        this.filters = {
+            searchKey: event.target.value.toLowerCase()
+        };
+        this.pageNumber = 1;
     }
 
     handleFilterChange(filters) {
-        this.filters = JSON.stringify(filters);
+        this.filters = { ...filters };
         this.pageNumber = 1;
     }
 
