@@ -110,7 +110,7 @@ git checkout -b devOrg
 
 6. In VS Code, use the Ctrl/Cmd-P shortcut for Quick Open. Type **E_Bikes.site** and click on the **E_Bikes.site-meta.xml** file to open it.
 
-7. Change the value in the **\<siteAdmin>** line to be your user name in the Developer Org, and change the value in the **\<subdomain>** line to be the subdomain you selected for your Communities (**\codey@ebikes.dev** and **codeys-ebikes-developer-edition** in the example below). Save the file.
+7. Change the value in the **\<siteAdmin>** line to be your user name in the Developer Org, and change the value in the **\<subdomain>** line to be the subdomain you selected for your Communities (**codey\@ebikes\.dev** and **codeys-ebikes-developer-edition** in the example below). Save the file.
 ```
     <siteAdmin>codey@ebikes.dev</siteAdmin>
     <siteType>ChatterNetwork</siteType>
