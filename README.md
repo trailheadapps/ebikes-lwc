@@ -138,27 +138,21 @@ sfdx force:user:permset:assign -n ebikes
 sfdx force:data:tree:import --plan ./data/sample-data-plan.json
 ```
 
-11. Deploy Community metadata
-
-```
-sfdx force:mdapi:deploy -u ebikes --deploydir mdapiDeploy/unpackaged -w 1
-```
-
-12. Open the scratch org:
+11. Open the scratch org:
 
 ```
 sfdx force:org:open
 ```
 
-13. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
+12. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
-14. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
+13. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
 
-15. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
+14. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
 
-16. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
+15. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
 
-17. If you want to work with the application in a scratch org in the future, you'll want to switch back to the **master** branch:
+16. If you want to work with the application in a scratch org in the future, you'll want to switch back to the **master** branch:
 
 ```
 git checkout master
