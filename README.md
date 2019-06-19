@@ -120,39 +120,46 @@ git checkout -b devOrg
 <subdomain>codeys-ebikes-developer-edition</subdomain>
 ```
 
-8. Deploy the app to your Developer Edition org:
+8. Use Quick Open again to search for **Profile** and open **E-Bikes Profile.profile**. At the very end of the file, change the value in the **\<userLicense>** line to **Guest**. Save the file.
+
+```
+    <userLicense>Guest</userLicense>
+</Profile>
+```
+
+9. Deploy the app to your Developer Edition org:
 
 ```
 sfdx force:source:deploy -p force-app/main/default -u ebikesDE
 ```
 
-9. Assign the **ebikes** permission set to the default user:
+10. Assign the **ebikes** permission set to the default user:
 
 ```
-sfdx force:user:permset:assign -n ebikes
+sfdx force:user:permset:assign -n ebikes -u ebikesDE
 ```
 
-10. Load sample data:
+11. Load sample data:
 
 ```
-sfdx force:data:tree:import --plan ./data/sample-data-plan.json
+sfdx force:data:tree:import --plan ./data/sample-data-plan.json -u ebikesDE
 ```
 
-11. Open the scratch org:
+12. Open the Developer org:
 
 ```
-sfdx force:org:open
+sfdx force:org:open -u ebikesDE
 ```
 
-12. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
+13. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
-13. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
+14. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
 
-14. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
+15. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
 
-15. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
+16. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
 
-16. If you want to work with the application in a scratch org in the future, you'll want to switch back to the **master** branch:
+17. If you want to work with the application in a scratch org in the future, you'll want to switch back to the **master** branch:
 
 ```
 git checkout master
