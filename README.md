@@ -88,7 +88,7 @@ sfdx force:org:open
 
 ## Installing E-Bikes using a Developer Edition Org
 
-These steps assume you have followed the instructions above to install the application into a Scratch org first, and now want to deploy it to a more permanent environment, including for completion of the [Lightning Web Components Basics Trailhead module](https://trailhead.salesforce.com/content/learn/modules/lightning-web-components-basics).
+These steps assume you have followed the instructions above to install the application into a scratch org first, and now want to deploy it to a more permanent environment, including for completion of the [Lightning Web Components Basics Trailhead module](https://trailhead.salesforce.com/content/learn/modules/lightning-web-components-basics).
 
 1. It's recommended to sign up for a [new Developer Edition org](https://developer.salesforce.com/signup), to avoid conflicts with work you may have done in any other orgs. If you created a new Developer Edition org to serve as a DevHub, and haven't done other work in the org, you can use that org.
 
@@ -115,9 +115,9 @@ git checkout -b devOrg
 7. Change the value in the **\<siteAdmin>** line to be your user name in the Developer Org, and change the value in the **\<subdomain>** line to be the subdomain you selected for your Communities (**codey<span>@</span>ebikes.dev** and **codeys-ebikes-developer-edition** in the example below). Save the file.
 
 ```
-    <siteAdmin>codey@ebikes.dev</siteAdmin>
-    <siteType>ChatterNetwork</siteType>
-    <subdomain>codeys-ebikes-developer-edition</subdomain>
+<siteAdmin>codey@ebikes.dev</siteAdmin>
+<siteType>ChatterNetwork</siteType>
+<subdomain>codeys-ebikes-developer-edition</subdomain>
 ```
 
 8. Deploy the app to your Developer Edition org:
@@ -126,18 +126,39 @@ git checkout -b devOrg
 sfdx force:source:deploy -p force-app/main/default -u ebikesDE
 ```
 
-9. Follow the other deployment steps above, specifying your Developer org's alias:
+9. Assign the **ebikes** permission set to the default user:
 
 ```
-sfdx force:user:permset:assign -n ebikes -u ebikesDE
-sfdx force:data:tree:import --plan ./data/sample-data-plan.json -u ebikesDE
-sfdx force:mdapi:deploy -u ebikesDE --deploydir mdapiDeploy/unpackaged -w 1
-sfdx force:org:open -u ebikesDE
+sfdx force:user:permset:assign -n ebikes
 ```
 
-10. Follow the manual configuration steps from above.
+10. Load sample data:
 
-11. If you want to work with the application in a scratch org in the future, you'll want to switch back to the **master** branch:
+```
+sfdx force:data:tree:import --plan ./data/sample-data-plan.json
+```
+
+11. Deploy Community metadata
+
+```
+sfdx force:mdapi:deploy -u ebikes --deploydir mdapiDeploy/unpackaged -w 1
+```
+
+12. Open the scratch org:
+
+```
+sfdx force:org:open
+```
+
+13. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
+
+14. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
+
+15. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
+
+16. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
+
+17. If you want to work with the application in a scratch org in the future, you'll want to switch back to the **master** branch:
 
 ```
 git checkout master
