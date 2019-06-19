@@ -12,6 +12,8 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 -   [Installing E-Bikes using a scratch org](#installing-e-bikes-using-a-scratch-org)
 
+-   [Installing E-Bikes using a Developer Edition Org](#installing-e-bikes-using-a-developer-edition-org)
+
 -   [Optional installation instructions](#optional-installation-instructions)
 
 -   [Salesforce Application Walkthrough](#salesforce-application-walkthrough)
@@ -83,6 +85,78 @@ sfdx force:org:open
 12. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
 
 13. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
+
+## Installing E-Bikes using a Developer Edition Org
+
+These steps assume you have followed the instructions above to install the application into a scratch org first, and now want to deploy it to a more permanent environment, including for completion of the [Lightning Web Components Basics Trailhead module](https://trailhead.salesforce.com/content/learn/modules/lightning-web-components-basics).
+
+1. It's recommended to sign up for a [new Developer Edition org](https://developer.salesforce.com/signup), to avoid conflicts with work you may have done in any other orgs. If you created a new Developer Edition org to serve as a DevHub, and haven't done other work in the org, you can use that org.
+
+2. Once you've logged in to the org, in **Setup**, under **My Domain**, [register a My Domain](https://help.salesforce.com/articleView?id=domain_name_setup.htm&type=5).
+
+3. In **Setup**, under **Communities Settings**, click the **Enable communities** checkbox, and then select and register a subdomain for your community.
+
+4. In **Setup**, under **Object Manager**, delete the custom **Product** picklist field from the **Case** object.
+
+5. At the command line, authenticate to your Developer Edition, and provide it with an alias (**ebikesDE** in the command below):
+
+```
+sfdx force:auth:web:login -a ebikesDE
+```
+
+5. Check out a new branch of the code, to make changes that will allow deployment to a Developer Edition org:
+
+```
+git checkout -b devOrg
+```
+
+6. In VS Code, use the Ctrl/Cmd-P shortcut for Quick Open. Type **E_Bikes.site** and click on the **E_Bikes.site-meta.xml** file to open it.
+
+7. Change the value in the **\<siteAdmin>** line to be your user name in the Developer Org, and change the value in the **\<subdomain>** line to be the subdomain you selected for your Communities (**codey<span>@</span>ebikes.dev** and **codeys-ebikes-developer-edition** in the example below). Save the file.
+
+```
+<siteAdmin>codey@ebikes.dev</siteAdmin>
+<siteType>ChatterNetwork</siteType>
+<subdomain>codeys-ebikes-developer-edition</subdomain>
+```
+
+8. Deploy the app to your Developer Edition org:
+
+```
+sfdx force:source:deploy -p force-app/main/default -u ebikesDE
+```
+
+9. Assign the **ebikes** permission set to the default user:
+
+```
+sfdx force:user:permset:assign -n ebikes
+```
+
+10. Load sample data:
+
+```
+sfdx force:data:tree:import --plan ./data/sample-data-plan.json
+```
+
+11. Open the scratch org:
+
+```
+sfdx force:org:open
+```
+
+12. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
+
+13. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
+
+14. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
+
+15. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
+
+16. If you want to work with the application in a scratch org in the future, you'll want to switch back to the **master** branch:
+
+```
+git checkout master
+```
 
 ## Optional Installation Instructions
 
