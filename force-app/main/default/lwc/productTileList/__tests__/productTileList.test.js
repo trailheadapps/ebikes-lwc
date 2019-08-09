@@ -4,7 +4,7 @@ import { fireEvent } from 'c/pubsub';
 import {
     registerTestWireAdapter,
     registerApexTestWireAdapter
-} from '@salesforce/lwc-jest';
+} from '@salesforce/sfdx-lwc-jest';
 import getProducts from '@salesforce/apex/ProductController.getProducts';
 import { CurrentPageReference } from 'lightning/navigation';
 

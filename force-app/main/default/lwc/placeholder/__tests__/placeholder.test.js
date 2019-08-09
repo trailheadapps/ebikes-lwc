@@ -15,7 +15,7 @@ describe('c-placeholder', () => {
         });
         document.body.appendChild(element);
         const img = element.shadowRoot.querySelector('img');
-        // By default @salesforce/lwc-jest resolves the
+        // By default @salesforce/sfdx-lwc-jest resolves the
         // @salesforce/resourceUrl/bike_assets import to "bike_assets"
         expect(img.src).toMatch(/\/bike_assets\//);
     });
