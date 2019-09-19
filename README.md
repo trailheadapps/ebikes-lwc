@@ -42,49 +42,54 @@ git clone https://github.com/trailheadapps/ebikes-lwc
 cd ebikes-lwc
 ```
 
-4. Create a scratch org and provide it with an alias (**ebikes** in the command below):
+4. Config default hub username with an alias (**ebikes** in the command below):
+```
+sfdx force:config:set defaultdevhubusername=ebikes --global
+```
+
+5. Create a scratch org and provide it with an alias (**ebikes** in the command below):
 
 ```
 sfdx force:org:create -s -f config/project-scratch-def.json -a ebikes
 ```
 
-5. Push the app to your scratch org:
+6. Push the app to your scratch org:
 
 ```
 sfdx force:source:push
 ```
 
-6. Assign the **ebikes** permission set to the default user:
+7. Assign the **ebikes** permission set to the default user:
 
 ```
 sfdx force:user:permset:assign -n ebikes
 ```
 
-7. Load sample data:
+8. Load sample data:
 
 ```
 sfdx force:data:tree:import --plan ./data/sample-data-plan.json
 ```
 
-8. Deploy Community metadata
+9. Deploy Community metadata
 
 ```
 sfdx force:mdapi:deploy -u ebikes --deploydir mdapiDeploy/unpackaged -w 1
 ```
 
-9. Open the scratch org:
+10. Open the scratch org:
 
 ```
 sfdx force:org:open
 ```
 
-10. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
+11. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
-11. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
+12. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
 
-12. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
+13. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
 
-13. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
+14. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
 
 ## Installing E-Bikes using a Developer Edition Org
 
