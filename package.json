@@ -30,7 +30,7 @@
         "@salesforce/sfdx-lwc-jest": "^0.5.4",
         "eslint": "^5.16.0",
         "husky": "^2.4.1",
-        "lint-staged": "^8.2.0",
+        "lint-staged": "^9.2.5",
         "prettier": "^1.18.2",
         "semver": "^6.1.1"
     },
