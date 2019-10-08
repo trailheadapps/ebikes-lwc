@@ -11,8 +11,8 @@
         "test:unit": "lwc-jest",
         "test:unit:watch": "lwc-jest --watch",
         "test:unit:debug": "lwc-jest --debug",
-        "prettier": "prettier --write '**/*.{cmp,component,css,html,js,json,md,page,yaml,yml,cls}'",
-        "prettier:verify": "prettier --list-different '**/*.{cmp,component,css,html,js,json,md,page,yaml,yml,cls}'",
+        "prettier": "prettier --write '**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}'",
+        "prettier:verify": "prettier --list-different '**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}'",
         "postinstall": "node bin/check-version.js"
     },
     "author": "salesforce.com",
