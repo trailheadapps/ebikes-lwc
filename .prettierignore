@@ -4,4 +4,5 @@
 
 lcc-react-js-bike-model/
 **/staticresources/**
+.localdevserver
 .sfdx
