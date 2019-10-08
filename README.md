@@ -260,3 +260,6 @@ The account record page features an **Account Map** component that locates the a
 1. The product record page features a **Similar Products** component.
 
 2. Click the **View Details** button to navigate to a similar product record page.
+
+
+# New branch created
