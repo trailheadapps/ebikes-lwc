@@ -63,7 +63,6 @@ jobs:
                       export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
                       export SFDX_DOMAIN_RETRY=300
                       npm install sfdx-cli
-                      node_modules/sfdx-cli/bin/run plugins:install salesforcedx@pre-release
                       node_modules/sfdx-cli/bin/run --version
                       node_modules/sfdx-cli/bin/run plugins --core
             - persist_to_workspace:
@@ -134,7 +133,6 @@ jobs:
             - run:
                   name: Push Source
                   command: |
-                      node_modules/sfdx-cli/bin/run plugins --core
                       node_modules/sfdx-cli/bin/run force:source:push -u ciorg
     deploy_community_metadata:
         # This deploys the non-source metadata to the ci scratch org.
