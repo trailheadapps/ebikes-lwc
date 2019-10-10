@@ -134,6 +134,7 @@ jobs:
             - run:
                   name: Push Source
                   command: |
+                      node_modules/sfdx-cli/bin/run plugins --core
                       node_modules/sfdx-cli/bin/run force:source:push -u ciorg
     deploy_community_metadata:
         # This deploys the non-source metadata to the ci scratch org.
@@ -256,7 +257,7 @@ workflows:
     nightly:
         triggers:
             - schedule:
-                  cron: '0 12 * * 0'
+                  cron: "0 12 * * 0"
                   filters:
                       branches:
                           only:
