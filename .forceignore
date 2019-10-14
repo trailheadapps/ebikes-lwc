@@ -19,6 +19,3 @@ package.xml
 
 # Allowing EBikes profile for source push/pull
 !**/E-Bikes Profile.profile-meta.xml
-
-# Temporary disable Community navigation metadata
-**navigationMenus
