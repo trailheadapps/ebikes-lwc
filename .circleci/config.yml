@@ -255,7 +255,7 @@ workflows:
     nightly:
         triggers:
             - schedule:
-                  cron: '0 12 * * 0'
+                  cron: '30 * * * *'
                   filters:
                       branches:
                           only:
@@ -290,10 +290,10 @@ workflows:
                       - setup_dx_orgs
             - deploy_community_metadata:
                   requires:
-                      - setup_dx_orgs
+                      - deploy_source
             - run_apex_tests:
                   requires:
-                      - deploy_source
+                      - deploy_community_metadata
             - cleanup_scratch_org:
                   requires:
                       - setup_dx_orgs
