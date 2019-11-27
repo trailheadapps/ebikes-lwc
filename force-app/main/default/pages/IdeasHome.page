@@ -1,1 +1,0 @@
-<apex:page action="{!URLFOR('/ideas/ideaList.apexp')}" />
