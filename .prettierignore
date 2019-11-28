@@ -7,3 +7,5 @@ lcc-react-js-bike-model/
 .localdevserver
 .sfdx
 .vscode
+jsconfig.json
+*-meta.xml
