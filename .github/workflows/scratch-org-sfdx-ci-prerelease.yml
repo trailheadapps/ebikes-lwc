@@ -106,7 +106,7 @@ jobs:
             - name: 'Deploy Community metadata'
               uses: forcedotcom/salesforcedx-actions@master
               with:
-                  args: 'force:mdapi:deploy -u ebikes --deploydir mdapiDeploy/unpackaged -w 5'
+                  args: 'force:mdapi:deploy --deploydir mdapiDeploy/unpackaged -w 5'
 
             # Run Apex tests in scratch org
             - name: 'Run Apex tests'
