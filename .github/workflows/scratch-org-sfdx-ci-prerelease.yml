@@ -45,7 +45,7 @@ jobs:
 
             # Unit tests
             - name: 'Unit test Lightning Web Components'
-              run: npm run test:unit:coverage
+              run: npm run test:unit
 
     scratch-org-test:
         runs-on: ubuntu-latest
