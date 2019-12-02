@@ -1,6 +1,6 @@
 # E-Bikes Lightning Web Components Sample Application
 
-[![CircleCI](https://circleci.com/gh/trailheadapps/ebikes-lwc.svg?style=svg)](https://circleci.com/gh/trailheadapps/ebikes-lwc)
+[![Github Workflow](<https://github.com/trailheadapps/ebikes-lwc/workflows/Salesforce%20DX%20CI%20(scratch%20org%20only)/badge.svg>)](https://github.com/trailheadapps/ebikes-lwc/actions)
 
 ![ebikes-logo](ebikes-logo.png)
 
@@ -69,7 +69,7 @@ sfdx force:data:tree:import --plan ./data/sample-data-plan.json
 8. Deploy Community metadata
 
 ```
-sfdx force:mdapi:deploy -u ebikes --deploydir mdapiDeploy/unpackaged -w 1
+sfdx force:mdapi:deploy -u ebikes --deploydir mdapiDeploy/unpackaged -w 5
 ```
 
 9. Open the scratch org:
