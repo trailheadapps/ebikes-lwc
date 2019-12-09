@@ -30,7 +30,7 @@
         "@salesforce/sfdx-lwc-jest": "^0.6.2",
         "eslint": "^5.16.0",
         "husky": "^3.1.0",
-        "lint-staged": "^9.4.3",
+        "lint-staged": "^9.5.0",
         "prettier": "^1.19.1",
         "prettier-plugin-apex": "^1.1.0",
         "semver": "^6.3.0"
