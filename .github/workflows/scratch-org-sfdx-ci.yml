@@ -3,6 +3,9 @@ name: Salesforce DX CI (scratch org only)
 
 # Definition when the workflow should run
 on:
+    push:
+        branches:
+            - master
     pull_request:
         types: [opened, synchronize, reopened]
         branches-ignore:
