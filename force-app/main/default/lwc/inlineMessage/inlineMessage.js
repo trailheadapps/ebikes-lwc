@@ -1,4 +1,4 @@
-import { LightningElement, api, track } from 'lwc';
+import { LightningElement, api } from 'lwc';
 import { reduceErrors } from 'c/ldsUtils';
 
 const VARIANTS = {
@@ -12,7 +12,7 @@ export default class InlineMessage extends LightningElement {
     /** Generic / user-friendly message */
     @api message = 'Error retrieving data';
 
-    @track iconName = VARIANTS.info;
+    iconName = VARIANTS.info;
 
     _variant = 'info';
     @api
@@ -26,7 +26,7 @@ export default class InlineMessage extends LightningElement {
         }
     }
 
-    @track viewDetails = false;
+    viewDetails = false;
 
     /** Single or array of LDS errors */
     @api errors;

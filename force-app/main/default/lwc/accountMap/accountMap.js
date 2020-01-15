@@ -1,4 +1,4 @@
-import { LightningElement, api, track, wire } from 'lwc';
+import { LightningElement, api, wire } from 'lwc';
 import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
 
 import BILLING_CITY from '@salesforce/schema/Account.BillingCity';
@@ -18,11 +18,9 @@ const fields = [
 export default class PropertyMap extends LightningElement {
     @api recordId;
 
-    @track zoomLevel = 14;
-
-    @track markers = [];
-
-    @track error;
+    zoomLevel = 14;
+    markers = [];
+    error;
 
     @wire(getRecord, { recordId: '$recordId', fields })
     wiredRecord({ error, data }) {

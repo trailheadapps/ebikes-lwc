@@ -1,4 +1,4 @@
-import { LightningElement, track, wire, api } from 'lwc';
+import { LightningElement, wire, api } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { reduceErrors } from 'c/ldsUtils';
 
@@ -71,15 +71,15 @@ export default class OrderBuilder extends LightningElement {
     @api recordId;
 
     /** The Order_Item__c SObjects to display. */
-    @track orderItems;
+    orderItems;
 
     /** Total price of the Order__c. Calculated from this.orderItems. */
-    @track orderPrice = 0;
+    orderPrice = 0;
 
     /** Total quantity of the Order__c. Calculated from this.orderItems. */
-    @track orderQuantity = 0;
+    orderQuantity = 0;
 
-    @track error;
+    error;
 
     /** Wired Apex result so it may be programmatically refreshed. */
     wiredOrderItems;

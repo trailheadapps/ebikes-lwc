@@ -1,4 +1,4 @@
-import { LightningElement, api, wire, track } from 'lwc';
+import { LightningElement, api, wire } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
 import getRecordInfo from '@salesforce/apex/ProductRecordInfoController.getRecordInfo';
 
@@ -11,7 +11,7 @@ export default class HeroDetails extends NavigationMixin(LightningElement) {
     @api recordName;
     @api recordInfoData;
 
-    @track hrefUrl;
+    hrefUrl;
 
     @wire(getRecordInfo, { productOrFamilyName: '$recordName' })
     recordInfo({ error, data }) {
