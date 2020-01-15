@@ -11,8 +11,8 @@
         "test:unit": "sfdx-lwc-jest",
         "test:unit:watch": "sfdx-lwc-jest --watch",
         "test:unit:debug": "sfdx-lwc-jest --debug",
-        "prettier": "prettier --write '**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}'",
-        "prettier:verify": "prettier --list-different '**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}'",
+        "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
+        "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "postinstall": "node bin/check-version.js"
     },
     "author": "salesforce.com",
@@ -31,10 +31,10 @@
         "@salesforce/sfdx-lwc-jest": "^0.6.2",
         "eslint": "^5.16.0",
         "husky": "^3.1.0",
-        "lint-staged": "^9.4.3",
+        "lint-staged": "^9.5.0",
         "prettier": "^1.19.1",
         "prettier-plugin-apex": "^1.1.0",
-        "semver": "^6.3.0"
+        "semver": "^7.1.1"
     },
     "husky": {
         "hooks": {
