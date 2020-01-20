@@ -1,12 +1,22 @@
 {
-  "orgName": "Ebikes",
-  "edition": "Developer",
-  "hasSampleData": "false",
-  "settings": {
-      "orgPreferenceSettings": {
-          "s1DesktopEnabled": true,
-          "selfSetPasswordInApi": true,
-          "s1EncryptedStoragePref2": false
-      }
-  }
+    "orgName": "Ebikes",
+    "edition": "Developer",
+    "hasSampleData": false,
+    "features": ["Communities", "Sites"],
+    "settings": {
+        "communitiesSettings": {
+            "enableNetworksEnabled": true
+        },
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "securitySettings": {
+            "passwordPolicies": {
+                "enableSetPasswordInApi": true
+            }
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
+        }
+    }
 }

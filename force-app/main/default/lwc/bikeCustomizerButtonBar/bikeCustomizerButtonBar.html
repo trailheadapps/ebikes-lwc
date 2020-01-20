@@ -1,0 +1,32 @@
+<template>
+    <div class="buttons">
+        <lightning-button
+            variant="success"
+            label="View Frame"
+            data-type="frame"
+            title="frameView"
+            onclick={handleButtonClick}
+        ></lightning-button>
+        <lightning-button
+            variant="brand"
+            label="View Seat"
+            data-type="seat"
+            title="seatView"
+            onclick={handleButtonClick}
+        ></lightning-button>
+        <lightning-button
+            variant="destructive"
+            label="View Handlebars"
+            data-type="handlebars"
+            title="handlebarsView"
+            onclick={handleButtonClick}
+        ></lightning-button>
+        <lightning-button
+            variant="neutral"
+            label="View Waterbottle"
+            data-type="waterbottle"
+            title="waterbottleView"
+            onclick={handleButtonClick}
+        ></lightning-button>
+    </div>
+</template>

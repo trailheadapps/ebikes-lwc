@@ -1,0 +1,54 @@
+<template>
+    <lightning-record-edit-form
+        object-api-name={caseObject}
+        onsuccess={handleCaseCreated}
+    >
+        <lightning-messages></lightning-messages>
+        <h3
+            class="slds-section__title slds-theme_shade slds-p-horizontal_small slds-m-bottom_x-small"
+        >
+            Case Information
+        </h3>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field
+                    field-name={productField}
+                ></lightning-input-field>
+                <lightning-input-field
+                    field-name={priorityField}
+                ></lightning-input-field>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <lightning-input-field
+                    field-name={categoryField}
+                ></lightning-input-field>
+                <lightning-input-field
+                    field-name={reasonField}
+                ></lightning-input-field>
+            </div>
+        </div>
+        <h3
+            class="slds-section__title slds-theme_shade slds-m-top_small slds-m-bottom_x-small slds-p-horizontal_small"
+        >
+            Description Information
+        </h3>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-1">
+                <lightning-input-field
+                    field-name={subjectField}
+                ></lightning-input-field>
+                <lightning-input-field
+                    field-name={descriptionField}
+                ></lightning-input-field>
+            </div>
+        </div>
+        <div class="slds-m-top_medium slds-text-align_center">
+            <lightning-button
+                class="submit-button slds-text-heading_small"
+                type="submit"
+                variant="brand"
+                label="Submit"
+            ></lightning-button>
+        </div>
+    </lightning-record-edit-form>
+</template>

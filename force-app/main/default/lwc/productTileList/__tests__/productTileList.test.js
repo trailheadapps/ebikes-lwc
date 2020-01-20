@@ -4,7 +4,7 @@ import { fireEvent } from 'c/pubsub';
 import {
     registerTestWireAdapter,
     registerApexTestWireAdapter
-} from '@salesforce/lwc-jest';
+} from '@salesforce/sfdx-lwc-jest';
 import getProducts from '@salesforce/apex/ProductController.getProducts';
 import { CurrentPageReference } from 'lightning/navigation';
 
@@ -58,9 +58,7 @@ describe('c-product-tile-list', () => {
                     mockGetProducts.totalItemCount / mockGetProducts.pageSize
                 );
                 const regex = new RegExp(
-                    `${mockGetProducts.totalItemCount} items(.*)page ${
-                        mockGetProducts.pageNumber
-                    } of ${totalPages}`
+                    `${mockGetProducts.totalItemCount} items(.*)page ${mockGetProducts.pageNumber} of ${totalPages}`
                 );
                 expect(paginator.shadowRoot.textContent).toMatch(regex);
             });
@@ -237,8 +235,8 @@ describe('c-product-tile-list', () => {
 
     describe('with search bar visible', () => {
         it('updates getProducts @wire with searchKey as filter when search bar changes', () => {
-            const searchKey = 'foo';
-            const expected = JSON.stringify({ searchKey });
+            const input = 'foo';
+            const expected = { searchKey: input };
             const element = createElement('c-product-tile-list', {
                 is: ProductTileList
             });
@@ -251,12 +249,12 @@ describe('c-product-tile-list', () => {
                     const searchBar = element.shadowRoot.querySelector(
                         '.search-bar'
                     );
-                    searchBar.value = searchKey;
+                    searchBar.value = input;
                     searchBar.dispatchEvent(new CustomEvent('change'));
                 })
                 .then(() => {
                     const { filters } = getProductsAdapter.getLastConfig();
-                    expect(filters).toBe(expected);
+                    expect(filters).toEqual(expected);
                 });
         });
     });
