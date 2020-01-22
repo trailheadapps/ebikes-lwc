@@ -84,7 +84,7 @@ jobs:
             - name: 'Wait for two min for Communities activation'
               uses: maddox/actions/sleep@master
               with:
-                  args: 300
+                  args: 120
 
             # Deploy source to scratch org
             - name: 'Push source to scratch org'
