@@ -80,6 +80,12 @@ jobs:
             - name: 'Create scratch org'
               run: 'sfdx force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1'
 
+            # Wait for package replication
+            - name: 'Wait for two min for Communities activation'
+              uses: maddox/actions/sleep@master
+              with:
+                  args: 300
+
             # Deploy source to scratch org
             - name: 'Push source to scratch org'
               run: 'sfdx force:source:push'
