@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <brand>
         <headerColor>#C23335</headerColor>
@@ -8,7 +8,8 @@
     </brand>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override created by Lightning App Builder on activation. Added manually because this isn't registered by force:source:pull.</comment>
+        <comment
+        >Action override created by Lightning App Builder on activation. Added manually because this isn't registered by force:source:pull.</comment>
         <content>Account_Record_Page</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
