@@ -1,5 +1,5 @@
 # Unique name for this workflow
-name: Salesforce DX CI (scratch org only)
+name: Salesforce DX (scratch org)
 
 # Definition when the workflow should run
 on:
@@ -17,7 +17,7 @@ jobs:
         steps:
             # Checkout the code in the pull request
             - name: 'Checkout source code'
-              uses: actions/checkout@v1
+              uses: actions/checkout@v2
 
             # Cache node_modules to speed up the process
             - name: Restore node_modules cache
@@ -61,7 +61,7 @@ jobs:
 
             # Checkout the code in the pull request
             - name: 'Checkout source code'
-              uses: actions/checkout@v1
+              uses: actions/checkout@v2
 
             # Store secret for dev hub
             - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
@@ -79,6 +79,12 @@ jobs:
             # Create scratch org
             - name: 'Create scratch org'
               run: 'sfdx force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1'
+
+            # Wait for package replication
+            - name: 'Wait for two min for Communities activation'
+              uses: maddox/actions/sleep@master
+              with:
+                  args: 120
 
             # Deploy source to scratch org
             - name: 'Push source to scratch org'
@@ -102,4 +108,5 @@ jobs:
 
             # Housekeeping
             - name: 'Delete scratch org'
+              if: always()
               run: 'sfdx force:org:delete -p -u scratch-org'
