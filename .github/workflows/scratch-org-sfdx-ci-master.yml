@@ -1,5 +1,5 @@
 # Unique name for this workflow
-name: Salesforce DX CI (scratch org)
+name: Salesforce DX (scratch org)
 
 # Definition when the workflow should run
 on:
