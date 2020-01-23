@@ -8,9 +8,9 @@
         "lint:lwc": "eslint **/lwc/**",
         "lint:aura": "sfdx force:lightning:lint **/aura/** --exit",
         "test": "npm run lint && npm run test:unit",
-        "test:unit": "lwc-jest",
-        "test:unit:watch": "lwc-jest --watch",
-        "test:unit:debug": "lwc-jest --debug",
+        "test:unit": "sfdx-lwc-jest",
+        "test:unit:watch": "sfdx-lwc-jest --watch",
+        "test:unit:debug": "sfdx-lwc-jest --debug",
         "prettier": "prettier --write '**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}'",
         "prettier:verify": "prettier --list-different '**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,yaml,yml}'",
         "postinstall": "node bin/check-version.js"
