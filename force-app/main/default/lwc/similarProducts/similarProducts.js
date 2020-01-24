@@ -1,4 +1,4 @@
-import { LightningElement, api, track, wire } from 'lwc';
+import { LightningElement, api, wire } from 'lwc';
 import { getRecord } from 'lightning/uiRecordApi';
 import getSimilarProducts from '@salesforce/apex/ProductController.getSimilarProducts';
 import PRODUCT_FAMILY_FIELD from '@salesforce/schema/Product__c.Product_Family__c';
@@ -8,7 +8,6 @@ const fields = [PRODUCT_FAMILY_FIELD];
 export default class SimilarProducts extends LightningElement {
     @api recordId;
     @api familyId;
-    @track product;
 
     // Track changes to the Product_Family__c field that could be made in other components.
     // If Product_Family__c is updated in another component, getSimilarProducts

@@ -1,4 +1,4 @@
-import { LightningElement, api, track } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 /**
  * Displays an Order_Item__c SObject. Note that this component does not use schema imports and uses dynamic
@@ -12,7 +12,7 @@ export default class OrderItemTile extends LightningElement {
     @api orderItem;
 
     /** Whether the component has unsaved changes. */
-    @track isModified = false;
+    isModified = false;
 
     /** Mutated/unsaved Order_Item__c values. */
     form = {};

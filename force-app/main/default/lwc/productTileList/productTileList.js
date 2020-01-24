@@ -1,4 +1,4 @@
-import { LightningElement, api, track, wire } from 'lwc';
+import { LightningElement, api, wire } from 'lwc';
 import { CurrentPageReference } from 'lightning/navigation';
 
 /** getProducts() method in ProductController Apex class */
@@ -24,16 +24,16 @@ export default class ProductTileList extends LightningElement {
     @api tilesAreDraggable = false;
 
     /** Current page in the product list. */
-    @track pageNumber = 1;
+    pageNumber = 1;
 
     /** The number of items on a page. */
-    @track pageSize;
+    pageSize;
 
     /** The total number of items matching the selection. */
-    @track totalItemCount = 0;
+    totalItemCount = 0;
 
     /** JSON.stringified version of filters to pass to apex */
-    @track filters = {};
+    filters = {};
 
     @wire(CurrentPageReference) pageRef;
 
