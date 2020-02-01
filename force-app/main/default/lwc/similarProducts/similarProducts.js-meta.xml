@@ -15,7 +15,13 @@
             </objects>
         </targetConfig>
         <targetConfig targets="lightningCommunity__Default">
-            <property name="recordId" type="String" label="Record Id To find similarities" description="Default uses the current page's record id. Modify if you want a specific record to use." default="{!recordId}" />
+            <property
+                name="recordId"
+                type="String"
+                label="Record Id To find similarities"
+                description="Default uses the current page's record id. Modify if you want a specific record to use."
+                default="{!recordId}"
+            />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
