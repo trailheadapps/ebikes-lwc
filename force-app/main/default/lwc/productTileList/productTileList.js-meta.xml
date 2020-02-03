@@ -12,15 +12,31 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__RecordPage">
-            <property name="searchBarIsVisible" type="Boolean" label="Search bar visible" />
-            <property name="tilesAreDraggable" type="Boolean" label="Product tiles are draggable" />
+            <property
+                name="searchBarIsVisible"
+                type="Boolean"
+                label="Search bar visible"
+            />
+            <property
+                name="tilesAreDraggable"
+                type="Boolean"
+                label="Product tiles are draggable"
+            />
             <objects>
                 <object>Order__c</object>
             </objects>
         </targetConfig>
         <targetConfig targets="lightningCommunity__Default">
-            <property name="searchBarIsVisible" type="Boolean" label="Search bar visible" />
-            <property name="tilesAreDraggable" type="Boolean" label="Product tiles are draggable" />
+            <property
+                name="searchBarIsVisible"
+                type="Boolean"
+                label="Search bar visible"
+            />
+            <property
+                name="tilesAreDraggable"
+                type="Boolean"
+                label="Product tiles are draggable"
+            />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
