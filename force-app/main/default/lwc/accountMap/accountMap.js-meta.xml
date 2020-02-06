@@ -5,7 +5,6 @@
     <masterLabel>Account Map</masterLabel>
     <targets>
         <target>lightning__RecordPage</target>
-        <target>lightningCommunity__Page</target>
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__RecordPage">
