@@ -18,7 +18,7 @@
     <versions>
         <version>
             <number>1</number>
-            <pathOnClient>ebikeslogo.png</pathOnClient>
+            <pathOnClient>ebikes-logo.png</pathOnClient>
         </version>
     </versions>
 </ContentAsset>
