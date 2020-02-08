@@ -6,6 +6,7 @@
 package.xml
 **appMenu
 **appSwitcher
+**navigationMenus
 **objectTranslations
 **profiles
 **settings
@@ -51,8 +52,6 @@ package.xml
 **/classes/ForgotPasswordController.cls-meta.xml
 **/classes/ForgotPasswordControllerTest.cls
 **/classes/ForgotPasswordControllerTest.cls-meta.xml
-#**/classes/HeroDetailsPositionCustomPicklist.cls
-#**/classes/HeroDetailsPositionCustomPicklist.cls-meta.xml
 **/classes/LightningForgotPasswordController.cls
 **/classes/LightningForgotPasswordController.cls-meta.xml
 **/classes/LightningForgotPasswordControllerTest.cls

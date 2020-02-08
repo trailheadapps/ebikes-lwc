@@ -5,8 +5,8 @@
         <members>ebikeslogo</members>
     </types>
     <types>
-        <members>E-Bikes Profile</members>
-        <name>Profile</name>
+        <name>NavigationMenu</name>
+        <members>Default_Navigation</members>
     </types>
     <version>48.0</version>
 </Package>
