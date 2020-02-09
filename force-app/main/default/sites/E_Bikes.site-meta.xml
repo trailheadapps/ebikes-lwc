@@ -23,8 +23,10 @@
     <requireHttps>true</requireHttps>
     <requireInsecurePortalAccess>false</requireInsecurePortalAccess>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>test-yofedql671ah@example.com</siteAdmin>
+ <!--   <siteAdmin>test-yofedql671ah@example.com</siteAdmin>　-->
+    <siteAdmin>y.okoshi_ebike@crefil.com</siteAdmin>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>fun-computing-3083-dev-ed-16985874c7a</subdomain>
+ <!--   <subdomain>fun-computing-3083-dev-ed-16985874c7a</subdomain> -->
+    <subdomain>ebike-y-okoshi-developer-edition</subdomain>
     <urlPathPrefix>ebikes</urlPathPrefix>
 </CustomSite>
