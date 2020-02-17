@@ -10,7 +10,7 @@ import CASE_CATEGORY from '@salesforce/schema/Case.Case_Category__c';
 import REASON from '@salesforce/schema/Case.Reason';
 
 const TITLE_SUCCESS = 'Case Created!';
-const MESSAGE_SUCCESS = 'You have successfully created an Case';
+const MESSAGE_SUCCESS = 'You have successfully created a Case';
 
 export default class CreateCase extends LightningElement {
     caseObject = CASE_OBJECT;

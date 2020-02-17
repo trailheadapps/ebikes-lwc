@@ -4,7 +4,7 @@ name: Salesforce DX (scratch org)
 # Definition when the workflow should run
 on:
     pull_request:
-        types: [opened, synchronize, reopened]
+        types: [opened, edited, synchronize, reopened]
         branches-ignore:
             - prerelease/spring[2-9][0-9]
             - prerelease/summer[2-9][0-9]
@@ -100,7 +100,7 @@ jobs:
 
             # Deploy Community metadata
             - name: 'Deploy Community metadata'
-              run: 'sfdx force:mdapi:deploy--deploydir mdapiDeploy/unpackaged -w 5'
+              run: 'sfdx force:mdapi:deploy --deploydir mdapiDeploy/unpackaged -w 5'
 
             # Run Apex tests in scratch org
             - name: 'Run Apex tests'

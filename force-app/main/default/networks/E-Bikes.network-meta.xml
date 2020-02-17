@@ -5,18 +5,20 @@
     <changePasswordTemplate
     >unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
     <communityRoles />
+    <description>A community for electric bikes enthusiasts</description>
     <disableReputationRecordConversations
     >true</disableReputationRecordConversations>
-    <emailSenderAddress>some.sender@company.com</emailSenderAddress>
-    <emailSenderName>E-Bikes Demo</emailSenderName>
+    <emailSenderAddress>pozil@salesforce.com</emailSenderAddress>
+    <emailSenderName>E-Bikes</emailSenderName>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>true</enableDirectMessages>
     <enableGuestChatter>false</enableGuestChatter>
     <enableGuestFileAccess>true</enableGuestFileAccess>
+    <enableGuestMemberVisibility>false</enableGuestMemberVisibility>
     <enableInvitation>false</enableInvitation>
     <enableKnowledgeable>false</enableKnowledgeable>
-    <enableMemberVisibility>true</enableMemberVisibility>
-    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enableMemberVisibility>false</enableMemberVisibility>
+    <enableNicknameDisplay>true</enableNicknameDisplay>
     <enablePrivateMessages>false</enablePrivateMessages>
     <enableReputation>false</enableReputation>
     <enableShowAllNetworkSettings>false</enableShowAllNetworkSettings>
@@ -28,40 +30,8 @@
     <forgotPasswordTemplate
     >unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
     <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
-    <navigationLinkSet>
-        <navigationMenuItem>
-            <label>Create Case</label>
-            <position>1</position>
-            <publiclyAvailable>false</publiclyAvailable>
-            <target>/create-case</target>
-            <type>InternalLink</type>
-        </navigationMenuItem>
-        <navigationMenuItem>
-            <label>Product Explorer</label>
-            <position>2</position>
-            <publiclyAvailable>true</publiclyAvailable>
-            <target>/product-explorer</target>
-            <type>InternalLink</type>
-        </navigationMenuItem>
-        <navigationMenuItem>
-            <defaultListViewId>All_Product_Families</defaultListViewId>
-            <label>Product Families</label>
-            <position>3</position>
-            <publiclyAvailable>false</publiclyAvailable>
-            <target>Product_Family__c</target>
-            <type>SalesforceObject</type>
-        </navigationMenuItem>
-        <navigationMenuItem>
-            <defaultListViewId>My_Cases</defaultListViewId>
-            <label>Cases</label>
-            <position>4</position>
-            <publiclyAvailable>false</publiclyAvailable>
-            <target>Case</target>
-            <type>SalesforceObject</type>
-        </navigationMenuItem>
-    </navigationLinkSet>
     <networkMemberGroups>
-        <profile>Admin</profile>
+        <profile>admin</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting
@@ -73,11 +43,11 @@
         <selfRegProfilePageOverrideSetting
         >Designer</selfRegProfilePageOverrideSetting>
     </networkPageOverrides>
-    <picassoSite>E_Bikes_C</picassoSite>
+    <picassoSite>E_Bikes1</picassoSite>
     <selfRegistration>false</selfRegistration>
     <sendWelcomeEmail>true</sendWelcomeEmail>
     <site>E_Bikes</site>
-    <status>UnderConstruction</status>
+    <status>Live</status>
     <tabs>
         <defaultTab>home</defaultTab>
         <standardTab>Chatter</standardTab>

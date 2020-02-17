@@ -4,27 +4,29 @@
     <containerType>Network</containerType>
     <label>Default Navigation</label>
     <navigationMenuItem>
-        <label>Create Case</label>
-        <position>1</position>
-        <publiclyAvailable>true</publiclyAvailable>
-        <target>/create-case</target>
-        <type>InternalLink</type>
-    </navigationMenuItem>
-    <navigationMenuItem>
         <label>Product Explorer</label>
-        <position>2</position>
+        <position>1</position>
         <publiclyAvailable>true</publiclyAvailable>
         <target>/product-explorer</target>
         <type>InternalLink</type>
     </navigationMenuItem>
     <navigationMenuItem>
+        <defaultListViewId>All_Product_Families</defaultListViewId>
         <label>Product Families</label>
-        <position>3</position>
+        <position>2</position>
         <publiclyAvailable>true</publiclyAvailable>
         <target>Product_Family__c</target>
         <type>SalesforceObject</type>
     </navigationMenuItem>
     <navigationMenuItem>
+        <label>Create Case</label>
+        <position>3</position>
+        <publiclyAvailable>true</publiclyAvailable>
+        <target>/create-case</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <defaultListViewId>My_Cases</defaultListViewId>
         <label>Cases</label>
         <position>4</position>
         <publiclyAvailable>true</publiclyAvailable>

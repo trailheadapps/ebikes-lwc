@@ -2,10 +2,13 @@
     "orgName": "Ebikes",
     "edition": "Developer",
     "hasSampleData": false,
-    "features": ["Communities", "Sites"],
+    "features": ["Communities"],
     "settings": {
         "communitiesSettings": {
             "enableNetworksEnabled": true
+        },
+        "experienceBundleSettings": {
+            "enableExperienceBundleMetadata": true
         },
         "lightningExperienceSettings": {
             "enableS1DesktopEnabled": true

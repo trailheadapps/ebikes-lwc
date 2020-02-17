@@ -1,4 +1,4 @@
-import { LightningElement, api, track } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 /**
  * A presentation component to display a Product__c sObject. The provided
@@ -22,9 +22,9 @@ export default class ProductTile extends LightningElement {
     }
 
     /** Product__c field values to display. */
-    @track pictureUrl;
-    @track name;
-    @track msrp;
+    pictureUrl;
+    name;
+    msrp;
 
     handleClick() {
         const selectedEvent = new CustomEvent('selected', {

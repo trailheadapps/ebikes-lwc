@@ -1,0 +1,10 @@
+{
+    "activeViewId": "979f3f20-49c0-4197-8419-d20cb14c0a86",
+    "appPageId": "591ae89d-97d7-4f5d-b93f-ce618e5d48f1",
+    "id": "de8cc46f-87e1-4d3d-8de8-fb1b79896ce6",
+    "label": "Product Detail",
+    "objectApiName": "Product__c",
+    "routeType": "detail-a03",
+    "type": "route",
+    "urlPrefix": "product"
+}
