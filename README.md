@@ -24,67 +24,67 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
 
--   Enable Dev Hub in your Trailhead Playground
--   Install Salesforce CLI
--   Install Visual Studio Code
--   Install the Visual Studio Code Salesforce extensions, including the Lightning Web Components extension
+    - Enable Dev Hub in your Trailhead Playground
+    - Install Salesforce CLI
+    - Install Visual Studio Code
+    - Install the Visual Studio Code Salesforce extensions, including the Lightning Web Components extension
 
-2. If you haven't already done so, authenticate with your hub org and provide it with an alias (**myhuborg** in the command below):
+1. If you haven't already done so, authenticate with your hub org and provide it with an alias (**myhuborg** in the command below):
 
-```
-sfdx force:auth:web:login -d -a myhuborg
-```
+    ```
+    sfdx force:auth:web:login -d -a myhuborg
+    ```
 
-3. Clone the repository:
+1. Clone the repository:
 
-```
-git clone https://github.com/trailheadapps/ebikes-lwc
-cd ebikes-lwc
-```
+    ```
+    git clone https://github.com/trailheadapps/ebikes-lwc
+    cd ebikes-lwc
+    ```
 
-4. Create a scratch org and provide it with an alias (**ebikes** in the command below):
+1. Create a scratch org and provide it with an alias (**ebikes** in the command below):
 
-```
-sfdx force:org:create -s -f config/project-scratch-def.json -a ebikes
-```
+    ```
+    sfdx force:org:create -s -f config/project-scratch-def.json -a ebikes
+    ```
 
-5. Push the app to your scratch org:
+1. Push the app to your scratch org:
 
-```
-sfdx force:source:push
-```
+    ```
+    sfdx force:source:push
+    ```
 
-6. Assign the **ebikes** permission set to the default user:
+1. Assign the **ebikes** permission set to the default user:
 
-```
-sfdx force:user:permset:assign -n ebikes
-```
+    ```
+    sfdx force:user:permset:assign -n ebikes
+    ```
 
-7. Load sample data:
+1. Load sample data:
 
-```
-sfdx force:data:tree:import --plan ./data/sample-data-plan.json
-```
+    ```
+    sfdx force:data:tree:import --plan ./data/sample-data-plan.json
+    ```
 
-8. Deploy Community metadata
+1. Deploy Community metadata
 
-```
-sfdx force:mdapi:deploy -u ebikes --deploydir mdapiDeploy/unpackaged -w 5
-```
+    ```
+    sfdx force:mdapi:deploy -u ebikes --deploydir mdapiDeploy/unpackaged -w 5
+    ```
 
-9. Open the scratch org:
+1. Open the scratch org:
 
-```
-sfdx force:org:open
-```
+    ```
+    sfdx force:org:open
+    ```
 
-10. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
+1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
-11. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
+1. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
 
-12. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
+1. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
 
-13. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
+1. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
 
 ## Installing E-Bikes using a Developer Edition Org
 
@@ -92,78 +92,80 @@ These steps assume you have followed the instructions above to install the appli
 
 1. It's recommended to sign up for a [new Developer Edition org](https://developer.salesforce.com/signup), to avoid conflicts with work you may have done in any other orgs. If you created a new Developer Edition org to serve as a DevHub, and haven't done other work in the org, you can use that org.
 
-2. Once you've logged in to the org, in **Setup**, under **My Domain**, [register a My Domain](https://help.salesforce.com/articleView?id=domain_name_setup.htm&type=5).
+1. Once you've logged in to the org, in **Setup**, under **My Domain**, [register a My Domain](https://help.salesforce.com/articleView?id=domain_name_setup.htm&type=5).
 
-3. In **Setup**, under **Communities Settings**, click the **Enable communities** checkbox, and then select and register a subdomain for your community.
+1. In **Setup**, under **Communities Settings**, click the **Enable communities** checkbox, and then select and register a subdomain for your community.
 
-4. In **Setup**, under **Object Manager**, delete the custom **Product** picklist field from the **Case** object.
+1. In **Setup**, under **Communities Settings** and **Community Management Settings**, click the **Enable ExperienceBundle Metadata API** checkbox, and click **Save**.
 
-5. At the command line, authenticate to your Developer Edition, and provide it with an alias (**ebikesDE** in the command below):
+1. In **Setup**, under **Object Manager**, delete the custom **Product** picklist field from the **Case** object.
 
-```
-sfdx force:auth:web:login -a ebikesDE
-```
+1. At the command line, authenticate to your Developer Edition, and provide it with an alias (**ebikesDE** in the command below):
 
-5. Check out a new branch of the code, to make changes that will allow deployment to a Developer Edition org:
+    ```
+    sfdx force:auth:web:login -a ebikesDE
+    ```
 
-```
-git checkout -b devOrg
-```
+1. Check out a new branch of the code, to make changes that will allow deployment to a Developer Edition org:
 
-6. In VS Code, use the Ctrl/Cmd-P shortcut for Quick Open. Type **E_Bikes.site** and click on the **E_Bikes.site-meta.xml** file to open it.
+    ```
+    git checkout -b devOrg
+    ```
 
-7. Change the value in the **\<siteAdmin>** line to be your user name in the Developer Org, and change the value in the **\<subdomain>** line to be the subdomain you selected for your Communities (**codey<span>@</span>ebikes.dev** and **codeys-ebikes-developer-edition** in the example below). Save the file.
+1. In VS Code, use the Ctrl/Cmd-P shortcut for Quick Open. Type **E_Bikes.site** and click on the **E_Bikes.site-meta.xml** file to open it.
 
-```
-<siteAdmin>codey@ebikes.dev</siteAdmin>
-<siteType>ChatterNetwork</siteType>
-<subdomain>codeys-ebikes-developer-edition</subdomain>
-```
+1. Change the value in the **\<siteAdmin>** line to be your user name in the Developer Org, and change the value in the **\<subdomain>** line to be the subdomain you selected for your Communities (**codey<span>@</span>ebikes.dev** and **codeys-ebikes-developer-edition** in the example below). Save the file.
 
-8. Use Quick Open again to search for **Profile** and open **E-Bikes Profile.profile**. At the very end of the file, change the value in the **\<userLicense>** line to **Guest**. Save the file.
+    ```
+    <siteAdmin>codey@ebikes.dev</siteAdmin>
+    <siteType>ChatterNetwork</siteType>
+    <subdomain>codeys-ebikes-developer-edition</subdomain>
+    ```
 
-```
-    <userLicense>Guest</userLicense>
-</Profile>
-```
+1. Use Quick Open again to search for **Profile** and open **E-Bikes Profile.profile**. At the very end of the file, change the value in the **\<userLicense>** line to **Guest**. Save the file.
 
-9. Deploy the app to your Developer Edition org:
+    ```
+        <userLicense>Guest</userLicense>
+    </Profile>
+    ```
 
-```
-sfdx force:source:deploy -p force-app/main/default -u ebikesDE
-```
+1. Deploy the app to your Developer Edition org:
 
-10. Assign the **ebikes** permission set to the default user:
+    ```
+    sfdx force:source:deploy -p force-app/main/default -u ebikesDE
+    ```
 
-```
-sfdx force:user:permset:assign -n ebikes -u ebikesDE
-```
+1. Assign the **ebikes** permission set to the default user:
 
-11. Load sample data:
+    ```
+    sfdx force:user:permset:assign -n ebikes -u ebikesDE
+    ```
 
-```
-sfdx force:data:tree:import --plan ./data/sample-data-plan.json -u ebikesDE
-```
+1. Load sample data:
 
-12. Open the Developer org:
+    ```
+    sfdx force:data:tree:import --plan ./data/sample-data-plan.json -u ebikesDE
+    ```
 
-```
-sfdx force:org:open -u ebikesDE
-```
+1. Open the Developer org:
 
-13. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
+    ```
+    sfdx force:org:open -u ebikesDE
+    ```
 
-14. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
+1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
-15. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
+1. In **Setup**, select **All Communities**. Click on **Builder** for the _E-Bikes_ Community.
 
-16. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
+1. Click **Publish**, to publish the community. Click on the workspace icon in the top left corner, then click **View E-Bikes** to see the live community.
 
-17. If you want to work with the application in a scratch org in the future, you'll want to switch back to the **master** branch:
+1. For experiencing the Salesforce app, open the App Launcher, and select the **E-Bikes** app.
 
-```
-git checkout master
-```
+1. If you want to work with the application in a scratch org in the future, you'll want to switch back to the **master** branch:
+
+    ```
+    git checkout master
+    ```
 
 ## Optional Installation Instructions
 
@@ -184,7 +186,8 @@ This repository also comes with a [package.json](./package.json) file that makes
 To set up the formatting and linting pre-commit hook:
 
 1. Install [Node.js](https://nodejs.org) if you haven't already done so
-2. Run `npm install` in your project's root folder to install the ESLint and Prettier modules (Note: Mac users should verify that Xcode command line tools are installed before running this command.)
+
+1. Run `npm install` in your project's root folder to install the ESLint and Prettier modules (Note: Mac users should verify that Xcode command line tools are installed before running this command.)
 
 Prettier and ESLint will now run automatically every time you commit changes. The commit will fail if linting errors are detected. You can also run the formatting and linting from the command line using the following commands (check out [package.json](./package.json) for the full list):
 
@@ -199,31 +202,31 @@ npm run prettier
 
 1. Click the **Product Explorer** tab.
 
-2. Filter the list using the filter component in the left sidebar.
+1. Filter the list using the filter component in the left sidebar.
 
-3. Click a product in the tile list to see the details in the product card.
+1. Click a product in the tile list to see the details in the product card.
 
-4. Click the expand icon in the product card to navigate to the product record page.
+1. Click the expand icon in the product card to navigate to the product record page.
 
 ### Product Record Page
 
 1. The product record page features a **Similar Products** component.
 
-2. Click the **View Details** button to navigate to a similar product record page.
+1. Click the **View Details** button to navigate to a similar product record page.
 
 ### Reseller Orders
 
 1. Click the down arrow on the **Reseller Order** tab and click **New Reseller Order**.
 
-2. Select an account, for example **Wheelworks** and click **Save**.
+1. Select an account, for example **Wheelworks** and click **Save**.
 
-3. Drag a product from the product list on the right onto the gray panel in the center. The product is automatically added to the order as an order item.
+1. Drag a product from the product list on the right onto the gray panel in the center. The product is automatically added to the order as an order item.
 
-4. Modify the ordered quantity for small (S), medium (M), and large (L) frames and click the save button (checkmark icon).
+1. Modify the ordered quantity for small (S), medium (M), and large (L) frames and click the save button (checkmark icon).
 
-5. Repeat steps 3 and 4 to add more products to the order.
+1. Repeat steps 3 and 4 to add more products to the order.
 
-6. Mouse over an order item tile and click the trash can icon to delete an order item from the order.
+1. Mouse over an order item tile and click the trash can icon to delete an order item from the order.
 
 ### Account Record Page
 
@@ -235,28 +238,28 @@ The account record page features an **Account Map** component that locates the a
 
 1. See the custom hero component in Communities that pulls in rich assets and navigates to the product or product family that is configured.
 
-2. Check all the properties exposed in the hero component in Community Builder.
+1. Check all the properties exposed in the hero component in Community Builder.
 
 ### Create Case
 
 1. Select the _My Cases_ list view in the record list on the right side of the page.
 
-2. Fill in the details of the case on the left side of the page.
+1. Fill in the details of the case on the left side of the page.
 
-3. Click on Create Case and see the record list to be updated with your new case.
+1. Click on Create Case and see the record list to be updated with your new case.
 
 ### Product Explorer
 
 1. Click the **Product Explorer** tab.
 
-2. Filter the list using the filter component in the left sidebar.
+1. Filter the list using the filter component in the left sidebar.
 
-3. Click a product in the tile list to see the details in the product card.
+1. Click a product in the tile list to see the details in the product card.
 
-4. Click the expand icon in the product card to navigate to the product record page.
+1. Click the expand icon in the product card to navigate to the product record page.
 
 ### Product Record Page
 
 1. The product record page features a **Similar Products** component.
 
-2. Click the **View Details** button to navigate to a similar product record page.
+1. Click the **View Details** button to navigate to a similar product record page.
