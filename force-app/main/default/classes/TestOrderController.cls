@@ -20,6 +20,7 @@ public class TestOrderController {
 
     @isTest
     static void testGetOrderItems() {
+        Account foo = new Account(Name = 'Sample Account');
         Order__c testOrder = [SELECT Id FROM Order__c];
         List<Order_Item__c> orderItems = OrderController.getOrderItems(
             testOrder.Id
