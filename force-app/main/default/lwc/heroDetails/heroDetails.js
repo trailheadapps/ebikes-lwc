@@ -9,8 +9,8 @@ export default class HeroDetails extends NavigationMixin(LightningElement) {
     @api title;
     @api slogan;
     @api recordName;
-    @api recordInfoData;
 
+    recordInfoData;
     hrefUrl;
 
     @wire(getRecordInfo, { productOrFamilyName: '$recordName' })

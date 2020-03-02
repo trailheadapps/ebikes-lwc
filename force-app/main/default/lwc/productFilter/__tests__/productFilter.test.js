@@ -98,6 +98,7 @@ describe('c-product-filter', () => {
             );
         });
 
+        // eslint-disable-next-line jest/expect-expect
         it('fired when checkbox is toggled', () => {
             const element = createElement('c-product-filter', {
                 is: ProductFilter
