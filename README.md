@@ -91,7 +91,7 @@ E-Bikes is a sample application that demonstrates how to build applications with
 ## Installing E-Bikes using a Developer Edition Org or a Trailhead Playground
 
 Follow this set of instructions if you want to deploy the app to a more permanent environment than a Scratch org.
-This includes non source-tracked orgs such as a [free Developer Edition Orgs](https://developer.salesforce.com/signup) or [Trailhead Playgrounds]().
+This includes non source-tracked orgs such as a [free Developer Edition Org](https://developer.salesforce.com/signup) or a [Trailhead Playground](https://trailhead.salesforce.com/).
 
 Make sure to start from a brand-new environment to avoid conflicts with previous work you may have done.
 
