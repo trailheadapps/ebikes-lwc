@@ -113,10 +113,11 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
 
 1. In VS Code, use the shortcut for Quick Open: Cmd+P for macOS, Ctrl+P for Windows. Type **E_Bikes.site** and click on the **E_Bikes.site-meta.xml** file to open it.
 
-1. Change the value in the **\<siteAdmin>** line to be your user name in the Developer Org, and change the value in the **\<subdomain>** line to be the subdomain you selected for your Communities (**codey<span>@</span>ebikes.dev** and **codeys-ebikes-developer-edition** in the example below). Save the file.
+1. Change the value in the **\<siteAdmin>** line and **\<siteGuestRecordDefaultOwner>** to be your user name in the Developer Org, and change the value in the **\<subdomain>** line to be the subdomain you selected for your Communities (**codey<span>@</span>ebikes.dev** and **codeys-ebikes-developer-edition** in the example below). Save the file.
 
     ```
     <siteAdmin>codey@ebikes.dev</siteAdmin>
+    <siteGuestRecordDefaultOwner>codey@ebikes.dev</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
     <subdomain>codeys-ebikes-developer-edition</subdomain>
     ```
