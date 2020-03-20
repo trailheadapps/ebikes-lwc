@@ -96,7 +96,6 @@ This includes non source-tracked orgs such as a [free Developer Edition Org](htt
 Make sure to start from a brand-new environment to avoid conflicts with previous work you may have done.
 
 1. Log in to your org
-
 1. If you are setting up a Developer Edition: go to **Setup**, under **My Domain**, [register a My Domain](https://help.salesforce.com/articleView?id=domain_name_setup.htm&type=5).
 
 ### Step 1: Enable and Configure Communities
