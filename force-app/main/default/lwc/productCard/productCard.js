@@ -1,12 +1,15 @@
 import { LightningElement, wire } from 'lwc';
-import { CurrentPageReference } from 'lightning/navigation';
 import { NavigationMixin } from 'lightning/navigation';
+import {
+    subscribe,
+    unsubscribe,
+    APPLICATION_SCOPE,
+    MessageContext
+} from 'lightning/messageService';
+import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
 
 /** Wire adapter to load records, utils to extract values. */
 import { getRecord } from 'lightning/uiRecordApi';
-
-/** Pub-sub mechanism for sibling component communication. */
-import { registerListener, unregisterAllListeners } from 'c/pubsub';
 
 /** Product__c Schema. */
 import PRODUCT_OBJECT from '@salesforce/schema/Product__c';
@@ -34,18 +37,29 @@ export default class ProductCard extends NavigationMixin(LightningElement) {
     /** Id of Product__c to display. */
     recordId;
 
-    @wire(CurrentPageReference) pageRef;
-
     /** Load the Product__c to display. */
     @wire(getRecord, { recordId: '$recordId', fields })
     product;
 
+    /** Load context for Ligthning Messaging Service */
+    @wire(MessageContext) messageContext;
+
+    /** Subscription for ProductSelected Ligthning message */
+    productSelectionSubscription;
+
     connectedCallback() {
-        registerListener('productSelected', this.handleProductSelected, this);
+        // Subscribe to ProductSelected message
+        this.productSelectionSubscription = subscribe(
+            this.messageContext,
+            PRODUCT_SELECTED_MESSAGE,
+            message => this.handleProductSelected(message.productId),
+            { scope: APPLICATION_SCOPE }
+        );
     }
 
     disconnectedCallback() {
-        unregisterAllListeners(this);
+        unsubscribe(this.productSelectionSubscription);
+        this.productSelectionSubscription = null;
     }
 
     /**
