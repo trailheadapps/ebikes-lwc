@@ -4,7 +4,7 @@ import CATEGORY_FIELD from '@salesforce/schema/Product__c.Category__c';
 import LEVEL_FIELD from '@salesforce/schema/Product__c.Level__c';
 import MATERIAL_FIELD from '@salesforce/schema/Product__c.Material__c';
 import { publish, MessageContext } from 'lightning/messageService';
-import PRODUCT_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductFiltered__c';
+import PRODUCTS_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductsFiltered__c';
 
 /** The delay used when debouncing event handlers before firing the event. */
 const DELAY = 350;
@@ -77,8 +77,8 @@ export default class ProductFilter extends LightningElement {
                 item => item !== value
             );
         }
-        // Published ProductFiltered message
-        publish(this.messageContext, PRODUCT_FILTERED_MESSAGE, {
+        // Published ProductsFiltered message
+        publish(this.messageContext, PRODUCTS_FILTERED_MESSAGE, {
             filters: this.filters
         });
     }
@@ -90,8 +90,8 @@ export default class ProductFilter extends LightningElement {
         window.clearTimeout(this.delayTimeout);
         // eslint-disable-next-line @lwc/lwc/no-async-operation
         this.delayTimeout = setTimeout(() => {
-            // Published ProductFiltered message
-            publish(this.messageContext, PRODUCT_FILTERED_MESSAGE, {
+            // Published ProductsFiltered message
+            publish(this.messageContext, PRODUCTS_FILTERED_MESSAGE, {
                 filters: this.filters
             });
         }, DELAY);

@@ -6,7 +6,7 @@ import {
     APPLICATION_SCOPE,
     MessageContext
 } from 'lightning/messageService';
-import PRODUCT_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductFiltered__c';
+import PRODUCTS_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductsFiltered__c';
 import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
 
 /** getProducts() method in ProductController Apex class */
@@ -43,7 +43,7 @@ export default class ProductTileList extends LightningElement {
     /** Load context for Ligthning Messaging Service */
     @wire(MessageContext) messageContext;
 
-    /** Subscription for ProductFiltered Ligthning message */
+    /** Subscription for ProductsFiltered Ligthning message */
     productFilterSubscription;
 
     /**
@@ -53,10 +53,10 @@ export default class ProductTileList extends LightningElement {
     products;
 
     connectedCallback() {
-        // Subscribe to ProductFiltered message
+        // Subscribe to ProductsFiltered message
         this.productFilterSubscription = subscribe(
             this.messageContext,
-            PRODUCT_FILTERED_MESSAGE,
+            PRODUCTS_FILTERED_MESSAGE,
             message => this.handleFilterChange(message.filters),
             { scope: APPLICATION_SCOPE }
         );
