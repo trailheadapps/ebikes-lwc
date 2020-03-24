@@ -2,8 +2,8 @@ import { LightningElement, wire } from 'lwc';
 import { CurrentPageReference } from 'lightning/navigation';
 import { NavigationMixin } from 'lightning/navigation';
 
-/** Wire adapter to load records, utils to extract values. */
-import { getRecord } from 'lightning/uiRecordApi';
+/** Utils to extract field values. */
+import { getFieldValue } from 'lightning/uiRecordApi';
 
 /** Pub-sub mechanism for sibling component communication. */
 import { registerListener, unregisterAllListeners } from 'c/pubsub';
@@ -11,21 +11,7 @@ import { registerListener, unregisterAllListeners } from 'c/pubsub';
 /** Product__c Schema. */
 import PRODUCT_OBJECT from '@salesforce/schema/Product__c';
 import NAME_FIELD from '@salesforce/schema/Product__c.Name';
-import LEVEL_FIELD from '@salesforce/schema/Product__c.Level__c';
-import CATEGORY_FIELD from '@salesforce/schema/Product__c.Category__c';
-import MATERIAL_FIELD from '@salesforce/schema/Product__c.Material__c';
-import MSRP_FIELD from '@salesforce/schema/Product__c.MSRP__c';
 import PICTURE_URL_FIELD from '@salesforce/schema/Product__c.Picture_URL__c';
-
-/** Record fields to load. */
-const fields = [
-    NAME_FIELD,
-    LEVEL_FIELD,
-    CATEGORY_FIELD,
-    MATERIAL_FIELD,
-    MSRP_FIELD,
-    PICTURE_URL_FIELD
-];
 
 /**
  * Component to display details of a Product__c.
@@ -34,11 +20,11 @@ export default class ProductCard extends NavigationMixin(LightningElement) {
     /** Id of Product__c to display. */
     recordId;
 
-    @wire(CurrentPageReference) pageRef;
+    /** Product fields displayed with specific format */
+    productName;
+    productPictureUrl;
 
-    /** Load the Product__c to display. */
-    @wire(getRecord, { recordId: '$recordId', fields })
-    product;
+    @wire(CurrentPageReference) pageRef;
 
     connectedCallback() {
         registerListener('productSelected', this.handleProductSelected, this);
@@ -46,6 +32,18 @@ export default class ProductCard extends NavigationMixin(LightningElement) {
 
     disconnectedCallback() {
         unregisterAllListeners(this);
+    }
+
+    handleRecordLoaded(event) {
+        const { records } = event.detail;
+        if (records[this.recordId]) {
+            const recordData = records[this.recordId];
+            this.productName = getFieldValue(recordData, NAME_FIELD);
+            this.productPictureUrl = getFieldValue(
+                recordData,
+                PICTURE_URL_FIELD
+            );
+        }
     }
 
     /**
@@ -65,9 +63,5 @@ export default class ProductCard extends NavigationMixin(LightningElement) {
                 actionName: 'view'
             }
         });
-    }
-
-    get noData() {
-        return !this.product.error && !this.product.data;
     }
 }
