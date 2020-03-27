@@ -108,7 +108,7 @@ Enable Communities by following these steps:
 1. Make sure that your domain name is available by clicking **Check Availability**.
 1. Click **Save** then **Ok**.
 1. Navigate back to **Communities Settings** in Setup.
-1. Under **Community Management Settings**, click the** Enable ExperienceBundle Metadata API** checkbox, and click **Save**.
+1. Under **Community Management Settings**, click the **Enable ExperienceBundle Metadata API** checkbox, and click **Save**.
 
 Configure the Communities metadata file:
 
