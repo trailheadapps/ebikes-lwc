@@ -1,28 +1,11 @@
 img.product {
     width: 100%;
-    margin-bottom: 8px;
-}
-
-.row {
-    display: flex;
-    border-bottom: solid 1px #f3f2f2;
-}
-
-.row div:first-child {
-    width: 80px;
-}
-
-.row div:nth-child(2) {
-    flex: 1;
+    margin-bottom: 0.5rem;
 }
 
 section {
     font-weight: bold;
-    font-size: 13px;
-    margin-top: 8px;
+    font-size: 0.85rem;
+    margin-top: 0.75rem;
     text-transform: uppercase;
-}
-
-.price {
-    color: #c23335;
 }

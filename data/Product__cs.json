@@ -12,7 +12,13 @@
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex1.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex1.jpg",
+            "Battery__c": "401Wh",
+            "Charger__c": "41V4A",
+            "Motor__c": "251 watt, 75Nm",
+            "Fork__c": "Air spring",
+            "Front_Brakes__c": "Dual-pivot caliper brake",
+            "Rear_Brakes__c": "Dual-pivot caliper brake"
         },
         {
             "attributes": {
@@ -26,7 +32,13 @@
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex2.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex2.jpg",
+            "Battery__c": "402Wh",
+            "Charger__c": "42V4A",
+            "Motor__c": "252 watt, 75Nm",
+            "Fork__c": "Air spring",
+            "Front_Brakes__c": "Dual-pivot caliper brake",
+            "Rear_Brakes__c": "Dual-pivot caliper brake"
         },
         {
             "attributes": {
@@ -40,7 +52,13 @@
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex3.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex3.jpg",
+            "Battery__c": "403Wh",
+            "Charger__c": "43V4A",
+            "Motor__c": "253 watt, 75Nm",
+            "Fork__c": "Air spring",
+            "Front_Brakes__c": "Dual-pivot caliper brake",
+            "Rear_Brakes__c": "Dual-pivot caliper brake"
         },
         {
             "attributes": {
@@ -54,7 +72,13 @@
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex4.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex4.jpg",
+            "Battery__c": "404Wh",
+            "Charger__c": "44V4A",
+            "Motor__c": "254 watt, 75Nm",
+            "Fork__c": "Air spring",
+            "Front_Brakes__c": "Dual-pivot caliper brake",
+            "Rear_Brakes__c": "Dual-pivot caliper brake"
         },
         {
             "attributes": {
@@ -68,7 +92,13 @@
             "Level__c": "Racer",
             "Category__c": "Mountain",
             "Material__c": "Carbon",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox1.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox1.jpg",
+            "Battery__c": "501Wh",
+            "Charger__c": "41V4A",
+            "Motor__c": "281 watt, 75Nm",
+            "Fork__c": "Air spring, adjustable rebound",
+            "Front_Brakes__c": "Hydraulic disc, 200mm",
+            "Rear_Brakes__c": "Hydraulic disc, 200mm"
         },
         {
             "attributes": {
@@ -82,7 +112,13 @@
             "Level__c": "Racer",
             "Category__c": "Mountain",
             "Material__c": "Carbon",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox2.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox2.jpg",
+            "Battery__c": "502Wh",
+            "Charger__c": "42V4A",
+            "Motor__c": "282 watt, 75Nm",
+            "Fork__c": "Air spring, adjustable rebound",
+            "Front_Brakes__c": "Hydraulic disc, 200mm",
+            "Rear_Brakes__c": "Hydraulic disc, 200mm"
         },
         {
             "attributes": {
@@ -96,7 +132,13 @@
             "Level__c": "Racer",
             "Category__c": "Mountain",
             "Material__c": "Carbon",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox3.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox3.jpg",
+            "Battery__c": "503Wh",
+            "Charger__c": "43V4A",
+            "Motor__c": "283 watt, 75Nm",
+            "Fork__c": "Air spring, adjustable rebound",
+            "Front_Brakes__c": "Hydraulic disc, 200mm",
+            "Rear_Brakes__c": "Hydraulic disc, 200mm"
         },
         {
             "attributes": {
@@ -110,7 +152,13 @@
             "Level__c": "Racer",
             "Category__c": "Mountain",
             "Material__c": "Carbon",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox4.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox4.jpg",
+            "Battery__c": "504Wh",
+            "Charger__c": "44V4A",
+            "Motor__c": "284 watt, 75Nm",
+            "Fork__c": "Air spring, adjustable rebound",
+            "Front_Brakes__c": "Hydraulic disc, 200mm",
+            "Rear_Brakes__c": "Hydraulic disc, 200mm"
         },
         {
             "attributes": {
@@ -124,7 +172,13 @@
             "Level__c": "Enthusiast",
             "Category__c": "Mountain",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax1.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax1.jpg",
+            "Battery__c": "501Wh",
+            "Charger__c": "41V4A",
+            "Motor__c": "251 watt, 75Nm",
+            "Fork__c": "Air spring, adjustable rebound",
+            "Front_Brakes__c": "Hydraulic disc, 200mm",
+            "Rear_Brakes__c": "Hydraulic disc, 200mm"
         },
         {
             "attributes": {
@@ -138,7 +192,13 @@
             "Level__c": "Enthusiast",
             "Category__c": "Mountain",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax2.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax2.jpg",
+            "Battery__c": "502Wh",
+            "Charger__c": "42V4A",
+            "Motor__c": "252 watt, 75Nm",
+            "Fork__c": "Air spring, adjustable rebound",
+            "Front_Brakes__c": "Hydraulic disc, 200mm",
+            "Rear_Brakes__c": "Hydraulic disc, 200mm"
         },
         {
             "attributes": {
@@ -152,7 +212,13 @@
             "Level__c": "Enthusiast",
             "Category__c": "Mountain",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax3.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax3.jpg",
+            "Battery__c": "503Wh",
+            "Charger__c": "43V4A",
+            "Motor__c": "253 watt, 75Nm",
+            "Fork__c": "Air spring, adjustable rebound",
+            "Front_Brakes__c": "Hydraulic disc, 200mm",
+            "Rear_Brakes__c": "Hydraulic disc, 200mm"
         },
         {
             "attributes": {
@@ -166,7 +232,13 @@
             "Level__c": "Enthusiast",
             "Category__c": "Mountain",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax4.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax4.jpg",
+            "Battery__c": "504Wh",
+            "Charger__c": "44V4A",
+            "Motor__c": "254 watt, 75Nm",
+            "Fork__c": "Air spring, adjustable rebound",
+            "Front_Brakes__c": "Hydraulic disc, 200mm",
+            "Rear_Brakes__c": "Hydraulic disc, 200mm"
         },
         {
             "attributes": {
@@ -180,7 +252,13 @@
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx1.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx1.jpg",
+            "Battery__c": "300Wh",
+            "Charger__c": "21V4A",
+            "Motor__c": "251 watt, 75Nm",
+            "Fork__c": "Foldable",
+            "Front_Brakes__c": "Centre-pull caliper brake",
+            "Rear_Brakes__c": "Centre-pull caliper brake"
         },
         {
             "attributes": {
@@ -194,7 +272,13 @@
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx2.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx2.jpg",
+            "Battery__c": "300Wh",
+            "Charger__c": "42V4A",
+            "Motor__c": "252 watt, 75Nm",
+            "Fork__c": "Foldable",
+            "Front_Brakes__c": "Centre-pull caliper brake",
+            "Rear_Brakes__c": "Centre-pull caliper brake"
         },
         {
             "attributes": {
@@ -208,7 +292,13 @@
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx3.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx3.jpg",
+            "Battery__c": "300Wh",
+            "Charger__c": "23V4A",
+            "Motor__c": "253 watt, 75Nm",
+            "Fork__c": "Foldable",
+            "Front_Brakes__c": "Centre-pull caliper brake",
+            "Rear_Brakes__c": "Centre-pull caliper brake"
         },
         {
             "attributes": {
@@ -222,7 +312,13 @@
             "Level__c": "Beginner",
             "Category__c": "Commuter",
             "Material__c": "Aluminum",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx4.jpg"
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx4.jpg",
+            "Battery__c": "300Wh",
+            "Charger__c": "24V4A",
+            "Motor__c": "254 watt, 75Nm",
+            "Fork__c": "Foldable",
+            "Front_Brakes__c": "Centre-pull caliper brake",
+            "Rear_Brakes__c": "Centre-pull caliper brake"
         }
     ]
 }
