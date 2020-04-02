@@ -21,32 +21,31 @@
                     density="compact"
                 >
                     <lightning-output-field
-                        field-name="Category__c"
+                        field-name={categoryField}
                     ></lightning-output-field>
                     <lightning-output-field
-                        field-name="Level__c"
+                        field-name={levelField}
                     ></lightning-output-field>
                     <lightning-output-field
-                        field-name="MSRP__c"
-                        class="price"
+                        field-name={msrpField}
                     ></lightning-output-field>
 
                     <section>Electric Components</section>
                     <lightning-output-field
-                        field-name="Battery__c"
+                        field-name={batteryField}
                     ></lightning-output-field>
                     <lightning-output-field
-                        field-name="Charger__c"
+                        field-name={chargerField}
                     ></lightning-output-field>
                     <lightning-output-field
-                        field-name="Motor__c"
+                        field-name={motorField}
                     ></lightning-output-field>
                     <section>Frame</section>
                     <lightning-output-field
-                        field-name="Material__c"
+                        field-name={materialField}
                     ></lightning-output-field>
                     <lightning-output-field
-                        field-name="Fork__c"
+                        field-name={forkField}
                     ></lightning-output-field>
 
                     <section>Brakes</section>
@@ -54,7 +53,7 @@
                         <span class="slds-form-element__label">Front</span>
                         <div class="slds-form-element__control">
                             <lightning-output-field
-                                field-name="Front_Brakes__c"
+                                field-name={frontBrakesField}
                                 variant="label-hidden"
                             ></lightning-output-field>
                         </div>
@@ -63,7 +62,7 @@
                         <span class="slds-form-element__label">Rear</span>
                         <div class="slds-form-element__control">
                             <lightning-output-field
-                                field-name="Rear_Brakes__c"
+                                field-name={rearBrakesField}
                                 variant="label-hidden"
                             ></lightning-output-field>
                         </div>
