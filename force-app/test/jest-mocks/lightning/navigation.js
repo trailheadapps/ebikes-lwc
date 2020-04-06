@@ -9,7 +9,7 @@ let _pageReference, _replace;
 
 const Navigate = Symbol('Navigate');
 const GenerateUrl = Symbol('GenerateUrl');
-export const NavigationMixin = Base => {
+export const NavigationMixin = (Base) => {
     return class extends Base {
         [Navigate](pageReference, replace) {
             _pageReference = pageReference;

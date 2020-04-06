@@ -58,13 +58,13 @@ export default class ProductFilter extends LightningElement {
         if (!this.filters.categories) {
             // Lazy initialize filters with all values initially set
             this.filters.categories = this.categories.data.values.map(
-                item => item.value
+                (item) => item.value
             );
             this.filters.levels = this.levels.data.values.map(
-                item => item.value
+                (item) => item.value
             );
             this.filters.materials = this.materials.data.values.map(
-                item => item.value
+                (item) => item.value
             );
         }
         const value = event.target.dataset.value;
@@ -75,7 +75,7 @@ export default class ProductFilter extends LightningElement {
             }
         } else {
             this.filters[event.target.dataset.filter] = filterArray.filter(
-                item => item !== value
+                (item) => item !== value
             );
         }
         fireEvent(this.pageRef, 'filterChange', this.filters);
