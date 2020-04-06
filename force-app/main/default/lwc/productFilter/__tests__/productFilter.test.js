@@ -160,7 +160,7 @@ describe('c-product-filter', () => {
 
         it.each(['categories', 'materials', 'levels'])(
             'does not render %s input options',
-            type => {
+            (type) => {
                 const element = createElement('c-product-filter', {
                     is: ProductFilter
                 });

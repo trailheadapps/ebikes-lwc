@@ -128,7 +128,7 @@ export default class OrderBuilder extends LightningElement {
                 // refresh the Order_Item__c SObjects
                 return refreshApex(this.wiredOrderItems);
             })
-            .catch(e => {
+            .catch((e) => {
                 this.dispatchEvent(
                     new ShowToastEvent({
                         title: 'Error creating order',
@@ -150,7 +150,7 @@ export default class OrderBuilder extends LightningElement {
 
         // optimistically make the change on the client
         const previousOrderItems = this.orderItems;
-        const orderItems = this.orderItems.map(orderItem => {
+        const orderItems = this.orderItems.map((orderItem) => {
             if (orderItem.Id === orderItemChanges.Id) {
                 // synthesize a new Order_Item__c SObject
                 return Object.assign({}, orderItem, orderItemChanges);
@@ -166,7 +166,7 @@ export default class OrderBuilder extends LightningElement {
                 // if there were triggers/etc that invalidate the Apex result then we'd refresh it
                 // return refreshApex(this.wiredOrderItems);
             })
-            .catch(e => {
+            .catch((e) => {
                 // error updating server so rollback to previous data
                 this.setOrderItems(previousOrderItems);
                 this.dispatchEvent(
@@ -186,7 +186,7 @@ export default class OrderBuilder extends LightningElement {
         // optimistically make the change on the client
         const previousOrderItems = this.orderItems;
         const orderItems = this.orderItems.filter(
-            orderItem => orderItem.Id !== id
+            (orderItem) => orderItem.Id !== id
         );
         this.setOrderItems(orderItems);
 
@@ -196,7 +196,7 @@ export default class OrderBuilder extends LightningElement {
                 // if there were triggers/etc that invalidate the Apex result then we'd refresh it
                 // return refreshApex(this.wiredOrderItems);
             })
-            .catch(e => {
+            .catch((e) => {
                 // error updating server so rollback to previous data
                 this.setOrderItems(previousOrderItems);
                 this.dispatchEvent(
