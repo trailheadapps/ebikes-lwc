@@ -213,21 +213,21 @@ describe('c-product-tile-list', () => {
             getProductsAdapter.error();
             return Promise.resolve()
                 .then(() => {
-                    const inlineMessage = element.shadowRoot.querySelector(
-                        'c-inline-message'
+                    const errorPanel = element.shadowRoot.querySelector(
+                        'c-error-panel'
                     );
                     // check the "Show Details" checkbox to render additional error messages
-                    const lightningInput = inlineMessage.shadowRoot.querySelector(
+                    const lightningInput = errorPanel.shadowRoot.querySelector(
                         'lightning-input'
                     );
                     lightningInput.checked = true;
                     lightningInput.dispatchEvent(new CustomEvent('change'));
                 })
                 .then(() => {
-                    const inlineMessage = element.shadowRoot.querySelector(
-                        'c-inline-message'
+                    const errorPanel = element.shadowRoot.querySelector(
+                        'c-error-panel'
                     );
-                    const text = inlineMessage.shadowRoot.textContent;
+                    const text = errorPanel.shadowRoot.textContent;
                     expect(text).toContain(defaultError);
                 });
         });

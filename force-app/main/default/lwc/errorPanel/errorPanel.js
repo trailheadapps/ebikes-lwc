@@ -8,7 +8,7 @@ const VARIANTS = {
     error: 'utility:error'
 };
 
-export default class InlineMessage extends LightningElement {
+export default class ErrorPanel extends LightningElement {
     /** Generic / user-friendly message */
     @api message = 'Error retrieving data';
 
