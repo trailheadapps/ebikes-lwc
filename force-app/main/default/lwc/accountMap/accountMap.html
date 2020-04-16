@@ -7,15 +7,11 @@
             ></lightning-map>
         </template>
         <template if:false={markers.length}>
-            <c-error-panel
-                variant="info"
-                message="No address to map"
-            ></c-error-panel>
+            <c-error-panel friendly-message="No address to map"></c-error-panel>
         </template>
         <template if:true={error}>
             <c-error-panel
-                variant="error"
-                message="Error retrieving map data"
+                friendly-message="Error retrieving map data"
                 errors={error}
             ></c-error-panel>
         </template>

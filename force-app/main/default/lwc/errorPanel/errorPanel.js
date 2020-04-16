@@ -1,32 +1,13 @@
 import { LightningElement, api } from 'lwc';
 import { reduceErrors } from 'c/ldsUtils';
-
-const VARIANTS = {
-    info: 'utility:info',
-    success: 'utility:success',
-    warning: 'utility:warning',
-    error: 'utility:error'
-};
+import NODATA_SVG from '@salesforce/resourceUrl/noDataErrorIllustration';
 
 export default class ErrorPanel extends LightningElement {
     /** Generic / user-friendly message */
-    @api message = 'Error retrieving data';
-
-    iconName = VARIANTS.info;
-
-    _variant = 'info';
-    @api
-    get variant() {
-        return this._variant;
-    }
-    set variant(value) {
-        if (VARIANTS[value]) {
-            this._variant = value;
-            this.iconName = VARIANTS[value];
-        }
-    }
+    @api friendlyMessage = 'Error retrieving data';
 
     viewDetails = false;
+    noDataSvgUrl = `${NODATA_SVG}#noDataErrorIllustration`;
 
     /** Single or array of LDS errors */
     @api errors;
