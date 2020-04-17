@@ -40,7 +40,7 @@
             </template>
         </template>
         <template if:true={products.error}>
-            <c-inline-message errors={products.error}></c-inline-message>
+            <c-error-panel errors={products.error}></c-error-panel>
         </template>
     </div>
 </template>

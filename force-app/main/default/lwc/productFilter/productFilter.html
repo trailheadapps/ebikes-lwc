@@ -35,10 +35,10 @@
                     </template>
                 </template>
                 <template if:true={categories.error}>
-                    <c-inline-message
-                        message="Error loading categories"
+                    <c-error-panel
+                        friendly-message="Error loading categories"
                         errors={categories.error}
-                    ></c-inline-message>
+                    ></c-error-panel>
                 </template>
             </section>
             <section>
@@ -60,10 +60,10 @@
                     </template>
                 </template>
                 <template if:true={materials.error}>
-                    <c-inline-message
-                        message="Error loading materials"
+                    <c-error-panel
+                        friendly-message="Error loading materials"
                         errors={materials.error}
-                    ></c-inline-message>
+                    ></c-error-panel>
                 </template>
             </section>
             <section>
@@ -82,10 +82,10 @@
                     </template>
                 </template>
                 <template if:true={levels.error}>
-                    <c-inline-message
-                        message="Error loading levels"
+                    <c-error-panel
+                        friendly-message="Error loading levels"
                         errors={levels.error}
-                    ></c-inline-message>
+                    ></c-error-panel>
                 </template>
             </section>
         </div>
