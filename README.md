@@ -86,7 +86,7 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
-1. Open the App Launcher, click **View All** then click on either of the **E-Bikes** cards to open the app or the Community.
+1. In App Launcher, select the **E-Bikes** app.
 
 ## Installing E-Bikes using a Developer Edition Org or a Trailhead Playground
 
@@ -95,78 +95,82 @@ This includes non source-tracked orgs such as a [free Developer Edition Org](htt
 
 Make sure to start from a brand-new environment to avoid conflicts with previous work you may have done.
 
-1. Log in to your org
+1. Authenticate with your Trailhead Playground or Developer org and provide it with an alias (**mydevorg** in the command below):
+
+    ```
+    sfdx force:auth:web:login -d -a mydevorg
+    ```
+
+1. Clone this repository:
+
+    ```
+    git clone https://github.com/trailheadapps/ebikes-lwc
+    cd ebikes-lwc
+    ```
+
 1. If you are setting up a Developer Edition: go to **Setup**, under **My Domain**, [register a My Domain](https://help.salesforce.com/articleView?id=domain_name_setup.htm&type=5).
 
-### Step 1: Enable and Configure Communities
+1. Enable Communities with the following steps:
 
-Enable Communities by following these steps:
+    1. In your org, in **Setup**, select **Communities Settings**.
+    1. Click the **Enable communities** checkbox
+    1. Enter a domain name for your community. Remember this value as you’ll use it later in this step.
+    1. Make sure that your domain name is available by clicking **Check Availability**.
+    1. Click **Save** then **Ok**.
+    1. Navigate back to **Communities Settings** in Setup.
+    1. Under **Community Management Settings**, enable **Enable ExperienceBundle Metadata API**.
 
-1. In your org, navigate to Setup, enter `communities` in the Quick Find box then select **Communities Settings**.
-1. Click the **Enable communities** checkbox
-1. Enter a domain name for your community. Remember this value as you’ll use it later in this step.
-1. Make sure that your domain name is available by clicking **Check Availability**.
-1. Click **Save** then **Ok**.
-1. Navigate back to **Communities Settings** in Setup.
-1. Under **Community Management Settings**, click the **Enable ExperienceBundle Metadata API** checkbox, and click **Save**.
+1. Configure the Community metadata file with the following steps:
 
-Configure the Communities metadata file:
+    1. Edit the `force-app/main/default/sites/E_Bikes.site-meta.xml` file.
+    1. Replace the value between the `<siteAdmin>` tags with your Playground username.
+    1. Replace the value between the `<siteGuestRecordDefaultOwner>` tags with your Playground username.
+    1. Replace the value between the `<subdomain>` tags with your Communities domain.
+    1. Save the file.
 
-1. Edit the `force-app/main/default/sites/E_Bikes.site-meta.xml` file.
-1. Replace the value between the `<siteAdmin>` tags with your Playground username.
-1. Replace the value between the `<siteGuestRecordDefaultOwner>` tags with your Playground username.
-1. Replace the value between the `<subdomain>` tags with your Communities domain.
-1. Save the file.
+1. Remove the `Product` custom field from the `Case` object with the following steps:
 
-### Step 2: Prepare the Org's Metadata
+    1. In Setup, click the **Object Manager** tab.
+    1. Click on the **Case** object.
+    1. Click **Fields & Relationships**.
+    1. Locate the **Product** picklist field and click **Delete** from the row menu.
+    1. Confirm deletion by clicking **Delete**.
 
-Remove the `Product` custom field from the `Case` object:
+1. Deploy the App with these steps:
 
-1. In Setup, click the **Object Manager** tab.
-1. Click on the **Case** object.
-1. Click **Fields & Relationships**.
-1. Locate the **Product** picklist field and click **Delete** from the row menu.
-1. Confirm deletion by clicking **Delete**.
+    1. Run this command in a terminal to deploy the app.
 
-### Step 3: Deploy the App
+        ```
+        sfdx force:source:deploy -p force-app
+        ```
 
-Deploy the app to your org with the Salesforce CLI:
+    1. Assign the `ebikes` permission set to the default user.
 
-1. Run this command in a terminal to deploy the app.
+        ```
+        sfdx force:user:permset:assign -n ebikes
+        ```
 
-    ```
-    sfdx force:source:deploy -p force-app
-    ```
+    1. Import some sample data.
 
-1. Assign the `ebikes` permission set to the default user.
+        ```
+        sfdx force:data:tree:import -p ./data/sample-data-plan.json
+        ```
 
-    ```
-    sfdx force:user:permset:assign -n ebikes
-    ```
+    1. Deploy the Community metadata.
 
-1. Import some sample data.
+        ```
+        sfdx force:mdapi:deploy -d mdapiDeploy/unpackaged -w 5
+        ```
 
-    ```
-    sfdx force:data:tree:import -p ./data/sample-data-plan.json
-    ```
+    1. Publish the Community.
 
-1. Deploy the Community metadata.
+        ```
+        sfdx force:community:publish -n E-Bikes
+        ```
 
-    ```
-    sfdx force:mdapi:deploy -d mdapiDeploy/unpackaged -w 5
-    ```
+    1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
-1. Publish the Community.
-
-    ```
-    sfdx force:community:publish -n E-Bikes
-    ```
-
-1. In your org, navigate to Setup, enter `themes` in the Quick Find box then select **Themes and Branding**.
-1. Locate the **Lightning Lite** theme and click **Activate** from the row menu.
-
-Congratulations! You’ve successfully set up the E-Bikes sample app.
-Open the App Launcher, click **View All** then click on either of the **E-Bikes** cards to open the app or the Community.
+    1. In App Launcher, select the **E-Bikes** app.
 
 ## Optional Installation Instructions
 
