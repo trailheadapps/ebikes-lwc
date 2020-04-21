@@ -168,7 +168,13 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
         sfdx force:community:publish -n E-Bikes
         ```
 
-    1. If your org isn't already open, open it now: `sfdx force:org:open -u mydevorg`. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
+    1. If your org isn't already open, open it now:
+
+        ```
+        sfdx force:org:open -u mydevorg
+        ```
+
+    1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
 
     1. In App Launcher, select the **E-Bikes** app.
 
