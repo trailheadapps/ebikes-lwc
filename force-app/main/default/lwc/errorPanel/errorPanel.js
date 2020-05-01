@@ -22,8 +22,7 @@ export default class ErrorPanel extends LightningElement {
     }
 
     render() {
-        if (this.type === 'inlineMessage')
-            return inlineMessage;
+        if (this.type === 'inlineMessage') return inlineMessage;
         return noDataIllustration;
     }
 }

@@ -1,5 +1,7 @@
 <template>
-    <div class="slds-illustration slds-illustration_small slds-var-m-vertical_small">
+    <div
+        class="slds-illustration slds-illustration_small slds-var-m-vertical_small"
+    >
         <svg
             class="slds-illustration__svg"
             viewBox="0 0 454 272"
@@ -241,9 +243,7 @@
         <div class="slds-text-longform">
             <h3 class="slds-text-heading_medium">{friendlyMessage}</h3>
             <template if:true={errorMessages.length}>
-                <a onclick={handleShowDetailsClick}
-                    >Show details</a
-                >
+                <a onclick={handleShowDetailsClick}>Show details</a>
                 <template if:true={viewDetails}>
                     <template for:each={errorMessages} for:item="message">
                         <p class="slds-text-body_regular" key={message}>
