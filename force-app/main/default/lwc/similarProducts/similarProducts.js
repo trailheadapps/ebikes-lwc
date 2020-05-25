@@ -23,7 +23,7 @@ export default class SimilarProducts extends LightningElement {
 
     get errors() {
         const errors = [this.product.error, this.similarProducts.error].filter(
-            error => error
+            (error) => error
         );
         return errors.length ? errors : undefined;
     }

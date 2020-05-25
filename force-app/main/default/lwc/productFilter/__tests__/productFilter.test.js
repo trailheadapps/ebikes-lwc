@@ -151,7 +151,7 @@ describe('c-product-filter', () => {
 
             return Promise.resolve().then(() => {
                 const messages = element.shadowRoot.querySelectorAll(
-                    'c-inline-message'
+                    'c-error-panel'
                 );
                 // One error message per @wire
                 expect(messages).toHaveLength(3);
@@ -160,7 +160,7 @@ describe('c-product-filter', () => {
 
         it.each(['categories', 'materials', 'levels'])(
             'does not render %s input options',
-            type => {
+            (type) => {
                 const element = createElement('c-product-filter', {
                     is: ProductFilter
                 });

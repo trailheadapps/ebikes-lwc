@@ -20,10 +20,10 @@
                 </template>
             </template>
             <template if:true={errors}>
-                <c-inline-message
-                    message="An error has occurred while retrieving similar products"
+                <c-error-panel
+                    friendly-message="An error has occurred while retrieving similar products"
                     errors={errors}
-                ></c-inline-message>
+                ></c-error-panel>
             </template>
         </div>
     </lightning-card>

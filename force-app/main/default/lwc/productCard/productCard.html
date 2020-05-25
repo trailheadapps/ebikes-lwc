@@ -1,7 +1,7 @@
 <template>
     <lightning-card icon-name="standard:apex_plugin">
-        <template if:true={product.data}>
-            <span slot="title">{product.data.fields.Name.value}</span>
+        <template if:true={recordId}>
+            <span slot="title">{productName}</span>
             <lightning-button-icon
                 icon-name="utility:expand_alt"
                 slot="actions"
@@ -9,71 +9,72 @@
             ></lightning-button-icon>
             <div class="slds-m-horizontal_medium">
                 <img
-                    src={product.data.fields.Picture_URL__c.value}
+                    if:true={productPictureUrl}
+                    src={productPictureUrl}
                     class="product"
                     alt="Product picture"
                 />
-                <div class="row">
-                    <div>Category:</div>
-                    <div>{product.data.fields.Category__c.value}</div>
-                </div>
-                <div class="row">
-                    <div>Level:</div>
-                    <div>{product.data.fields.Level__c.value}</div>
-                </div>
-                <div class="row">
-                    <div>MSRP:</div>
-                    <div>
-                        <lightning-formatted-number
-                            format-style="currency"
-                            currency-code="USD"
-                            value={product.data.fields.MSRP__c.value}
-                            class="price"
-                        ></lightning-formatted-number>
+                <lightning-record-view-form
+                    record-id={recordId}
+                    onload={handleRecordLoaded}
+                    object-api-name="Product__c"
+                    density="compact"
+                >
+                    <lightning-output-field
+                        field-name={categoryField}
+                    ></lightning-output-field>
+                    <lightning-output-field
+                        field-name={levelField}
+                    ></lightning-output-field>
+                    <lightning-output-field
+                        field-name={msrpField}
+                    ></lightning-output-field>
+
+                    <section>Electric Components</section>
+                    <lightning-output-field
+                        field-name={batteryField}
+                    ></lightning-output-field>
+                    <lightning-output-field
+                        field-name={chargerField}
+                    ></lightning-output-field>
+                    <lightning-output-field
+                        field-name={motorField}
+                    ></lightning-output-field>
+                    <section>Frame</section>
+                    <lightning-output-field
+                        field-name={materialField}
+                    ></lightning-output-field>
+                    <lightning-output-field
+                        field-name={forkField}
+                    ></lightning-output-field>
+
+                    <section>Brakes</section>
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <span class="slds-form-element__label">Front</span>
+                        <div class="slds-form-element__control">
+                            <lightning-output-field
+                                field-name={frontBrakesField}
+                                variant="label-hidden"
+                            ></lightning-output-field>
+                        </div>
                     </div>
-                </div>
-                <section>Electric Components</section>
-                <div class="row">
-                    <div>Battery:</div>
-                    <div>500Wh</div>
-                </div>
-                <div class="row">
-                    <div>Charger:</div>
-                    <div>42V4A</div>
-                </div>
-                <div class="row">
-                    <div>Motor:</div>
-                    <div>250 watt, 75Nm</div>
-                </div>
-                <section>Frame</section>
-                <div class="row">
-                    <div>Frame:</div>
-                    <div>{product.data.fields.Material__c.value}</div>
-                </div>
-                <div class="row">
-                    <div>Fork:</div>
-                    <div>Air spring, adjustable rebound</div>
-                </div>
-                <section>Brakes</section>
-                <div class="row">
-                    <div>Front:</div>
-                    <div>Hydraulic disc, 200mm</div>
-                </div>
-                <div class="row">
-                    <div>Rear:</div>
-                    <div>Hydraulic disc, 200mm</div>
-                </div>
+                    <div class="slds-form-element slds-form-element_horizontal">
+                        <span class="slds-form-element__label">Rear</span>
+                        <div class="slds-form-element__control">
+                            <lightning-output-field
+                                field-name={rearBrakesField}
+                                variant="label-hidden"
+                            ></lightning-output-field>
+                        </div>
+                    </div>
+                </lightning-record-view-form>
             </div>
         </template>
 
-        <template if:true={noData}>
+        <template if:false={recordId}>
             <c-placeholder
                 message="Select a product to see details"
             ></c-placeholder>
-        </template>
-
-        <template if:true={product.error}>
-            <c-inline-message errors={product.error}></c-inline-message>
         </template>
     </lightning-card>
 </template>

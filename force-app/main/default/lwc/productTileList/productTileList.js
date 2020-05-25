@@ -57,7 +57,7 @@ export default class ProductTileList extends LightningElement {
         this.productFilterSubscription = subscribe(
             this.messageContext,
             PRODUCTS_FILTERED_MESSAGE,
-            message => this.handleFilterChange(message.filters),
+            (message) => this.handleFilterChange(message.filters),
             { scope: APPLICATION_SCOPE }
         );
     }
