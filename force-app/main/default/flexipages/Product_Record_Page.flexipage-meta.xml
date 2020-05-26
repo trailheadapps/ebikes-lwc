@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
-        <componentInstances>
+        <itemInstances>
+<componentInstance>
             <componentInstanceProperties>
                 <name>collapsed</name>
                 <value>false</value>
             </componentInstanceProperties>
             <componentName>force:highlightsPanel</componentName>
-        </componentInstances>
+        </componentInstance>
+</itemInstances>
         <mode>Replace</mode>
         <name>header</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <componentInstances>
+        <itemInstances>
+<componentInstance>
             <componentInstanceProperties>
                 <name>relatedListComponentOverride</name>
                 <value>NONE</value>
             </componentInstanceProperties>
             <componentName>force:relatedListContainer</componentName>
-        </componentInstances>
+        </componentInstance>
+</itemInstances>
         <mode>Replace</mode>
         <name>relatedTabContent</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <componentInstances>
+        <itemInstances>
+<componentInstance>
             <componentName>force:detailPanel</componentName>
-        </componentInstances>
+        </componentInstance>
+</itemInstances>
         <mode>Replace</mode>
         <name>detailTabContent</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <componentInstances>
+        <itemInstances>
+<componentInstance>
             <componentInstanceProperties>
                 <name>body</name>
                 <value>relatedTabContent</value>
@@ -43,8 +50,10 @@
                 <value>Standard.Tab.relatedLists</value>
             </componentInstanceProperties>
             <componentName>flexipage:tab</componentName>
-        </componentInstances>
-        <componentInstances>
+        </componentInstance>
+</itemInstances>
+        <itemInstances>
+<componentInstance>
             <componentInstanceProperties>
                 <name>active</name>
                 <value>true</value>
@@ -58,27 +67,32 @@
                 <value>Standard.Tab.detail</value>
             </componentInstanceProperties>
             <componentName>flexipage:tab</componentName>
-        </componentInstances>
+        </componentInstance>
+</itemInstances>
         <mode>Replace</mode>
         <name>maintabs</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <componentInstances>
+        <itemInstances>
+<componentInstance>
             <componentInstanceProperties>
                 <name>tabs</name>
                 <value>maintabs</value>
             </componentInstanceProperties>
             <componentName>flexipage:tabset</componentName>
-        </componentInstances>
+        </componentInstance>
+</itemInstances>
         <mode>Replace</mode>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <componentInstances>
+        <itemInstances>
+<componentInstance>
             <componentName>similarProducts</componentName>
-        </componentInstances>
+        </componentInstance>
+</itemInstances>
         <mode>Replace</mode>
         <name>sidebar</name>
         <type>Region</type>
