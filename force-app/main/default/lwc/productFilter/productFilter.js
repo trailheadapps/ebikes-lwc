@@ -1,12 +1,16 @@
 import { LightningElement, wire } from 'lwc';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
+
+// Product schema
 import CATEGORY_FIELD from '@salesforce/schema/Product__c.Category__c';
 import LEVEL_FIELD from '@salesforce/schema/Product__c.Level__c';
 import MATERIAL_FIELD from '@salesforce/schema/Product__c.Material__c';
+
+// Ligthning Message Service and a message channel
 import { publish, MessageContext } from 'lightning/messageService';
 import PRODUCTS_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductsFiltered__c';
 
-/** The delay used when debouncing event handlers before firing the event. */
+// The delay used when debouncing event handlers before firing the event
 const DELAY = 350;
 
 /**

@@ -1,4 +1,6 @@
 import { LightningElement, wire } from 'lwc';
+
+// Ligthning Message Service and a message channel
 import { NavigationMixin } from 'lightning/navigation';
 import {
     subscribe,
@@ -8,10 +10,10 @@ import {
 } from 'lightning/messageService';
 import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
 
-/** Utils to extract field values. */
+// Utils to extract field values
 import { getFieldValue } from 'lightning/uiRecordApi';
 
-/** Product__c Schema. */
+// Product__c Schema
 import PRODUCT_OBJECT from '@salesforce/schema/Product__c';
 import NAME_FIELD from '@salesforce/schema/Product__c.Name';
 import PICTURE_URL_FIELD from '@salesforce/schema/Product__c.Picture_URL__c';

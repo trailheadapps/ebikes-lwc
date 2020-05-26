@@ -1,4 +1,6 @@
 import { LightningElement, api, wire } from 'lwc';
+
+// Ligthning Message Service and message channels
 import {
     publish,
     subscribe,
@@ -9,7 +11,7 @@ import {
 import PRODUCTS_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductsFiltered__c';
 import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
 
-/** getProducts() method in ProductController Apex class */
+// getProducts() method in ProductController Apex class
 import getProducts from '@salesforce/apex/ProductController.getProducts';
 
 /**
