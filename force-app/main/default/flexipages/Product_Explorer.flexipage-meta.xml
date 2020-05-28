@@ -2,28 +2,28 @@
 <FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
     <flexiPageRegions>
         <itemInstances>
-<componentInstance>
-            <componentName>c:productFilter</componentName>
-        </componentInstance>
-</itemInstances>
+            <componentInstance>
+                <componentName>c:productFilter</componentName>
+            </componentInstance>
+        </itemInstances>
         <name>left</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-<componentInstance>
-            <componentName>c:productTileList</componentName>
-        </componentInstance>
-</itemInstances>
+            <componentInstance>
+                <componentName>c:productTileList</componentName>
+            </componentInstance>
+        </itemInstances>
         <name>center</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-<componentInstance>
-            <componentName>c:productCard</componentName>
-        </componentInstance>
-</itemInstances>
+            <componentInstance>
+                <componentName>c:productCard</componentName>
+            </componentInstance>
+        </itemInstances>
         <name>right</name>
         <type>Region</type>
     </flexiPageRegions>
