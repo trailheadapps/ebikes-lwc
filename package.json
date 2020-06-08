@@ -33,7 +33,7 @@
         "husky": "^4.2.5",
         "lint-staged": "^10.2.7",
         "prettier": "^2.0.5",
-        "prettier-plugin-apex": "^1.4.0",
+        "prettier-plugin-apex": "^1.5.0",
         "semver": "^7.3.2"
     },
     "husky": {
