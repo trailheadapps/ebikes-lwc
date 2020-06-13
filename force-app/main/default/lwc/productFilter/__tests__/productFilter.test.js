@@ -1,19 +1,11 @@
 import { createElement } from 'lwc';
 import ProductFilter from 'c/productFilter';
-import { fireEvent } from 'c/pubsub';
 import {
     registerLdsTestWireAdapter,
     registerTestWireAdapter
 } from '@salesforce/sfdx-lwc-jest';
 import { CurrentPageReference } from 'lightning/navigation';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
-
-// Mock out the event firing function to verify it was called with expected parameters.
-jest.mock('c/pubsub', () => {
-    return {
-        fireEvent: jest.fn()
-    };
-});
 
 /*
  * Import a snapshot of getPicklistValues' response for functional verification. This eliminates

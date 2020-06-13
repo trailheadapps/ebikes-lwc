@@ -1,21 +1,11 @@
 import { createElement } from 'lwc';
 import ProductTileList from 'c/productTileList';
-import { fireEvent } from 'c/pubsub';
 import {
     registerTestWireAdapter,
     registerApexTestWireAdapter
 } from '@salesforce/sfdx-lwc-jest';
 import getProducts from '@salesforce/apex/ProductController.getProducts';
 import { CurrentPageReference } from 'lightning/navigation';
-
-// Mock out the pubsub lib and use these mocks to verify how functions were called
-jest.mock('c/pubsub', () => {
-    return {
-        fireEvent: jest.fn(),
-        registerListener: jest.fn(),
-        unregisterAllListeners: jest.fn()
-    };
-});
 
 // Realistic data with multiple records
 const mockGetProducts = require('./data/getProducts.json');
