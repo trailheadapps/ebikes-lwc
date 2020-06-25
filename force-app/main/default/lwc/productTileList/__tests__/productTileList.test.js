@@ -4,8 +4,9 @@ import {
     registerTestWireAdapter,
     registerApexTestWireAdapter
 } from '@salesforce/sfdx-lwc-jest';
+import { publish, MessageContext } from 'lightning/messageService';
+import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
 import getProducts from '@salesforce/apex/ProductController.getProducts';
-import { CurrentPageReference } from 'lightning/navigation';
 
 // Realistic data with multiple records
 const mockGetProducts = require('./data/getProducts.json');
@@ -18,7 +19,7 @@ const getProductsAdapter = registerApexTestWireAdapter(getProducts);
 
 // Register as a standard wire adapter because the component under test requires this adapter.
 // We don't exercise this wire adapter in the tests.
-registerTestWireAdapter(CurrentPageReference);
+registerTestWireAdapter(MessageContext);
 
 describe('c-product-tile-list', () => {
     afterEach(() => {
@@ -136,7 +137,7 @@ describe('c-product-tile-list', () => {
             });
         });
 
-        it('fires productSelected event when c-product-tile selected', () => {
+        it('sends productSelected event when c-product-tile selected', () => {
             const element = createElement('c-product-tile-list', {
                 is: ProductTileList
             });
@@ -148,10 +149,10 @@ describe('c-product-tile-list', () => {
                     'c-product-tile'
                 );
                 productTile.dispatchEvent(new CustomEvent('selected'));
-                expect(fireEvent).toHaveBeenCalledWith(
+                expect(publish).toHaveBeenCalledWith(
                     undefined,
-                    'productSelected',
-                    null
+                    PRODUCT_SELECTED_MESSAGE,
+                    { productId: null }
                 );
             });
         });

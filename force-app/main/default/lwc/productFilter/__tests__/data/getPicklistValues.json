@@ -6,9 +6,9 @@
     "values": [
         {
             "attributes": null,
-            "label": "Commuter",
+            "label": "MockValue",
             "validFor": [],
-            "value": "Commuter"
+            "value": "MockValue"
         }
     ]
 }
