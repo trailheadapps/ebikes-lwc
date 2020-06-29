@@ -15,13 +15,15 @@ export const unsubscribe = jest.fn();
 var _messageChannel = null;
 var _messageHandler = null;
 
-export const publish = (messageContext, messageChannel, message) => {
+export const publish = jest.fn((messageContext, messageChannel, message) => {
     if (_messageHandler && _messageChannel === messageChannel) {
         _messageHandler(message);
     }
-};
+});
 
-export const subscribe = (messageContext, messageChannel, messageHandler) => {
-    _messageChannel = messageChannel;
-    _messageHandler = messageHandler;
-};
+export const subscribe = jest.fn(
+    (messageContext, messageChannel, messageHandler) => {
+        _messageChannel = messageChannel;
+        _messageHandler = messageHandler;
+    }
+);
