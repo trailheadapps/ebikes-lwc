@@ -59,7 +59,7 @@ export default class ProductTileList extends LightningElement {
         this.productFilterSubscription = subscribe(
             this.messageContext,
             PRODUCTS_FILTERED_MESSAGE,
-            (message) => this.handleFilterChange(message.filters),
+            (message) => this.handleFilterChange(message),
             { scope: APPLICATION_SCOPE }
         );
     }
@@ -83,8 +83,8 @@ export default class ProductTileList extends LightningElement {
         this.pageNumber = 1;
     }
 
-    handleFilterChange(filters) {
-        this.filters = { ...filters };
+    handleFilterChange(message) {
+        this.filters = { ...message.filters };
         this.pageNumber = 1;
     }
 

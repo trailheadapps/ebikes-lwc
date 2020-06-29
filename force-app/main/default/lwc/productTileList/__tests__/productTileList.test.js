@@ -5,6 +5,7 @@ import {
     registerApexTestWireAdapter
 } from '@salesforce/sfdx-lwc-jest';
 import { publish, MessageContext } from 'lightning/messageService';
+import PRODUCTS_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductsFiltered__c';
 import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
 import getProducts from '@salesforce/apex/ProductController.getProducts';
 
@@ -246,6 +247,27 @@ describe('c-product-tile-list', () => {
                     const { filters } = getProductsAdapter.getLastConfig();
                     expect(filters).toEqual(expected);
                 });
+        });
+    });
+
+    describe('with filter changes', () => {
+        it('updates product list when filters change', () => {
+            const element = createElement('c-product-tile-list', {
+                is: ProductTileList
+            });
+            document.body.appendChild(element);
+
+            // Simulate filter change
+            const mockMessage = {
+                filters: { searchKey: 'mockValue', maxPrice: 666 }
+            };
+            publish(null, PRODUCTS_FILTERED_MESSAGE, mockMessage);
+
+            // Check that wire gets called with new filters
+            return Promise.resolve().then(() => {
+                const { filters } = getProductsAdapter.getLastConfig();
+                expect(filters).toEqual(mockMessage.filters);
+            });
         });
     });
 });

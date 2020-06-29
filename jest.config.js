@@ -3,6 +3,8 @@ module.exports = {
     ...jestConfig,
     moduleNameMapper: {
         '^lightning/navigation$':
-            '<rootDir>/force-app/test/jest-mocks/lightning/navigation'
+            '<rootDir>/force-app/test/jest-mocks/lightning/navigation',
+        '^lightning/messageService$':
+            '<rootDir>/force-app/test/jest-mocks/lightning/messageService'
     }
 };
