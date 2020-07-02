@@ -5,7 +5,6 @@ import { NavigationMixin } from 'lightning/navigation';
 import {
     subscribe,
     unsubscribe,
-    APPLICATION_SCOPE,
     MessageContext
 } from 'lightning/messageService';
 import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
@@ -62,8 +61,7 @@ export default class ProductCard extends NavigationMixin(LightningElement) {
         this.productSelectionSubscription = subscribe(
             this.messageContext,
             PRODUCT_SELECTED_MESSAGE,
-            (message) => this.handleProductSelected(message.productId),
-            { scope: APPLICATION_SCOPE }
+            (message) => this.handleProductSelected(message.productId)
         );
     }
 

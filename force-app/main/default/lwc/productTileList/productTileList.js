@@ -5,7 +5,6 @@ import {
     publish,
     subscribe,
     unsubscribe,
-    APPLICATION_SCOPE,
     MessageContext
 } from 'lightning/messageService';
 import PRODUCTS_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductsFiltered__c';
@@ -59,8 +58,7 @@ export default class ProductTileList extends LightningElement {
         this.productFilterSubscription = subscribe(
             this.messageContext,
             PRODUCTS_FILTERED_MESSAGE,
-            (message) => this.handleFilterChange(message),
-            { scope: APPLICATION_SCOPE }
+            (message) => this.handleFilterChange(message)
         );
     }
 
