@@ -2,11 +2,7 @@ import { LightningElement, wire } from 'lwc';
 
 // Ligthning Message Service and a message channel
 import { NavigationMixin } from 'lightning/navigation';
-import {
-    subscribe,
-    unsubscribe,
-    MessageContext
-} from 'lightning/messageService';
+import { subscribe, MessageContext } from 'lightning/messageService';
 import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
 
 // Utils to extract field values
@@ -63,11 +59,6 @@ export default class ProductCard extends NavigationMixin(LightningElement) {
             PRODUCT_SELECTED_MESSAGE,
             (message) => this.handleProductSelected(message.productId)
         );
-    }
-
-    disconnectedCallback() {
-        unsubscribe(this.productSelectionSubscription);
-        this.productSelectionSubscription = null;
     }
 
     handleRecordLoaded(event) {

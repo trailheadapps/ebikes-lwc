@@ -1,12 +1,7 @@
 import { LightningElement, api, wire } from 'lwc';
 
 // Ligthning Message Service and message channels
-import {
-    publish,
-    subscribe,
-    unsubscribe,
-    MessageContext
-} from 'lightning/messageService';
+import { publish, subscribe, MessageContext } from 'lightning/messageService';
 import PRODUCTS_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductsFiltered__c';
 import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
 
@@ -60,11 +55,6 @@ export default class ProductTileList extends LightningElement {
             PRODUCTS_FILTERED_MESSAGE,
             (message) => this.handleFilterChange(message)
         );
-    }
-
-    disconnectedCallback() {
-        unsubscribe(this.productFilterSubscription);
-        this.productFilterSubscription = null;
     }
 
     handleProductSelected(event) {
