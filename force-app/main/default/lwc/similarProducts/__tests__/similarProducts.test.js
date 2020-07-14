@@ -1,14 +1,16 @@
 import { createElement } from 'lwc';
 import SimilarProducts from 'c/similarProducts';
-import { getRecord } from 'lightning/uiRecordApi';
 import {
     registerLdsTestWireAdapter,
     registerApexTestWireAdapter
 } from '@salesforce/sfdx-lwc-jest';
+import { getRecord } from 'lightning/uiRecordApi';
 import getSimilarProducts from '@salesforce/apex/ProductController.getSimilarProducts';
 
-// Mock realistic data
+// Mock realistic data for the getRecord adapter
 const mockGetRecord = require('./data/getRecord.json');
+
+// Mock realistic data for the getSimilarProducts adapter
 const mockSimilarProducts = require('./data/similarProducts.json');
 
 // Register as an LDS wire adapter. Some tests verify the provisioned values trigger desired behavior.
@@ -33,16 +35,16 @@ describe('c-similar-products', () => {
         });
         document.body.appendChild(element);
 
-        // Emit data from Lds @wire
+        // Emit data from getRecord adapter
         getRecordAdapter.emit(mockGetRecord);
 
-        // Emit Data from the Apex wire adapter. Some tests verify that provisioned values trigger desired behavior.
+        // Emit Data from the Apex wire adapter.
         getSimilarProductsListAdapter.emit(mockSimilarProducts);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
-        //return flushPromises().then(() => {
+
         return Promise.resolve().then(() => {
             // Select elements for validation
             const productListItemEl = element.shadowRoot.querySelector(
@@ -58,16 +60,16 @@ describe('c-similar-products', () => {
         });
         document.body.appendChild(element);
 
-        // Emit data from Lds @wire
+        // Emit data from getRecord adapter
         getRecordAdapter.emit(mockGetRecord);
 
-        // Emit Data from the Apex wire adapter. Some tests verify that provisioned values trigger desired behavior.
+        // Emit Data from the Apex wire adapter.
         getSimilarProductsListAdapter.emit([]);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
-        //return flushPromises().then(() => {
+
         return Promise.resolve().then(() => {
             // Select elements for validation
             const placeholderEl = element.shadowRoot.querySelector(
@@ -83,16 +85,16 @@ describe('c-similar-products', () => {
         });
         document.body.appendChild(element);
 
-        // Emit data from Lds @wire
+        // Emit data from getRecord adapter
         getRecordAdapter.emit(mockGetRecord);
 
-        // Emit Data from the Apex wire adapter. Some tests verify that provisioned values trigger desired behavior.
+        // Emit an error from the Apex wire adapter.
         getSimilarProductsListAdapter.error();
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
-        //return flushPromises().then(() => {
+
         return Promise.resolve().then(() => {
             // Select elements for validation
             const errorPanelEl = element.shadowRoot.querySelector(
