@@ -1,0 +1,35 @@
+{
+    "status": 0,
+    "result": {
+        "apiName": "Account",
+        "childRelationships": {},
+        "eTag": "846fdcd21a53214d447e578adbe263c6",
+        "fields": {
+            "BillingCity": {
+                "displayValue": null,
+                "value": "San Francisco"
+            },
+            "BillingCountry": {
+                "displayValue": null,
+                "value": "USA"
+            },
+            "BillingPostalCode": {
+                "displayValue": null,
+                "value": "94105"
+            },
+            "BillingState": {
+                "displayValue": null,
+                "value": "California"
+            },
+            "BillingStreet": {
+                "displayValue": null,
+                "value": "415 Mission St."
+            }
+        },
+        "id": "0014J00000A05CsQAJ",
+        "lastModifiedById": "00517000002fESIAA2",
+        "lastModifiedDate": "2020-07-13T10:33:07.000Z",
+        "recordTypeInfo": null,
+        "systemModstamp": "2020-07-13T10:33:07.000Z"
+    }
+}
