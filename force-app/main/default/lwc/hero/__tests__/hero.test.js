@@ -13,7 +13,7 @@ const mockImgOrVideoIMAGE = 'Image';
 const mockImgOrVideoVIDEO = 'Video';
 const mockInternalResource = true;
 const mockOverlay = 'true';
-const mockOpacity = 10;
+const mockOpacity = 5;
 const mockButtonClickProductOrFamilyName = 'Product';
 
 describe('c-hero', () => {
@@ -49,7 +49,7 @@ describe('c-hero', () => {
             expect(imageEl).not.toBeNull();
             // Verify that the URL returned matches, in the context of the test, the domain will render as http://localhost/
             expect(imageEl.src).toBe(
-                'http://localhost/' + IMAGE_URL + mockResourceUrl
+                `http://localhost/${IMAGE_URL}${mockResourceUrl}`
             );
         });
     });
@@ -58,16 +58,9 @@ describe('c-hero', () => {
         const element = createElement('c-hero', {
             is: Hero
         });
-        element.title = mockTitle;
-        element.slogan = mockSlogan;
-        element.buttonText = mockButtonText;
-        element.heroDetailsPosition = mockHeroDetailsPositionLEFT;
         element.resourceUrl = mockResourceUrl;
         element.imgOrVideo = mockImgOrVideoVIDEO;
         element.internalResource = mockInternalResource;
-        element.overlay = mockOverlay;
-        element.opacity = mockOpacity;
-        element.buttonClickProductOrFamilyName = mockButtonClickProductOrFamilyName;
         document.body.appendChild(element);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
@@ -78,7 +71,7 @@ describe('c-hero', () => {
             const sourceEl = element.shadowRoot.querySelector('source');
             expect(sourceEl).not.toBeNull();
             // Verify that the URL returned matches, in the context of the test, the domain will render as http://localhost/
-            expect(sourceEl.src).toBe('http://localhost/' + mockResourceUrl);
+            expect(sourceEl.src).toBe(`http://localhost/${mockResourceUrl}`);
         });
     });
 
@@ -86,16 +79,8 @@ describe('c-hero', () => {
         const element = createElement('c-hero', {
             is: Hero
         });
-        element.title = mockTitle;
-        element.slogan = mockSlogan;
-        element.buttonText = mockButtonText;
-        element.heroDetailsPosition = mockHeroDetailsPositionLEFT;
-        element.resourceUrl = mockResourceUrl;
-        element.imgOrVideo = mockImgOrVideoVIDEO;
-        element.internalResource = mockInternalResource;
         element.overlay = mockOverlay;
         element.opacity = mockOpacity;
-        element.buttonClickProductOrFamilyName = mockButtonClickProductOrFamilyName;
         document.body.appendChild(element);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
@@ -105,6 +90,7 @@ describe('c-hero', () => {
             // Select elements for validation
             const divEl = element.shadowRoot.querySelector('div');
             expect(divEl).not.toBeNull();
+            expect(divEl.style.opacity).toBe('0.5');
         });
     });
 
@@ -116,11 +102,6 @@ describe('c-hero', () => {
         element.slogan = mockSlogan;
         element.buttonText = mockButtonText;
         element.heroDetailsPosition = mockHeroDetailsPositionLEFT;
-        element.resourceUrl = mockResourceUrl;
-        element.imgOrVideo = mockImgOrVideoVIDEO;
-        element.internalResource = mockInternalResource;
-        element.overlay = mockOverlay;
-        element.opacity = mockOpacity;
         element.buttonClickProductOrFamilyName = mockButtonClickProductOrFamilyName;
         document.body.appendChild(element);
 
@@ -154,11 +135,6 @@ describe('c-hero', () => {
         element.slogan = mockSlogan;
         element.buttonText = mockButtonText;
         element.heroDetailsPosition = mockHeroDetailsPositionRIGHT;
-        element.resourceUrl = mockResourceUrl;
-        element.imgOrVideo = mockImgOrVideoVIDEO;
-        element.internalResource = mockInternalResource;
-        element.overlay = mockOverlay;
-        element.opacity = mockOpacity;
         element.buttonClickProductOrFamilyName = mockButtonClickProductOrFamilyName;
         document.body.appendChild(element);
 
@@ -173,6 +149,38 @@ describe('c-hero', () => {
             expect(heroDetailsEL).not.toBeNull();
             expect(
                 heroDetailsEL.classList.contains('c-hero-center-right')
+            ).toBeTruthy();
+            expect(heroDetailsEL.title).toBe(mockTitle);
+            expect(heroDetailsEL.slogan).toBe(mockSlogan);
+            expect(heroDetailsEL.recordName).toBe(
+                mockButtonClickProductOrFamilyName
+            );
+            const spanEl = element.shadowRoot.querySelector('span');
+            expect(spanEl.textContent).toBe(mockButtonText);
+        });
+    });
+
+    it('displays the hero details component positioned center', () => {
+        const element = createElement('c-hero', {
+            is: Hero
+        });
+        element.title = mockTitle;
+        element.slogan = mockSlogan;
+        element.buttonText = mockButtonText;
+        element.buttonClickProductOrFamilyName = mockButtonClickProductOrFamilyName;
+        document.body.appendChild(element);
+
+        // Return a promise to wait for any asynchronous DOM updates. Jest
+        // will automatically wait for the Promise chain to complete before
+        // ending the test and fail the test if the promise rejects.
+        return Promise.resolve().then(() => {
+            // Select elements for validation
+            const heroDetailsEL = element.shadowRoot.querySelector(
+                'c-hero-details'
+            );
+            expect(heroDetailsEL).not.toBeNull();
+            expect(
+                heroDetailsEL.classList.contains('c-hero-center-default')
             ).toBeTruthy();
             expect(heroDetailsEL.title).toBe(mockTitle);
             expect(heroDetailsEL.slogan).toBe(mockSlogan);
