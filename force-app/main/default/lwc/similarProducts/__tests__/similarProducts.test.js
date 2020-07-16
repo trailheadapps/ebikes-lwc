@@ -13,9 +13,24 @@ const mockGetRecord = require('./data/getRecord.json');
 // Mock realistic data for the getSimilarProducts adapter
 const mockSimilarProducts = require('./data/similarProducts.json');
 
+// Mock empty data for the getSimilarProducts adapter
+const mockSimilarProductsWithoutData = require('./data/similarProductsWithoutData.json');
+
 // Mock realistic data for the public properties
 const mockRecordId = '0031700000pHcf8AAC';
 const mockFamilyId = '0069500000pGbk8DDC';
+const mockWireErrorMessage = 'Error retrieving records';
+
+//Expected Wire Input
+const WIRE_INPUT = {
+    fields: [
+        {
+            fieldApiName: 'Product_Family__c',
+            objectApiName: 'Product__c'
+        }
+    ],
+    recordId: '0031700000pHcf8AAC'
+};
 
 // Register as an LDS wire adapter. Some tests verify the provisioned values trigger desired behavior.
 const getRecordAdapter = registerLdsTestWireAdapter(getRecord);
@@ -51,14 +66,17 @@ describe('c-similar-products', () => {
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
+            // Check the wire parameters are correct
+            expect(getRecordAdapter.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
             const productListItemEl = element.shadowRoot.querySelectorAll(
                 'c-product-list-item'
             );
-            expect(productListItemEl.length).toBe(1);
-            console.log(JSON.stringify(productListItemEl[0].key));
-            //expect(productListItemEl[0].key).toBe(mockSimilarProducts[0].Id);
-            //expect(productListItemEl.product).toBe(mockSimilarProducts[0]);
+            expect(productListItemEl.length).toBe(3);
+            console.log(JSON.stringify(productListItemEl[0]));
+            expect(productListItemEl[0].product).toStrictEqual(
+                mockSimilarProducts[0]
+            );
         });
     });
 
@@ -73,14 +91,15 @@ describe('c-similar-products', () => {
         // Emit data from getRecord adapter
         getRecordAdapter.emit(mockGetRecord);
 
-        // Emit Data from the Apex wire adapter.
-        getSimilarProductsListAdapter.emit([]);
+        // Emit an empty array from the Apex wire adapter.
+        getSimilarProductsListAdapter.emit(mockSimilarProductsWithoutData);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
-
         return Promise.resolve().then(() => {
+            // Check the wire parameters are correct
+            expect(getRecordAdapter.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
             const placeholderEl = element.shadowRoot.querySelector(
                 'c-placeholder'
@@ -89,7 +108,7 @@ describe('c-similar-products', () => {
         });
     });
 
-    it('displays a n error panel when the Apex wire adaptor returns an error', () => {
+    it('displays an error panel when the Apex wire adapter returns an error', () => {
         const element = createElement('c-similar-products', {
             is: SimilarProducts
         });
@@ -101,18 +120,24 @@ describe('c-similar-products', () => {
         getRecordAdapter.emit(mockGetRecord);
 
         // Emit an error from the Apex wire adapter.
-        getSimilarProductsListAdapter.error();
+        getSimilarProductsListAdapter.error(mockWireErrorMessage);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
 
         return Promise.resolve().then(() => {
+            // Check the wire parameters are correct
+            expect(getRecordAdapter.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
             const errorPanelEl = element.shadowRoot.querySelector(
                 'c-error-panel'
             );
             expect(errorPanelEl).not.toBeNull();
+            expect(errorPanelEl.errors[0].body).toBe(mockWireErrorMessage);
+            expect(errorPanelEl.friendlyMessage).toBe(
+                'An error has occurred while retrieving similar products'
+            );
         });
     });
 });
