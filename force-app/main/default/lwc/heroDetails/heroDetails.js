@@ -1,11 +1,10 @@
 import { LightningElement, api, wire } from 'lwc';
-import { NavigationMixin } from 'lightning/navigation';
 import getRecordInfo from '@salesforce/apex/ProductRecordInfoController.getRecordInfo';
 
 /**
  * Details component that is on top of the video.
  */
-export default class HeroDetails extends NavigationMixin(LightningElement) {
+export default class HeroDetails extends LightningElement {
     @api title;
     @api slogan;
     @api recordName;
