@@ -7,6 +7,7 @@ import { registerLdsTestWireAdapter } from '@salesforce/sfdx-lwc-jest';
 const mockGetRecordWithAddress = require('./data/getRecordWithAddress.json');
 const mockGetRecordWithoutAddress = require('./data/getRecordWithoutAddress.json');
 const mockRecordId = '0031700000pJRRSAA4';
+const mockWireErrorMessage = 'Error retrieving record';
 
 // Register as a LDS wire adapter. Some tests verify the provisioned values trigger desired behavior.
 const getRecordAdapter = registerLdsTestWireAdapter(getRecord);
@@ -85,17 +86,24 @@ describe('c-account-map', () => {
         document.body.appendChild(element);
 
         // Emit an error from the getRecord adapter.
-        getRecordAdapter.error();
+        getRecordAdapter.error(mockWireErrorMessage);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Select elements for validation
-            const errorPanelEl = element.shadowRoot.querySelector(
+            const errorPanelEl = element.shadowRoot.querySelectorAll(
                 'c-error-panel'
             );
-            expect(errorPanelEl).not.toBeNull();
+            // There are two error panels in the component - we need the second to check
+            // the wire errors are displaying correctly
+            let errorPanel = errorPanelEl[1];
+            expect(errorPanel).not.toBeNull();
+            expect(errorPanel.errors.body).toBe(mockWireErrorMessage);
+            expect(errorPanel.friendlyMessage).toBe(
+                'Error retrieving map data'
+            );
         });
     });
 });
