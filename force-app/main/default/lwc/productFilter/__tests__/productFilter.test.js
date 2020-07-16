@@ -1,19 +1,12 @@
 import { createElement } from 'lwc';
 import ProductFilter from 'c/productFilter';
-import { fireEvent } from 'c/pubsub';
 import {
     registerLdsTestWireAdapter,
     registerTestWireAdapter
 } from '@salesforce/sfdx-lwc-jest';
-import { CurrentPageReference } from 'lightning/navigation';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
-
-// Mock out the event firing function to verify it was called with expected parameters.
-jest.mock('c/pubsub', () => {
-    return {
-        fireEvent: jest.fn()
-    };
-});
+import { publish, MessageContext } from 'lightning/messageService';
+import PRODUCTS_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductsFiltered__c';
 
 /*
  * Import a snapshot of getPicklistValues' response for functional verification. This eliminates
@@ -36,7 +29,7 @@ const getPicklistValuesAdapter = registerLdsTestWireAdapter(getPicklistValues);
 
 // Register as a standard wire adapter because the component under test requires this adapter.
 // We don't exercise this wire adapter in the tests.
-registerTestWireAdapter(CurrentPageReference);
+registerTestWireAdapter(MessageContext);
 
 describe('c-product-filter', () => {
     beforeEach(() => {
@@ -54,7 +47,7 @@ describe('c-product-filter', () => {
     });
 
     describe('filterChange event', () => {
-        it('fired when slider value changes', () => {
+        it('sends message when slider value changes', () => {
             const expectedPrice = 500;
             const element = createElement('c-product-filter', {
                 is: ProductFilter
@@ -68,14 +61,20 @@ describe('c-product-filter', () => {
             jest.runAllTimers();
 
             // Only verify the relevant params
-            expect(fireEvent).toHaveBeenCalledWith(
+            const expectedFilters = {
+                filters: {
+                    maxPrice: expectedPrice,
+                    searchKey: expect.any(String)
+                }
+            };
+            expect(publish).toHaveBeenCalledWith(
                 undefined,
-                'filterChange',
-                expect.objectContaining({ maxPrice: expectedPrice })
+                PRODUCTS_FILTERED_MESSAGE,
+                expect.objectContaining(expectedFilters)
             );
         });
 
-        it('fired when search value changes', () => {
+        it('sends message when search value changes', () => {
             const expectedSearchKey = 'search string';
             const element = createElement('c-product-filter', {
                 is: ProductFilter
@@ -91,22 +90,38 @@ describe('c-product-filter', () => {
             jest.runAllTimers();
 
             // Only verify the relevant params
-            expect(fireEvent).toHaveBeenCalledWith(
+            const expectedFilters = {
+                filters: {
+                    maxPrice: expect.any(Number),
+                    searchKey: expectedSearchKey
+                }
+            };
+            expect(publish).toHaveBeenCalledWith(
                 undefined,
-                'filterChange',
-                expect.objectContaining({ searchKey: expectedSearchKey })
+                PRODUCTS_FILTERED_MESSAGE,
+                expect.objectContaining(expectedFilters)
             );
         });
 
         // eslint-disable-next-line jest/expect-expect
-        it('fired when checkbox is toggled', () => {
+        it('sends messages when checkbox are toggled', () => {
             const element = createElement('c-product-filter', {
                 is: ProductFilter
             });
-            element.commuter = false;
             document.body.appendChild(element);
 
             getPicklistValuesAdapter.emit(mockGetPicklistValues);
+
+            // Prepare epected filter values with default filters
+            const expectedFilters = {
+                filters: {
+                    categories: ['MockValue'],
+                    levels: ['MockValue'],
+                    materials: ['MockValue'],
+                    maxPrice: 10000,
+                    searchKey: ''
+                }
+            };
 
             // Return a promise to wait for any asynchronous DOM updates. Jest
             // will automatically wait for the Promise chain to complete before
@@ -114,28 +129,31 @@ describe('c-product-filter', () => {
             // rejected state
             return Promise.resolve()
                 .then(() => {
-                    verifyFilterToggle(element, 'categories');
+                    expectedFilters.filters.categories = [];
+                    verifyFilterToggle(element, 'categories', expectedFilters);
                 })
                 .then(() => {
-                    verifyFilterToggle(element, 'materials');
+                    expectedFilters.filters.materials = [];
+                    verifyFilterToggle(element, 'materials', expectedFilters);
                 })
                 .then(() => {
-                    verifyFilterToggle(element, 'levels');
+                    expectedFilters.filters.levels = [];
+                    verifyFilterToggle(element, 'levels', expectedFilters);
                 });
         });
 
-        function verifyFilterToggle(element, filter) {
+        function verifyFilterToggle(element, filterName, expectedFilters) {
             const checkbox = element.shadowRoot.querySelector(
-                `[data-filter="${filter}"]`
+                `[data-filter="${filterName}"]`
             );
             checkbox.checked = false;
             checkbox.dispatchEvent(new CustomEvent('change'));
             // Filters are initialized to include all values emitted by getPicklistValuesAdapter, which is one item
             // per filter. Toggling it results in that filter being empty.
-            expect(fireEvent).toHaveBeenCalledWith(
+            expect(publish).toHaveBeenCalledWith(
                 undefined,
-                'filterChange',
-                expect.objectContaining({ [filter]: [] })
+                PRODUCTS_FILTERED_MESSAGE,
+                expect.objectContaining(expectedFilters)
             );
         }
     });
