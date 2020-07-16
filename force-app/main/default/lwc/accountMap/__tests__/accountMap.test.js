@@ -36,12 +36,12 @@ describe('c-account-map', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Select elements for validation
-            let mapEl = element.shadowRoot.querySelector('lightning-map');
+            const mapEl = element.shadowRoot.querySelector('lightning-map');
             expect(mapEl).not.toBeNull();
             expect(mapEl.zoomLevel).toBe(14);
 
             // Get the map markers from mapEl to check that the location data has been populated
-            let location = mapEl.mapMarkers[0].location;
+            const location = mapEl.mapMarkers[0].location;
             expect(location).toEqual(
                 expect.objectContaining({
                     City: 'San Francisco',
@@ -71,8 +71,13 @@ describe('c-account-map', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Select elements for validation
-            let mapEl = element.shadowRoot.querySelector('lightning-map');
-            expect(mapEl).toBe(null);
+            const mapEl = element.shadowRoot.querySelector('lightning-map');
+            expect(mapEl).toBeNull();
+            const errorPanelEl = element.shadowRoot.querySelector(
+                'c-error-panel'
+            );
+            expect(errorPanelEl).not.toBeNull();
+            expect(errorPanelEl.friendlyMessage).toBe('No address to map');
         });
     });
 
@@ -98,7 +103,7 @@ describe('c-account-map', () => {
             );
             // There are two error panels in the component - we need the second to check
             // the wire errors are displaying correctly
-            let errorPanel = errorPanelEl[1];
+            const errorPanel = errorPanelEl[1];
             expect(errorPanel).not.toBeNull();
             expect(errorPanel.errors.body).toBe(mockWireErrorMessage);
             expect(errorPanel.friendlyMessage).toBe(
