@@ -13,6 +13,10 @@ const mockGetRecord = require('./data/getRecord.json');
 // Mock realistic data for the getSimilarProducts adapter
 const mockSimilarProducts = require('./data/similarProducts.json');
 
+// Mock realistic data for the public properties
+const mockRecordId = '0031700000pHcf8AAC';
+const mockFamilyId = '0069500000pGbk8DDC';
+
 // Register as an LDS wire adapter. Some tests verify the provisioned values trigger desired behavior.
 const getRecordAdapter = registerLdsTestWireAdapter(getRecord);
 
@@ -33,6 +37,8 @@ describe('c-similar-products', () => {
         const element = createElement('c-similar-products', {
             is: SimilarProducts
         });
+        element.recordId = mockRecordId;
+        element.familyId = mockFamilyId;
         document.body.appendChild(element);
 
         // Emit data from getRecord adapter
@@ -44,13 +50,15 @@ describe('c-similar-products', () => {
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
-
         return Promise.resolve().then(() => {
             // Select elements for validation
-            const productListItemEl = element.shadowRoot.querySelector(
+            const productListItemEl = element.shadowRoot.querySelectorAll(
                 'c-product-list-item'
             );
-            expect(productListItemEl).not.toBeNull();
+            expect(productListItemEl.length).toBe(1);
+            console.log(JSON.stringify(productListItemEl[0].key));
+            //expect(productListItemEl[0].key).toBe(mockSimilarProducts[0].Id);
+            //expect(productListItemEl.product).toBe(mockSimilarProducts[0]);
         });
     });
 
@@ -58,6 +66,8 @@ describe('c-similar-products', () => {
         const element = createElement('c-similar-products', {
             is: SimilarProducts
         });
+        element.recordId = mockRecordId;
+        element.familyId = mockFamilyId;
         document.body.appendChild(element);
 
         // Emit data from getRecord adapter
@@ -83,6 +93,8 @@ describe('c-similar-products', () => {
         const element = createElement('c-similar-products', {
             is: SimilarProducts
         });
+        element.recordId = mockRecordId;
+        element.familyId = mockFamilyId;
         document.body.appendChild(element);
 
         // Emit data from getRecord adapter
