@@ -28,7 +28,6 @@ export default class PropertyMap extends LightningElement {
             this.markers = [];
             this.error = undefined;
             const street = getFieldValue(data, BILLING_STREET);
-            console.log('street: ' + JSON.stringify(street));
             if (street) {
                 this.markers = [
                     {
