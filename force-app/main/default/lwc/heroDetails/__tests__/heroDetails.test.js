@@ -8,6 +8,8 @@ const mockGetRecordInfoProduct = require('./data/getRecordInfoProduct.json');
 const mockGetRecordInfoProductFamily = require('./data/getRecordInfoProductFamily.json');
 
 // Mock realistic data for the public properties
+const mockTitle = 'Title';
+const mockSlogan = 'Slogan';
 const mockRecordName = 'Electra';
 
 //Expected Wire Input
@@ -73,6 +75,33 @@ describe('c-hero-details', () => {
             expect(anchorEl.href).toBe(
                 `http://localhost/product-family/${mockGetRecordInfoProduct[0]}`
             );
+        });
+    });
+
+    it('displays the title and slogan', () => {
+        const element = createElement('c-hero-details', {
+            is: HeroDetails
+        });
+        element.title = mockTitle;
+        element.slogan = mockSlogan;
+        element.recordName = mockRecordName;
+        document.body.appendChild(element);
+
+        // Emit Data from the Apex wire adapter.
+        getRecordInfoAdapter.emit(mockGetRecordInfoProductFamily);
+
+        // Return a promise to wait for any asynchronous DOM updates. Jest
+        // will automatically wait for the Promise chain to complete before
+        // ending the test and fail the test if the promise rejects.
+        return Promise.resolve().then(() => {
+            // Check the wire parameters are correct
+            expect(getRecordInfoAdapter.getLastConfig()).toEqual(WIRE_INPUT);
+            // Select elements for validation
+            const headingEL = element.shadowRoot.querySelector('h1');
+            console.log(headingEL);
+            expect(headingEL.textContent).toBe(mockTitle);
+            const paragraphEl = element.shadowRoot.querySelector('p');
+            expect(paragraphEl.textContent).toBe(mockSlogan);
         });
     });
 });
