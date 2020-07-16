@@ -72,8 +72,7 @@ describe('c-similar-products', () => {
             const productListItemEl = element.shadowRoot.querySelectorAll(
                 'c-product-list-item'
             );
-            expect(productListItemEl.length).toBe(3);
-            console.log(JSON.stringify(productListItemEl[0]));
+            expect(productListItemEl.length).toBe(mockSimilarProducts.length);
             expect(productListItemEl[0].product).toStrictEqual(
                 mockSimilarProducts[0]
             );

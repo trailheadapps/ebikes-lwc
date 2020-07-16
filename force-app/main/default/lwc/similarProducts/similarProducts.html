@@ -2,16 +2,11 @@
     <lightning-card title="Similar Products" icon-name="standard:link">
         <div class="slds-m-horizontal_medium">
             <template if:true={similarProducts.data}>
-                <template if:true={similarProducts.data}>
-                    <template
-                        for:each={similarProducts.data}
-                        for:item="product"
-                    >
-                        <c-product-list-item
-                            key={product.Id}
-                            product={product}
-                        ></c-product-list-item>
-                    </template>
+                <template for:each={similarProducts.data} for:item="product">
+                    <c-product-list-item
+                        key={product.Id}
+                        product={product}
+                    ></c-product-list-item>
                 </template>
                 <template if:false={similarProducts.data.length}>
                     <c-placeholder
