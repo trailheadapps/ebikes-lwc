@@ -3,6 +3,7 @@
         <lightning-layout-item size="2">
             <template if:false={isFirstPage}>
                 <lightning-button-icon
+                    class="previous"
                     icon-name="utility:chevronleft"
                     onclick={handlePrevious}
                 ></lightning-button-icon>
@@ -14,6 +15,7 @@
         <lightning-layout-item size="2" class="nav-next">
             <template if:false={isLastPage}>
                 <lightning-button-icon
+                    class="next"
                     icon-name="utility:chevronright"
                     onclick={handleNext}
                 ></lightning-button-icon>
