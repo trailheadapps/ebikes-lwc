@@ -52,7 +52,7 @@ describe('c-order-builder', () => {
             );
             expect(orderItemTileEl.length).toBe(mockGetOrderItems.length);
             // Get the order items to verify they have been set correctly
-            const orderItem = orderItemTileEl[0].orderItem;
+            const { orderItem } = orderItemTileEl[0];
             expect(orderItem).toEqual(
                 expect.objectContaining(mockGetOrderItems[0])
             );
@@ -63,7 +63,7 @@ describe('c-order-builder', () => {
             expect(formattedNumberEl.value).toBe(expectedSum);
             // Get the order total to verify it has been calculated
             const orderTotalDivEl = element.shadowRoot.querySelector(
-                'div[class="right"]'
+                'div.right'
             );
             expect(orderTotalDivEl.textContent).toBe(
                 `Total Items: ${expectedItems}`
@@ -96,7 +96,7 @@ describe('c-order-builder', () => {
                     WIRE_INPUT
                 );
                 // Select elements for validation
-                let orderItemTileEl = element.shadowRoot.querySelectorAll(
+                const orderItemTileEl = element.shadowRoot.querySelectorAll(
                     'c-order-item-tile'
                 );
                 orderItemTileEl[0].dispatchEvent(
@@ -107,7 +107,7 @@ describe('c-order-builder', () => {
                 );
             })
             .then(() => {
-                let orderItemTileEl = element.shadowRoot.querySelectorAll(
+                const orderItemTileEl = element.shadowRoot.querySelectorAll(
                     'c-order-item-tile'
                 );
                 // Get the first order item and check that the quantity has ben updated
@@ -120,7 +120,7 @@ describe('c-order-builder', () => {
                 expect(formattedNumberEl.value).toBe(expectedSum);
                 // Get the order total to verify it has been updated
                 const orderTotalDivEl = element.shadowRoot.querySelector(
-                    'div[class="right"]'
+                    'div.right'
                 );
                 expect(orderTotalDivEl.textContent).toBe(
                     `Total Items: ${expectedItems}`
@@ -152,7 +152,7 @@ describe('c-order-builder', () => {
                     WIRE_INPUT
                 );
                 // Select elements for validation
-                let orderItemTileEl = element.shadowRoot.querySelectorAll(
+                const orderItemTileEl = element.shadowRoot.querySelectorAll(
                     'c-order-item-tile'
                 );
                 orderItemTileEl[0].dispatchEvent(
@@ -162,7 +162,7 @@ describe('c-order-builder', () => {
                 );
             })
             .then(() => {
-                let orderItemTileEl = element.shadowRoot.querySelectorAll(
+                const orderItemTileEl = element.shadowRoot.querySelectorAll(
                     'c-order-item-tile'
                 );
                 // Get the first order item and check that the quantity has ben updated
@@ -176,7 +176,7 @@ describe('c-order-builder', () => {
                 expect(formattedNumberEl.value).toBe(expectedSum);
                 // Get the order total to verify it has been updated
                 const orderTotalDivEl = element.shadowRoot.querySelector(
-                    'div[class="right"]'
+                    'div.right'
                 );
                 expect(orderTotalDivEl.textContent).toBe(
                     `Total Items: ${expectedItems}`
@@ -211,7 +211,7 @@ describe('c-order-builder', () => {
 
     it('displays a error when an error is returned', () => {
         // Set values for validating component changes
-        const mockWireErrorMessage = 'Error retrieving data';
+        const mockError = { message: 'mockError' };
 
         const element = createElement('c-order-builder', {
             is: OrderBuilder
@@ -220,7 +220,7 @@ describe('c-order-builder', () => {
         document.body.appendChild(element);
 
         // Emit Data from the Apex wire adapter.
-        getOrderItemsAdapter.error(mockWireErrorMessage);
+        getOrderItemsAdapter.error(mockError);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
@@ -231,7 +231,7 @@ describe('c-order-builder', () => {
                 'c-error-panel'
             );
             expect(errorPanelEl).not.toBeNull();
-            expect(errorPanelEl.friendlyMessage).toBe(mockWireErrorMessage);
+            expect(errorPanelEl.errors.body).toStrictEqual(mockError);
         });
     });
 });
