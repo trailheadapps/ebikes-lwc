@@ -106,8 +106,6 @@ export default class OrderBuilder extends LightningElement {
     /** Handles drag-and-dropping a new product to create a new Order_Item__c. */
     handleDrop(event) {
         event.preventDefault();
-        console.log('event received');
-        console.log(JSON.stringify(event));
         // Product__c from LDS
         const product = JSON.parse(event.dataTransfer.getData('product'));
 
@@ -164,12 +162,10 @@ export default class OrderBuilder extends LightningElement {
         const recordInput = { fields: orderItemChanges };
         updateRecord(recordInput)
             .then(() => {
-                console.log('success');
                 // if there were triggers/etc that invalidate the Apex result then we'd refresh it
                 // return refreshApex(this.wiredOrderItems);
             })
             .catch((e) => {
-                console.log('error');
                 // error updating server so rollback to previous data
                 this.setOrderItems(previousOrderItems);
                 this.dispatchEvent(
