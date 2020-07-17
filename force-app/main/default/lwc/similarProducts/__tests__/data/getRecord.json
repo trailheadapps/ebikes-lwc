@@ -1,0 +1,12 @@
+{
+    "apiName": "Product__c",
+    "childRelationships": {},
+    "eTag": "846fdcd21a53214d447e578adbe263c6",
+    "fields": {
+        "Product_Family__c": {
+            "displayValue": null,
+            "value": "amy@demo.net"
+        }
+    },
+    "id": "0031700000pHcf8AAC"
+}
