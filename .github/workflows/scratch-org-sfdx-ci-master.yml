@@ -30,13 +30,13 @@ jobs:
             # Install npm dependencies for Prettier and Jest
             - name: 'Install npm dependencies'
               if: steps.cache-npm.outputs.cache-hit != 'true'
-              run: npm install
+              run: npm ci
 
             # Prettier formatting
             - name: 'Code formatting verification with Prettier'
               run: npm run prettier:verify
 
-            # ESlint
+            # Lint LWC
             - name: 'Lint Lightning Web Components'
               run: npm run lint:lwc
 
@@ -75,13 +75,15 @@ jobs:
             - name: 'Authenticate Dev Hub'
               run: 'sfdx force:auth:sfdxurl:store -f ./DEVHUB_SFDX_URL.txt -a devhub -d'
 
-            # Lint Aura components
-            - name: 'Lint Aura components'
-              run: 'sfdx force:lightning:lint force-app/main/default/aura --exit'
-
             # Create scratch org
             - name: 'Create scratch org'
               run: 'sfdx force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1'
+
+            # Wait for package replication
+            - name: 'Wait for two min for Communities activation'
+              uses: maddox/actions/sleep@master
+              with:
+                  args: 120
 
             # Deploy source to scratch org
             - name: 'Push source to scratch org'
