@@ -12,6 +12,7 @@
     "type": "theme",
     "views": [
         {
+            "componentAttributes": {},
             "componentName": "salesforceIdentity:loginBody2",
             "id": "10fb592c-ced0-44cf-bf8e-7bbc5327e5f3",
             "label": "Login",
@@ -35,6 +36,15 @@
             "type": "view"
         },
         {
+            "componentAttributes": {
+                "fixedPageWidth": 1440,
+                "headerBgColor": "rgba(255, 255, 255, 0.8)",
+                "isHeaderPinned": false,
+                "isHeroUnderHeader": false,
+                "isPageWidthFixed": true,
+                "showHeader": true,
+                "showHero": false
+            },
             "componentName": "siteforce:themeLayoutStarter",
             "id": "1e7d39c7-bfc8-441a-a3ac-bdd8058dba6f",
             "label": "Default",
@@ -160,6 +170,15 @@
             "type": "view"
         },
         {
+            "componentAttributes": {
+                "fixedPageWidth": 1440,
+                "headerBgColor": "rgba(255, 255, 255, 0.8)",
+                "isHeaderPinned": false,
+                "isHeroUnderHeader": false,
+                "isPageWidthFixed": true,
+                "showHeader": true,
+                "showHero": true
+            },
             "componentName": "siteforce:themeLayoutStarter",
             "id": "ef7d55e9-d400-400c-b895-49ccc916c52e",
             "label": "Home",
