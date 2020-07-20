@@ -5,6 +5,10 @@
 		<name>ExperienceBundle</name>
     </types>
     <types>
+		<members>*</members>
+		<name>Profile</name>
+    </types>
+    <types>
         <name>ContentAsset</name>
         <members>ebikeslogo</members>
     </types>
