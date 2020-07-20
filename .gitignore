@@ -35,3 +35,5 @@ $RECYCLE.BIN/
 # VS Code project settings
 .vscode/
 
+# Codecov
+coverage
