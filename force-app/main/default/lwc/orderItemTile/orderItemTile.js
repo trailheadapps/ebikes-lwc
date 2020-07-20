@@ -31,15 +31,9 @@ export default class OrderItemTile extends LightningElement {
     /** Fires event to update the Order_Item__c SObject.  */
 
     saveOrderItem() {
-        console.log(
-            JSON.stringify({
-                detail: Object.assign({}, { Id: this.orderItem.Id }, this.form)
-            })
-        );
         const event = new CustomEvent('orderitemchange', {
             detail: Object.assign({}, { Id: this.orderItem.Id }, this.form)
         });
-        console.log(JSON.stringify(event));
         this.dispatchEvent(event);
         this.isModified = false;
     }
