@@ -109,7 +109,7 @@
                                                 "userSettingsLabel": "My Settings",
                                                 "viewProfileLabel": "My Profile"
                                             },
-                                            "componentName": "forceCommunity:themeProfileMenu",
+                                            "componentName": "forceCommunity:customizableUserProfileMenu",
                                             "id": "bd98d2ad-538d-4d38-90ed-be99913c1dfb",
                                             "renditionMap": {},
                                             "type": "component"
@@ -243,7 +243,7 @@
                                                 "userSettingsLabel": "My Settings",
                                                 "viewProfileLabel": "My Profile"
                                             },
-                                            "componentName": "forceCommunity:themeProfileMenu",
+                                            "componentName": "forceCommunity:customizableUserProfileMenu",
                                             "id": "67f1ffc7-d66c-44a1-a020-df2c3d80c323",
                                             "renditionMap": {},
                                             "type": "component"

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+		<members>*</members>
+		<name>ExperienceBundle</name>
+    </types>
+    <types>
         <name>ContentAsset</name>
         <members>ebikeslogo</members>
     </types>
