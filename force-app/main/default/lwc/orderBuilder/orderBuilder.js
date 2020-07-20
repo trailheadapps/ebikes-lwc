@@ -106,7 +106,6 @@ export default class OrderBuilder extends LightningElement {
     /** Handles drag-and-dropping a new product to create a new Order_Item__c. */
     handleDrop(event) {
         event.preventDefault();
-
         // Product__c from LDS
         const product = JSON.parse(event.dataTransfer.getData('product'));
 

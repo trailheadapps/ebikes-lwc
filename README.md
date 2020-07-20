@@ -1,6 +1,6 @@
 # E-Bikes Lightning Web Components Sample Application
 
-[![Github Workflow](<https://github.com/trailheadapps/ebikes-lwc/workflows/Salesforce%20DX%20(scratch%20org)/badge.svg?branch=master>)](https://github.com/trailheadapps/ebikes-lwc/actions?query=workflow%3A%22Salesforce+DX+%28scratch+org%29%22)
+[![Github Workflow](<https://github.com/trailheadapps/ebikes-lwc/workflows/Salesforce%20DX%20(scratch%20org)/badge.svg?branch=master>)](https://github.com/trailheadapps/ebikes-lwc/actions?query=workflow%3A%22Salesforce+DX+%28scratch+org%29%22) [![codecov](https://codecov.io/gh/trailheadapps/ebikes-lwc/branch/master/graph/badge.svg)](https://codecov.io/gh/trailheadapps/ebikes-lwc)
 
 ![ebikes-logo](ebikes-logo.png)
 

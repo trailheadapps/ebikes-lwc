@@ -1,14 +1,16 @@
 import { LightningElement, wire } from 'lwc';
-import { CurrentPageReference } from 'lightning/navigation';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
+
+// Product schema
 import CATEGORY_FIELD from '@salesforce/schema/Product__c.Category__c';
 import LEVEL_FIELD from '@salesforce/schema/Product__c.Level__c';
 import MATERIAL_FIELD from '@salesforce/schema/Product__c.Material__c';
 
-/** Pub-sub mechanism for sibling component communication. */
-import { fireEvent } from 'c/pubsub';
+// Ligthning Message Service and a message channel
+import { publish, MessageContext } from 'lightning/messageService';
+import PRODUCTS_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductsFiltered__c';
 
-/** The delay used when debouncing event handlers before firing the event. */
+// The delay used when debouncing event handlers before firing the event
 const DELAY = 350;
 
 /**
@@ -23,7 +25,8 @@ export default class ProductFilter extends LightningElement {
         maxPrice: 10000
     };
 
-    @wire(CurrentPageReference) pageRef;
+    @wire(MessageContext)
+    messageContext;
 
     @wire(getPicklistValues, {
         recordTypeId: '012000000000000AAA',
@@ -78,7 +81,10 @@ export default class ProductFilter extends LightningElement {
                 (item) => item !== value
             );
         }
-        fireEvent(this.pageRef, 'filterChange', this.filters);
+        // Published ProductsFiltered message
+        publish(this.messageContext, PRODUCTS_FILTERED_MESSAGE, {
+            filters: this.filters
+        });
     }
 
     delayedFireFilterChangeEvent() {
@@ -88,7 +94,10 @@ export default class ProductFilter extends LightningElement {
         window.clearTimeout(this.delayTimeout);
         // eslint-disable-next-line @lwc/lwc/no-async-operation
         this.delayTimeout = setTimeout(() => {
-            fireEvent(this.pageRef, 'filterChange', this.filters);
+            // Published ProductsFiltered message
+            publish(this.messageContext, PRODUCTS_FILTERED_MESSAGE, {
+                filters: this.filters
+            });
         }, DELAY);
     }
 }

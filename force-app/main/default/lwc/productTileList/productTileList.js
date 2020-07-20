@@ -1,11 +1,12 @@
 import { LightningElement, api, wire } from 'lwc';
-import { CurrentPageReference } from 'lightning/navigation';
 
-/** getProducts() method in ProductController Apex class */
+// Ligthning Message Service and message channels
+import { publish, subscribe, MessageContext } from 'lightning/messageService';
+import PRODUCTS_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductsFiltered__c';
+import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
+
+// getProducts() method in ProductController Apex class
 import getProducts from '@salesforce/apex/ProductController.getProducts';
-
-/** Pub-sub mechanism for sibling component communication. */
-import { registerListener, unregisterAllListeners, fireEvent } from 'c/pubsub';
 
 /**
  * Container component that loads and displays a list of Product__c records.
@@ -35,7 +36,11 @@ export default class ProductTileList extends LightningElement {
     /** JSON.stringified version of filters to pass to apex */
     filters = {};
 
-    @wire(CurrentPageReference) pageRef;
+    /** Load context for Ligthning Messaging Service */
+    @wire(MessageContext) messageContext;
+
+    /** Subscription for ProductsFiltered Ligthning message */
+    productFilterSubscription;
 
     /**
      * Load the list of available products.
@@ -44,15 +49,19 @@ export default class ProductTileList extends LightningElement {
     products;
 
     connectedCallback() {
-        registerListener('filterChange', this.handleFilterChange, this);
+        // Subscribe to ProductsFiltered message
+        this.productFilterSubscription = subscribe(
+            this.messageContext,
+            PRODUCTS_FILTERED_MESSAGE,
+            (message) => this.handleFilterChange(message)
+        );
     }
 
     handleProductSelected(event) {
-        fireEvent(this.pageRef, 'productSelected', event.detail);
-    }
-
-    disconnectedCallback() {
-        unregisterAllListeners(this);
+        // Published ProductSelected message
+        publish(this.messageContext, PRODUCT_SELECTED_MESSAGE, {
+            productId: event.detail
+        });
     }
 
     handleSearchKeyChange(event) {
@@ -62,8 +71,8 @@ export default class ProductTileList extends LightningElement {
         this.pageNumber = 1;
     }
 
-    handleFilterChange(filters) {
-        this.filters = { ...filters };
+    handleFilterChange(message) {
+        this.filters = { ...message.filters };
         this.pageNumber = 1;
     }
 

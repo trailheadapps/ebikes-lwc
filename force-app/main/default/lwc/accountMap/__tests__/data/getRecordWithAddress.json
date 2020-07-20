@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "BillingCity": {
+            "displayValue": null,
+            "value": "San Francisco"
+        },
+        "BillingCountry": {
+            "displayValue": null,
+            "value": "USA"
+        },
+        "BillingPostalCode": {
+            "displayValue": null,
+            "value": "94105"
+        },
+        "BillingState": {
+            "displayValue": null,
+            "value": "California"
+        },
+        "BillingStreet": {
+            "displayValue": null,
+            "value": "415 Mission St."
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "fields": {
+        "BillingCity": {
+            "displayValue": null,
+            "value": null
+        },
+        "BillingCountry": {
+            "displayValue": null,
+            "value": null
+        },
+        "BillingPostalCode": {
+            "displayValue": null,
+            "value": null
+        },
+        "BillingState": {
+            "displayValue": null,
+            "value": null
+        },
+        "BillingStreet": {
+            "displayValue": null,
+            "value": null
+        }
+    }
+}

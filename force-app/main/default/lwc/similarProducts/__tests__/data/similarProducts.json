@@ -1,0 +1,35 @@
+[
+    {
+        "Id": "a033B00000381hVQAQ",
+        "Name": "VOLT X1",
+        "MSRP__c": 1200,
+        "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Category__c": "Commuter",
+        "Level__c": "Beginner",
+        "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx1.jpg",
+        "Material__c": "Aluminum",
+        "$serId$": 1602
+    },
+    {
+        "Id": "a033B00000381hWQAQ",
+        "Name": "VOLT X2",
+        "MSRP__c": 1400,
+        "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Category__c": "Commuter",
+        "Level__c": "Beginner",
+        "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx2.jpg",
+        "Material__c": "Aluminum",
+        "$serId$": 1603
+    },
+    {
+        "Id": "a033B00000381hXQAQ",
+        "Name": "VOLT X3",
+        "MSRP__c": 1800,
+        "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Category__c": "Commuter",
+        "Level__c": "Beginner",
+        "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx3.jpg",
+        "Material__c": "Aluminum",
+        "$serId$": 1604
+    }
+]

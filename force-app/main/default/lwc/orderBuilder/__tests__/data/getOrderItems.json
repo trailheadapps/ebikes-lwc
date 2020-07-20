@@ -1,0 +1,50 @@
+[
+    {
+        "Id": "a003B000004fG1VQAU",
+        "Qty_S__c": 1,
+        "Qty_M__c": 1,
+        "Qty_L__c": 1,
+        "Price__c": 4200,
+        "Product__c": "a033B00000381hNQAQ",
+        "Product__r": {
+            "Name": "DYNAMO X1",
+            "MSRP__c": 7000,
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox1.jpg",
+            "Id": "a033B00000381hNQAQ",
+            "$serId$": 343
+        },
+        "$serId$": 342
+    },
+    {
+        "Id": "a003B000004fG1aQAE",
+        "Qty_S__c": 1,
+        "Qty_M__c": 1,
+        "Qty_L__c": 1,
+        "Price__c": 4320,
+        "Product__c": "a033B00000381hOQAQ",
+        "Product__r": {
+            "Name": "DYNAMO X2",
+            "MSRP__c": 7200,
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox2.jpg",
+            "Id": "a033B00000381hOQAQ",
+            "$serId$": 345
+        },
+        "$serId$": 344
+    },
+    {
+        "Id": "a003B000004fG1fQAE",
+        "Qty_S__c": 1,
+        "Qty_M__c": 1,
+        "Qty_L__c": 1,
+        "Price__c": 4440,
+        "Product__c": "a033B00000381hPQAQ",
+        "Product__r": {
+            "Name": "DYNAMO X3",
+            "MSRP__c": 7400,
+            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox3.jpg",
+            "Id": "a033B00000381hPQAQ",
+            "$serId$": 347
+        },
+        "$serId$": 346
+    }
+]
