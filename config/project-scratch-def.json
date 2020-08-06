@@ -2,7 +2,7 @@
     "orgName": "Ebikes",
     "edition": "Developer",
     "hasSampleData": false,
-    "features": ["Communities"],
+    "features": ["Communities", "Walkthroughs"],
     "settings": {
         "communitiesSettings": {
             "enableNetworksEnabled": true
@@ -20,6 +20,9 @@
         },
         "mobileSettings": {
             "enableS1EncryptedStoragePref2": false
+        },
+        "userEngagementSettings": {
+            "enableOrchestrationInSandbox": true
         }
     }
 }
