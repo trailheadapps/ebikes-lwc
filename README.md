@@ -24,10 +24,6 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 -   [Optional installation instructions](#optional-installation-instructions)
 
--   [Salesforce Application Walkthrough](#salesforce-application-walkthrough)
-
--   [Communities Application Walkthrough](#communities-application-walkthrough)
-
 ## Installing E-Bikes using a Scratch Org
 
 1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
