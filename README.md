@@ -6,6 +6,14 @@
 
 E-Bikes is a sample application that demonstrates how to build applications with Lightning Web Components and integrate with Salesforce Communities. E-Bikes is a fictitious electric bicycle manufacturer. The application helps E-Bikes manage their products and reseller orders using a rich user experience.
 
+<div>
+    <img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70,w_50/learn/projects/quick-start-ebikes-sample-app/a11bf85d136053cdb4745123c4d0ae61_badge.png" align="left" alt="Trailhead Badge"/>
+    Learn more about this app by completing the <a href="https://trailhead.salesforce.com/en/content/learn/projects/quick-start-ebikes-sample-app">Quick Start: Explore the E-Bikes Sample App</a> Trailhead project.
+    <br/>
+    <br/>
+    <br/>
+</div>
+
 > This sample application is designed to run on Salesforce Platform. If you want to experience Lightning Web Components on any platform, please visit https://lwc.dev, and try out our Lightning Web Components sample application [LWC Recipes OSS](https://github.com/trailheadapps/lwc-recipes-oss).
 
 ## Table of contents
@@ -15,10 +23,6 @@ E-Bikes is a sample application that demonstrates how to build applications with
 -   [Installing E-Bikes using a Developer Edition Org or a Trailhead Playground](#installing-e-bikes-using-a-developer-edition-org-or-a-trailhead-playground)
 
 -   [Optional installation instructions](#optional-installation-instructions)
-
--   [Salesforce Application Walkthrough](#salesforce-application-walkthrough)
-
--   [Communities Application Walkthrough](#communities-application-walkthrough)
 
 ## Installing E-Bikes using a Scratch Org
 
@@ -206,71 +210,3 @@ Prettier and ESLint will now run automatically every time you commit changes. Th
 npm run lint:lwc
 npm run prettier
 ```
-
-## Salesforce Application Walkthrough
-
-### Product Explorer
-
-1. Click the **Product Explorer** tab.
-
-1. Filter the list using the filter component in the left sidebar.
-
-1. Click a product in the tile list to see the details in the product card.
-
-1. Click the expand icon in the product card to navigate to the product record page.
-
-### Product Record Page
-
-1. The product record page features a **Similar Products** component.
-
-1. Click the **View Details** button to navigate to a similar product record page.
-
-### Reseller Orders
-
-1. Click the down arrow on the **Reseller Order** tab and click **New Reseller Order**.
-
-1. Select an account, for example **Wheelworks** and click **Save**.
-
-1. Drag a product from the product list on the right onto the gray panel in the center. The product is automatically added to the order as an order item.
-
-1. Modify the ordered quantity for small (S), medium (M), and large (L) frames and click the save button (checkmark icon).
-
-1. Repeat steps 3 and 4 to add more products to the order.
-
-1. Mouse over an order item tile and click the trash can icon to delete an order item from the order.
-
-### Account Record Page
-
-The account record page features an **Account Map** component that locates the account on a map.
-
-## Communities Application Walkthrough
-
-### Home
-
-1. See the custom hero component in Communities that pulls in rich assets and navigates to the product or product family that is configured.
-
-1. Check all the properties exposed in the hero component in Community Builder.
-
-### Create Case
-
-1. Select the _My Cases_ list view in the record list on the right side of the page.
-
-1. Fill in the details of the case on the left side of the page.
-
-1. Click on Create Case and see the record list to be updated with your new case.
-
-### Product Explorer
-
-1. Click the **Product Explorer** tab.
-
-1. Filter the list using the filter component in the left sidebar.
-
-1. Click a product in the tile list to see the details in the product card.
-
-1. Click the expand icon in the product card to navigate to the product record page.
-
-### Product Record Page
-
-1. The product record page features a **Similar Products** component.
-
-1. Click the **View Details** button to navigate to a similar product record page.
