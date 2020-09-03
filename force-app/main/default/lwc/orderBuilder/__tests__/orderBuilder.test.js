@@ -234,4 +234,14 @@ describe('c-order-builder', () => {
             expect(errorPanelEl.errors.body).toStrictEqual(mockError);
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-order-builder', {
+            is: OrderBuilder
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

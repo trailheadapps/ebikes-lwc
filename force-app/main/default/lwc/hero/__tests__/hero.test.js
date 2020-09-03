@@ -191,4 +191,14 @@ describe('c-hero', () => {
             expect(spanEl.textContent).toBe(mockButtonText);
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-hero', {
+            is: Hero
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

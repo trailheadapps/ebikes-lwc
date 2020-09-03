@@ -139,4 +139,14 @@ describe('c-similar-products', () => {
             );
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-similar-products', {
+            is: SimilarProducts
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

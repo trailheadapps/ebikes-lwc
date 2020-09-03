@@ -195,4 +195,17 @@ describe('c-product-filter', () => {
             }
         );
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-product-filter', {
+            is: ProductFilter
+        });
+        document.body.appendChild(element);
+
+        getPicklistValuesAdapter.emit(mockGetPicklistValues);
+
+        return Promise.resolve().then(() => {
+            expect(element).toBeAccessible();
+        });
+    });
 });

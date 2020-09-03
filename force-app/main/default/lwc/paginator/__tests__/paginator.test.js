@@ -110,4 +110,14 @@ describe('c-paginator', () => {
             );
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-paginator', {
+            is: Paginator
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

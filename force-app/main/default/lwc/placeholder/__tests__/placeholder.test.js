@@ -19,4 +19,14 @@ describe('c-placeholder', () => {
         // @salesforce/resourceUrl/bike_assets import to "bike_assets"
         expect(img.src).toMatch(/\/bike_assets\//);
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-placeholder', {
+            is: Placeholder
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

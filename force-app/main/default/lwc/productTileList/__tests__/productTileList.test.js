@@ -270,4 +270,14 @@ describe('c-product-tile-list', () => {
             });
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-product-tile-list', {
+            is: ProductTileList
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

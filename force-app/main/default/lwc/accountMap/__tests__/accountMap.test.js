@@ -111,4 +111,14 @@ describe('c-account-map', () => {
             );
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-account-map', {
+            is: AccountMap
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

@@ -55,4 +55,14 @@ describe('c-product-tile', () => {
 
         expect(listener).toHaveBeenCalled();
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-product-tile', {
+            is: ProductTile
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

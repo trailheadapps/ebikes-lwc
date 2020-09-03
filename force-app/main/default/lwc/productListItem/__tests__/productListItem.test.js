@@ -34,4 +34,14 @@ describe('c-product-list-item', () => {
         expect(pageReference.type).toBe('standard__recordPage');
         expect(pageReference.attributes.recordId).toBe(expectedId);
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-product-list-item', {
+            is: ProductListItem
+        });
+
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });
