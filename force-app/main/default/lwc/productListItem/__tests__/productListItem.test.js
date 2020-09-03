@@ -40,8 +40,16 @@ describe('c-product-list-item', () => {
             is: ProductListItem
         });
 
+        element.product = {
+            Id: 'expectedId',
+            Picture_URL__c: 'https://salesforce.com',
+            Name: 'Foo',
+            MSRP__c: 1000
+        };
         document.body.appendChild(element);
 
-        return Promise.resolve().then(() => expect(element).toBeAccessible());
+        return Promise.resolve().then(() => {
+            expect(element).toBeAccessible();
+        });
     });
 });
