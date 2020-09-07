@@ -140,12 +140,57 @@ describe('c-similar-products', () => {
         });
     });
 
-    it('is accessible', () => {
+    it('is accessible when similar products returned', () => {
         const element = createElement('c-similar-products', {
             is: SimilarProducts
         });
 
+        element.recordId = mockRecordId;
+        element.familyId = mockFamilyId;
         document.body.appendChild(element);
+
+        // Emit data from getRecord adapter
+        getRecordAdapter.emit(mockGetRecord);
+
+        // Emit Data from the Apex wire adapter.
+        getSimilarProductsListAdapter.emit(mockSimilarProducts);
+
+        return Promise.resolve().then(() => {
+            expect(element).toBeAccessible();
+        });
+    });
+
+    it('is accessible when no similar products returned', () => {
+        const element = createElement('c-similar-products', {
+            is: SimilarProducts
+        });
+
+        element.recordId = mockRecordId;
+        element.familyId = mockFamilyId;
+        document.body.appendChild(element);
+
+        // Emit data from getRecord adapter
+        getRecordAdapter.emit(mockGetRecord);
+
+        // Emit an empty array from the Apex wire adapter.
+        getSimilarProductsListAdapter.emit(mockSimilarProductsWithoutData);
+
+        return Promise.resolve().then(() => {
+            expect(element).toBeAccessible();
+        });
+    });
+
+    it('is accessible when error returned', () => {
+        const element = createElement('c-similar-products', {
+            is: SimilarProducts
+        });
+
+        element.recordId = mockRecordId;
+        element.familyId = mockFamilyId;
+        document.body.appendChild(element);
+
+        // Emit an error from the Apex wire adapter.
+        getSimilarProductsListAdapter.error(mockWireErrorMessage);
 
         return Promise.resolve().then(() => {
             expect(element).toBeAccessible();

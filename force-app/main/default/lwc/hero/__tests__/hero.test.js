@@ -192,11 +192,38 @@ describe('c-hero', () => {
         });
     });
 
-    it('is accessible', () => {
+    it('is accessible when type image', () => {
         const element = createElement('c-hero', {
             is: Hero
         });
 
+        element.isImg = true;
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => {
+            expect(element).toBeAccessible();
+        });
+    });
+
+    it('is accessible when type video', () => {
+        const element = createElement('c-hero', {
+            is: Hero
+        });
+
+        element.isVideo = true;
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => {
+            expect(element).toBeAccessible();
+        });
+    });
+
+    it('is accessible when type overlay', () => {
+        const element = createElement('c-hero', {
+            is: Hero
+        });
+
+        element.isOverlay = true;
         document.body.appendChild(element);
 
         return Promise.resolve().then(() => {

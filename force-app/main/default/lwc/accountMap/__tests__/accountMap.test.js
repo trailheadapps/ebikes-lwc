@@ -112,12 +112,32 @@ describe('c-account-map', () => {
         });
     });
 
-    it('is accessible', () => {
+    it('is accessible when showing map', () => {
         const element = createElement('c-account-map', {
             is: AccountMap
         });
 
+        element.recordId = mockRecordId;
         document.body.appendChild(element);
+
+        // Emit data from the get record adapter that includes billing street data
+        getRecordAdapter.emit(mockGetRecordWithAddress);
+
+        return Promise.resolve().then(() => {
+            expect(element).toBeAccessible();
+        });
+    });
+
+    it('is accessible when showing error', () => {
+        const element = createElement('c-account-map', {
+            is: AccountMap
+        });
+
+        element.recordId = mockRecordId;
+        document.body.appendChild(element);
+
+        // Emit an error from the getRecord adapter.
+        getRecordAdapter.error(mockWireErrorMessage);
 
         return Promise.resolve().then(() => {
             expect(element).toBeAccessible();

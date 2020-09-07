@@ -112,7 +112,7 @@ describe('c-product-filter', () => {
 
             getPicklistValuesAdapter.emit(mockGetPicklistValues);
 
-            // Prepare epected filter values with default filters
+            // Prepare expected filter values with default filters
             const expectedFilters = {
                 filters: {
                     categories: ['MockValue'],
@@ -196,13 +196,26 @@ describe('c-product-filter', () => {
         );
     });
 
-    it('is accessible', () => {
+    it('is accessible when picklist values returned', () => {
         const element = createElement('c-product-filter', {
             is: ProductFilter
         });
         document.body.appendChild(element);
 
         getPicklistValuesAdapter.emit(mockGetPicklistValues);
+
+        return Promise.resolve().then(() => {
+            expect(element).toBeAccessible();
+        });
+    });
+
+    it('is accessible when error returned', () => {
+        const element = createElement('c-product-filter', {
+            is: ProductFilter
+        });
+        document.body.appendChild(element);
+
+        getPicklistValuesAdapter.error();
 
         return Promise.resolve().then(() => {
             expect(element).toBeAccessible();

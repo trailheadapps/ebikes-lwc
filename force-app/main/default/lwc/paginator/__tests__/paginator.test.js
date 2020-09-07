@@ -116,6 +116,9 @@ describe('c-paginator', () => {
             is: Paginator
         });
 
+        element.pageNumber = 3;
+        element.pageSize = 9;
+        element.totalItemCount = 12;
         document.body.appendChild(element);
 
         return Promise.resolve().then(() => {
