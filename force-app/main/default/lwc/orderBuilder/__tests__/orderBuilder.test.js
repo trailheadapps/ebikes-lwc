@@ -245,9 +245,7 @@ describe('c-order-builder', () => {
         // Emit Data from the Apex wire adapter.
         getOrderItemsAdapter.emit(mockGetOrderItems);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 
     it('is accessible when no orders returned', () => {
@@ -260,9 +258,7 @@ describe('c-order-builder', () => {
         // Emit Data from the Apex wire adapter.
         getOrderItemsAdapter.emit(mockGetOrderItemsEmpty);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 
     it('is accessible when error returned', () => {
@@ -277,8 +273,6 @@ describe('c-order-builder', () => {
         // Emit Error from the Apex wire adapter.
         getOrderItemsAdapter.error(mockError);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 });

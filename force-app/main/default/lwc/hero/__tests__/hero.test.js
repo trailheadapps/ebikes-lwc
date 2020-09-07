@@ -200,9 +200,7 @@ describe('c-hero', () => {
         element.isImg = true;
         document.body.appendChild(element);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 
     it('is accessible when type video', () => {
@@ -213,9 +211,7 @@ describe('c-hero', () => {
         element.isVideo = true;
         document.body.appendChild(element);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 
     it('is accessible when type overlay', () => {
@@ -226,8 +222,6 @@ describe('c-hero', () => {
         element.isOverlay = true;
         document.body.appendChild(element);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 });

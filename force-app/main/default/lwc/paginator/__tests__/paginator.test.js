@@ -121,8 +121,6 @@ describe('c-paginator', () => {
         element.totalItemCount = 12;
         document.body.appendChild(element);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 });

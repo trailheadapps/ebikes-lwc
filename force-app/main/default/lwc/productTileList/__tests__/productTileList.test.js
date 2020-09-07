@@ -279,9 +279,7 @@ describe('c-product-tile-list', () => {
         document.body.appendChild(element);
         getProductsAdapter.emit(mockGetProducts);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 
     it('is accessible when no products returned', () => {
@@ -292,9 +290,7 @@ describe('c-product-tile-list', () => {
         document.body.appendChild(element);
         getProductsAdapter.emit(mockGetProductsNoRecords);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 
     it('is accessible when error returned', () => {
@@ -305,8 +301,6 @@ describe('c-product-tile-list', () => {
         document.body.appendChild(element);
         getProductsAdapter.error();
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 });

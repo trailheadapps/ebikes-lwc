@@ -155,9 +155,7 @@ describe('c-similar-products', () => {
         // Emit Data from the Apex wire adapter.
         getSimilarProductsListAdapter.emit(mockSimilarProducts);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 
     it('is accessible when no similar products returned', () => {
@@ -175,9 +173,7 @@ describe('c-similar-products', () => {
         // Emit an empty array from the Apex wire adapter.
         getSimilarProductsListAdapter.emit(mockSimilarProductsWithoutData);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 
     it('is accessible when error returned', () => {
@@ -192,8 +188,6 @@ describe('c-similar-products', () => {
         // Emit an error from the Apex wire adapter.
         getSimilarProductsListAdapter.error(mockWireErrorMessage);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 });

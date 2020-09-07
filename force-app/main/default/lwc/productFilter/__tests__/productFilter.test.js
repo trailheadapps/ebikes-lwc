@@ -204,9 +204,7 @@ describe('c-product-filter', () => {
 
         getPicklistValuesAdapter.emit(mockGetPicklistValues);
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 
     it('is accessible when error returned', () => {
@@ -217,8 +215,6 @@ describe('c-product-filter', () => {
 
         getPicklistValuesAdapter.error();
 
-        return Promise.resolve().then(() => {
-            expect(element).toBeAccessible();
-        });
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 });
