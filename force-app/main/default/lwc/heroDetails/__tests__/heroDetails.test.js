@@ -109,6 +109,9 @@ describe('c-hero-details', () => {
             is: HeroDetails
         });
 
+        element.title = mockTitle;
+        element.slogan = mockSlogan;
+        element.recordName = mockRecordName;
         document.body.appendChild(element);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());

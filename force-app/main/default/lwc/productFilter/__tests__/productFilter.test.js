@@ -195,26 +195,4 @@ describe('c-product-filter', () => {
             }
         );
     });
-
-    it('is accessible when picklist values returned', () => {
-        const element = createElement('c-product-filter', {
-            is: ProductFilter
-        });
-        document.body.appendChild(element);
-
-        getPicklistValuesAdapter.emit(mockGetPicklistValues);
-
-        return Promise.resolve().then(() => expect(element).toBeAccessible());
-    });
-
-    it('is accessible when error returned', () => {
-        const element = createElement('c-product-filter', {
-            is: ProductFilter
-        });
-        document.body.appendChild(element);
-
-        getPicklistValuesAdapter.error();
-
-        return Promise.resolve().then(() => expect(element).toBeAccessible());
-    });
 });

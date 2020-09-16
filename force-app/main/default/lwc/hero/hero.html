@@ -1,5 +1,5 @@
 <template>
-    <img if:true={isImg} src={resUrl} />
+    <img alt="" if:true={isImg} src={resUrl} />
     <video if:true={isVideo} autoplay muted loop>
         <source src={resUrl} type="video/mp4" />
     </video>
