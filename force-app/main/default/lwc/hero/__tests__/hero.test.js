@@ -214,9 +214,7 @@ describe('c-hero', () => {
         return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 
-    // NOTE: there's an issue while testing audio / video tags with sa11y.
-    // Uncomment this test when the issue is fixed.
-    /*it('is accessible when type video and overlay displayed', () => {
+    it('is accessible when type video and overlay displayed', () => {
         const element = createElement('c-hero', {
             is: Hero
         });
@@ -228,5 +226,5 @@ describe('c-hero', () => {
         document.body.appendChild(element);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());
-    });*/
+    });
 });
