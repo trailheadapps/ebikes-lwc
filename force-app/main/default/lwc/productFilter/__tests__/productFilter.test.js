@@ -112,7 +112,7 @@ describe('c-product-filter', () => {
 
             getPicklistValuesAdapter.emit(mockGetPicklistValues);
 
-            // Prepare epected filter values with default filters
+            // Prepare expected filter values with default filters
             const expectedFilters = {
                 filters: {
                     categories: ['MockValue'],

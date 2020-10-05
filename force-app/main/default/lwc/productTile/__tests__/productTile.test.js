@@ -55,4 +55,20 @@ describe('c-product-tile', () => {
 
         expect(listener).toHaveBeenCalled();
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-product-tile', {
+            is: ProductTile
+        });
+
+        element.product = {
+            Id: 1,
+            Picture_URL__c: 'https://salesforce.com',
+            Name: 'Foo',
+            MSRP__c: 1000
+        };
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });
