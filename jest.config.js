@@ -1,4 +1,6 @@
 const { jestConfig } = require('@salesforce/sfdx-lwc-jest/config');
+const setupFilesAfterEnv = jestConfig.setupFilesAfterEnv || [];
+setupFilesAfterEnv.push('<rootDir>/jest-sa11y-setup.js');
 module.exports = {
     ...jestConfig,
     moduleNameMapper: {
@@ -8,5 +10,5 @@ module.exports = {
         '^lightning/messageService$':
             '<rootDir>/force-app/test/jest-mocks/lightning/messageService'
     },
-    setupFilesAfterEnv: ['<rootDir>/jest-sa11y-setup.js']
+    setupFilesAfterEnv
 };
