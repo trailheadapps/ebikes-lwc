@@ -1,10 +1,16 @@
-{
-    "packageDirectories": [
-        {
-            "path": "force-app",
-            "default": true
-        }
-    ],
-    "namespace": "",
-    "sourceApiVersion": "49.0"
+"packageDirectories": [
+    {
+        "path": "force-app",
+        "default": true,
+        "package": "LWCRecipes",
+        "versionName": "Spring '20",
+        "versionNumber": "3.0.0.NEXT"
+    }
+],
+"namespace": "",
+"sourceApiVersion": "48.0",
+"sfdcLoginUrl": "https://login.salesforce.com",
+"packageAliases": {
+    "LWCRecipes": "0HoB0000000GmiJKAS",
+    "LWCRecipes@3.0.0-59": "04tB0000000AziHIAS"
 }
