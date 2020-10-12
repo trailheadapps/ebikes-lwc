@@ -1,11 +1,11 @@
 {
     "appPageId": "591ae89d-97d7-4f5d-b93f-ce618e5d48f1",
     "componentName": "siteforce:sldsOneColLayout",
-    "id": "ab855e75-dda5-4037-8a55-1b62d32a1c3c",
-    "label": "Case Detail",
+    "id": "c177692a-740d-4c05-8dce-e725b859f8a1",
+    "label": "Product Family Detail",
     "regions": [
         {
-            "id": "7ad1967e-c67e-45df-8f17-0ee01a58f3bd",
+            "id": "701fb246-8ba9-400b-9b0e-f6b6dd331834",
             "regionName": "header",
             "type": "region"
         },
@@ -16,7 +16,7 @@
                         "recordId": "{!recordId}"
                     },
                     "componentName": "forceCommunity:recordHeadline",
-                    "id": "e0aa4d5b-426a-4c01-83d7-e2bf918d8ba4",
+                    "id": "e9cf49a7-fde9-424a-8ddf-b9efd2613b89",
                     "renderPriority": "NEUTRAL",
                     "renditionMap": {},
                     "type": "component"
@@ -29,23 +29,23 @@
                         "relatedTabLabel": "Related",
                         "tab1Type": "details",
                         "tab2Type": "related",
-                        "tab3Type": "chatter",
+                        "tab3Type": "none",
                         "tab4Type": "none",
                         "timelineTabLabel": "Activity"
                     },
                     "componentName": "forceCommunity:recordHomeTabs",
-                    "id": "78b18cdb-1e31-4f2a-bae9-935050da7e80",
+                    "id": "ef9e0a49-fbbb-49b9-837e-91f1ea51e68a",
                     "renderPriority": "NEUTRAL",
                     "renditionMap": {},
                     "type": "component"
                 }
             ],
-            "id": "8d4329dd-41fd-4828-99c9-e555af18d505",
+            "id": "cbc0b27c-2e21-4440-9505-b8edcb36ef3e",
             "regionName": "content",
             "type": "region"
         },
         {
-            "id": "b3312db3-63f6-45fb-a9ed-b028989d055b",
+            "id": "a5b0623e-f1b8-4b47-8445-265e4b58c9fd",
             "regionName": "footer",
             "type": "region"
         },
@@ -58,17 +58,17 @@
                         "title": "{!Record._Object}: {!Record._Title}"
                     },
                     "componentName": "forceCommunity:seoAssistant",
-                    "id": "61b01e5d-a7df-49a7-9bdf-5c98ee9695aa",
+                    "id": "2013c938-7e67-4ca1-b63d-4ef8c1221f17",
                     "renditionMap": {},
                     "type": "component"
                 }
             ],
-            "id": "79026e78-ee61-4b2e-bb0c-a4ecd5043506",
+            "id": "62ec64d2-31f3-4be1-bf35-5999d24cbc25",
             "regionName": "sfdcHiddenRegion",
             "type": "region"
         }
     ],
     "themeLayoutType": "Inner",
     "type": "view",
-    "viewType": "detail-500"
+    "viewType": "detail-a02"
 }

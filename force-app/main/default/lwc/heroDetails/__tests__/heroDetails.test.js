@@ -98,7 +98,6 @@ describe('c-hero-details', () => {
             expect(getRecordInfoAdapter.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
             const headingEL = element.shadowRoot.querySelector('h1');
-            console.log(headingEL);
             expect(headingEL.textContent).toBe(mockTitle);
             const paragraphEl = element.shadowRoot.querySelector('p');
             expect(paragraphEl.textContent).toBe(mockSlogan);

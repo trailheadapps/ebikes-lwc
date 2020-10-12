@@ -85,7 +85,6 @@
                                     "components": [
                                         {
                                             "componentAttributes": {
-                                                "accountManagementLabel": "Account Management",
                                                 "buttonBackgroundColor": "",
                                                 "buttonBackgroundHoverColor": "",
                                                 "buttonBorderColor": "rgba(0, 0, 0, 0)",
@@ -93,21 +92,7 @@
                                                 "buttonText": "Log in",
                                                 "buttonTextColor": "",
                                                 "buttonTextHoverColor": "",
-                                                "communityBuilderLabel": "Experience Builder",
-                                                "communitySetupLabel": "Salesforce Setup",
-                                                "contactSupportLabel": "Contact Support",
-                                                "filterName": "MyCases",
-                                                "homeLabel": "Home",
-                                                "logoutLabel": "Logout",
-                                                "menuStyle": "iconOnly",
-                                                "messagesLabel": "Messages",
-                                                "myAccountLabel": "My Account",
-                                                "showAccountManagement": true,
-                                                "showContactSupport": true,
-                                                "showMessages": true,
-                                                "showUserSettings": true,
-                                                "userSettingsLabel": "My Settings",
-                                                "viewProfileLabel": "My Profile"
+                                                "menuStyleSettings": "{\"selectedMenuStyleSetting\":\"iconOnly\",\"selectedIconSetting\":\"userAvatar\",\"includeCompanyName\":false,\"selectedTextOrientationSetting\":\"right\"}"
                                             },
                                             "componentName": "forceCommunity:customizableUserProfileMenu",
                                             "id": "bd98d2ad-538d-4d38-90ed-be99913c1dfb",
@@ -219,7 +204,6 @@
                                     "components": [
                                         {
                                             "componentAttributes": {
-                                                "accountManagementLabel": "Account Management",
                                                 "buttonBackgroundColor": "",
                                                 "buttonBackgroundHoverColor": "",
                                                 "buttonBorderColor": "rgba(0, 0, 0, 0)",
@@ -227,21 +211,7 @@
                                                 "buttonText": "Log in",
                                                 "buttonTextColor": "",
                                                 "buttonTextHoverColor": "",
-                                                "communityBuilderLabel": "Experience Builder",
-                                                "communitySetupLabel": "Salesforce Setup",
-                                                "contactSupportLabel": "Contact Support",
-                                                "filterName": "MyCases",
-                                                "homeLabel": "Home",
-                                                "logoutLabel": "Logout",
-                                                "menuStyle": "iconOnly",
-                                                "messagesLabel": "Messages",
-                                                "myAccountLabel": "My Account",
-                                                "showAccountManagement": true,
-                                                "showContactSupport": true,
-                                                "showMessages": true,
-                                                "showUserSettings": true,
-                                                "userSettingsLabel": "My Settings",
-                                                "viewProfileLabel": "My Profile"
+                                                "menuStyleSettings": "{\"selectedMenuStyleSetting\":\"iconOnly\",\"selectedIconSetting\":\"userAvatar\",\"includeCompanyName\":false,\"selectedTextOrientationSetting\":\"right\"}"
                                             },
                                             "componentName": "forceCommunity:customizableUserProfileMenu",
                                             "id": "67f1ffc7-d66c-44a1-a020-df2c3d80c323",
