@@ -45,7 +45,7 @@
     </promptVersions>
     <promptVersions>
         <body
-        >E-Bikes products are show in this paginated list.&lt;br/&gt;Click on one of the tiles to view product details.</body>
+        >E-Bikes products are shown in this paginated list.&lt;br/&gt;Click on one of the tiles to view product details.</body>
         <dismissButtonLabel>Close</dismissButtonLabel>
         <displayPosition>BottomCenter</displayPosition>
         <displayType>FloatingPanel</displayType>

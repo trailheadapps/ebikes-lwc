@@ -12,7 +12,7 @@
         <displayType>FloatingPanel</displayType>
         <isPublished>true</isPublished>
         <masterLabel>Order Builder Step 1</masterLabel>
-        <publishedDate>2020-10-09</publishedDate>
+        <publishedDate>2020-10-15</publishedDate>
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
         <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <startDate>2020-10-09</startDate>
@@ -57,7 +57,7 @@
     </promptVersions>
     <promptVersions>
         <body
-        >You can drag products from the list into the basket. As you add products, the totals will update and relate the records to the order. &lt;br&gt;&lt;br&gt; The drop is handled using the standard &lt;a href=&quot;#=https://mzl.la/36N7i4c&quot;&gt;Drag &amp; Drop APIs&lt;/a&gt;.</body>
+        >You can drag products from the list into the basket. As you add products, the totals will update and relate the records to the order.</body>
         <dismissButtonLabel>Close</dismissButtonLabel>
         <displayPosition>TopCenter</displayPosition>
         <displayType>FloatingPanel</displayType>
@@ -97,7 +97,7 @@
     </promptVersions>
     <promptVersions>
         <body
-        >&lt;p&gt;Now that you have seen Lightning Web Components used to create an interactive ordering experience, you can learn how to build them yourself! &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;As demonstrated, you can follow web standards like using Custom Events &amp;amp; The Drag &amp;amp; Drop API to communicate across components. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Make sure you check out the &lt;b&gt;Property Explorer &lt;/b&gt;Tab for more great ways you can innovate with Lightning Web Components.&lt;/p&gt;</body>
+        >&lt;p&gt;Now that you have seen Lightning Web Components used to create an interactive ordering experience, you can learn how to build them yourself!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;As demonstrated, you can follow web standards like using Custom Events &amp;amp; The Drag &amp;amp; Drop API to communicate across components.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Make sure you check out the &lt;b&gt;Product Explorer &lt;/b&gt;Tab for more great ways you can innovate with Lightning Web Components.&lt;/p&gt;</body>
         <displayPosition>BottomCenter</displayPosition>
         <displayType>DockedComposer</displayType>
         <header>Resources</header>
