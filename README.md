@@ -64,6 +64,12 @@ E-Bikes is a sample application that demonstrates how to build applications with
     sfdx force:user:permset:assign -n ebikes
     ```
 
+1. Assign the **Walkthroughs** permission set to the default user:
+
+    ```
+    sfdx force:user:permset:assign -n Walkthroughs
+    ```
+
 1. Import sample data:
 
     ```
@@ -140,6 +146,12 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     1. Locate the **Product** picklist field and click **Delete** from the row menu.
     1. Confirm deletion by clicking **Delete**.
 
+1. Start an In-App Guidance trial
+
+    1. In Setup, navigate to **User Engagement > In-App Guidance**.
+    1. Click on the **Start Walkthrough Trial**.
+    1. Click on **Submit**.
+
 1. Deploy the App with these steps:
 
     1. Run this command in a terminal to deploy the app.
@@ -148,7 +160,7 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
         sfdx force:source:deploy -p force-app
         ```
 
-    1. Assign the `ebikes` permission set to the default user.
+    1. Assign the **ebikes** permission set to the default user.
 
         ```
         sfdx force:user:permset:assign -n ebikes
