@@ -4,9 +4,8 @@
     "version": "1.0.0",
     "description": "EBikes Sample App - Lightning Web Components",
     "scripts": {
-        "lint": "npm run lint:lwc && npm run lint:aura",
+        "lint": "npm run lint:lwc",
         "lint:lwc": "eslint **/lwc/**",
-        "lint:aura": "eslint **/aura/**",
         "test": "npm run lint && npm run test:unit",
         "test:unit": "sfdx-lwc-jest",
         "test:unit:watch": "sfdx-lwc-jest --watch",
@@ -30,7 +29,6 @@
         "@prettier/plugin-xml": "^0.12.0",
         "@sa11y/jest": "^0.1.4-beta.0",
         "@salesforce/eslint-config-lwc": "^0.7.0",
-        "@salesforce/eslint-plugin-aura": "^1.4.0",
         "@salesforce/sfdx-lwc-jest": "^0.10.1",
         "eslint": "^7.11.0",
         "eslint-config-prettier": "^6.13.0",
