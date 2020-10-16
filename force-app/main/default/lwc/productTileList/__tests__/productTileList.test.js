@@ -270,4 +270,37 @@ describe('c-product-tile-list', () => {
             });
         });
     });
+
+    it('is accessible when products returned', () => {
+        const element = createElement('c-product-tile-list', {
+            is: ProductTileList
+        });
+
+        document.body.appendChild(element);
+        getProductsAdapter.emit(mockGetProducts);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
+
+    it('is accessible when no products returned', () => {
+        const element = createElement('c-product-tile-list', {
+            is: ProductTileList
+        });
+
+        document.body.appendChild(element);
+        getProductsAdapter.emit(mockGetProductsNoRecords);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
+
+    it('is accessible when error returned', () => {
+        const element = createElement('c-product-tile-list', {
+            is: ProductTileList
+        });
+
+        document.body.appendChild(element);
+        getProductsAdapter.error();
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

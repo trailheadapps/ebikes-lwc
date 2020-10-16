@@ -37,7 +37,7 @@ describe('c-order-builder', () => {
         element.recordId = mockRecordId;
         document.body.appendChild(element);
 
-        // Emit Data from the Apex wire adapter.s
+        // Emit Data from the Apex wire adapter.
         getOrderItemsAdapter.emit(mockGetOrderItems);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
@@ -233,5 +233,46 @@ describe('c-order-builder', () => {
             expect(errorPanelEl).not.toBeNull();
             expect(errorPanelEl.errors.body).toStrictEqual(mockError);
         });
+    });
+
+    it('is accessible when orders returned', () => {
+        const element = createElement('c-order-builder', {
+            is: OrderBuilder
+        });
+        element.recordId = mockRecordId;
+        document.body.appendChild(element);
+
+        // Emit Data from the Apex wire adapter.
+        getOrderItemsAdapter.emit(mockGetOrderItems);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
+
+    it('is accessible when no orders returned', () => {
+        const element = createElement('c-order-builder', {
+            is: OrderBuilder
+        });
+        element.recordId = mockRecordId;
+        document.body.appendChild(element);
+
+        // Emit Data from the Apex wire adapter.
+        getOrderItemsAdapter.emit(mockGetOrderItemsEmpty);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
+
+    it('is accessible when error returned', () => {
+        const mockError = { message: 'mockError' };
+
+        const element = createElement('c-order-builder', {
+            is: OrderBuilder
+        });
+        element.recordId = mockRecordId;
+        document.body.appendChild(element);
+
+        // Emit Error from the Apex wire adapter.
+        getOrderItemsAdapter.error(mockError);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 });

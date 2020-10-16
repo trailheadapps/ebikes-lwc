@@ -58,6 +58,7 @@ describe('c-hero', () => {
         const element = createElement('c-hero', {
             is: Hero
         });
+        element.title = mockTitle;
         element.resourceUrl = mockResourceUrl;
         element.imgOrVideo = mockImgOrVideoVIDEO;
         element.internalResource = mockInternalResource;
@@ -79,6 +80,7 @@ describe('c-hero', () => {
         const element = createElement('c-hero', {
             is: Hero
         });
+        element.title = mockTitle;
         element.overlay = mockOverlay;
         element.opacity = mockOpacity;
         document.body.appendChild(element);
@@ -190,5 +192,39 @@ describe('c-hero', () => {
             const spanEl = element.shadowRoot.querySelector('span');
             expect(spanEl.textContent).toBe(mockButtonText);
         });
+    });
+
+    it('is accessible when type image and overlay displayed', () => {
+        const element = createElement('c-hero', {
+            is: Hero
+        });
+
+        element.title = mockTitle;
+        element.slogan = mockSlogan;
+        element.buttonText = mockButtonText;
+        element.heroDetailsPosition = mockHeroDetailsPositionLEFT;
+        element.resourceUrl = mockResourceUrl;
+        element.imgOrVideo = mockImgOrVideoIMAGE;
+        element.internalResource = mockInternalResource;
+        element.overlay = mockOverlay;
+        element.opacity = mockOpacity;
+        element.buttonClickProductOrFamilyName = mockButtonClickProductOrFamilyName;
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
+
+    it('is accessible when type video and overlay displayed', () => {
+        const element = createElement('c-hero', {
+            is: Hero
+        });
+
+        element.title = mockTitle;
+        element.resourceUrl = mockResourceUrl;
+        element.imgOrVideo = mockImgOrVideoVIDEO;
+        element.internalResource = mockInternalResource;
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
 });

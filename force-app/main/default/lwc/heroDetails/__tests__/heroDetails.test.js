@@ -103,4 +103,17 @@ describe('c-hero-details', () => {
             expect(paragraphEl.textContent).toBe(mockSlogan);
         });
     });
+
+    it('is accessible', () => {
+        const element = createElement('c-hero-details', {
+            is: HeroDetails
+        });
+
+        element.title = mockTitle;
+        element.slogan = mockSlogan;
+        element.recordName = mockRecordName;
+        document.body.appendChild(element);
+
+        return Promise.resolve().then(() => expect(element).toBeAccessible());
+    });
 });

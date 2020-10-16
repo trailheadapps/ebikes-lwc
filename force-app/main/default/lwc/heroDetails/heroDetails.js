@@ -5,7 +5,7 @@ import getRecordInfo from '@salesforce/apex/ProductRecordInfoController.getRecor
  * Details component that is on top of the video.
  */
 export default class HeroDetails extends LightningElement {
-    @api title;
+    @api title = 'Hero Details'; // Default title to comply with accessibility
     @api slogan;
     @api recordName;
 

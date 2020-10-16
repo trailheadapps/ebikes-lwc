@@ -31,10 +31,10 @@
         "@salesforce/eslint-config-lwc": "^0.7.0",
         "@salesforce/eslint-plugin-aura": "^1.4.0",
         "@salesforce/sfdx-lwc-jest": "^0.10.1",
-        "eslint": "^7.9.0",
-        "eslint-config-prettier": "^6.11.0",
+        "eslint": "^7.11.0",
+        "eslint-config-prettier": "^6.13.0",
         "husky": "^4.3.0",
-        "lint-staged": "^10.2.11",
+        "lint-staged": "^10.4.1",
         "prettier": "^2.1.2",
         "prettier-plugin-apex": "^1.7.0",
         "semver": "^7.3.2"
