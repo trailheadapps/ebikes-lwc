@@ -5,4 +5,6 @@
     >s3_us_west_1_amazonaws_com Trusted Site Added Via Community Builder</description>
     <endpointUrl>https://s3-us-west-1.amazonaws.com</endpointUrl>
     <isActive>true</isActive>
+    <isApplicableToImgSrc>true</isApplicableToImgSrc>
+    <isApplicableToMediaSrc>true</isApplicableToMediaSrc>
 </CspTrustedSite>

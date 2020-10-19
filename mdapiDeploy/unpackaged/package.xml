@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-		<members>*</members>
-		<name>ExperienceBundle</name>
-    </types>
-    <types>
-		<members>*</members>
-		<name>Profile</name>
-    </types>
-    <types>
-        <name>ContentAsset</name>
-        <members>ebikeslogo</members>
-    </types>
-    <types>
         <name>NavigationMenu</name>
         <members>Default_Navigation</members>
     </types>
-    <version>49.0</version>
+    <version>50.0</version>
 </Package>

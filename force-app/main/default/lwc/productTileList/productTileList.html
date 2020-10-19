@@ -1,5 +1,5 @@
 <template>
-    <div class="slds-card slds-p-around_x-small">
+    <div class="slds-card slds-var-p-around_x-small">
         <template if:true={searchBarIsVisible}>
             <lightning-input
                 label="Search Key"
@@ -20,7 +20,7 @@
                             product={product}
                             draggable={tilesAreDraggable}
                             onselected={handleProductSelected}
-                            class="slds-m-around_x-small"
+                            class="slds-var-m-around_x-small"
                         >
                         </c-product-tile>
                     </template>

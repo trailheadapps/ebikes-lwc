@@ -14,7 +14,7 @@
                 <div class="right">Total Items: {orderQuantity}</div>
             </header>
             <div
-                class="drop-zone slds-p-around_x-small"
+                class="drop-zone slds-var-p-around_x-small"
                 ondrop={handleDrop}
                 ondragover={handleDragOver}
             >
@@ -22,7 +22,7 @@
                     <c-order-item-tile
                         key={orderItem.Id}
                         order-item={orderItem}
-                        class="slds-m-around_x-small"
+                        class="slds-var-m-around_x-small"
                         onorderitemchange={handleOrderItemChange}
                         onorderitemdelete={handleOrderItemDelete}
                     >

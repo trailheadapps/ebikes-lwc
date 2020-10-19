@@ -1,11 +1,11 @@
 {
     "appPageId": "591ae89d-97d7-4f5d-b93f-ce618e5d48f1",
     "componentName": "siteforce:sldsOneColLayout",
-    "id": "000dacc0-82d1-4e73-a297-d34ddbe52c03",
-    "label": "Case Related List",
+    "id": "eb60ff2f-bca3-4cc7-befe-74a5cc28d67f",
+    "label": "Product Family Related List",
     "regions": [
         {
-            "id": "5f56e172-507b-4304-9320-2072a57eac7c",
+            "id": "e2525dfe-a877-4e1e-856d-057f885f9801",
             "regionName": "header",
             "type": "region"
         },
@@ -22,23 +22,23 @@
                         "showRowNumbers": true
                     },
                     "componentName": "forceCommunity:relatedList",
-                    "id": "24869e60-15c5-4ae5-8e07-32a90a85fecc",
+                    "id": "547f6ec6-4fbc-49e5-b87e-3b89e8db2525",
                     "renderPriority": "NEUTRAL",
                     "renditionMap": {},
                     "type": "component"
                 }
             ],
-            "id": "18226e1f-a524-44c2-9990-37f6f93f04a2",
+            "id": "61d84bb8-6943-4585-a1b8-be02be8b72ac",
             "regionName": "content",
             "type": "region"
         },
         {
-            "id": "47293871-f949-4585-96e6-f8d13b2cb4f3",
+            "id": "5021e296-247c-4759-93aa-aaf5b15f7284",
             "regionName": "footer",
             "type": "region"
         }
     ],
     "themeLayoutType": "Inner",
     "type": "view",
-    "viewType": "relatedlist-500"
+    "viewType": "relatedlist-a02"
 }
