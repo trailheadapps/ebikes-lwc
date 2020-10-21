@@ -23,15 +23,7 @@
         <targetPageType>standard__recordPage</targetPageType>
         <timesToDisplay>1</timesToDisplay>
         <title>Product Details</title>
-        <uiFormulaRule>
-            <criteria>
-                <leftValue
-                >{!$Permission.StandardPermission.AccessWalkthroughs}</leftValue>
-                <operator>EQUAL</operator>
-                <rightValue>TRUE</rightValue>
-            </criteria>
-        </uiFormulaRule>
-        <userAccess>SpecificPermissions</userAccess>
+        <userAccess>Everyone</userAccess>
         <userProfileAccess>Everyone</userProfileAccess>
         <versionNumber>1</versionNumber>
     </promptVersions>
