@@ -100,10 +100,6 @@ jobs:
             - name: 'Import sample data'
               run: 'sfdx force:data:tree:import -p ./data/sample-data-plan.json'
 
-            # Deploy Community metadata
-            - name: 'Deploy Community metadata'
-              run: 'sfdx force:mdapi:deploy --deploydir mdapiDeploy/unpackaged -w 5'
-
             # Run Apex tests in scratch org
             - name: 'Run Apex tests'
               run: 'sfdx force:apex:test:run -c -r human -d ./tests/apex -w 20'
