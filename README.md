@@ -76,12 +76,6 @@ E-Bikes is a sample application that demonstrates how to build applications with
     sfdx force:data:tree:import -p ./data/sample-data-plan.json
     ```
 
-1. Deploy Community metadata:
-
-    ```
-    sfdx force:mdapi:deploy -d mdapiDeploy/unpackaged -w 5
-    ```
-
 1. Publish the Community:
 
     ```
@@ -170,12 +164,6 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
 
         ```
         sfdx force:data:tree:import -p ./data/sample-data-plan.json
-        ```
-
-    1. Deploy the Community metadata.
-
-        ```
-        sfdx force:mdapi:deploy -d mdapiDeploy/unpackaged -w 5
         ```
 
     1. Publish the Community.
