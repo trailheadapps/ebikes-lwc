@@ -39,7 +39,7 @@ sfdx force:community:publish -n E-Bikes && \
 echo "" && \
 
 echo "Opening org..." && \
-sfdx force:org:open -p /lightning/page/home && \
+sfdx force:org:open -p lightning/n/Product_Explorer && \
 echo ""
 
 EXIT_CODE="$?"
