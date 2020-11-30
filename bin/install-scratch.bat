@@ -26,6 +26,7 @@ echo Assigning permission sets...
 cmd.exe /c sfdx force:user:permset:assign -n ebikes
 call :checkForError
 @echo:
+cd %CD%/..
 
 echo Importing sample data...
 cmd.exe /c sfdx force:data:tree:import -p data/sample-data-plan.json
