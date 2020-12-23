@@ -112,8 +112,6 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     sfdx force:auth:web:login -s -a mydevorg
     ```
 
-1. If you are setting up a Developer Edition: go to **Setup**, under **My Domain**, [register a My Domain](https://help.salesforce.com/articleView?id=domain_name_setup.htm&type=5).
-
 1. Enable Communities with the following steps:
 
     1. In your org, in **Setup**, select **Communities Settings**.
