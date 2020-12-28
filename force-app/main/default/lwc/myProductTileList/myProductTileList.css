@@ -1,0 +1,11 @@
+.slds-card {
+    background: #2225e2;
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+c-my-product-tile {
+    min-width: 200px;
+    flex: 1;
+}

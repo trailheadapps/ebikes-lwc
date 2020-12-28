@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable">
+    <div aura:id="container">
+        
+        <lightning:layout multiplerows="true">
+            <lightning:layoutItem aura:id='leftColumn' size="2">
+                
+            </lightning:layoutItem>
+            <lightning:layoutItem aura:id='leftColumn' size="7">
+                <c:myProductTileList></c:myProductTileList>
+            </lightning:layoutItem>
+            <lightning:layoutItem aura:id='leftColumn' size="3">
+                
+            </lightning:layoutItem>
+        </lightning:layout>
+    
+    </div>
+</aura:component>

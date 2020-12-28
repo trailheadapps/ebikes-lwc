@@ -1,0 +1,22 @@
+<template>
+    <div class="slds-card slds-var-p-around_x-small">
+        <template if:true={products.data}>
+            <div class="content slds-align_absolute-center">
+                <template
+                    for:each={products.data.records}
+                    for:item="productRecord"
+                >
+                    <c-my-product-tile
+                        key={productRecord.Id}
+                        product={productRecord}
+                        class="slds-var-m-around_x-small"
+                    >
+                    </c-my-product-tile>
+                </template>
+            </div>
+        </template>
+        <template if:true={products.error}>
+            <c-error-panel errors={products.error}></c-error-panel>
+        </template>
+    </div>
+</template>
