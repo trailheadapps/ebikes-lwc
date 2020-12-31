@@ -1,17 +1,20 @@
 <aura:component implements="force:appHostable">
+    <aura:attribute name="selecttedProduct" type="String"></aura:attribute>
+
     <div aura:id="container">
-        
         <lightning:layout multiplerows="true">
-            <lightning:layoutItem aura:id='leftColumn' size="2">
-                
+            <lightning:layoutItem aura:id="leftColumn" size="2">
             </lightning:layoutItem>
-            <lightning:layoutItem aura:id='leftColumn' size="7">
-                <c:myProductTileList></c:myProductTileList>
+            <lightning:layoutItem aura:id="leftColumn" size="7">
+                <c:myProductTileList
+                   onproductselected="{!c.handleProductSelected}" 
+                ></c:myProductTileList>
             </lightning:layoutItem>
-            <lightning:layoutItem aura:id='leftColumn' size="3">
-                <c:myProductCard></c:myProductCard>
+            <lightning:layoutItem aura:id="leftColumn" size="3">
+                <c:myProductCard
+                    product="{!v.selecttedProduct}"
+                ></c:myProductCard>
             </lightning:layoutItem>
         </lightning:layout>
-    
     </div>
 </aura:component>

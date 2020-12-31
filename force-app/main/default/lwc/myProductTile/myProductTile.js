@@ -15,4 +15,11 @@ export default class MyProductTile extends LightningElement {
     pictureUrl;
     name;
     msrp;
+    handleClick(event){
+
+        const selectedEvent = new CustomEvent('selected', {
+            detail: this.product.Id
+        });
+        this.dispatchEvent(selectedEvent);
+    }
 }

@@ -1,5 +1,19 @@
 <template>
-    <lightning-card   icon-name="standard:apex_plugin">
-
+    <lightning-card icon-name="standard:apex_plugin">
+        <lightning-record-view-form
+            record-id={product}
+            object-api-name="Product__c"
+            density="compact"
+        >
+            <lightning-output-field
+                field-name={categoryField}
+            ></lightning-output-field>
+            <lightning-output-field
+                field-name={levelField}
+            ></lightning-output-field>
+            <lightning-output-field
+                field-name={msrpField}
+            ></lightning-output-field>
+        </lightning-record-view-form>
     </lightning-card>
 </template>
