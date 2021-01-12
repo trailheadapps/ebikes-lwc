@@ -30,7 +30,7 @@
         "@sa11y/jest": "^0.2.0",
         "@salesforce/eslint-config-lwc": "^0.8.0",
         "@salesforce/sfdx-lwc-jest": "^0.10.2",
-        "eslint": "^7.14.0",
+        "eslint": "^7.17.0",
         "eslint-config-prettier": "^7.1.0",
         "husky": "^4.3.6",
         "lint-staged": "^10.5.3",
