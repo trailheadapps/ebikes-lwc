@@ -15,20 +15,20 @@
                     "componentAttributes": {
                         "scopes": [
                             {
-                                "name": "FeedPost",
-                                "isPublic": true
+                                "isPublic": true,
+                                "name": "FeedPost"
                             },
                             {
-                                "name": "KnowledgeArticleVersion",
-                                "isPublic": true
+                                "isPublic": true,
+                                "name": "KnowledgeArticleVersion"
                             },
                             {
-                                "name": "Case",
-                                "isPublic": false
+                                "isPublic": false,
+                                "name": "Case"
                             },
                             {
-                                "name": "CollaborationGroup",
-                                "isPublic": true
+                                "isPublic": true,
+                                "name": "CollaborationGroup"
                             }
                         ],
                         "searchResultFiltering": true,
