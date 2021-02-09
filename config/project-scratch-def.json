@@ -2,7 +2,7 @@
     "orgName": "Ebikes",
     "edition": "Developer",
     "hasSampleData": false,
-    "features": ["Communities", "Walkthroughs"],
+    "features": ["Communities", "Walkthroughs", "EnableSetPasswordInApi"],
     "settings": {
         "communitiesSettings": {
             "enableNetworksEnabled": true
@@ -12,11 +12,6 @@
         },
         "lightningExperienceSettings": {
             "enableS1DesktopEnabled": true
-        },
-        "securitySettings": {
-            "passwordPolicies": {
-                "enableSetPasswordInApi": true
-            }
         },
         "mobileSettings": {
             "enableS1EncryptedStoragePref2": false
