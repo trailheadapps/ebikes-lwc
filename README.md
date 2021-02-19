@@ -24,6 +24,8 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 -   [Optional installation instructions](#optional-installation-instructions)
 
+-   [Code tours](#code-tours)
+
 ## Installing E-Bikes using a Scratch Org
 
 1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
@@ -208,3 +210,7 @@ Prettier and ESLint will now run automatically every time you commit changes. Th
 npm run lint:lwc
 npm run prettier
 ```
+
+## Code Tours
+
+Code Tours are guided walkthroughs that will help you understand the app code better. To be able to run them, install the [CodeTour VSCode extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour).
