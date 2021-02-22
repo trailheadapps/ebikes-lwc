@@ -1,0 +1,50 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "👋 Welcome to E-Bikes",
+  "steps": [
+    {
+      "title": "Property Explorer - Wire Decorator",
+      "file": "force-app/main/default/lwc/productTileList/productTileList.js",
+      "description": "The Product Explorer lets you browse thought E-Bikes products by displaying cards that contain the product and it's price. It gets these by using an @wire to query call the `getProducts` Apex method and providing the filter values that have been set.",
+      "line": 48
+    },
+    {
+      "title": "Property Explorer - Lightning Message Service",
+      "file": "force-app/main/default/lwc/productTileList/productTileList.js",
+      "description": "The LWC uses Lightning Message Service to publish a selected product using the `PRODUCT_SELECTED_MESSAGE` [Lightning message channel](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.use_message_channel). This way, any components subscribing to the message will recieve the data when it is published.",
+      "line": 62
+    },
+    {
+      "title": "Product Card - Lightning Message Service",
+      "file": "force-app/main/default/lwc/productCard/productCard.js",
+      "description": "The product card subscribes to the `PRODUCT_SELECTED_MESSAGE` [Lightning message channel](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.use_message_channel) and passes the payload to the handleRecordLoaded method which will query for and return the selected record.",
+      "line": 57
+    },
+    {
+      "title": "Similar Products - Api Decorator",
+      "file": "force-app/main/default/lwc/similarProducts/similarProducts.js",
+      "description": "The Similar Products component is accessed by a user on a record detail page. In LWC you can use the `@api recordId` property to gather the id from the pages context. ",
+      "line": 9
+    },
+    {
+      "title": "Similar Products - Wire Decorator",
+      "file": "force-app/main/default/lwc/similarProducts/similarProducts.js",
+      "description": "Using [Lightning Data Services](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.data_ui_api), we can use an `@wire` to query for a records fields by passing in the `recordId` and the fields property that we have defined.",
+      "line": 15
+    },
+    {
+      "title": "Similar Products - Lightning Data Service",
+      "file": "force-app/main/default/lwc/similarProducts/similarProducts.html",
+      "description": "When the similarProducts are returned from the [Lightning Data Services](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.data_ui_api) transaction, we can iterate over the result and pass the data into the Product List Item component.",
+      "line": 5
+    },
+    {
+      "title": "Product List Item - Navigation",
+      "file": "force-app/main/default/lwc/productListItem/productListItem.js",
+      "description": "Once the values have been populated by the parent component, in this case similarProducts, you can select an item to view it's details. In this case, we are using [Lightning Navigation Service](https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.use_navigate) to navigate to a record page and include the `recordId` and `objectApiName` to ensure that the user gets to the correct record.",
+      "line": 13
+    }
+  ],
+  "ref": "sg/codetour",
+  "isPrimary": true
+}
