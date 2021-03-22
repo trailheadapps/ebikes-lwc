@@ -1,5 +1,5 @@
 # Unique name for this workflow
-name: Salesforce DX (scratch org)
+name: CI
 
 # Definition when the workflow should run
 on:
@@ -12,12 +12,12 @@ jobs:
     formatting-and-linting:
         runs-on: ubuntu-latest
         steps:
-            # Checkout the code in the pull request
+            # Checkout the source code
             - name: 'Checkout source code'
               uses: actions/checkout@v2
 
             # Cache node_modules to speed up the process
-            - name: Restore node_modules cache
+            - name: 'Restore node_modules cache'
               id: cache-npm
               uses: actions/cache@v1
               with:
@@ -40,7 +40,7 @@ jobs:
             - name: 'Lint Lightning Web Components'
               run: npm run lint:lwc
 
-            # Unit tests
+            # LWC unit tests
             - name: 'Unit test Lightning Web Components'
               run: npm run test:unit:coverage
 
@@ -55,29 +55,29 @@ jobs:
         needs: formatting-and-linting
         steps:
             # Install Salesforce CLI
-            - name: Install Salesforce CLI
+            - name: 'Install Salesforce CLI'
               run: |
                   wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
                   mkdir sfdx-cli
                   tar xJf sfdx-linux-amd64.tar.xz -C sfdx-cli --strip-components 1
                   ./sfdx-cli/install
 
-            # Checkout the code in the pull request
+            # Checkout the source code
             - name: 'Checkout source code'
               uses: actions/checkout@v2
 
             # Store secret for dev hub
             - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
               shell: bash
-              run: 'echo ${{ secrets.DEVHUB_SFDX_URL}} > ./DEVHUB_SFDX_URL.txt'
+              run: echo ${{ secrets.DEVHUB_SFDX_URL}} > ./DEVHUB_SFDX_URL.txt
 
             # Authenticate dev hub
             - name: 'Authenticate Dev Hub'
-              run: 'sfdx auth:sfdxurl:store -f ./DEVHUB_SFDX_URL.txt -a devhub -d'
+              run: sfdx auth:sfdxurl:store -f ./DEVHUB_SFDX_URL.txt -a devhub -d
 
             # Create scratch org
             - name: 'Create scratch org'
-              run: 'sfdx force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1'
+              run: sfdx force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1
 
             # Wait for package replication
             - name: 'Wait for two min for Communities activation'
@@ -87,19 +87,19 @@ jobs:
 
             # Deploy source to scratch org
             - name: 'Push source to scratch org'
-              run: 'sfdx force:source:push'
+              run: sfdx force:source:push
 
             # Assign permissionset
             - name: 'Assign permissionset to default user'
-              run: 'sfdx force:user:permset:assign -n ebikes'
+              run: sfdx force:user:permset:assign -n ebikes
 
             # Import sample data
             - name: 'Import sample data'
-              run: 'sfdx force:data:tree:import -p ./data/sample-data-plan.json'
+              run: sfdx force:data:tree:import -p ./data/sample-data-plan.json
 
             # Run Apex tests in scratch org
             - name: 'Run Apex tests'
-              run: 'sfdx force:apex:test:run -c -r human -d ./tests/apex -w 20'
+              run: sfdx force:apex:test:run -c -r human -d ./tests/apex -w 20
 
             # Upload code coverage data
             - name: 'Upload code coverage for Apex to Codecov.io'
@@ -110,4 +110,4 @@ jobs:
             # Housekeeping
             - name: 'Delete scratch org'
               if: always()
-              run: 'sfdx force:org:delete -p -u scratch-org'
+              run: sfdx force:org:delete -p -u scratch-org
