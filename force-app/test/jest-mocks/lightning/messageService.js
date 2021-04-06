@@ -1,7 +1,7 @@
 /**
  * For the original lightning/messageService (LMS) stub that comes by default with
  * @salesforce/sfdx-lwc-jest, see:
- * https://github.com/salesforce/sfdx-lwc-jest/blob/master/src/lightning-stubs/messageService/messageService.js
+ * https://github.com/salesforce/sfdx-lwc-jest/blob/main/src/lightning-stubs/messageService/messageService.js
  */
 
 export const APPLICATION_SCOPE = Symbol('APPLICATION_SCOPE');
