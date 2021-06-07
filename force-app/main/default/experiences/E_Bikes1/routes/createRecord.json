@@ -1,10 +1,10 @@
 {
-    "activeViewId": "0832e8af-7900-4144-84cf-0d09812e25a9",
-    "appPageId": "591ae89d-97d7-4f5d-b93f-ce618e5d48f1",
-    "configurationTags": [],
-    "id": "3b095910-c486-4fdf-8105-f9dccb711864",
-    "label": "Create Record",
-    "routeType": "createrecord",
-    "type": "route",
-    "urlPrefix": "createrecord"
+  "activeViewId" : "2fe804bc-3b6d-46a7-8c57-804df5d9979c",
+  "appPageId" : "1f9afd36-7ca0-451b-a07b-58308ca4b970",
+  "configurationTags" : [ ],
+  "id" : "1533339b-9c5e-4ef5-936c-46cdf3435be1",
+  "label" : "Create Record",
+  "routeType" : "createrecord",
+  "type" : "route",
+  "urlPrefix" : "createrecord"
 }

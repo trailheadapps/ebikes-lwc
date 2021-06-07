@@ -2,7 +2,12 @@
     "orgName": "Ebikes",
     "edition": "Developer",
     "hasSampleData": false,
-    "features": ["Communities", "Walkthroughs", "EnableSetPasswordInApi"],
+    "release": "Preview",
+    "features": [
+        "Communities",
+        "Walkthroughs",
+        "EnableSetPasswordInApi"
+    ],
     "settings": {
         "communitiesSettings": {
             "enableNetworksEnabled": true
