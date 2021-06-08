@@ -8,7 +8,7 @@
     <description>A community for electric bikes enthusiasts</description>
     <disableReputationRecordConversations
     >true</disableReputationRecordConversations>
-    <emailSenderAddress>ctp230@na44stmfb.com</emailSenderAddress>
+    <emailSenderAddress>some.sender@company.com</emailSenderAddress>
     <emailSenderName>E-Bikes</emailSenderName>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>true</enableDirectMessages>

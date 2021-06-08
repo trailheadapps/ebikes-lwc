@@ -12,7 +12,6 @@
     <browserXssProtection>true</browserXssProtection>
     <clickjackProtectionLevel>SameOriginOnly</clickjackProtectionLevel>
     <contentSniffingProtection>true</contentSniffingProtection>
-    <cspUpgradeInsecureRequests>true</cspUpgradeInsecureRequests>
     <enableAuraRequests>true</enableAuraRequests>
     <fileNotFoundPage>FileNotFound</fileNotFoundPage>
     <genericErrorPage>Exception</genericErrorPage>
@@ -21,11 +20,11 @@
     <masterLabel>E-Bikes</masterLabel>
     <referrerPolicyOriginWhenCrossOrigin
     >true</referrerPolicyOriginWhenCrossOrigin>
-    <requireHttps>true</requireHttps>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>ctp230@na44stmfb.com</siteAdmin>
-    <siteGuestRecordDefaultOwner>ctp230@na44stmfb.com</siteGuestRecordDefaultOwner>
+    <siteAdmin>test-yypfaowt42yo@example.com</siteAdmin>
+    <siteGuestRecordDefaultOwner
+    >test-yypfaowt42yo@example.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>230na44stmfb</subdomain>
+    <subdomain>efficiency-connect-1801-dev--1701a0bb7eb</subdomain>
     <urlPathPrefix>ebikes</urlPathPrefix>
 </CustomSite>
