@@ -74,9 +74,8 @@ describe('c-paginator', () => {
         document.body.appendChild(element);
 
         // Query div for validating the display message on component init
-        const lightningLayoutItemEl = element.shadowRoot.querySelector(
-            '.nav-info'
-        );
+        const lightningLayoutItemEl =
+            element.shadowRoot.querySelector('.nav-info');
         //Check for the 0 items message
         expect(lightningLayoutItemEl).not.toBeNull();
         expect(lightningLayoutItemEl.textContent).toBe('0 items • page 0 of 0');
@@ -95,9 +94,8 @@ describe('c-paginator', () => {
         element.totalItemCount = 12;
 
         // Query div for validating the display message on component init
-        const lightningLayoutItemEl = element.shadowRoot.querySelector(
-            '.nav-info'
-        );
+        const lightningLayoutItemEl =
+            element.shadowRoot.querySelector('.nav-info');
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before

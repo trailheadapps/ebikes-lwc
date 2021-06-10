@@ -81,9 +81,8 @@ describe('c-product-filter', () => {
             });
             document.body.appendChild(element);
 
-            const searchInput = element.shadowRoot.querySelector(
-                'lightning-input'
-            );
+            const searchInput =
+                element.shadowRoot.querySelector('lightning-input');
             searchInput.value = expectedSearchKey;
             searchInput.dispatchEvent(new CustomEvent('change'));
             // Run timers eg setTimeout()
@@ -168,9 +167,8 @@ describe('c-product-filter', () => {
             getPicklistValuesAdapter.error();
 
             return Promise.resolve().then(() => {
-                const messages = element.shadowRoot.querySelectorAll(
-                    'c-error-panel'
-                );
+                const messages =
+                    element.shadowRoot.querySelectorAll('c-error-panel');
                 // One error message per @wire
                 expect(messages).toHaveLength(3);
             });
