@@ -73,9 +73,8 @@ describe('c-account-map', () => {
             // Select elements for validation
             const mapEl = element.shadowRoot.querySelector('lightning-map');
             expect(mapEl).toBeNull();
-            const errorPanelEl = element.shadowRoot.querySelector(
-                'c-error-panel'
-            );
+            const errorPanelEl =
+                element.shadowRoot.querySelector('c-error-panel');
             expect(errorPanelEl).not.toBeNull();
             expect(errorPanelEl.friendlyMessage).toBe('No address to map');
         });
@@ -98,9 +97,8 @@ describe('c-account-map', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Select elements for validation
-            const errorPanelEl = element.shadowRoot.querySelectorAll(
-                'c-error-panel'
-            );
+            const errorPanelEl =
+                element.shadowRoot.querySelectorAll('c-error-panel');
             // There are two error panels in the component - we need the second to check
             // the wire errors are displaying correctly
             const errorPanel = errorPanelEl[1];

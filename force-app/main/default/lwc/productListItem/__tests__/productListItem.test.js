@@ -23,9 +23,8 @@ describe('c-product-list-item', () => {
         };
         document.body.appendChild(element);
 
-        const lightningButton = element.shadowRoot.querySelector(
-            'lightning-button'
-        );
+        const lightningButton =
+            element.shadowRoot.querySelector('lightning-button');
         lightningButton.click();
 
         const { pageReference } = getNavigateCalledWith();
