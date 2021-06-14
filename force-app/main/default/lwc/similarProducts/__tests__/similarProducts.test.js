@@ -36,9 +36,8 @@ const WIRE_INPUT = {
 const getRecordAdapter = registerLdsTestWireAdapter(getRecord);
 
 // Register as Apex wire adapter. Some tests verify that provisioned values trigger desired behavior.
-const getSimilarProductsListAdapter = registerApexTestWireAdapter(
-    getSimilarProducts
-);
+const getSimilarProductsListAdapter =
+    registerApexTestWireAdapter(getSimilarProducts);
 
 describe('c-similar-products', () => {
     afterEach(() => {
@@ -100,9 +99,8 @@ describe('c-similar-products', () => {
             // Check the wire parameters are correct
             expect(getRecordAdapter.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
-            const placeholderEl = element.shadowRoot.querySelector(
-                'c-placeholder'
-            );
+            const placeholderEl =
+                element.shadowRoot.querySelector('c-placeholder');
             expect(placeholderEl).not.toBeNull();
         });
     });
@@ -129,9 +127,8 @@ describe('c-similar-products', () => {
             // Check the wire parameters are correct
             expect(getRecordAdapter.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
-            const errorPanelEl = element.shadowRoot.querySelector(
-                'c-error-panel'
-            );
+            const errorPanelEl =
+                element.shadowRoot.querySelector('c-error-panel');
             expect(errorPanelEl).not.toBeNull();
             expect(errorPanelEl.errors[0].body).toBe(mockWireErrorMessage);
             expect(errorPanelEl.friendlyMessage).toBe(

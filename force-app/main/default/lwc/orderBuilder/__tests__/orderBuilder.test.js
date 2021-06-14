@@ -47,9 +47,8 @@ describe('c-order-builder', () => {
             // Check the wire parameters are correct
             expect(getOrderItemsAdapter.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
-            const orderItemTileEl = element.shadowRoot.querySelectorAll(
-                'c-order-item-tile'
-            );
+            const orderItemTileEl =
+                element.shadowRoot.querySelectorAll('c-order-item-tile');
             expect(orderItemTileEl.length).toBe(mockGetOrderItems.length);
             // Get the order items to verify they have been set correctly
             const { orderItem } = orderItemTileEl[0];
@@ -62,9 +61,8 @@ describe('c-order-builder', () => {
             );
             expect(formattedNumberEl.value).toBe(expectedSum);
             // Get the order total to verify it has been calculated
-            const orderTotalDivEl = element.shadowRoot.querySelector(
-                'div.right'
-            );
+            const orderTotalDivEl =
+                element.shadowRoot.querySelector('div.right');
             expect(orderTotalDivEl.textContent).toBe(
                 `Total Items: ${expectedItems}`
             );
@@ -96,9 +94,8 @@ describe('c-order-builder', () => {
                     WIRE_INPUT
                 );
                 // Select elements for validation
-                const orderItemTileEl = element.shadowRoot.querySelectorAll(
-                    'c-order-item-tile'
-                );
+                const orderItemTileEl =
+                    element.shadowRoot.querySelectorAll('c-order-item-tile');
                 orderItemTileEl[0].dispatchEvent(
                     new CustomEvent('orderitemchange', {
                         detail: mockRecordUpdate,
@@ -107,9 +104,8 @@ describe('c-order-builder', () => {
                 );
             })
             .then(() => {
-                const orderItemTileEl = element.shadowRoot.querySelectorAll(
-                    'c-order-item-tile'
-                );
+                const orderItemTileEl =
+                    element.shadowRoot.querySelectorAll('c-order-item-tile');
                 // Get the first order item and check that the quantity has ben updated
                 const orderItem = orderItemTileEl[0].orderItem.Qty_S__c;
                 expect(orderItem).toEqual(mockRecordUpdate.Qty_S__c);
@@ -119,9 +115,8 @@ describe('c-order-builder', () => {
                 );
                 expect(formattedNumberEl.value).toBe(expectedSum);
                 // Get the order total to verify it has been updated
-                const orderTotalDivEl = element.shadowRoot.querySelector(
-                    'div.right'
-                );
+                const orderTotalDivEl =
+                    element.shadowRoot.querySelector('div.right');
                 expect(orderTotalDivEl.textContent).toBe(
                     `Total Items: ${expectedItems}`
                 );
@@ -152,9 +147,8 @@ describe('c-order-builder', () => {
                     WIRE_INPUT
                 );
                 // Select elements for validation
-                const orderItemTileEl = element.shadowRoot.querySelectorAll(
-                    'c-order-item-tile'
-                );
+                const orderItemTileEl =
+                    element.shadowRoot.querySelectorAll('c-order-item-tile');
                 orderItemTileEl[0].dispatchEvent(
                     new CustomEvent('orderitemdelete', {
                         detail: { id: mockRecordToDeleteId }
@@ -162,9 +156,8 @@ describe('c-order-builder', () => {
                 );
             })
             .then(() => {
-                const orderItemTileEl = element.shadowRoot.querySelectorAll(
-                    'c-order-item-tile'
-                );
+                const orderItemTileEl =
+                    element.shadowRoot.querySelectorAll('c-order-item-tile');
                 // Get the first order item and check that the quantity has ben updated
                 expect(orderItemTileEl.length).toBe(
                     mockGetOrderItems.length - 1
@@ -175,9 +168,8 @@ describe('c-order-builder', () => {
                 );
                 expect(formattedNumberEl.value).toBe(expectedSum);
                 // Get the order total to verify it has been updated
-                const orderTotalDivEl = element.shadowRoot.querySelector(
-                    'div.right'
-                );
+                const orderTotalDivEl =
+                    element.shadowRoot.querySelector('div.right');
                 expect(orderTotalDivEl.textContent).toBe(
                     `Total Items: ${expectedItems}`
                 );
@@ -202,9 +194,8 @@ describe('c-order-builder', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // verify that the placeholder is showing the correct data
-            const placeholderEl = element.shadowRoot.querySelector(
-                'c-placeholder'
-            );
+            const placeholderEl =
+                element.shadowRoot.querySelector('c-placeholder');
             expect(placeholderEl.message).toBe(expectedMessage);
         });
     });
@@ -227,9 +218,8 @@ describe('c-order-builder', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Verify that the error panel is showing the correct data
-            const errorPanelEl = element.shadowRoot.querySelector(
-                'c-error-panel'
-            );
+            const errorPanelEl =
+                element.shadowRoot.querySelector('c-error-panel');
             expect(errorPanelEl).not.toBeNull();
             expect(errorPanelEl.errors.body).toStrictEqual(mockError);
         });

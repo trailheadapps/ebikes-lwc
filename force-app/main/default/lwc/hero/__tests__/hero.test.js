@@ -37,7 +37,8 @@ describe('c-hero', () => {
         element.internalResource = mockInternalResource;
         element.overlay = mockOverlay;
         element.opacity = mockOpacity;
-        element.buttonClickProductOrFamilyName = mockButtonClickProductOrFamilyName;
+        element.buttonClickProductOrFamilyName =
+            mockButtonClickProductOrFamilyName;
         document.body.appendChild(element);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
@@ -104,7 +105,8 @@ describe('c-hero', () => {
         element.slogan = mockSlogan;
         element.buttonText = mockButtonText;
         element.heroDetailsPosition = mockHeroDetailsPositionLEFT;
-        element.buttonClickProductOrFamilyName = mockButtonClickProductOrFamilyName;
+        element.buttonClickProductOrFamilyName =
+            mockButtonClickProductOrFamilyName;
         document.body.appendChild(element);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
@@ -112,9 +114,8 @@ describe('c-hero', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Select elements for validation
-            const heroDetailsEL = element.shadowRoot.querySelector(
-                'c-hero-details'
-            );
+            const heroDetailsEL =
+                element.shadowRoot.querySelector('c-hero-details');
             expect(heroDetailsEL).not.toBeNull();
             expect(
                 heroDetailsEL.classList.contains('c-hero-center-left')
@@ -137,7 +138,8 @@ describe('c-hero', () => {
         element.slogan = mockSlogan;
         element.buttonText = mockButtonText;
         element.heroDetailsPosition = mockHeroDetailsPositionRIGHT;
-        element.buttonClickProductOrFamilyName = mockButtonClickProductOrFamilyName;
+        element.buttonClickProductOrFamilyName =
+            mockButtonClickProductOrFamilyName;
         document.body.appendChild(element);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
@@ -145,9 +147,8 @@ describe('c-hero', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Select elements for validation
-            const heroDetailsEL = element.shadowRoot.querySelector(
-                'c-hero-details'
-            );
+            const heroDetailsEL =
+                element.shadowRoot.querySelector('c-hero-details');
             expect(heroDetailsEL).not.toBeNull();
             expect(
                 heroDetailsEL.classList.contains('c-hero-center-right')
@@ -169,7 +170,8 @@ describe('c-hero', () => {
         element.title = mockTitle;
         element.slogan = mockSlogan;
         element.buttonText = mockButtonText;
-        element.buttonClickProductOrFamilyName = mockButtonClickProductOrFamilyName;
+        element.buttonClickProductOrFamilyName =
+            mockButtonClickProductOrFamilyName;
         document.body.appendChild(element);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
@@ -177,9 +179,8 @@ describe('c-hero', () => {
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Select elements for validation
-            const heroDetailsEL = element.shadowRoot.querySelector(
-                'c-hero-details'
-            );
+            const heroDetailsEL =
+                element.shadowRoot.querySelector('c-hero-details');
             expect(heroDetailsEL).not.toBeNull();
             expect(
                 heroDetailsEL.classList.contains('c-hero-center-default')
@@ -208,7 +209,8 @@ describe('c-hero', () => {
         element.internalResource = mockInternalResource;
         element.overlay = mockOverlay;
         element.opacity = mockOpacity;
-        element.buttonClickProductOrFamilyName = mockButtonClickProductOrFamilyName;
+        element.buttonClickProductOrFamilyName =
+            mockButtonClickProductOrFamilyName;
         document.body.appendChild(element);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());

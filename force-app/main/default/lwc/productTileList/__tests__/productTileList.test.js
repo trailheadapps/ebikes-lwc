@@ -40,9 +40,8 @@ describe('c-product-tile-list', () => {
 
             // Return a promise to wait for any asynchronous DOM updates.
             return Promise.resolve().then(() => {
-                const paginator = element.shadowRoot.querySelector(
-                    'c-paginator'
-                );
+                const paginator =
+                    element.shadowRoot.querySelector('c-paginator');
                 expect(paginator).not.toBeNull();
 
                 // paginator text will look something like: "12 items • page 1 of 2"
@@ -68,17 +67,15 @@ describe('c-product-tile-list', () => {
 
             return Promise.resolve()
                 .then(() => {
-                    const paginator = element.shadowRoot.querySelector(
-                        'c-paginator'
-                    );
+                    const paginator =
+                        element.shadowRoot.querySelector('c-paginator');
                     paginator.dispatchEvent(new CustomEvent('next'));
                 })
                 .then(() => {
                     // DOM is updated after event is fired so need to wait
                     // another microtask for the rerender
-                    const paginator = element.shadowRoot.querySelector(
-                        'c-paginator'
-                    );
+                    const paginator =
+                        element.shadowRoot.querySelector('c-paginator');
                     const currentPage =
                         parseInt(mockGetProducts.pageNumber, 10) + 1;
                     const regex = new RegExp(
@@ -89,9 +86,8 @@ describe('c-product-tile-list', () => {
                     paginator.dispatchEvent(new CustomEvent('previous'));
                 })
                 .then(() => {
-                    const paginator = element.shadowRoot.querySelector(
-                        'c-paginator'
-                    );
+                    const paginator =
+                        element.shadowRoot.querySelector('c-paginator');
                     // we're back to the original page number now
                     const regex = new RegExp(
                         `page ${mockGetProducts.pageNumber} of ${totalPages}$`
@@ -110,9 +106,8 @@ describe('c-product-tile-list', () => {
             // Return a promise to wait for any asynchronous DOM updates.
             return Promise.resolve()
                 .then(() => {
-                    const paginator = element.shadowRoot.querySelector(
-                        'c-paginator'
-                    );
+                    const paginator =
+                        element.shadowRoot.querySelector('c-paginator');
                     paginator.dispatchEvent(new CustomEvent('next'));
                 })
                 .then(() => {
@@ -131,9 +126,8 @@ describe('c-product-tile-list', () => {
             getProductsAdapter.emit(mockGetProducts);
 
             return Promise.resolve().then(() => {
-                const productTiles = element.shadowRoot.querySelectorAll(
-                    'c-product-tile'
-                );
+                const productTiles =
+                    element.shadowRoot.querySelectorAll('c-product-tile');
                 expect(productTiles).toHaveLength(recordCount);
             });
         });
@@ -146,9 +140,8 @@ describe('c-product-tile-list', () => {
             getProductsAdapter.emit(mockGetProducts);
 
             return Promise.resolve().then(() => {
-                const productTile = element.shadowRoot.querySelector(
-                    'c-product-tile'
-                );
+                const productTile =
+                    element.shadowRoot.querySelector('c-product-tile');
                 productTile.dispatchEvent(new CustomEvent('selected'));
                 expect(publish).toHaveBeenCalledWith(
                     undefined,
@@ -168,9 +161,8 @@ describe('c-product-tile-list', () => {
             getProductsAdapter.emit(mockGetProductsNoRecords);
 
             return Promise.resolve().then(() => {
-                const paginator = element.shadowRoot.querySelector(
-                    'c-paginator'
-                );
+                const paginator =
+                    element.shadowRoot.querySelector('c-paginator');
                 expect(paginator).toBeNull();
             });
         });
@@ -185,9 +177,8 @@ describe('c-product-tile-list', () => {
             getProductsAdapter.emit(mockGetProductsNoRecords);
 
             return Promise.resolve().then(() => {
-                const placeholder = element.shadowRoot.querySelector(
-                    'c-placeholder'
-                );
+                const placeholder =
+                    element.shadowRoot.querySelector('c-placeholder');
                 expect(placeholder.shadowRoot.textContent).toBe(expected);
             });
         });
@@ -205,19 +196,16 @@ describe('c-product-tile-list', () => {
             getProductsAdapter.error();
             return Promise.resolve()
                 .then(() => {
-                    const errorPanel = element.shadowRoot.querySelector(
-                        'c-error-panel'
-                    );
+                    const errorPanel =
+                        element.shadowRoot.querySelector('c-error-panel');
                     // Click the "Show Details" link to render additional error messages
-                    const lightningInput = errorPanel.shadowRoot.querySelector(
-                        'a'
-                    );
+                    const lightningInput =
+                        errorPanel.shadowRoot.querySelector('a');
                     lightningInput.dispatchEvent(new CustomEvent('click'));
                 })
                 .then(() => {
-                    const errorPanel = element.shadowRoot.querySelector(
-                        'c-error-panel'
-                    );
+                    const errorPanel =
+                        element.shadowRoot.querySelector('c-error-panel');
                     const text = errorPanel.shadowRoot.textContent;
                     expect(text).toContain(defaultError);
                 });
@@ -237,9 +225,8 @@ describe('c-product-tile-list', () => {
 
             return Promise.resolve()
                 .then(() => {
-                    const searchBar = element.shadowRoot.querySelector(
-                        '.search-bar'
-                    );
+                    const searchBar =
+                        element.shadowRoot.querySelector('.search-bar');
                     searchBar.value = input;
                     searchBar.dispatchEvent(new CustomEvent('change'));
                 })
