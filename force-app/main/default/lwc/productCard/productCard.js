@@ -1,6 +1,6 @@
 import { LightningElement, wire } from 'lwc';
 
-// Ligthning Message Service and a message channel
+// Lightning Message Service and a message channel
 import { NavigationMixin } from 'lightning/navigation';
 import { subscribe, MessageContext } from 'lightning/messageService';
 import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
@@ -46,10 +46,10 @@ export default class ProductCard extends NavigationMixin(LightningElement) {
     productName;
     productPictureUrl;
 
-    /** Load context for Ligthning Messaging Service */
+    /** Load context for Lightning Messaging Service */
     @wire(MessageContext) messageContext;
 
-    /** Subscription for ProductSelected Ligthning message */
+    /** Subscription for ProductSelected Lightning message */
     productSelectionSubscription;
 
     connectedCallback() {
