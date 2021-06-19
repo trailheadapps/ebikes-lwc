@@ -47,7 +47,7 @@ export default class ProductFilter extends LightningElement {
     materials;
 
     handleSearchKeyChange(event) {
-        this.filters.searchKey = event.target.value;
+        this.filters.searchKey = event.target.value.trim();
         this.delayedFireFilterChangeEvent();
     }
 
