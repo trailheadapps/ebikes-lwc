@@ -7,10 +7,38 @@
     "layouts": {
         "Home": "ef7d55e9-d400-400c-b895-49ccc916c52e",
         "Inner": "1e7d39c7-bfc8-441a-a3ac-bdd8058dba6f",
-        "Login": "10fb592c-ced0-44cf-bf8e-7bbc5327e5f3"
+        "Login": "10fb592c-ced0-44cf-bf8e-7bbc5327e5f3",
+        "ServiceNotAvailable": "6102e046-b7c1-4fb9-a330-27971d42c36a"
     },
     "type": "theme",
     "views": [
+        {
+            "componentAttributes": {
+                "fixedPageWidth": 1440,
+                "headerBgColor": "rgba(0, 0, 0, 0)",
+                "isHeaderPinned": false,
+                "isHeroUnderHeader": false,
+                "isPageWidthFixed": false,
+                "showHeader": false,
+                "showHero": false
+            },
+            "componentName": "siteforce:themeLayoutStarter",
+            "id": "6102e046-b7c1-4fb9-a330-27971d42c36a",
+            "label": "ServiceNotAvailable",
+            "regions": [
+                {
+                    "id": "fbf1f5f0-b812-42a3-9a31-47fa9efce267",
+                    "regionName": "themeHeader",
+                    "type": "region"
+                },
+                {
+                    "id": "0b766870-3c08-4268-b431-a427d8ceae73",
+                    "regionName": "themeFooter",
+                    "type": "region"
+                }
+            ],
+            "type": "view"
+        },
         {
             "componentAttributes": {},
             "componentName": "salesforceIdentity:loginBody2",
