@@ -84,6 +84,16 @@ E-Bikes is a sample application that demonstrates how to build applications with
     sfdx force:community:publish -n E-Bikes
     ```
 
+1. Optional: Activate High Velocity Sales.
+
+    ```
+    Setup --> High Velocity Sales --> Setup and Enable HVS
+    ```
+
+    ```
+    sfdx force:user:permset:assign -n HighVelocitySalesUser,HighVelocitySalesCadenceCreator
+    ```
+
 1. Open the scratch org:
 
     ```
