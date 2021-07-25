@@ -1,0 +1,37 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "ActionCadenceRule",
+                "referenceId": "ActionCadenceRuleRef1"
+            },
+            "ActionCadenceStepID": "@ActionCadenceStepRef4",
+            "ConditionLogic": "and",
+            "OutcomeNextStepName": "f74027b6-aeae-47d4-9540-5e49f5d8d384",
+            "RuleName": "beac1525-f7bf-4ee8-9480-79289f758b32",
+            "RuleType": "BranchStep"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceRule",
+                "referenceId": "ActionCadenceRuleRef2"
+            },
+            "ActionCadenceStepID": "@ActionCadenceStepRef7",
+            "ConditionLogic": "and",
+            "OutcomeNextStepName": "67235e7b-19bf-4086-bef3-c5fcc2323c38",
+            "RuleName": "fe359676-7fd9-4de3-b059-a32374652de4",
+            "RuleType": "BranchStep"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceRule",
+                "referenceId": "ActionCadenceRuleRef3"
+            },
+            "ActionCadenceStepID": "@ActionCadenceStepRef12",
+            "ConditionLogic": "and",
+            "OutcomeNextStepName": "fbefe828-05cc-4d49-917a-2f33df8c1e01",
+            "RuleName": "1cae4b81-19d8-4523-b9b2-551de4d1c063",
+            "RuleType": "BranchStep"
+        }
+    ]
+}

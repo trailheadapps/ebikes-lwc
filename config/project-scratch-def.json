@@ -2,7 +2,7 @@
     "orgName": "Ebikes",
     "edition": "Developer",
     "hasSampleData": false,
-    "features": ["Communities", "Walkthroughs", "EnableSetPasswordInApi", "HighVelocitySales"],
+    "features": ["Communities", "Walkthroughs", "EnableSetPasswordInApi", "HighVelocitySales", "LightningSalesConsole", "SalesCloudEinstein"],
     "settings": {
         "communitiesSettings": {
             "enableNetworksEnabled": true
@@ -18,6 +18,11 @@
         },
         "userEngagementSettings": {
             "enableOrchestrationInSandbox": true
+        },
+        "highVelocitySalesSettings": {
+            "enableHighVelocitySales": true,
+            "enableHighVelocitySalesSetup": true,
+            "enableACAutoSendEmail": true
         }
     }
 }

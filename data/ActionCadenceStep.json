@@ -1,0 +1,164 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef1"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "CreateTask",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "67235e7b-19bf-4086-bef3-c5fcc2323c38",
+            "ParentStepName": "1a8dbfd6-078c-4e98-b8d0-7f60f53beb8e",
+            "StepTitle": "Email response next steps",
+            "StepComments": "If dealership responded with interest, create reseller order and share with dealership.\n\nIf not, set lead status to \"Unqualified\"."
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef2"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "Wait",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "92d735c8-3960-41f4-95cf-ba3f175a4225",
+            "ParentStepName": "f74027b6-aeae-47d4-9540-5e49f5d8d384",
+            "StepTitle": "Wait"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef3"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "AutoSendAnEmail",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "faa33174-7007-48e9-b5a8-1ca33d6ea6d1",
+            "ParentStepName": "RootNode",
+            "StepTitle": "Automated email send",
+            "StepComments": "First contact with dealership email"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef4"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "ListenerBranch",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "eecf1236-a6b1-4e8f-a119-8c78aa79f6ab",
+            "ParentStepName": "faa33174-7007-48e9-b5a8-1ca33d6ea6d1",
+            "StepTitle": "Email reply listener branch"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef5"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "CreateTask",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "fbefe828-05cc-4d49-917a-2f33df8c1e01",
+            "ParentStepName": "23fcb0f6-0777-4343-aff0-42028d3e6603",
+            "StepTitle": "Email response next steps",
+            "StepComments": "If dealership responded with interest, create reseller order and share with dealership.\n\nIf not, set lead status to \"Unqualified\"."
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef6"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "CreateTask",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "54a5705f-ce62-40eb-87f6-7556f9fb09d4",
+            "ParentStepName": "eecf1236-a6b1-4e8f-a119-8c78aa79f6ab",
+            "StepTitle": "Set lead status as \"Unqualified\""
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef7"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "ListenerBranch",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "1a8dbfd6-078c-4e98-b8d0-7f60f53beb8e",
+            "ParentStepName": "759d5ed6-6f02-45b2-9d56-23e0038fbd98",
+            "StepTitle": "Email reply listener branch"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef8"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "MakeACall",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "f74027b6-aeae-47d4-9540-5e49f5d8d384",
+            "ParentStepName": "eecf1236-a6b1-4e8f-a119-8c78aa79f6ab",
+            "StepTitle": "Make a call",
+            "StepComments": "Call script to explain bikes features & pricing"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef9"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "CreateTask",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "4ca3df6e-6beb-4ab6-bf10-6e97efcfbb6f",
+            "ParentStepName": "23fcb0f6-0777-4343-aff0-42028d3e6603",
+            "StepTitle": "Set lead status to \"Unqualified\"",
+            "StepComments": "Set lead status to \"Unqualified\"."
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef10"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "AutoSendAnEmail",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "759d5ed6-6f02-45b2-9d56-23e0038fbd98",
+            "ParentStepName": "92d735c8-3960-41f4-95cf-ba3f175a4225",
+            "StepTitle": "Automated email send",
+            "StepComments": "Send first email checking for dealership interest"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef11"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "AutoSendAnEmail",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "e44a7a30-f30f-48ae-9800-5b251e95d967",
+            "ParentStepName": "1a8dbfd6-078c-4e98-b8d0-7f60f53beb8e",
+            "StepTitle": "Automated email send",
+            "StepComments": "Send second email checking for dealership interest"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef12"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "ListenerBranch",
+            "RootStepId": "@ActionCadenceStepRef13",
+            "StepName": "23fcb0f6-0777-4343-aff0-42028d3e6603",
+            "ParentStepName": "e44a7a30-f30f-48ae-9800-5b251e95d967",
+            "StepTitle": "Email reply listener branch"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceStep",
+                "referenceId": "ActionCadenceStepRef13"
+            },
+            "ActionCadenceId": "@ActionCadenceRef1",
+            "Type": "Root",
+            "StepName": "RootNode"
+        }
+    ]
+}

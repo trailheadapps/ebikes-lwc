@@ -1,0 +1,37 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "ActionCadenceRuleCondition",
+                "referenceId": "ActionCadenceRuleConditionRef1"
+            },
+            "ActionCadenceRuleId": "@ActionCadenceRuleRef1",
+            "Resource": "EmailEngagement",
+            "Operator": "Equal",
+            "Value": "EmailReply",
+            "RuleConditionName": "b5a302f0-b7ea-41b2-82d2-f946d4bcb3c9"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceRuleCondition",
+                "referenceId": "ActionCadenceRuleConditionRef2"
+            },
+            "ActionCadenceRuleId": "@ActionCadenceRuleRef2",
+            "Resource": "EmailEngagement",
+            "Operator": "Equal",
+            "Value": "EmailReply",
+            "RuleConditionName": "0df21200-d515-48e5-9da2-4daee8b90826"
+        },
+        {
+            "attributes": {
+                "type": "ActionCadenceRuleCondition",
+                "referenceId": "ActionCadenceRuleConditionRef3"
+            },
+            "ActionCadenceRuleId": "@ActionCadenceRuleRef3",
+            "Resource": "EmailEngagement",
+            "Operator": "Equal",
+            "Value": "EmailReply",
+            "RuleConditionName": "587f3e3c-c8b5-4f60-b018-79c797e41689"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "records": {
+    "attributes": {
+      "type": "ActionCadence",
+      "referenceId": "ActionCadenceRef1"
+    },
+    "Name": "Dealership Sales",
+    "State": "Active",
+    "ActivatedDate": "2021-07-22",
+    "ErrorMessage": null,
+    "Description": "Sales Cadence that automates inside sales steps for closing deals with ebikes dealerships",
+    "FolderName": "Public Sales Cadences"
+  }
+}

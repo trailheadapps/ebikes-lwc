@@ -1,0 +1,46 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "EmailTemplate",
+                "referenceId": "EmailTemplateRef1"
+            },
+            "Name": "First Contact",
+            "DeveloperName": "first_contact",
+            "FolderId": "00D2D000000E7eFUAS",
+            "IsActive": true,
+            "TemplateType": "custom",
+            "Description": "First contact with dealership email",
+            "Subject": "Ebikes Reseller Opportunity",
+            "HtmlValue": "<html><head>\n\t<title></title>\n</head>\n<body style=\"height: auto; min-height: auto;\"><p>Dear&nbsp;{{{Recipient.Salutation}}} {{{Recipient.LastName}}},</p>\n\n<p>I'm one of the sales reps for ebikes, an electric bikes manufacturer who builds the most wanted ebikes on the market.</p>\n\n<p>Our ebikes use the latest technology and we have bikes for all pocket sizes.</p>\n\n<p>We wanted to get in touch with you because we believe your dealership company would benefit from an alliance with us. If you are interested, I'll schedule a call to discuss our bikes features and pricing.</p>\n\n<p>Thank you for your time.</p></body></html>"
+        },
+        {
+            "attributes": {
+                "type": "EmailTemplate",
+                "referenceId": "EmailTemplateRef2"
+            },
+            "Name": "Check interest - first email",
+            "DeveloperName": "interest_check_first",
+            "FolderId": "00D2D000000E7eFUAS",
+            "IsActive": true,
+            "TemplateType": "custom",
+            "Description": "Email to check in dealership interest after having explained our offerings",
+            "Subject": "Ebikes Reseller Opportunity - Are you interested?",
+            "HtmlValue": "<html><head>\n\t<title></title>\n</head>\n<body style=\"height: auto; min-height: auto;\"><p>Dear&nbsp;{{{Recipient.Salutation}}} {{{Recipient.LastName}}},</p>\n\n<p>After our discussion by phone, I&nbsp;reach out to you to discuss the next steps. Are you&nbsp;interested in partnering with us?&nbsp;If you have questions, don't hesitate to ask us.&nbsp;</p>\n\n<p>Thank you for your time.</p></body></html>"
+        },
+        {
+          "attributes": {
+              "type": "EmailTemplate",
+              "referenceId": "EmailTemplateRef3"
+          },
+          "Name": "Check interest - second email",
+          "DeveloperName": "interest_check_second",
+          "FolderId": "00D2D000000E7eFUAS",
+          "IsActive": true,
+          "TemplateType": "custom",
+          "Description": "Email to check in dealership interest after having explained our offerings - second attempt",
+          "Subject": "Ebikes Reseller Opportunity - Are you interested?",
+          "HtmlValue": "<html><head>\n\t<title></title>\n</head>\n<body style=\"height: auto; min-height: auto;\"><p>Dear&nbsp;{{{Recipient.Salutation}}} {{{Recipient.LastName}}},</p>\n\n<p><br />\nWe haven't heard back from you and we want to make sure you received our email communication. Are you&nbsp;interested in partnering with us?&nbsp;If you have questions, don't hesitate to ask us.&nbsp;</p>\n\n<p>Thank you for your time.</p></body></html>"
+      }
+    ]
+}

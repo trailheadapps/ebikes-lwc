@@ -1,0 +1,12 @@
+[
+    {
+        "sobject": "EmailTemplate",
+        "saveRefs": true,
+        "files": ["EmailTemplate.json"]
+    },
+    {
+        "sobject": "ActionCadence",
+        "saveRefs": true,
+        "files": ["ActionCadence.json"]
+    }
+]
