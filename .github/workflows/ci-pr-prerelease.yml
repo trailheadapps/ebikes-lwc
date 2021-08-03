@@ -107,7 +107,7 @@ jobs:
               run: sfdx force:apex:test:run -c -r human -d ./tests/apex -w 20
 
             # Delete temporary test file that Codecov is unable to parse
-            - name: Delete coverage file (temporary step)
+            - name: 'Delete coverage file (temporary step)'
               run: rm ./tests/apex/test-result-707*-codecoverage.json
 
             # Upload code coverage data
