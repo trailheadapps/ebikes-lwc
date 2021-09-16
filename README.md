@@ -140,12 +140,6 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     1. Locate the **Product** picklist field and click **Delete** from the row menu.
     1. Confirm deletion by clicking **Delete**.
 
-1. Start an In-App Guidance trial
-
-    1. In Setup, navigate to **User Engagement > In-App Guidance**.
-    1. Click on the **Start Walkthrough Trial**.
-    1. Click on **Submit**.
-
 1. Deploy the App with these steps:
 
     1. Run this command in a terminal to deploy the app.
