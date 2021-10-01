@@ -46,7 +46,7 @@
         "eslint-plugin-jest": "^24.3.6",
         "husky": "^6.0.0",
         "lint-staged": "^11.0.0",
-        "prettier": "^2.3.1",
+        "prettier": "^2.4.1",
         "prettier-plugin-apex": "^1.9.1"
     },
     "volta": {
