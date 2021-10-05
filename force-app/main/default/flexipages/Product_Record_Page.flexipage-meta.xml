@@ -7,6 +7,7 @@
                     <name>collapsed</name>
                     <value>false</value>
                 </componentInstanceProperties>
+                <identifier>forceHighlights</identifier>
                 <componentName>force:highlightsPanel</componentName>
             </componentInstance>
         </itemInstances>
@@ -21,6 +22,7 @@
                     <name>relatedListComponentOverride</name>
                     <value>NONE</value>
                 </componentInstanceProperties>
+                <identifier>forceRelatedContainer</identifier>
                 <componentName>force:relatedListContainer</componentName>
             </componentInstance>
         </itemInstances>
@@ -31,6 +33,7 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <identifier>forceDetail</identifier>
                 <componentName>force:detailPanel</componentName>
             </componentInstance>
         </itemInstances>
@@ -49,6 +52,7 @@
                     <name>title</name>
                     <value>Standard.Tab.relatedLists</value>
                 </componentInstanceProperties>
+                <identifier>flexiTab</identifier>
                 <componentName>flexipage:tab</componentName>
             </componentInstance>
         </itemInstances>
@@ -66,6 +70,7 @@
                     <name>title</name>
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
+                <identifier>flexiTab2</identifier>
                 <componentName>flexipage:tab</componentName>
             </componentInstance>
         </itemInstances>
@@ -80,6 +85,7 @@
                     <name>tabs</name>
                     <value>maintabs</value>
                 </componentInstanceProperties>
+                <identifier>flexiTabset</identifier>
                 <componentName>flexipage:tabset</componentName>
             </componentInstance>
         </itemInstances>
@@ -90,6 +96,7 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <identifier>similarProducts</identifier>
                 <componentName>similarProducts</componentName>
             </componentInstance>
         </itemInstances>
