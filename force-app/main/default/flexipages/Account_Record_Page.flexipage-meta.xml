@@ -11,6 +11,7 @@
                     <name>numVisibleActions</name>
                     <value>3</value>
                 </componentInstanceProperties>
+                <identifier>forceHighlights</identifier>
                 <componentName>force:highlightsPanel</componentName>
             </componentInstance>
         </itemInstances>
@@ -21,6 +22,7 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+            <identifier>companyInsightTeaserCard</identifier>
                 <componentName>cooper:companyInsightTeaserCard</componentName>
             </componentInstance>
         </itemInstances>
@@ -30,6 +32,7 @@
                     <name>displayOption</name>
                     <value>BOTH</value>
                 </componentInstanceProperties>
+                <identifier>mergeCandidatesPreviewCard</identifier>
                 <componentName
                 >runtime_sales_merge:mergeCandidatesPreviewCard</componentName>
             </componentInstance>
@@ -40,6 +43,7 @@
                     <name>relatedListComponentOverride</name>
                     <value>NONE</value>
                 </componentInstanceProperties>
+                <identifier>forceRelatedContainer</identifier>
                 <componentName>force:relatedListContainer</componentName>
             </componentInstance>
         </itemInstances>
@@ -50,6 +54,7 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+            <identifier>forceDetail</identifier>
                 <componentName>force:detailPanel</componentName>
             </componentInstance>
         </itemInstances>
@@ -60,6 +65,7 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+            <identifier>socialPanel</identifier>
                 <componentName>runtime_sales_social:socialPanel</componentName>
             </componentInstance>
         </itemInstances>
@@ -82,6 +88,7 @@
                     <name>title</name>
                     <value>Standard.Tab.relatedLists</value>
                 </componentInstanceProperties>
+                <identifier>flexiTab</identifier>
                 <componentName>flexipage:tab</componentName>
             </componentInstance>
         </itemInstances>
@@ -95,6 +102,7 @@
                     <name>title</name>
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
+                <identifier>flexiTab2</identifier>
                 <componentName>flexipage:tab</componentName>
             </componentInstance>
         </itemInstances>
@@ -108,6 +116,7 @@
                     <name>title</name>
                     <value>Standard.Tab.news</value>
                 </componentInstanceProperties>
+                <identifier>flexiTab3</identifier>
                 <componentName>flexipage:tab</componentName>
             </componentInstance>
         </itemInstances>
@@ -122,6 +131,7 @@
                     <name>tabs</name>
                     <value>maintabs</value>
                 </componentInstanceProperties>
+                <identifier>flexiTabset</identifier>
                 <componentName>flexipage:tabset</componentName>
             </componentInstance>
         </itemInstances>
@@ -132,6 +142,7 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+            <identifier>runtimeSales</identifier>
                 <componentName
                 >runtime_sales_activities:activityPanel</componentName>
             </componentInstance>
@@ -143,6 +154,7 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <identifier>forceChatter1</identifier>
                 <componentName>forceChatter:recordFeedContainer</componentName>
             </componentInstance>
         </itemInstances>
@@ -165,6 +177,7 @@
                     <name>title</name>
                     <value>Standard.Tab.activity</value>
                 </componentInstanceProperties>
+                <identifier>flexitab4</identifier>
                 <componentName>flexipage:tab</componentName>
             </componentInstance>
         </itemInstances>
@@ -178,6 +191,7 @@
                     <name>title</name>
                     <value>Standard.Tab.collaborate</value>
                 </componentInstanceProperties>
+                <identifier>flexitab5</identifier>
                 <componentName>flexipage:tab</componentName>
             </componentInstance>
         </itemInstances>
@@ -188,7 +202,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentName>accountMap</componentName>
+                <identifier>accountMap</identifier>
+<componentName>accountMap</componentName>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -197,6 +212,7 @@
                     <name>tabs</name>
                     <value>sidebartabs</value>
                 </componentInstanceProperties>
+                <identifier>tabset</identifier>
                 <componentName>flexipage:tabset</componentName>
             </componentInstance>
         </itemInstances>

@@ -15,6 +15,7 @@
                     <name>hideChatterActions</name>
                     <value>false</value>
                 </componentInstanceProperties>
+                <identifier>forceHighlights</identifier>
                 <componentName>force:highlightsPanel</componentName>
             </componentInstance>
         </itemInstances>
@@ -37,6 +38,7 @@
                     <name>showActionBar</name>
                     <value>true</value>
                 </componentInstanceProperties>
+                <identifier>forceRelatedContainer</identifier>
                 <componentName>force:relatedListContainer</componentName>
             </componentInstance>
         </itemInstances>
@@ -51,6 +53,7 @@
                     <name>uiBehavior</name>
                     <value>required</value>
                 </fieldInstanceProperties>
+                <identifier>recordAccount1</identifier>
                 <fieldItem>Record.Account__c</fieldItem>
             </fieldInstance>
         </itemInstances>
@@ -64,6 +67,7 @@
                     <name>uiBehavior</name>
                     <value>readonly</value>
                 </fieldInstanceProperties>
+                <identifier>createdById</identifier>
                 <fieldItem>Record.CreatedById</fieldItem>
             </fieldInstance>
         </itemInstances>
@@ -73,6 +77,7 @@
                     <name>uiBehavior</name>
                     <value>readonly</value>
                 </fieldInstanceProperties>
+                <identifier>LastModifiedById</identifier>
                 <fieldItem>Record.LastModifiedById</fieldItem>
             </fieldInstance>
         </itemInstances>
@@ -86,6 +91,7 @@
                     <name>body</name>
                     <value>Facet-5109d7d1-dd5b-4058-b438-645b94ab5d5f</value>
                 </componentInstanceProperties>
+                <identifier>flexiColumn1</identifier>
                 <componentName>flexipage:column</componentName>
             </componentInstance>
         </itemInstances>
@@ -95,6 +101,7 @@
                     <name>body</name>
                     <value>Facet-24481a15-ff0a-486e-9b84-705cee2963d1</value>
                 </componentInstanceProperties>
+                <identifier>flexiColumn2</identifier>
                 <componentName>flexipage:column</componentName>
             </componentInstance>
         </itemInstances>
@@ -112,6 +119,7 @@
                     <name>label</name>
                     <value>Information</value>
                 </componentInstanceProperties>
+                <identifier>fieldSection</identifier>
                 <componentName>flexipage:fieldSection</componentName>
             </componentInstance>
         </itemInstances>
@@ -133,6 +141,7 @@
                     <name>body</name>
                     <value>Facet-724d8a06-9c83-4647-b61a-d7d88d2bbcd7</value>
                 </componentInstanceProperties>
+                <identifier>flexiColumn3</identifier>
                 <componentName>flexipage:column</componentName>
             </componentInstance>
         </itemInstances>
@@ -142,6 +151,7 @@
                     <name>body</name>
                     <value>Facet-f4868b5f-b091-46f4-96c1-36696d5f54b7</value>
                 </componentInstanceProperties>
+                <identifier>flexiColumn4</identifier>
                 <componentName>flexipage:column</componentName>
             </componentInstance>
         </itemInstances>
@@ -159,6 +169,7 @@
                     <name>label</name>
                     <value>System Information</value>
                 </componentInstanceProperties>
+                <identifier>fieldSection1</identifier>
                 <componentName>flexipage:fieldSection</componentName>
             </componentInstance>
         </itemInstances>
@@ -180,6 +191,7 @@
                     <name>name</name>
                     <value>accordionSection1</value>
                 </componentInstanceProperties>
+                <identifier>flexiaccordionSection1</identifier>
                 <componentName>flexipage:accordionSection</componentName>
             </componentInstance>
         </itemInstances>
@@ -197,6 +209,7 @@
                     <name>name</name>
                     <value>accordionSection2</value>
                 </componentInstanceProperties>
+                <identifier>flexiaccordionSection2</identifier>
                 <componentName>flexipage:accordionSection</componentName>
             </componentInstance>
         </itemInstances>
@@ -214,17 +227,20 @@
                     <name>defaultSectionName</name>
                     <value>accordionSection1</value>
                 </componentInstanceProperties>
+                <identifier>flexiacordionSection</identifier>
                 <componentName>flexipage:accordion</componentName>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
+            <identifier>forceMobileDetail</identifier>
                 <componentName>force:recordDetailPanelMobile</componentName>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentName>orderBuilder</componentName>
+                <identifier>orderBuilder</identifier>
+<componentName>orderBuilder</componentName>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -242,6 +258,7 @@
                     <name>title</name>
                     <value>Standard.Tab.relatedLists</value>
                 </componentInstanceProperties>
+                <identifier>flexiTab1</identifier>
                 <componentName>flexipage:tab</componentName>
             </componentInstance>
         </itemInstances>
@@ -259,6 +276,7 @@
                     <name>title</name>
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
+                <identifier>flexiTab2</identifier>
                 <componentName>flexipage:tab</componentName>
             </componentInstance>
         </itemInstances>
@@ -273,6 +291,7 @@
                     <name>tabs</name>
                     <value>maintabs</value>
                 </componentInstanceProperties>
+                <identifier>flexiTabset2</identifier>
                 <componentName>flexipage:tabset</componentName>
             </componentInstance>
         </itemInstances>
@@ -291,7 +310,8 @@
                     <name>tilesAreDraggable</name>
                     <value>true</value>
                 </componentInstanceProperties>
-                <componentName>productTileList</componentName>
+                <identifier>productTileList</identifier>
+<componentName>productTileList</componentName>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
