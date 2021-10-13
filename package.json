@@ -4,8 +4,7 @@
     "version": "1.0.0",
     "description": "EBikes Sample App - Lightning Web Components",
     "scripts": {
-        "lint": "npm run lint:lwc",
-        "lint:lwc": "eslint **/lwc/**",
+        "lint": "eslint **/lwc/**/*.js",
         "test": "npm run test:unit",
         "test:unit": "sfdx-lwc-jest --skipApiVersionCheck",
         "test:unit:watch": "sfdx-lwc-jest --watch --skipApiVersionCheck",
@@ -20,7 +19,7 @@
         "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
             "prettier --write"
         ],
-        "**/{aura,lwc}/**": [
+        "**/lwc/**/*.js": [
             "eslint"
         ],
         "**/lwc/**": [
