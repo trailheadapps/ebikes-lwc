@@ -42,7 +42,7 @@ jobs:
 
             # Lint LWC
             - name: 'Lint Lightning Web Components'
-              run: npm run lint:lwc
+              run: npm run lint
 
             # LWC unit tests
             - name: 'Unit test Lightning Web Components'
