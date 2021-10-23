@@ -25,6 +25,6 @@
     <siteGuestRecordDefaultOwner
     >test-yypfaowt42yo@example.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>efficiency-connect-1801-dev--1701a0bb7eb</subdomain>
+    <subdomain>usecase</subdomain>
     <urlPathPrefix>ebikes</urlPathPrefix>
 </CustomSite>
