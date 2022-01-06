@@ -3,6 +3,6 @@
     <apiVersion>54.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <description>Default communities landing page</description>
+    <description>Default experiences landing page</description>
     <label>CommunitiesLanding</label>
 </ApexPage>
