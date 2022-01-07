@@ -4,7 +4,4 @@
     <columns>NAME</columns>
     <filterScope>Everything</filterScope>
     <label>All  Product Families</label>
-    <sharedTo>
-        <roleAndSubordinatesInternal>CEO</roleAndSubordinatesInternal>
-    </sharedTo>
 </ListView>
