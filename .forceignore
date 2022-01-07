@@ -11,7 +11,10 @@ package.xml
 **/fieldRestrictionRules/**
 **/objectTranslations/**
 **/profiles/**
+**/profilePasswordPolicy/**
+**/profileSessionSetting/**
 **/settings/**
+**/sharingRules/**
 
 # LWC configuration files
 **/jsconfig.json
