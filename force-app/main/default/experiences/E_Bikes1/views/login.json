@@ -61,8 +61,8 @@
             "components": [
                 {
                     "componentAttributes": {
+                        "customHeadTags": "",
                         "description": "",
-                        "metaTags": "",
                         "title": "Login"
                     },
                     "componentName": "forceCommunity:seoAssistant",

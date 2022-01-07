@@ -53,8 +53,8 @@
             "components": [
                 {
                     "componentAttributes": {
+                        "customHeadTags": "",
                         "description": "",
-                        "metaTags": "",
                         "title": "{!Record._Object}: {!Record._Title}"
                     },
                     "componentName": "forceCommunity:seoAssistant",

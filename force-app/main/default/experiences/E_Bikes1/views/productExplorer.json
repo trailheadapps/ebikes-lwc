@@ -66,8 +66,8 @@
             "components": [
                 {
                     "componentAttributes": {
+                        "customHeadTags": "",
                         "description": "",
-                        "metaTags": "",
                         "title": "Product Explorer"
                     },
                     "componentName": "forceCommunity:seoAssistant",

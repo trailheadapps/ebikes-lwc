@@ -38,8 +38,8 @@
             "components": [
                 {
                     "componentAttributes": {
+                        "customHeadTags": "",
                         "description": "",
-                        "metaTags": "",
                         "title": "Create Case"
                     },
                     "componentName": "forceCommunity:seoAssistant",
