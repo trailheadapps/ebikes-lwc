@@ -78,10 +78,16 @@ E-Bikes is a sample application that demonstrates how to build applications with
     sfdx force:data:tree:import -p ./data/sample-data-plan.json
     ```
 
-1. Publish the Community:
+1. Publish the Experience Cloud site:
 
     ```
     sfdx force:community:publish -n E-Bikes
+    ```
+
+1. Deploy metadata for the Experience Cloud guest user profile:
+
+    ```
+    sfdx force:mdapi:deploy -d guest-profile-metadata -w 10
     ```
 
 1. Open the scratch org:
@@ -124,7 +130,7 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     1. Navigate back to **Settings** in Setup.
     1. Under **Experience Management Settings**, enable **Enable ExperienceBundle Metadata API**.
 
-1. Configure the Community metadata file with the following steps:
+1. Configure the Experience Cloud site metadata file with the following steps:
 
     1. Edit the `force-app/main/default/sites/E_Bikes.site-meta.xml` file.
     1. Replace the value between the `<siteAdmin>` tags with your Playground username.
@@ -160,16 +166,22 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
         sfdx force:data:tree:import -p ./data/sample-data-plan.json
         ```
 
-    1. Publish the Community.
+    1. Publish the Experience Cloud site.
 
         ```
         sfdx force:community:publish -n E-Bikes
         ```
 
+    1. Deploy metadata for the Experience Cloud guest user profile:
+
+        ```
+        sfdx force:mdapi:deploy -d guest-profile-metadata -w 10
+        ```
+
     1. If your org isn't already open, open it now:
 
         ```
-        sfdx force:org:open -u mydevorg
+        sfdx force:org:open
         ```
 
     1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
