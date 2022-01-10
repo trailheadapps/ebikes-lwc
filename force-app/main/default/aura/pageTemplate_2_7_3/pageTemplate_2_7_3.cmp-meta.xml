@@ -3,6 +3,6 @@
     xmlns="urn:metadata.tooling.soap.sforce.com"
     fqn="PageTemplate_2_7_3"
 >
-    <apiVersion>53.0</apiVersion>
+    <apiVersion>54.0</apiVersion>
     <description>A Lightning Component Bundle</description>
 </AuraDefinitionBundle>
