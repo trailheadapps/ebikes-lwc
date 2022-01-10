@@ -35,8 +35,8 @@
             "components": [
                 {
                     "componentAttributes": {
+                        "customHeadTags": "",
                         "description": "",
-                        "metaTags": "",
                         "title": "Login Error"
                     },
                     "componentName": "forceCommunity:seoAssistant",

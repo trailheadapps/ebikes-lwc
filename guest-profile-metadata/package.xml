@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>E_Bikes_Profile_profilePasswordPolicy1641485806127</members>
+        <name>ProfilePasswordPolicy</name>
+    </types>
+    <types>
+        <members>E_Bikes_Profile_profileSessionSetting1641485806295</members>
+        <name>ProfileSessionSetting</name>
+    </types>
+    <types>
+        <members>E-Bikes Profile</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Product_Family__c</members>
+        <members>Product__c</members>
+        <name>SharingRules</name>
+    </types>
+    <version>54.0</version>
+</Package>

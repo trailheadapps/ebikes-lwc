@@ -8,9 +8,13 @@
 package.xml
 **/appMenus/**
 **/appSwitcher/**
+**/fieldRestrictionRules/**
 **/objectTranslations/**
 **/profiles/**
+**/profilePasswordPolicy/**
+**/profileSessionSetting/**
 **/settings/**
+**/sharingRules/**
 
 # LWC configuration files
 **/jsconfig.json
@@ -19,7 +23,7 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-# Default generated Community metadata
+# Default generated Experience Cloud metadata
 **/aura/createAndRefreshCase
 **/aura/forgotPassword
 **/aura/loginForm
