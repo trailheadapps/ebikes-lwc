@@ -7,7 +7,7 @@
 .localdevserver/
 
 # LWC VSCode autocomplete
-jsconfig.json
+force-app/**/jsconfig.json
 
 # Logs
 logs

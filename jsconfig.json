@@ -1,0 +1,5 @@
+{
+    "extends": "@tsconfig/node14/tsconfig.json",
+    "include": ["force-app/test/**/*"],
+    "exclude": ["node_modules", "utam-preview", "pageObjects"]
+}
