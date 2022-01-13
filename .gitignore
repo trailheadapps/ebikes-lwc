@@ -43,3 +43,7 @@ coverage
 # UTAM
 pageObjects
 .env
+
+# UTAM
+pageObjects
+utam-preview
