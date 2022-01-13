@@ -38,3 +38,8 @@ $RECYCLE.BIN/
 
 # Codecov
 coverage
+
+# UTAM
+pageObjects
+utam-preview
+.env

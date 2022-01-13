@@ -1,0 +1,68 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "paginator",
+                "selector": {
+                    "css": "c-paginator"
+                },
+                "type": "utam-sfdx/pageObjects/paginator"
+            },
+            {
+                "name": "tiles",
+                "selector": {
+                    "css": "c-product-tile",
+                    "returnAll": true
+                },
+                "type": "utam-sfdx/pageObjects/productTile",
+                "public": true
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "getPaginationInfo",
+            "compose": [
+                {
+                    "element": "paginator",
+                    "apply": "getNavInfoText",
+                    "returnType": "string"
+                }
+            ]
+        },
+        {
+            "name": "waitForPaginationUpdate",
+            "args": [
+                {
+                    "name": "expectedPaginationInfo",
+                    "type": "string"
+                }
+            ],
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "paginator",
+                                    "apply": "getNavInfoText",
+                                    "matcher": {
+                                        "type": "stringEquals",
+                                        "args": [
+                                            {
+                                                "name": "expectedPaginationInfo",
+                                                "type": "argumentReference"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

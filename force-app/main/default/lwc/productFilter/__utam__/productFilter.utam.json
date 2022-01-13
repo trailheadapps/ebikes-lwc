@@ -1,0 +1,14 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "searchInput",
+                "selector": {
+                    "css": "lightning-input"
+                },
+                "type": "utam-lightning/pageObjects/input",
+                "public": true
+            }
+        ]
+    }
+}

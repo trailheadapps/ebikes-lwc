@@ -20,8 +20,10 @@ package.xml
 **/jsconfig.json
 **/.eslintrc.json
 
-# LWC Jest
+# LWC and UTAM tests
+force-app/test/**
 **/__tests__/**
+**/__utam__/**
 
 # Default generated Experience Cloud metadata
 **/aura/createAndRefreshCase
