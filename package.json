@@ -62,6 +62,7 @@
         "eslint-plugin-jest": "^25.3.4",
         "husky": "^7.0.4",
         "lint-staged": "^12.1.7",
+        "magic-string": "^0.25.7",
         "prettier": "^2.5.1",
         "prettier-plugin-apex": "^1.10.0",
         "utam": "^1.0.0",
