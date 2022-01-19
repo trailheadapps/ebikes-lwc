@@ -1,0 +1,61 @@
+{
+    "methods": [
+        {
+            "name": "click",
+            "compose": [
+                {
+                    "apply": "click",
+                    "element": "button"
+                }
+            ]
+        },
+        {
+            "name": "getButtonName",
+            "compose": [
+                {
+                    "apply": "getText",
+                    "element": "button"
+                }
+            ]
+        },
+        {
+            "name": "getClassAttr",
+            "compose": [
+                {
+                    "apply": "getAttribute",
+                    "element": "root",
+                    "args": [
+                        {
+                            "value": "\"class\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "isDisabled",
+            "compose": [
+                {
+                    "element": "button",
+                    "apply": "getAttribute",
+                    "args": [
+                        {
+                            "value": "\"disabled\""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "shadow": {
+        "elements": [
+            {
+                "name": "button",
+                "type": ["clickable"],
+                "selector": {
+                    "css": "button"
+                }
+            }
+        ]
+    }
+}

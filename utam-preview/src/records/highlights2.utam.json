@@ -1,0 +1,80 @@
+{
+    "elements": [
+        {
+            "name": "primaryFieldContent",
+            "type": "container",
+            "public": true,
+            "selector": {
+                "css": "[slot='primaryField']"
+            }
+        },
+        {
+            "name": "iconContent",
+            "type": "container",
+            "public": true,
+            "selector": {
+                "css": "[slot='icon']"
+            }
+        },
+        {
+            "name": "secondaryFields",
+            "type": "container",
+            "public": true,
+            "selector": {
+                "css": "[slot='secondaryFields']",
+                "returnAll": true
+            }
+        },
+        {
+            "name": "secondaryTextField",
+            "selector": {
+                "css": "[slot='secondaryFields']:nth-of-type(%d)",
+                "args": [
+                    {
+                        "name": "fieldIndexStarting1",
+                        "type": "number"
+                    }
+                ]
+            }
+        }
+    ],
+    "shadow": {
+        "elements": [
+            {
+                "name": "secondaryFieldContent",
+                "type": "container",
+                "public": true,
+                "selector": {
+                    "css": "slot[name='secondaryFields']"
+                }
+            },
+            {
+                "name": "actionsRibbon",
+                "public": true,
+                "type": "utam-action/pageObjects/actionsRibbon",
+                "selector": {
+                    "css": "runtime_platform_actions-actions-ribbon"
+                }
+            },
+            {
+                "name": "actionsContent",
+                "type": "container",
+                "public": true,
+                "selector": {
+                    "css": ".actionsContainer > * :first-child"
+                }
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "getSecondaryFieldText",
+            "compose": [
+                {
+                    "element": "secondaryTextField",
+                    "apply": "getText"
+                }
+            ]
+        }
+    ]
+}

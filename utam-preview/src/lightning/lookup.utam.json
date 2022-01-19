@@ -1,0 +1,34 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "lookupDesktop",
+                "public": true,
+                "type": "utam-lightning/pageObjects/lookupDesktop",
+                "selector": {
+                    "css": "lightning-lookup-desktop"
+                }
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "getBaseCombobox",
+            "compose": [
+                {
+                    "element": "lookupDesktop"
+                },
+                {
+                    "chain": true,
+                    "element": "groupedCombobox",
+                    "returnType": "utam-lightning/pageObjects/groupedCombobox"
+                },
+                {
+                    "chain": true,
+                    "element": "baseCombobox",
+                    "returnType": "utam-lightning/pageObjects/baseCombobox"
+                }
+            ]
+        }
+    ]
+}

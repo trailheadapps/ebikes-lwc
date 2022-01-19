@@ -1,0 +1,28 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "lightningButton",
+                "type": "utam-lightning/pageObjects/button",
+                "public": true,
+                "selector": {
+                    "css": "lightning-button"
+                }
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "clickButton",
+            "compose": [
+                {
+                    "element": "lightningButton"
+                },
+                {
+                    "chain": true,
+                    "apply": "click"
+                }
+            ]
+        }
+    ]
+}

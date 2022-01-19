@@ -1,0 +1,37 @@
+{
+    "elements": [
+        {
+            "public": true,
+            "name": "button",
+            "type": ["clickable"],
+            "selector": {
+                "css": "button",
+                "returnAll": true
+            },
+            "filter": {
+                "apply": "getText",
+                "matcher": {
+                    "type": "stringEquals",
+                    "args": [
+                        {
+                            "name": "buttonText",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "findFirst": true
+            }
+        }
+    ],
+    "methods": [
+        {
+            "name": "clickButton",
+            "compose": [
+                {
+                    "element": "button",
+                    "apply": "click"
+                }
+            ]
+        }
+    ]
+}

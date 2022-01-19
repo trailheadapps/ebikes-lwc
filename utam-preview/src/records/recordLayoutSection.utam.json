@@ -1,0 +1,129 @@
+{
+    "methods": [
+        {
+            "name": "isOpen",
+            "compose": [
+                {
+                    "element": "root",
+                    "apply": "containsElement",
+                    "args": [
+                        {
+                            "type": "locator",
+                            "value": {
+                                "css": "div.slds-section.has-header.slds-is-open"
+                            }
+                        },
+                        {
+                            "value": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "hasTitle",
+            "compose": [
+                {
+                    "element": "root",
+                    "apply": "containsElement",
+                    "args": [
+                        {
+                            "type": "locator",
+                            "value": {
+                                "css": ".slds-section__title .slds-truncate"
+                            }
+                        },
+                        {
+                            "value": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "toggleSectionCollapse",
+            "compose": [
+                {
+                    "element": "sectionTitleButton",
+                    "apply": "click"
+                },
+                {
+                    "element": "root",
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "root",
+                                    "apply": "containsElement",
+                                    "args": [
+                                        {
+                                            "type": "locator",
+                                            "value": {
+                                                "css": "div.slds-section.has-header.slds-is-open"
+                                            }
+                                        },
+                                        { "value": true }
+                                    ],
+                                    "matcher": {
+                                        "type": "isFalse"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "elements": [
+        {
+            "name": "rows",
+            "type": "utam-records/pageObjects/recordLayoutRow",
+            "selector": {
+                "css": "records-record-layout-row",
+                "returnAll": true
+            },
+            "public": true
+        },
+        {
+            "name": "row",
+            "public": true,
+            "type": "utam-records/pageObjects/recordLayoutRow",
+            "selector": {
+                "css": "records-record-layout-row:nth-of-type(%d)",
+                "args": [
+                    {
+                        "name": "indexStartingOne",
+                        "type": "number"
+                    }
+                ]
+            }
+        }
+    ],
+    "shadow": {
+        "elements": [
+            {
+                "name": "sectionTitleButton",
+                "type": ["clickable"],
+                "selector": {
+                    "css": "button.slds-button"
+                }
+            },
+            {
+                "name": "sectionTitle",
+                "public": true,
+                "selector": {
+                    "css": ".slds-section__title .slds-truncate"
+                }
+            },
+            {
+                "name": "openSection",
+                "selector": {
+                    "css": "div.slds-section.has-header.slds-is-open"
+                }
+            }
+        ]
+    }
+}

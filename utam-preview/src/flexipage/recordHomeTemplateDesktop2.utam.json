@@ -1,0 +1,12 @@
+{
+    "elements": [
+        {
+            "name": "highlights",
+            "selector": {
+                "css": "records-lwc-highlights-panel"
+            },
+            "type": "utam-records/pageObjects/lwcHighlightsPanel",
+            "public": true
+        }
+    ]
+}

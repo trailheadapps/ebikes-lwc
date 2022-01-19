@@ -1,0 +1,80 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "label",
+                "selector": {
+                    "css": "label"
+                },
+                "elements": [
+                    {
+                        "name": "required",
+                        "selector": {
+                            "css": ".slds-required"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "dateInput",
+                "type": "editable",
+                "selector": {
+                    "css": "input"
+                }
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "getLabelText",
+            "compose": [
+                {
+                    "element": "label",
+                    "apply": "getText"
+                }
+            ]
+        },
+        {
+            "name": "isRequired",
+            "compose": [
+                {
+                    "element": "required",
+                    "apply": "isPresent"
+                }
+            ]
+        },
+        {
+            "name": "setDateText",
+            "compose": [
+                {
+                    "element": "dateInput",
+                    "apply": "setText",
+                    "args": [
+                        {
+                            "name": "text",
+                            "type": "string"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "getDateText",
+            "compose": [
+                {
+                    "element": "dateInput",
+                    "apply": "getValue"
+                }
+            ]
+        },
+        {
+            "name": "clearDateText",
+            "compose": [
+                {
+                    "element": "dateInput",
+                    "apply": "clear"
+                }
+            ]
+        }
+    ]
+}

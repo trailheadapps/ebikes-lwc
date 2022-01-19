@@ -1,0 +1,38 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "saveButton",
+                "type": "utam-lightning/pageObjects/button",
+                "public": true,
+                "selector": {
+                    "css": "lightning-button.save-button"
+                }
+            },
+            {
+                "name": "cancelButton",
+                "type": "utam-lightning/pageObjects/button",
+                "public": true,
+                "selector": {
+                    "css": "lightning-button.cancel-button"
+                }
+            },
+            {
+                "name": "saveAndNewButton",
+                "type": "utam-lightning/pageObjects/button",
+                "public": true,
+                "selector": {
+                    "css": "lightning-button.save-and-new-button"
+                }
+            },
+            {
+                "name": "actionsRibbon",
+                "type": "utam-action/pageObjects/actionsRibbon",
+                "public": true,
+                "selector": {
+                    "css": "runtime_platform_actions-actions-ribbon"
+                }
+            }
+        ]
+    }
+}

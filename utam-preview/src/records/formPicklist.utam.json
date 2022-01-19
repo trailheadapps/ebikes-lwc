@@ -1,0 +1,22 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "type": "utam-lightning/pageObjects/picklist",
+                "name": "picklist",
+                "public": true,
+                "selector": {
+                    "css": "lightning-picklist"
+                }
+            },
+            {
+                "type": "utam-lightning/pageObjects/button",
+                "name": "editDependencyPanel",
+                "public": true,
+                "selector": {
+                    "css": "lightning-button"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "elements": [
+        {
+            "name": "items",
+            "type": "utam-records/pageObjects/recordLayoutItem",
+            "selector": {
+                "css": "records-record-layout-item",
+                "returnAll": true
+            },
+            "public": true
+        },
+        {
+            "name": "item",
+            "type": "utam-records/pageObjects/recordLayoutItem",
+            "selector": {
+                "css": "records-record-layout-item:nth-of-type(%d)",
+                "args": [
+                    {
+                        "name": "indexStartingOne",
+                        "type": "number"
+                    }
+                ]
+            },
+            "public": true
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "eventBroker",
+                "selector": {
+                    "css": "records-record-layout-event-broker"
+                },
+                "type": "utam-records/pageObjects/recordLayoutEventBroker",
+                "public": true
+            },
+            {
+                "name": "lwcDetailPanel",
+                "selector": {
+                    "css": "records-lwc-detail-panel"
+                },
+                "type": "utam-records/pageObjects/lwcDetailPanel",
+                "public": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "exposeRootElement": true,
+    "shadow": {
+        "elements": [
+            {
+                "type": "utam-records/pageObjects/baseRecordForm",
+                "name": "baseRecordForm",
+                "selector": {
+                    "css": "records-base-record-form"
+                },
+                "public": true
+            }
+        ]
+    }
+}

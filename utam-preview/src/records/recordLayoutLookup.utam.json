@@ -1,0 +1,14 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "lookup",
+                "public": true,
+                "type": "utam-lightning/pageObjects/lookup",
+                "selector": {
+                    "css": "lightning-lookup"
+                }
+            }
+        ]
+    }
+}
