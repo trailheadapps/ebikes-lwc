@@ -19,12 +19,14 @@ E-Bikes is a sample application that demonstrates how to build applications with
 ## Table of contents
 
 -   [Installing E-Bikes using a scratch org](#installing-e-bikes-using-a-scratch-org)
-
 -   [Installing E-Bikes using a Developer Edition Org or a Trailhead Playground](#installing-e-bikes-using-a-developer-edition-org-or-a-trailhead-playground)
-
 -   [Optional installation instructions](#optional-installation-instructions)
-
--   [Code tours](#code-tours)
+    -   [Code Formatting](#code-formatting)
+    -   [Code Linting](#code-linting)
+    -   [Pre-commit Hook](#pre-commit-hook)
+    -   [Lightning Web Component Tests](#lightning-web-component-tests)
+    -   [UI Tests](#ui-tests)
+-   [Code Tours](#code-tours)
 
 ## Installing E-Bikes using a Scratch Org
 
@@ -190,32 +192,53 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
 
 ## Optional Installation Instructions
 
-This repository contains several files that are relevant if you want to integrate modern web development tooling to your Salesforce development processes, or to your continuous integration/continuous deployment processes.
+This repository contains several tools and scripts that are relevant if you want to integrate modern web development tooling to your Salesforce development processes, or to your continuous integration/continuous deployment processes.
 
-### Code formatting
+To benefit from these developer tools, you must:
 
-[Prettier](https://prettier.io/) is a code formatter used to ensure consistent formatting across your code base. To use Prettier with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) from the Visual Studio Code Marketplace. The [.prettierignore](/.prettierignore) and [.prettierrc](/.prettierrc) files are provided as part of this repository to control the behavior of the Prettier formatter.
+1. install a [Node.js LTS version](https://nodejs.org/en/)
+1. install the Node project dependencies with by running `npm install` in a terminal.
 
-### Code linting
+For reference, the full list scripts and dependencies and can be found in [package.json](./package.json).
 
-[ESLint](https://eslint.org/) is a popular JavaScript linting tool used to identify stylistic errors and erroneous constructs. To use ESLint with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-lwc) from the Visual Studio Code Marketplace. The [.eslintignore](/.eslintignore) file is provided as part of this repository to exclude specific files from the linting process in the context of Lightning Web Components development.
+### Code Formatting
 
-### Pre-commit hook
+[Prettier](https://prettier.io/) is a code formatter used to ensure consistent formatting across your code base. The [.prettierignore](/.prettierignore) and [.prettierrc](/.prettierrc) files provided as part of this repository control the behavior of the Prettier formatter.
 
-This repository also comes with a [package.json](./package.json) file that makes it easy to set up a pre-commit hook that enforces code formatting and linting by running Prettier and ESLint every time you `git commit` changes.
+To run Prettier from the command line, run `npm run prettier`.
 
-To set up the formatting and linting pre-commit hook:
+To use Prettier with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) from the Visual Studio Code Marketplace.
 
-1. Install [Node.js](https://nodejs.org) if you haven't already done so
+### Code Linting
 
-1. Run `npm install` in your project's root folder to install the ESLint and Prettier modules (Note: Mac users should verify that Xcode command line tools are installed before running this command.)
+[ESLint](https://eslint.org/) is a popular JavaScript linting tool used to identify stylistic errors and erroneous constructs. The [.eslintignore](/.eslintignore) file is provided as part of this repository to exclude specific files from the linting process in the context of Lightning Web Components development.
 
-Prettier and ESLint will now run automatically every time you commit changes. The commit will fail if linting errors are detected. You can also run the formatting and linting from the command line using the following commands (check out [package.json](./package.json) for the full list):
+To run ESLint from the command line, run `npm run lint`.
 
-```
-npm run lint
-npm run prettier
-```
+To use ESLint with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) from the Visual Studio Code Marketplace. The extension provides a code overlay that help you identify linting issues quickly.
+
+### Pre-commit Hook
+
+We use [Husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged) to set up a pre-commit hook that enforces code formatting and linting by running Prettier and ESLint every time you `git commit` changes.
+
+Prettier and ESLint will automatically run every time you commit changes. The commit will fail if linting errors are detected in your changes.
+
+### Lightning Web Component Tests
+
+[Jest](https://jestjs.io/) is the testing library that we use to test our Lightning web components. More precisely, we use a [Jest wrapper library](https://github.com/salesforce/sfdx-lwc-jest) to run LWC tests. These tests are run on your local machine or in CI, not in Salesforce.
+
+To run LWC tests from the command line, run `npm test`.
+
+### UI Tests
+
+We use [UTAM](utam.dev) with [WebdriverIO](https://webdriver.io/) to run UI tests on our app. We run end-to-end tests on the Product Explorer page.
+
+Follow these instructions to run UI tests:
+
+-   Make sure that the Salesforce CLI is connected to an active org (run `sfdx force:org:open` to confirm it).
+-   Compile the UTAM page objects with this command: `npm run test:ui:compile`
+-   Prepare login information for your UI tests with this command: `npm run test:ui:generate:login`
+-   Run UI tests with this command: `npm run test:ui`
 
 ## Code Tours
 
