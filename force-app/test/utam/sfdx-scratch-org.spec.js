@@ -2,7 +2,6 @@ import ProductFilter from '../../../pageObjects/productFilter';
 import ProductTileList from '../../../pageObjects/productTileList';
 import ProductCard from '../../../pageObjects/productCard';
 import ProductExplorerPage from '../../../pageObjects/productExplorerPage';
-import { TestEnvironment } from './utilities/test-environment';
 
 const PAGINATION_ALL_ITEMS = '16 items • page 1 of 2';
 const PAGINATION_FILTERED_ITEMS = '4 items • page 1 of 1';
@@ -10,14 +9,18 @@ const SELECTION_EMPTY = 'Select a product to see details';
 
 const RECORD_PAGE_URL = /lightning\/r\/Product__c\/[a-z0-9]{18}\/view/i;
 
+if (!process.env.SALESFORCE_LOGIN_URL) {
+    console.error('\nError: missing SALESFORCE_LOGIN_URL configuration.\n');
+    process.exit(-1);
+}
+
 describe('ProductExplorer', () => {
-    const testEnvironment = new TestEnvironment('scratchOrg');
     let page;
     let domDocument;
 
     beforeAll(async () => {
         // Navigate to login URL
-        await browser.navigateTo(testEnvironment.sfdxLoginUrl);
+        await browser.navigateTo(process.env.SALESFORCE_LOGIN_URL);
 
         // Wait for home page URL
         domDocument = utam.getCurrentDocument();

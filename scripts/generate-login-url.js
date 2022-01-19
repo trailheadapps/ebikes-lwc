@@ -1,41 +1,8 @@
-/*
- * Copyright (c) 2021, salesforce.com, inc.
- * All rights reserved.
- * SPDX-License-Identifier: MIT
- * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
- */
-
-'use strict';
-
 const util = require('util');
 const exec = util.promisify(require('child_process').exec);
-const { existsSync, readFileSync, writeFileSync } = require('fs');
-const { parse } = require('envfile');
-const {
-    appendScratchOrgUrl,
-    replaceScratchOrgUrl,
-    getDefaultTemplate,
-    DOTENV_FILEPATH,
-    SCRATCH_ORG_KEY
-} = require('./script-utils');
-
-/**
- * Generate the content of the property file that should be written to disk
- *
- * @param {string} filePath path the default property file
- * @param {string} url scratch org login url to set in the property file
- * @returns {string} the property file with the updated url
- */
-function createTemplateFromFile(filePath, url) {
-    const envFile = readFileSync(filePath, { encoding: 'utf-8' });
-    const parsedEnv = parse(envFile);
-    const isScratchOrgKeyPresent =
-        Object.keys(parsedEnv).includes(SCRATCH_ORG_KEY);
-    const transformTemplateFn = !isScratchOrgKeyPresent
-        ? appendScratchOrgUrl
-        : replaceScratchOrgUrl;
-    return transformTemplateFn(envFile, url).toString();
-}
+const { writeFileSync } = require('fs');
+const { join } = require('path');
+const DOTENV_FILEPATH = join(__dirname, '../.env');
 
 /**
  * Get the scratch org login url from a child CLI process and parse it
@@ -57,23 +24,21 @@ async function getScratchOrgLoginUrl() {
 }
 
 /**
- * Main script entry point - generate a property file with the correct scratch org login url:
- *
- * 1. get the scratch org login url
- * 2. create or update the property file with the url returned in step 1
+ * Main script entry point - generate a property file with the correct salesforce login url:
+ * 1. get the org login url
+ * 2. overwrite property file with the url returned in step 1
  */
 async function generateLoginUrl() {
     try {
         const url = await getScratchOrgLoginUrl();
-        const template = existsSync(DOTENV_FILEPATH)
-            ? createTemplateFromFile(DOTENV_FILEPATH, url)
-            : getDefaultTemplate(url);
+        const template = `# DO NOT CHECK THIS FILE IN WITH PERSONAL INFORMATION SAVED
+SALESFORCE_LOGIN_URL=${url}`;
         writeFileSync(DOTENV_FILEPATH, template);
         console.log(
             `Property .env file successfully generated in ${DOTENV_FILEPATH}`
         );
     } catch (err) {
-        console.log(err);
+        console.error(err);
     }
 }
 
