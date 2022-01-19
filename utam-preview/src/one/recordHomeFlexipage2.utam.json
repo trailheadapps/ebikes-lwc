@@ -1,0 +1,101 @@
+{
+    "root": true,
+    "selector": {
+        "css": "one-record-home-flexipage2"
+    },
+    "beforeLoad": [
+        {
+            "apply": "waitFor",
+            "args": [
+                {
+                    "type": "function",
+                    "predicate": [
+                        {
+                            "element": "root",
+                            "apply": "isPresent"
+                        },
+                        {
+                            "element": "root",
+                            "apply": "containsElement",
+                            "args": [
+                                {
+                                    "type": "locator",
+                                    "value": {
+                                        "css": ".adg-rollup-wrapped"
+                                    }
+                                },
+                                {
+                                    "value": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "shadow": {
+        "elements": [
+            {
+                "name": "adgRollup",
+                "selector": {
+                    "css": ".adg-rollup-wrapped"
+                },
+                "shadow": {
+                    "elements": [
+                        {
+                            "name": "flexipageModule",
+                            "selector": {
+                                "css": ".forcegenerated-flexipage-module"
+                            },
+                            "shadow": {
+                                "elements": [
+                                    {
+                                        "type": "utam-record-flexipage/pageObjects/recordPageDecorator",
+                                        "public": true,
+                                        "name": "decorator",
+                                        "selector": {
+                                            "css": "record_flexipage-record-page-decorator"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "getAccountHighlights",
+            "compose": [
+                {
+                    "element": "decorator",
+                    "returnType": "utam-record-flexipage/pageObjects/recordPageDecorator"
+                },
+                {
+                    "chain": true,
+                    "element": "eventBroker",
+                    "returnType": "utam-records/pageObjects/recordLayoutEventBroker"
+                },
+                {
+                    "chain": true,
+                    "returnType": "utam-flexipage/pageObjects/recordHomeTemplateDesktop2",
+                    "element": "generatedTemplate",
+                    "args": [
+                        {
+                            "type": "pageObject",
+                            "value": "utam-flexipage/pageObjects/recordHomeTemplateDesktop2"
+                        }
+                    ]
+                },
+                {
+                    "chain": true,
+                    "element": "highlights",
+                    "returnType": "utam-records/pageObjects/lwcHighlightsPanel"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "baseCombobox",
+                "type": "utam-lightning/pageObjects/baseCombobox",
+                "selector": {
+                    "css": "lightning-base-combobox"
+                },
+                "public": true
+            }
+        ]
+    }
+}

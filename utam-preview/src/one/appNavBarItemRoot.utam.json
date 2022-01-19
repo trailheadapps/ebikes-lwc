@@ -1,0 +1,60 @@
+{
+    "exposeRootElement": true,
+    "type": ["clickable"],
+    "methods": [
+        {
+            "name": "getItemText",
+            "compose": [
+                {
+                    "element": "itemLink",
+                    "apply": "getTitle"
+                }
+            ]
+        },
+        {
+            "name": "clickAndWaitForUrl",
+            "compose": [
+                {
+                    // clicking on anchor did not work
+                    "element": "root",
+                    "apply": "click"
+                },
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "document",
+                                    "apply": "getUrl",
+                                    "matcher": {
+                                        "type": "stringContains",
+                                        "args": [
+                                            {
+                                                "type": "string",
+                                                "name": "url"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "shadow": {
+        "elements": [
+            {
+                "name": "itemLink",
+                "public": true,
+                "type": ["clickable"],
+                "selector": {
+                    "css": "a"
+                }
+            }
+        ]
+    }
+}

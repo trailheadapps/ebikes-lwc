@@ -1,0 +1,13 @@
+{
+    "methods": [
+        {
+            "name": "getInnerText",
+            "compose": [
+                {
+                    "element": "root",
+                    "apply": "getText"
+                }
+            ]
+        }
+    ]
+}

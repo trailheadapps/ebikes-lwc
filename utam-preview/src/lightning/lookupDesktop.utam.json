@@ -1,0 +1,14 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "groupedCombobox",
+                "public": true,
+                "type": "utam-lightning/pageObjects/groupedCombobox",
+                "selector": {
+                    "css": "lightning-grouped-combobox"
+                }
+            }
+        ]
+    }
+}

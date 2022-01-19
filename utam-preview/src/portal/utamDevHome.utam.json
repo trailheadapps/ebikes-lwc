@@ -1,0 +1,32 @@
+{
+    "selector": {
+        "css": "body"
+    },
+    "root": true,
+    "elements": [
+        {
+            "name": "menu",
+            "selector": {
+                "css": ".menu"
+            },
+            "elements": [
+                {
+                    "public": true,
+                    "name": "grammarMenuItem",
+                    "selector": {
+                        "css": "[data-navbar-id='grammar']"
+                    },
+                    "type": "clickable"
+                },
+                {
+                    "public": true,
+                    "name": "menuItems",
+                    "selector": {
+                        "css": "li",
+                        "returnAll": true
+                    }
+                }
+            ]
+        }
+    ]
+}

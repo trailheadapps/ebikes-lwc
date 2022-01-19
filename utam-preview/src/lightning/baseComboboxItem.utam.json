@@ -1,0 +1,47 @@
+{
+    "type": ["clickable"],
+    "methods": [
+        {
+            "name": "getItemValue",
+            "compose": [
+                {
+                    "element": "root",
+                    "apply": "getAttribute",
+                    "args": [
+                        {
+                            "value": "\"data-value\""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "clickItem",
+            "compose": [
+                {
+                    "element": "root",
+                    "apply": "click"
+                }
+            ]
+        }
+    ],
+    "shadow": {
+        "elements": [
+            {
+                "name": "itemByLabel",
+                "nullable": true,
+                "type": ["clickable"],
+                "selector": {
+                    "css": "span[title='%s']",
+                    "args": [
+                        {
+                            "name": "itemLabel",
+                            "type": "string"
+                        }
+                    ]
+                },
+                "public": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "type": "utam-records/pageObjects/recordLayoutEventBroker",
+                "name": "eventBroker",
+                "selector": {
+                    "css": "records-record-layout-event-broker"
+                },
+                "public": true
+            }
+        ]
+    },
+    "elements": [
+        {
+            "type": "utam-flexipage/pageObjects/recordHomeTemplateDesktop2",
+            "name": "templateDesktop2",
+            "selector": {
+                "css": "flexipage-record-home-template-desktop2"
+            },
+            "public": true
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "methods": [
+        {
+            "name": "getBasePicklist",
+            "compose": [
+                {
+                    "returnType": "utam-records/pageObjects/formPicklist",
+                    "element": "formPicklist"
+                },
+                {
+                    "returnType": "utam-lightning/pageObjects/picklist",
+                    "element": "picklist",
+                    "chain": true
+                }
+            ]
+        }
+    ],
+    "shadow": {
+        "elements": [
+            {
+                "name": "formPicklist",
+                "type": "utam-records/pageObjects/formPicklist",
+                "selector": {
+                    "css": "records-form-picklist"
+                },
+                "public": true
+            }
+        ]
+    }
+}

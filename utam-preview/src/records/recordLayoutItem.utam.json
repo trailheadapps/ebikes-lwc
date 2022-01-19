@@ -1,0 +1,179 @@
+{
+    "exposeRootElement": true,
+    "methods": [
+        {
+            "name": "getLabelText",
+            "compose": [
+                {
+                    "element": "label",
+                    "apply": "getText"
+                }
+            ]
+        },
+        {
+            "name": "hasLabelText",
+            "compose": [
+                {
+                    "element": "root",
+                    "apply": "containsElement",
+                    "args": [
+                        {
+                            "type": "locator",
+                            "value": {
+                                "css": ".test-id__field-label"
+                            }
+                        },
+                        {
+                            "value": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "edit",
+            "compose": [
+                {
+                    "element": "inlineEditButton",
+                    "apply": "click"
+                },
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "root",
+                                    "apply": "containsElement",
+                                    "args": [
+                                        {
+                                            "type": "locator",
+                                            "value": {
+                                                "css": "slot[slot='inputField']"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "getTextInput",
+            "compose": [
+                {
+                    "returnType": "utam-records/pageObjects/recordLayoutBaseInput",
+                    "element": "inputField",
+                    "args": [
+                        {
+                            "type": "pageObject",
+                            "value": "utam-records/pageObjects/recordLayoutBaseInput"
+                        }
+                    ]
+                },
+                {
+                    "chain": true,
+                    "element": "input",
+                    "returnType": "utam-lightning/pageObjects/input"
+                }
+            ]
+        },
+        {
+            "name": "getLookup",
+            "compose": [
+                {
+                    "returnType": "utam-records/pageObjects/recordLayoutLookup",
+                    "element": "inputField",
+                    "args": [
+                        {
+                            "type": "pageObject",
+                            "value": "utam-records/pageObjects/recordLayoutLookup"
+                        }
+                    ]
+                },
+                {
+                    "chain": true,
+                    "element": "lookup",
+                    "returnType": "utam-lightning/pageObjects/lookup"
+                }
+            ]
+        },
+        {
+            "name": "getPicklist",
+            "compose": [
+                {
+                    "returnType": "utam-sfa/pageObjects/inputStageName",
+                    "element": "inputField",
+                    "args": [
+                        {
+                            "type": "pageObject",
+                            "value": "utam-sfa/pageObjects/inputStageName"
+                        }
+                    ]
+                },
+                {
+                    "chain": true,
+                    "element": "recordPicklist",
+                    "returnType": "utam-records/pageObjects/recordPicklist"
+                },
+                {
+                    "apply": "getBasePicklist",
+                    "returnType": "utam-lightning/pageObjects/picklist",
+                    "chain": true
+                }
+            ]
+        },
+        {
+            "name": "getDatepicker",
+            "compose": [
+                {
+                    "returnType": "utam-lightning/pageObjects/input",
+                    "element": "inputField",
+                    "args": [
+                        {
+                            "type": "pageObject",
+                            "value": "utam-lightning/pageObjects/input"
+                        }
+                    ]
+                },
+                {
+                    "chain": true,
+                    "element": "datepicker",
+                    "returnType": "utam-lightning/pageObjects/datepicker"
+                }
+            ]
+        }
+    ],
+    "elements": [
+        {
+            "type": "container",
+            "name": "inputField",
+            "public": true,
+            "selector": {
+                "css": "[slot='inputField']"
+            }
+        }
+    ],
+    "shadow": {
+        "elements": [
+            {
+                "name": "label",
+                "selector": {
+                    "css": ".test-id__field-label"
+                },
+                "public": true
+            },
+            {
+                "name": "inlineEditButton",
+                "selector": {
+                    "css": "button.inline-edit-trigger"
+                },
+                "type": ["clickable"],
+                "public": true
+            }
+        ]
+    }
+}

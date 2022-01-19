@@ -1,0 +1,40 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "actionRendererWithTitle",
+                "public": true,
+                "type": "utam-action/pageObjects/actionRenderer",
+                "selector": {
+                    "css": "runtime_platform_actions-action-renderer[title='%s']",
+                    "args": [
+                        {
+                            "name": "titleString",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "waitForRenderedAction",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "actionRendererWithTitle"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

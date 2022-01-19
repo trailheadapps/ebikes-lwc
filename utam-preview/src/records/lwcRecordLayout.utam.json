@@ -1,0 +1,121 @@
+{
+    "methods": [
+        {
+            "name": "getItem",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "section"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chain": true,
+                    "element": "row",
+                    "returnType": "utam-records/pageObjects/recordLayoutRow",
+                    "args": [
+                        {
+                            "name": "rowIndex",
+                            "type": "number"
+                        }
+                    ]
+                },
+                {
+                    "chain": true,
+                    "element": "item",
+                    "returnType": "utam-records/pageObjects/recordLayoutItem",
+                    "args": [
+                        {
+                            "name": "itemIndex",
+                            "type": "number"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "waitForHighlights2",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "highlights2"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "shadow": {
+        "elements": [
+            {
+                "name": "forcegeneratedRecordLayout2",
+                "selector": {
+                    "css": ".forcegenerated-record-layout2"
+                },
+                "shadow": {
+                    "elements": [
+                        {
+                            "type": "container",
+                            "public": true,
+                            "name": "generatedContent"
+                        },
+                        {
+                            "type": "container",
+                            "public": true,
+                            "name": "generatedContentList",
+                            "selector": {
+                                "css": ":scope > *",
+                                "returnAll": true
+                            }
+                        },
+                        {
+                            "name": "highlights2",
+                            "public": true,
+                            "type": "utam-records/pageObjects/highlights2",
+                            "selector": {
+                                "css": "records-highlights2"
+                            }
+                        },
+                        {
+                            "name": "sections",
+                            "public": true,
+                            "type": "utam-records/pageObjects/recordLayoutSection",
+                            "selector": {
+                                "css": "records-record-layout-section",
+                                "returnAll": true
+                            }
+                        },
+                        {
+                            "name": "section",
+                            "public": true,
+                            "type": "utam-records/pageObjects/recordLayoutSection",
+                            "selector": {
+                                "css": "records-record-layout-section:nth-of-type(%d)",
+                                "args": [
+                                    {
+                                        "name": "indexStartingOne",
+                                        "type": "number"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "recordPicklist",
+                "selector": {
+                    "css": "records-record-picklist"
+                },
+                "type": "utam-records/pageObjects/recordPicklist",
+                "public": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,108 @@
+{
+    "methods": [
+        {
+            "name": "expand",
+            "compose": [
+                {
+                    "element": "triggerInput",
+                    "apply": "click"
+                },
+                {
+                    "element": "itemsWrapper",
+                    "apply": "waitForVisible"
+                }
+            ]
+        },
+        {
+            "name": "pickItem",
+            "compose": [
+                {
+                    "element": "item"
+                },
+                {
+                    "chain": true,
+                    "apply": "clickItem"
+                }
+            ]
+        },
+        {
+            "name": "expandForDisabledInput",
+            "compose": [
+                {
+                    "element": "expandButton",
+                    "apply": "click"
+                },
+                {
+                    "element": "itemsWrapper",
+                    "apply": "waitForVisible"
+                }
+            ]
+        }
+    ],
+    "exposeRootElement": true,
+    "type": "editable",
+    "shadow": {
+        "elements": [
+            {
+                // this button is only there if input is disabled
+                "name": "expandButton",
+                "selector": {
+                    "css": "button"
+                },
+                "type": "clickable"
+            },
+            {
+                "name": "triggerInput",
+                "selector": {
+                    "css": "input"
+                },
+                "type": "clickable"
+            },
+            {
+                "name": "groups",
+                "selector": {
+                    "css": "ul[role='group']",
+                    "returnAll": true
+                },
+                "public": true
+            },
+            {
+                "name": "itemsWrapper",
+                "selector": {
+                    "css": "div.slds-dropdown_fluid"
+                }
+            },
+            {
+                "name": "items",
+                "selector": {
+                    "css": "lightning-base-combobox-item",
+                    "returnAll": true
+                },
+                "type": "utam-lightning/pageObjects/baseComboboxItem",
+                "public": true
+            },
+            {
+                "name": "item",
+                "selector": {
+                    "css": "lightning-base-combobox-item:nth-of-type(%d)",
+                    "args": [
+                        {
+                            "name": "indexStartingOne",
+                            "type": "number"
+                        }
+                    ]
+                },
+                "type": "utam-lightning/pageObjects/baseComboboxItem",
+                "public": true
+            },
+            {
+                "name": "selectedItemInput",
+                "selector": {
+                    "css": "input[type='text']"
+                },
+                "type": "editable",
+                "public": true
+            }
+        ]
+    }
+}

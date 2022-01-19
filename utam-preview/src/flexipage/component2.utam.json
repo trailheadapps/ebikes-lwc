@@ -1,0 +1,12 @@
+{
+    "elements": [
+        {
+            "name": "content",
+            "type": "container",
+            "selector": {
+                "css": ":scope *"
+            },
+            "public": true
+        }
+    ]
+}
