@@ -1,3 +1,7 @@
+/**
+ * This file holds end-to-end tests for the Product Explorer page.
+ * We use UTAM and WebdriverIO to run UI tests.
+ */
 import ProductFilter from '../../../pageObjects/productFilter';
 import ProductTileList from '../../../pageObjects/productTileList';
 import ProductCard from '../../../pageObjects/productCard';
