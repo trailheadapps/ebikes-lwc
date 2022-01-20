@@ -17,8 +17,7 @@
             "selector": {
                 "css": ".oneContent.active app_flexipage-lwc-app-flexipage"
             },
-            "type": "utam-sfdx/pageObjects/threeRegionsTemplate",
-            "public": true
+            "type": "utam-sfdx/pageObjects/threeRegionsTemplate"
         }
     ],
     "methods": [
