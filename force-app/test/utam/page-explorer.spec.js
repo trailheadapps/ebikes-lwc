@@ -21,6 +21,7 @@ if (!process.env.SALESFORCE_LOGIN_URL) {
 describe('ProductExplorer', () => {
     let page;
     let domDocument;
+    let productFilter, productTileList, productCard;
 
     beforeAll(async () => {
         // Navigate to login URL
@@ -40,19 +41,17 @@ describe('ProductExplorer', () => {
         const appNavBar = await appNav.getAppNavBar();
         const navItem = await appNavBar.getNavItem('Product Explorer');
         await navItem.clickAndWaitForUrl('lightning/n/Product_Explorer');
+
+        // Get page components from page template regions
+        const leftComponent = await page.getLeftComponent();
+        productFilter = await leftComponent.getContent(ProductFilter);
+        const centerComponent = await page.getCenterComponent();
+        productTileList = await centerComponent.getContent(ProductTileList);
+        const rightComponent = await page.getRightComponent();
+        productCard = await rightComponent.getContent(ProductCard);
     });
 
     it('displays, filters and selects product from list', async () => {
-        // Get page components
-        const leftComponent = await page.getLeftComponent();
-        const productFilter = await leftComponent.getContent(ProductFilter);
-        const centerComponent = await page.getCenterComponent();
-        const productTileList = await centerComponent.getContent(
-            ProductTileList
-        );
-        const rightComponent = await page.getRightComponent();
-        const productCard = await rightComponent.getContent(ProductCard);
-
         // Check default pagination info in product tile list
         let pageInfo = await productTileList.getPaginationInfo();
         expect(pageInfo).toBe(PAGINATION_ALL_ITEMS);
