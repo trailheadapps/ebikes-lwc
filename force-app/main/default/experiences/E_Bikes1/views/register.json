@@ -73,8 +73,8 @@
             "components": [
                 {
                     "componentAttributes": {
+                        "customHeadTags": "",
                         "description": "",
-                        "metaTags": "",
                         "title": "Register"
                     },
                     "componentName": "forceCommunity:seoAssistant",

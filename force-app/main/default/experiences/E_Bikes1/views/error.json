@@ -13,7 +13,7 @@
             "components": [
                 {
                     "componentAttributes": {
-                        "richTextValue": "<div style='text-align: center;'>Invalid Page</div>"
+                        "richTextValue": "<p style=\"text-align: center;\">Invalid Page</p>"
                     },
                     "componentName": "forceCommunity:richTextInline",
                     "id": "ce095ed4-2744-491e-b3f7-5c40a057a075",
@@ -35,8 +35,8 @@
             "components": [
                 {
                     "componentAttributes": {
+                        "customHeadTags": "",
                         "description": "",
-                        "metaTags": "",
                         "title": "Error"
                     },
                     "componentName": "forceCommunity:seoAssistant",

@@ -95,12 +95,6 @@ jobs:
             - name: 'Create scratch org'
               run: sfdx force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1
 
-            # Wait for package replication
-            - name: 'Wait for two min for Communities activation'
-              uses: maddox/actions/sleep@master
-              with:
-                  args: 120
-
             # Deploy source to scratch org
             - name: 'Push source to scratch org'
               run: sfdx force:source:push
@@ -112,6 +106,20 @@ jobs:
             # Import sample data
             - name: 'Import sample data'
               run: sfdx force:data:tree:import -p ./data/sample-data-plan.json
+
+            # Wait for XP Cloud activation
+            - name: 'Wait for two min for XP Cloud activation'
+              uses: maddox/actions/sleep@master
+              with:
+                  args: 120
+
+            # Publish XP Cloud site
+            - name: 'Publish XP Cloud site'
+              run: sfdx force:community:publish -n E-Bikes
+
+            # Deploy guest profile for XP Cloud site
+            - name: 'Deploy guest profile for XP Cloud site'
+              run: sfdx force:mdapi:deploy -d guest-profile-metadata -w 10
 
             # Run Apex tests in scratch org
             - name: 'Run Apex tests'

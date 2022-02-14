@@ -8,9 +8,13 @@
 package.xml
 **/appMenus/**
 **/appSwitcher/**
+**/fieldRestrictionRules/**
 **/objectTranslations/**
 **/profiles/**
+**/profilePasswordPolicy/**
+**/profileSessionSetting/**
 **/settings/**
+**/sharingRules/**
 
 # LWC configuration files
 **/jsconfig.json
@@ -19,7 +23,7 @@ package.xml
 # LWC Jest
 **/__tests__/**
 
-# Default generated Community metadata
+# Default generated Experience Cloud metadata
 **/aura/createAndRefreshCase
 **/aura/forgotPassword
 **/aura/loginForm
@@ -30,10 +34,6 @@ package.xml
 **/classes/ChangePasswordController.cls-meta.xml
 **/classes/ChangePasswordControllerTest.cls
 **/classes/ChangePasswordControllerTest.cls-meta.xml
-**/classes/CommunitiesLandingController.cls
-**/classes/CommunitiesLandingController.cls-meta.xml
-**/classes/CommunitiesLandingControllerTest.cls
-**/classes/CommunitiesLandingControllerTest.cls-meta.xml
 **/classes/CommunitiesLoginController.cls
 **/classes/CommunitiesLoginController.cls-meta.xml
 **/classes/CommunitiesLoginControllerTest.cls
@@ -88,8 +88,6 @@ package.xml
 **/pages/BandwidthExceeded.page-meta.xml
 **/pages/ChangePassword.page
 **/pages/ChangePassword.page-meta.xml
-#**/pages/CommunitiesLanding.page
-#**/pages/CommunitiesLanding.page-meta.xml
 **/pages/CommunitiesLogin.page
 **/pages/CommunitiesLogin.page-meta.xml
 **/pages/CommunitiesSelfReg.page

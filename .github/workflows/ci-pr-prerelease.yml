@@ -107,6 +107,20 @@ jobs:
             - name: 'Import sample data'
               run: sfdx force:data:tree:import -p ./data/sample-data-plan.json
 
+            # Wait for XP Cloud activation
+            - name: 'Wait for two min for XP Cloud activation'
+              uses: maddox/actions/sleep@master
+              with:
+                  args: 120
+
+            # Publish XP Cloud site
+            - name: 'Publish XP Cloud site'
+              run: sfdx force:community:publish -n E-Bikes
+
+            # Deploy guest profile for XP Cloud site
+            - name: 'Deploy guest profile for XP Cloud site'
+              run: sfdx force:mdapi:deploy -d guest-profile-metadata -w 10
+
             # Run Apex tests in scratch org
             - name: 'Run Apex tests'
               run: sfdx force:apex:test:run -c -r human -d ./tests/apex -w 20

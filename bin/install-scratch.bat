@@ -33,12 +33,17 @@ cmd.exe /c sfdx force:data:tree:import -p data/sample-data-plan.json
 call :checkForError
 @echo:
 
-echo Sleeping 30s for Community deployment...
+echo Sleeping 30s for XP Cloud deployment...
 timeout /T 30 /NOBREAK
 @echo:
 
-echo Publishing Community...
+echo Publishing XP Cloud site...
 cmd.exe /c sfdx force:community:publish -n E-Bikes
+call :checkForError
+@echo:
+
+echo Deploying guest profile for XP Cloud site...
+cmd.exe /c sfdx force:mdapi:deploy -d guest-profile-metadata -w 10
 call :checkForError
 @echo:
 

@@ -30,12 +30,16 @@ echo "Importing sample data..." && \
 sfdx force:data:tree:import -p data/sample-data-plan.json && \
 echo "" && \
 
-echo "Sleeping 30s for Community deployment" && \
+echo "Sleeping 30s for XP Cloud deployment..." && \
 sleep 30 && \
 echo "" && \
 
-echo "Publishing Community" && \
+echo "Publishing XP Cloud site..." && \
 sfdx force:community:publish -n E-Bikes && \
+echo "" && \
+
+echo "Deploying guest profile for XP Cloud site..." && \
+sfdx force:mdapi:deploy -d guest-profile-metadata -w 10 && \
 echo "" && \
 
 echo "Opening org..." && \
