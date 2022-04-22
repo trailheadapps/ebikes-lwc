@@ -12,7 +12,6 @@
         "test:unit:coverage": "sfdx-lwc-jest --coverage --skipApiVersionCheck",
         "test:ui": "wdio",
         "test:ui:compile": "utam -c utam.config.js",
-        "test:ui:compile:old": "cd utam-preview && npm run compile && cd .. && utam -c utam.config.js",
         "test:ui:generate:login": "node scripts/generate-login-url.js",
         "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
@@ -65,10 +64,6 @@
         "wdio-chromedriver-service": "^7.3.2",
         "wdio-utam-service": "^1.0.2"
     },
-    "workspaces": [
-        "./",
-        "utam-preview"
-    ],
     "volta": {
         "node": "16.13.2",
         "npm": "8.1.2"
