@@ -4,6 +4,8 @@ module.exports = {
     // remap custom elements imports
     alias: {
         'utam-sfdx/': 'ebikes-lwc/',
-        'utam-*/': 'utam-preview/'
+        'utam-lightning/': 'salesforce-pageobjects/lightning/',
+        'utam-flexipage/': 'salesforce-pageobjects/flexipage/',
+        'utam-global/': 'salesforce-pageobjects/global/'
     }
 };
