@@ -77,7 +77,7 @@
             "compose": [
                 {
                     "element": "action",
-                    "apply": "click"
+                    "apply": "clickButton"
                 }
             ]
         }
