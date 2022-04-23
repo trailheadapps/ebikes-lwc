@@ -4,8 +4,7 @@ const path = require('path');
 const { UtamWdioService } = require('wdio-utam-service');
 // use prefix 'DEBUG=true' to run test in debug mode
 const { DEBUG } = process.env;
-const EXPLICIT_TIMEOUT = 60 * 1000;
-const DEBUG_TIMEOUT = EXPLICIT_TIMEOUT * 30;
+const TIMEOUT = DEBUG ? 60 * 1000 * 30 : 60 * 1000;
 
 exports.config = {
     runner: 'local',
@@ -20,11 +19,11 @@ exports.config = {
     logLevel: 'debug',
     bail: 0,
     // timeout for all waitFor commands
-    waitforTimeout: DEBUG ? DEBUG_TIMEOUT : EXPLICIT_TIMEOUT,
+    waitforTimeout: TIMEOUT,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     automationProtocol: 'webdriver',
-    services: ['chromedriver', [UtamWdioService, { implicitTimeout: 0 }]],
+    services: ['chromedriver', [UtamWdioService, { implicitTimeout: 1000 }]],
     framework: 'jasmine',
     reporters: ['spec'],
     jasmineNodeOpts: {

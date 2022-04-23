@@ -4,7 +4,7 @@
             {
                 "name": "searchInput",
                 "selector": {
-                    "css": ".search"
+                    "css": "lightning-input:first-child"
                 },
                 "type": "utam-lightning/pageObjects/input",
                 "public": true
