@@ -233,12 +233,26 @@ To run LWC tests from the command line, run `npm test`.
 
 We use [UTAM](utam.dev) with [WebdriverIO](https://webdriver.io/) to run UI tests on our app. We run end-to-end tests on the Product Explorer page.
 
-Follow these instructions to run UI tests:
+Follow these steps to run UI tests:
 
--   Make sure that the Salesforce CLI is connected to an active org (run `sfdx force:org:open` to confirm it).
--   Compile the UTAM page objects with this command: `npm run test:ui:compile`
--   Prepare login information for your UI tests with this command: `npm run test:ui:generate:login`
--   Run UI tests with this command: `npm run test:ui`
+1. Make sure that the Salesforce CLI is connected to an active org by running:
+    ```sh
+    sfdx force:org:open
+    ```
+1. Compile the UTAM page objects with this command:
+    ```sh
+    npm run test:ui:compile
+    ```
+1. Prepare login information for your UI tests with this command:
+    ```sh
+    npm run test:ui:generate:login
+    ```
+1. Run UI tests with this command:
+    ```sh
+    npm run test:ui
+    ```
+
+**Note:** if the test runner fails to open Chrome programmatically, update the `chromedriver` dependency to the latest version in `package.json` then, run `npm install` and `npm run test:ui` again.
 
 ## Code Tours
 
