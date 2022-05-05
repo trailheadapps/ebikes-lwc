@@ -23,7 +23,7 @@ exports.config = {
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     automationProtocol: 'webdriver',
-    services: ['chromedriver', [UtamWdioService, { implicitTimeout: 1000 }]],
+    services: ['chromedriver', [UtamWdioService, { implicitTimeout: 0 }]],
     framework: 'jasmine',
     reporters: ['spec'],
     jasmineNodeOpts: {
