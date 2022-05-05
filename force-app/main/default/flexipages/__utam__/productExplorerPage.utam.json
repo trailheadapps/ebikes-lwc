@@ -6,7 +6,7 @@
     "elements": [
         {
             "name": "navigationBar",
-            "type": "utam-global/pageObjects/appNav",
+            "type": "salesforce-pageobjects/global/pageObjects/appNav",
             "public": true,
             "selector": {
                 "css": "one-appnav"
@@ -35,7 +35,7 @@
                 {
                     "chain": true,
                     "element": "leftFlexipageComponent2",
-                    "returnType": "utam-flexipage/pageObjects/component2"
+                    "returnType": "salesforce-pageobjects/flexipage/pageObjects/component2"
                 }
             ]
         },
@@ -53,7 +53,7 @@
                 {
                     "chain": true,
                     "element": "centerFlexipageComponent2",
-                    "returnType": "utam-flexipage/pageObjects/component2"
+                    "returnType": "salesforce-pageobjects/flexipage/pageObjects/component2"
                 }
             ]
         },
@@ -71,7 +71,7 @@
                 {
                     "chain": true,
                     "element": "rightFlexipageComponent2",
-                    "returnType": "utam-flexipage/pageObjects/component2"
+                    "returnType": "salesforce-pageobjects/flexipage/pageObjects/component2"
                 }
             ]
         }

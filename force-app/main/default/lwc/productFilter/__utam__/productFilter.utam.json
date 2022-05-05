@@ -6,7 +6,7 @@
                 "selector": {
                     "css": "lightning-input:first-child"
                 },
-                "type": "utam-lightning/pageObjects/input",
+                "type": "salesforce-pageobjects/lightning/pageObjects/input",
                 "public": true
             }
         ]

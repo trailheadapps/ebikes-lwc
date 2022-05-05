@@ -6,14 +6,14 @@
                 "selector": {
                     "css": "lightning-card"
                 },
-                "type": "utam-lightning/pageObjects/card"
+                "type": "salesforce-pageobjects/lightning/pageObjects/card"
             },
             {
                 "name": "action",
                 "selector": {
                     "css": "lightning-button-icon[slot='actions']"
                 },
-                "type": "utam-lightning/pageObjects/buttonIcon"
+                "type": "salesforce-pageobjects/lightning/pageObjects/buttonIcon"
             }
         ]
     },
