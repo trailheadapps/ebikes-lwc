@@ -6,12 +6,7 @@
  **/
 import { createElement } from 'lwc';
 import ProductFilter from 'c/productFilter';
-import {
-    registerLdsTestWireAdapter,
-    registerTestWireAdapter
-} from '@salesforce/sfdx-lwc-jest';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
-import { MessageContext } from 'lightning/messageService';
 
 /*
  * Import a snapshot of getPicklistValues' response for functional verification. This eliminates
@@ -29,13 +24,6 @@ import { MessageContext } from 'lightning/messageService';
  */
 const mockGetPicklistValues = require('./data/getPicklistValues.json');
 
-// Register as an LDS wire adapter. Some tests verify the provisioned values trigger desired behavior.
-const getPicklistValuesAdapter = registerLdsTestWireAdapter(getPicklistValues);
-
-// Register as a standard wire adapter because the component under test requires this adapter.
-// We don't exercise this wire adapter in the tests.
-registerTestWireAdapter(MessageContext);
-
 describe('c-product-filter-accessibility', () => {
     afterEach(() => {
         // The jsdom instance is shared across test cases in a single file so reset the DOM
@@ -51,7 +39,7 @@ describe('c-product-filter-accessibility', () => {
         });
         document.body.appendChild(element);
 
-        getPicklistValuesAdapter.emit(mockGetPicklistValues);
+        getPicklistValues.emit(mockGetPicklistValues);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
@@ -62,7 +50,7 @@ describe('c-product-filter-accessibility', () => {
         });
         document.body.appendChild(element);
 
-        getPicklistValuesAdapter.error();
+        getPicklistValues.error();
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());
     });

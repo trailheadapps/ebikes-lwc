@@ -1,9 +1,5 @@
 import { createElement } from 'lwc';
 import SimilarProducts from 'c/similarProducts';
-import {
-    registerLdsTestWireAdapter,
-    registerApexTestWireAdapter
-} from '@salesforce/sfdx-lwc-jest';
 import { getRecord } from 'lightning/uiRecordApi';
 import getSimilarProducts from '@salesforce/apex/ProductController.getSimilarProducts';
 
@@ -32,12 +28,19 @@ const WIRE_INPUT = {
     recordId: '0031700000pHcf8AAC'
 };
 
-// Register as an LDS wire adapter. Some tests verify the provisioned values trigger desired behavior.
-const getRecordAdapter = registerLdsTestWireAdapter(getRecord);
-
-// Register as Apex wire adapter. Some tests verify that provisioned values trigger desired behavior.
-const getSimilarProductsListAdapter =
-    registerApexTestWireAdapter(getSimilarProducts);
+// Mock getSimilarProducts Apex wire adapter
+jest.mock(
+    '@salesforce/apex/ProductController.getSimilarProducts',
+    () => {
+        const {
+            createApexTestWireAdapter
+        } = require('@salesforce/sfdx-lwc-jest');
+        return {
+            default: createApexTestWireAdapter(jest.fn())
+        };
+    },
+    { virtual: true }
+);
 
 describe('c-similar-products', () => {
     afterEach(() => {
@@ -55,18 +58,18 @@ describe('c-similar-products', () => {
         element.familyId = mockFamilyId;
         document.body.appendChild(element);
 
-        // Emit data from getRecord adapter
-        getRecordAdapter.emit(mockGetRecord);
+        // Emit data from getRecord
+        getRecord.emit(mockGetRecord);
 
-        // Emit Data from the Apex wire adapter.
-        getSimilarProductsListAdapter.emit(mockSimilarProducts);
+        // Emit Data from the Apex wire
+        getSimilarProducts.emit(mockSimilarProducts);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Check the wire parameters are correct
-            expect(getRecordAdapter.getLastConfig()).toEqual(WIRE_INPUT);
+            expect(getRecord.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
             const productListItemEl = element.shadowRoot.querySelectorAll(
                 'c-product-list-item'
@@ -86,18 +89,18 @@ describe('c-similar-products', () => {
         element.familyId = mockFamilyId;
         document.body.appendChild(element);
 
-        // Emit data from getRecord adapter
-        getRecordAdapter.emit(mockGetRecord);
+        // Emit data from getRecord
+        getRecord.emit(mockGetRecord);
 
-        // Emit an empty array from the Apex wire adapter.
-        getSimilarProductsListAdapter.emit(mockSimilarProductsWithoutData);
+        // Emit an empty array from the Apex wire
+        getSimilarProducts.emit(mockSimilarProductsWithoutData);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Check the wire parameters are correct
-            expect(getRecordAdapter.getLastConfig()).toEqual(WIRE_INPUT);
+            expect(getRecord.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
             const placeholderEl =
                 element.shadowRoot.querySelector('c-placeholder');
@@ -113,11 +116,11 @@ describe('c-similar-products', () => {
         element.familyId = mockFamilyId;
         document.body.appendChild(element);
 
-        // Emit data from getRecord adapter
-        getRecordAdapter.emit(mockGetRecord);
+        // Emit data from getRecord
+        getRecord.emit(mockGetRecord);
 
-        // Emit an error from the Apex wire adapter.
-        getSimilarProductsListAdapter.error(mockWireErrorMessage);
+        // Emit an error from the Apex wire
+        getSimilarProducts.error(mockWireErrorMessage);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
@@ -125,7 +128,7 @@ describe('c-similar-products', () => {
 
         return Promise.resolve().then(() => {
             // Check the wire parameters are correct
-            expect(getRecordAdapter.getLastConfig()).toEqual(WIRE_INPUT);
+            expect(getRecord.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
             const errorPanelEl =
                 element.shadowRoot.querySelector('c-error-panel');
@@ -146,11 +149,11 @@ describe('c-similar-products', () => {
         element.familyId = mockFamilyId;
         document.body.appendChild(element);
 
-        // Emit data from getRecord adapter
-        getRecordAdapter.emit(mockGetRecord);
+        // Emit data from getRecord
+        getRecord.emit(mockGetRecord);
 
-        // Emit Data from the Apex wire adapter.
-        getSimilarProductsListAdapter.emit(mockSimilarProducts);
+        // Emit Data from the Apex wire
+        getSimilarProducts.emit(mockSimilarProducts);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
@@ -164,11 +167,11 @@ describe('c-similar-products', () => {
         element.familyId = mockFamilyId;
         document.body.appendChild(element);
 
-        // Emit data from getRecord adapter
-        getRecordAdapter.emit(mockGetRecord);
+        // Emit data from getRecord
+        getRecord.emit(mockGetRecord);
 
-        // Emit an empty array from the Apex wire adapter.
-        getSimilarProductsListAdapter.emit(mockSimilarProductsWithoutData);
+        // Emit an empty array from the Apex wire
+        getSimilarProducts.emit(mockSimilarProductsWithoutData);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
@@ -182,8 +185,8 @@ describe('c-similar-products', () => {
         element.familyId = mockFamilyId;
         document.body.appendChild(element);
 
-        // Emit an error from the Apex wire adapter.
-        getSimilarProductsListAdapter.error(mockWireErrorMessage);
+        // Emit an error from the Apex wire
+        getSimilarProducts.error(mockWireErrorMessage);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());
     });

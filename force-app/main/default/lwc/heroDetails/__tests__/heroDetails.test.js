@@ -1,6 +1,5 @@
 import { createElement } from 'lwc';
 import HeroDetails from 'c/heroDetails';
-import { registerApexTestWireAdapter } from '@salesforce/sfdx-lwc-jest';
 import getRecordInfo from '@salesforce/apex/ProductRecordInfoController.getRecordInfo';
 
 // Mock realistic data for the getRecordInfo adapter
@@ -17,8 +16,19 @@ const WIRE_INPUT = {
     productOrFamilyName: 'Electra'
 };
 
-// Register as an LDS wire adapter. Some tests verify the provisioned values trigger desired behavior.
-const getRecordInfoAdapter = registerApexTestWireAdapter(getRecordInfo);
+// Mock getRecordInfo Apex wire adapter
+jest.mock(
+    '@salesforce/apex/ProductRecordInfoController.getRecordInfo',
+    () => {
+        const {
+            createApexTestWireAdapter
+        } = require('@salesforce/sfdx-lwc-jest');
+        return {
+            default: createApexTestWireAdapter(jest.fn())
+        };
+    },
+    { virtual: true }
+);
 
 describe('c-hero-details', () => {
     afterEach(() => {
@@ -36,14 +46,14 @@ describe('c-hero-details', () => {
         document.body.appendChild(element);
 
         // Emit Data from the Apex wire adapter.
-        getRecordInfoAdapter.emit(mockGetRecordInfoProduct);
+        getRecordInfo.emit(mockGetRecordInfoProduct);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Check the wire parameters are correct
-            expect(getRecordInfoAdapter.getLastConfig()).toEqual(WIRE_INPUT);
+            expect(getRecordInfo.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
             const anchorEl = element.shadowRoot.querySelector('a');
             expect(anchorEl).not.toBeNull();
@@ -61,14 +71,14 @@ describe('c-hero-details', () => {
         document.body.appendChild(element);
 
         // Emit Data from the Apex wire adapter.
-        getRecordInfoAdapter.emit(mockGetRecordInfoProductFamily);
+        getRecordInfo.emit(mockGetRecordInfoProductFamily);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Check the wire parameters are correct
-            expect(getRecordInfoAdapter.getLastConfig()).toEqual(WIRE_INPUT);
+            expect(getRecordInfo.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
             const anchorEl = element.shadowRoot.querySelector('a');
             expect(anchorEl).not.toBeNull();
@@ -88,14 +98,14 @@ describe('c-hero-details', () => {
         document.body.appendChild(element);
 
         // Emit Data from the Apex wire adapter.
-        getRecordInfoAdapter.emit(mockGetRecordInfoProductFamily);
+        getRecordInfo.emit(mockGetRecordInfoProductFamily);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Check the wire parameters are correct
-            expect(getRecordInfoAdapter.getLastConfig()).toEqual(WIRE_INPUT);
+            expect(getRecordInfo.getLastConfig()).toEqual(WIRE_INPUT);
             // Select elements for validation
             const headingEL = element.shadowRoot.querySelector('h1');
             expect(headingEL.textContent).toBe(mockTitle);
