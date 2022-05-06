@@ -1,0 +1,135 @@
+{
+    "methods": [
+        {
+            "name": "waitForLoad",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "module",
+                                    "apply": "containsElement",
+                                    "args": [
+                                        {
+                                            "type": "locator",
+                                            "value": {
+                                                "css": ".forcegenerated-flexipage-template"
+                                            }
+                                        },
+                                        {
+                                            "value": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "apply": "returnSelf"
+                }
+            ]
+        }
+    ],
+    "shadow": {
+        "elements": [
+            {
+                "name": "internal",
+                "selector": {
+                    "css": "app_flexipage-lwc-app-flexipage-internal"
+                },
+                "shadow": {
+                    "elements": [
+                        {
+                            "name": "adgRollup",
+                            "selector": {
+                                "css": ".adg-rollup-wrapped"
+                            },
+                            "shadow": {
+                                "elements": [
+                                    {
+                                        "name": "module",
+                                        "selector": {
+                                            "css": ".forcegenerated-flexipage-module"
+                                        },
+                                        "shadow": {
+                                            "elements": [
+                                                {
+                                                    "name": "template",
+                                                    "selector": {
+                                                        "css": ".forcegenerated-flexipage-template"
+                                                    },
+                                                    "shadow": {
+                                                        "elements": [
+                                                            {
+                                                                "name": "leftRegion",
+                                                                "selector": {
+                                                                    "css": "forcegenerated-flexipageregion_product_explorer_left__js"
+                                                                },
+                                                                "shadow": {
+                                                                    "elements": [
+                                                                        {
+                                                                            "name": "leftFlexipageComponent2",
+                                                                            "type": "salesforce-pageobjects/flexipage/pageObjects/component2",
+                                                                            "selector": {
+                                                                                "css": "flexipage-component2"
+                                                                            },
+                                                                            "public": true
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "name": "centerRegion",
+                                                                "selector": {
+                                                                    "css": "forcegenerated-flexipageregion_product_explorer_center__js"
+                                                                },
+                                                                "shadow": {
+                                                                    "elements": [
+                                                                        {
+                                                                            "name": "centerFlexipageComponent2",
+                                                                            "type": "salesforce-pageobjects/flexipage/pageObjects/component2",
+                                                                            "selector": {
+                                                                                "css": "flexipage-component2"
+                                                                            },
+                                                                            "public": true
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            },
+                                                            {
+                                                                "name": "rightRegion",
+                                                                "selector": {
+                                                                    "css": "forcegenerated-flexipageregion_product_explorer_right__js"
+                                                                },
+                                                                "shadow": {
+                                                                    "elements": [
+                                                                        {
+                                                                            "name": "rightFlexipageComponent2",
+                                                                            "type": "salesforce-pageobjects/flexipage/pageObjects/component2",
+                                                                            "selector": {
+                                                                                "css": "flexipage-component2"
+                                                                            },
+                                                                            "public": true
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        ]
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

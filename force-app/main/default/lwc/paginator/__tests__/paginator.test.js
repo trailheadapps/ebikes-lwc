@@ -66,59 +66,52 @@ describe('c-paginator', () => {
         const element = createElement('c-paginator', {
             is: Paginator
         });
-        //Set the public property values
         element.pageNumber = 0;
         element.pageSize = 9;
         element.totalItemCount = 0;
-
         document.body.appendChild(element);
 
         // Query div for validating the display message on component init
-        const lightningLayoutItemEl =
-            element.shadowRoot.querySelector('.nav-info');
+        const navInfoEl = element.shadowRoot.querySelector('.nav-info');
         //Check for the 0 items message
-        expect(lightningLayoutItemEl).not.toBeNull();
-        expect(lightningLayoutItemEl.textContent).toBe('0 items • page 0 of 0');
+        expect(navInfoEl).not.toBeNull();
+        expect(navInfoEl.textContent).toBe('0 items • page 0 of 0');
     });
 
-    it('displays total item count, page number, and number of pages with some items', () => {
+    it('displays total item count, page number, and number of pages with some items', async () => {
         // Create initial element
         const element = createElement('c-paginator', {
             is: Paginator
         });
-        document.body.appendChild(element);
-
-        //Set the public properties for item count greater than zero
         element.pageNumber = 1;
         element.pageSize = 9;
         element.totalItemCount = 12;
+        document.body.appendChild(element);
 
         // Query div for validating the display message on component init
-        const lightningLayoutItemEl =
-            element.shadowRoot.querySelector('.nav-info');
+        const navInfoEl = element.shadowRoot.querySelector('.nav-info');
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
         // ending the test and fail the test if the promise rejects.
         return Promise.resolve().then(() => {
             // Query div for validating computed style attribute value on public property change
-            expect(lightningLayoutItemEl).not.toBeNull();
-            expect(lightningLayoutItemEl.textContent).toBe(
-                '12 items • page 1 of 2'
-            );
+            expect(navInfoEl).not.toBeNull();
+            expect(navInfoEl.textContent).toBe('12 items • page 1 of 2');
         });
     });
 
-    it('is accessible', () => {
+    it('is accessible', async () => {
+        // Create initial element
         const element = createElement('c-paginator', {
             is: Paginator
         });
-
         element.pageNumber = 3;
         element.pageSize = 9;
         element.totalItemCount = 12;
         document.body.appendChild(element);
 
-        return Promise.resolve().then(() => expect(element).toBeAccessible());
+        await Promise.resolve();
+        await expect(element).toBeAccessible();
     });
 });

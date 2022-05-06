@@ -1,0 +1,25 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "navInfo",
+                "selector": {
+                    "css": ".nav-info"
+                },
+                "public": true
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "getNavInfoText",
+            "compose": [
+                {
+                    "element": "navInfo",
+                    "apply": "getText",
+                    "returnType": "string"
+                }
+            ]
+        }
+    ]
+}
