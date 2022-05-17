@@ -32,7 +32,8 @@ async function generateLoginUrl() {
     try {
         const url = await getScratchOrgLoginUrl();
         const template = `# DO NOT CHECK THIS FILE IN WITH PERSONAL INFORMATION SAVED
-SALESFORCE_LOGIN_URL=${url}`;
+SALESFORCE_LOGIN_URL=${url}
+SALESFORCE_LOGIN_TIME=${new Date().getTime()}`;
         writeFileSync(DOTENV_FILEPATH, template);
         console.log(
             `Property .env file successfully generated in ${DOTENV_FILEPATH}`

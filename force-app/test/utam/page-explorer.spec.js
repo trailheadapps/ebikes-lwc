@@ -7,14 +7,29 @@ import ProductTileList from '../../../pageObjects/productTileList';
 import ProductCard from '../../../pageObjects/productCard';
 import ProductExplorerPage from '../../../pageObjects/productExplorerPage';
 
+const SESSION_TIMEOUT = 2 * 60 * 1000; // 2 hours by default
+
 const PAGINATION_ALL_ITEMS = '16 items • page 1 of 2';
 const PAGINATION_FILTERED_ITEMS = '4 items • page 1 of 1';
 const SELECTION_EMPTY = 'Select a product to see details';
 
 const RECORD_PAGE_URL = /lightning\/r\/Product__c\/[a-z0-9]{18}\/view/i;
 
-if (!process.env.SALESFORCE_LOGIN_URL) {
-    console.error('\nError: missing SALESFORCE_LOGIN_URL configuration.\n');
+// Check environment variables
+['SALESFORCE_LOGIN_URL', 'SALESFORCE_LOGIN_TIME'].forEach((varName) => {
+    if (!process.env[varName]) {
+        console.error(`Missing ${varName} environment variable`);
+        process.exit(-1);
+    }
+});
+// Check for Salesforce session timeout
+if (
+    new Date().getTime() - parseInt(process.env.SALESFORCE_LOGIN_TIME, 10) >
+    SESSION_TIMEOUT
+) {
+    console.error(
+        `Salesforce session timed out. Re-authenticate before running tests.`
+    );
     process.exit(-1);
 }
 
