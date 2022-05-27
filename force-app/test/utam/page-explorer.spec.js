@@ -22,9 +22,11 @@ const RECORD_PAGE_URL = /lightning\/r\/Product__c\/[a-z0-9]{18}\/view/i;
         process.exit(-1);
     }
 });
+const { SALESFORCE_LOGIN_URL, SALESFORCE_LOGIN_TIME } = process.env;
+
 // Check for Salesforce session timeout
 if (
-    new Date().getTime() - parseInt(process.env.SALESFORCE_LOGIN_TIME, 10) >
+    new Date().getTime() - parseInt(SALESFORCE_LOGIN_TIME, 10) >
     SESSION_TIMEOUT
 ) {
     console.error(
@@ -40,7 +42,7 @@ describe('ProductExplorer', () => {
 
     beforeAll(async () => {
         // Navigate to login URL
-        await browser.navigateTo(process.env.SALESFORCE_LOGIN_URL);
+        await browser.navigateTo(SALESFORCE_LOGIN_URL);
 
         // Wait for home page URL
         domDocument = utam.getCurrentDocument();
