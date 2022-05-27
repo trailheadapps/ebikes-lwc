@@ -7,7 +7,7 @@ import ProductTileList from '../../../pageObjects/productTileList';
 import ProductCard from '../../../pageObjects/productCard';
 import ProductExplorerPage from '../../../pageObjects/productExplorerPage';
 
-const SESSION_TIMEOUT = 2 * 60 * 1000; // 2 hours by default
+const SESSION_TIMEOUT = 2 * 60 * 60 * 1000; // 2 hours by default
 
 const PAGINATION_ALL_ITEMS = '16 items • page 1 of 2';
 const PAGINATION_FILTERED_ITEMS = '4 items • page 1 of 1';
