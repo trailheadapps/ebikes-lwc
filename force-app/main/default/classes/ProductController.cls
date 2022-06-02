@@ -14,7 +14,7 @@ public with sharing class ProductController {
         public String[] levels { get; set; }
     }
 
-    @AuraEnabled(Cacheable=true)
+    @AuraEnabled(Cacheable=true scope='global')
     public static PagedResult getProducts(Filters filters, Integer pageNumber) {
         String key, whereClause = '';
         Decimal maxPrice;
@@ -64,7 +64,7 @@ public with sharing class ProductController {
         return result;
     }
 
-    @AuraEnabled(Cacheable=true)
+    @AuraEnabled(Cacheable=true scope='global')
     public static Product__c[] getSimilarProducts(Id productId, Id familyId) {
         return [
             SELECT
