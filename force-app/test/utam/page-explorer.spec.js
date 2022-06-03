@@ -30,7 +30,7 @@ if (
     SESSION_TIMEOUT
 ) {
     console.error(
-        `Salesforce session timed out. Re-authenticate before running tests.`
+        `ERROR: Salesforce session timed out. Re-authenticate before running tests.`
     );
     process.exit(-1);
 }
