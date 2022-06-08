@@ -70,7 +70,7 @@ describe('ProductExplorer', () => {
 
     it('displays, filters and selects product from list', async () => {
         // Check default pagination info in product tile list
-        let pageInfo = await productTileList.getPaginationInfo();
+        const pageInfo = await productTileList.getPaginationInfo();
         expect(pageInfo).toBe(PAGINATION_ALL_ITEMS);
 
         // Check default empty selection in product card
@@ -85,10 +85,6 @@ describe('ProductExplorer', () => {
         await productTileList.waitForPaginationUpdate(
             PAGINATION_FILTERED_ITEMS
         );
-
-        // Check updated pagination info
-        pageInfo = await productTileList.getPaginationInfo();
-        expect(pageInfo).toBe(PAGINATION_FILTERED_ITEMS);
 
         // Select first product tile
         const productTiles = await productTileList.getTiles();
