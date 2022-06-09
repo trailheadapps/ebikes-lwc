@@ -17,5 +17,5 @@
         <members>Product__c</members>
         <name>SharingRules</name>
     </types>
-    <version>54.0</version>
+    <version>55.0</version>
 </Package>
