@@ -1,5 +1,5 @@
 public with sharing class ProductRecordInfoController {
-    @AuraEnabled(Cacheable=true)
+    @AuraEnabled(Cacheable=true scope='global')
     public static List<String> getRecordInfo(String productOrFamilyName) {
         List<String> recordInfo = new List<String>();
 
