@@ -14,6 +14,10 @@ export function reduceErrors(errors) {
             .filter((error) => !!error)
             // Extract an error message
             .map((error) => {
+                // String error
+                if (typeof error === 'string') {
+                    return error;
+                }
                 // UI API read errors
                 if (Array.isArray(error.body)) {
                     return error.body.map((e) => e.message);
