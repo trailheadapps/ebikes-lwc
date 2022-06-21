@@ -6,6 +6,7 @@
 **/pageObjects/
 
 .localdevserver/
+.sf/
 .sfdx/
 .vscode/
 coverage/
