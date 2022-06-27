@@ -5,9 +5,8 @@
     },
     "elements": [
         {
-            "name": "navigationBar",
+            "name": "appNav",
             "type": "salesforce-pageobjects/global/pageObjects/appNav",
-            "public": true,
             "selector": {
                 "css": "one-appnav"
             }
@@ -22,10 +21,38 @@
     ],
     "methods": [
         {
+            "name": "getAppNav",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "appNav"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "getLeftComponent",
             "compose": [
                 {
-                    "element": "activeFlexiPage"
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "activeFlexiPage"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "chain": true,
@@ -43,7 +70,17 @@
             "name": "getCenterComponent",
             "compose": [
                 {
-                    "element": "activeFlexiPage"
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "activeFlexiPage"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "chain": true,
@@ -61,7 +98,17 @@
             "name": "getRightComponent",
             "compose": [
                 {
-                    "element": "activeFlexiPage"
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "activeFlexiPage"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "chain": true,

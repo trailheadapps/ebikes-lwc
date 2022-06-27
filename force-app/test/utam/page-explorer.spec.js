@@ -54,7 +54,7 @@ describe('ProductExplorer', () => {
         page = await utam.load(ProductExplorerPage);
 
         // Click 'Product Explorer' in app navigation menu and wait for URL navigation
-        const appNav = await page.getNavigationBar();
+        const appNav = await page.getAppNav();
         const appNavBar = await appNav.getAppNavBar();
         const navItem = await appNavBar.getNavItem('Product Explorer');
         await navItem.clickAndWaitForUrl('lightning/n/Product_Explorer');
