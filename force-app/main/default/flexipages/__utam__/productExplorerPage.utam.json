@@ -21,7 +21,7 @@
     ],
     "methods": [
         {
-            "name": "waitForFlexipage",
+            "name": "getAppNav",
             "compose": [
                 {
                     "apply": "waitFor",
@@ -30,7 +30,7 @@
                             "type": "function",
                             "predicate": [
                                 {
-                                    "element": "activeFlexiPage"
+                                    "element": "appNav"
                                 }
                             ]
                         }
