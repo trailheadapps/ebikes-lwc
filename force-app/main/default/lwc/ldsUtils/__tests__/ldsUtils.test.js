@@ -2,6 +2,14 @@ import { reduceErrors } from 'c/ldsUtils';
 
 describe('c-lds-utils', () => {
     describe('reduceErrors', () => {
+        it('reduces string error', () => {
+            const FULL_ERROR = 'mockError';
+
+            const reduced = reduceErrors(FULL_ERROR);
+
+            expect(reduced).toStrictEqual([FULL_ERROR]);
+        });
+
         it('reduces single error with message in body', () => {
             const FULL_ERROR = { body: { message: 'mockError' } };
             const REDUCED_ERROR = [FULL_ERROR.body.message];

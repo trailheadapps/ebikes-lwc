@@ -1,0 +1,10 @@
+{
+    "apiName": "Order__c",
+    "createable": true,
+    "custom": false,
+    "defaultRecordTypeId": "012000000000000AAA",
+    "deletable": true,
+    "dependentFields": {},
+    "feedEnabled": true,
+    "fields": {}
+}

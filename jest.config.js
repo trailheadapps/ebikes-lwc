@@ -11,7 +11,9 @@ module.exports = {
         '^lightning/navigation$':
             '<rootDir>/force-app/test/jest-mocks/lightning/navigation',
         '^lightning/messageService$':
-            '<rootDir>/force-app/test/jest-mocks/lightning/messageService'
+            '<rootDir>/force-app/test/jest-mocks/lightning/messageService',
+        '^lightning/empApi$':
+            '<rootDir>/force-app/test/jest-mocks/lightning/empApi'
     },
     setupFilesAfterEnv
 };

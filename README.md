@@ -20,13 +20,15 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 -   [Installing E-Bikes using a scratch org](#installing-e-bikes-using-a-scratch-org)
 -   [Installing E-Bikes using a Developer Edition Org or a Trailhead Playground](#installing-e-bikes-using-a-developer-edition-org-or-a-trailhead-playground)
--   [Optional installation instructions](#optional-installation-instructions)
-    -   [Code Formatting](#code-formatting)
-    -   [Code Linting](#code-linting)
-    -   [Pre-commit Hook](#pre-commit-hook)
-    -   [Lightning Web Component Tests](#lightning-web-component-tests)
-    -   [UI Tests](#ui-tests)
--   [Code Tours](#code-tours)
+-   [Optional demo installation](#optional-demo-installation)
+    -   [Pub Sub API demo](#pub-sub-api-demo)
+-   [Optional tool installation](#optional-tool-installation)
+    -   [Code formatting](#code-formatting)
+    -   [Code linting](#code-linting)
+    -   [Pre-commit hook](#pre-commit-hook)
+    -   [Lightning Web Component tests](#lightning-web-component-tests)
+    -   [UI tests with UTAM](#ui-tests)
+    -   [Code Tours](#code-tours)
 
 ## Installing E-Bikes using a Scratch Org
 
@@ -190,7 +192,13 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
 
     1. In App Launcher, select the **E-Bikes** app.
 
-## Optional Installation Instructions
+## Optional Demo Installation
+
+### Pub Sub API Demo
+
+After installing the E-Bikes Salesforce app, you can install an optional [ebikes-manufacturing](https://github.com/trailheadapps/ebikes-manufacturing) demo app. This demo is built with the Lightning Web Runtime and demonstrates the use of the Pub Sub API with Change Data Capture events and Platform Events.
+
+## Optional Tool Installation
 
 This repository contains several tools and scripts that are relevant if you want to integrate modern web development tooling to your Salesforce development processes, or to your continuous integration/continuous deployment processes.
 
@@ -256,6 +264,6 @@ Follow these steps to run the UI tests manually:
 
 **Note:** if the test runner fails to open Chrome programmatically, update the `chromedriver` dependency to the latest version in `package.json` then, run `npm install` and `npm run test:ui` again.
 
-## Code Tours
+### Code Tours
 
 Code Tours are guided walkthroughs that will help you understand the app code better. To be able to run them, install the [CodeTour VSCode extension](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour).
