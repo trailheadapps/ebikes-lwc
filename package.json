@@ -52,7 +52,7 @@
         "@wdio/spec-reporter": "^7.20.3",
         "chromedriver": "git://github.com/pozil/node-chromedriver.git#102.0.0",
         "dotenv": "^16.0.1",
-        "eslint": "^8.16.0",
+        "eslint": "^8.18.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-jest": "^26.5.3",
         "husky": "^8.0.1",
