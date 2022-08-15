@@ -50,19 +50,19 @@
         "@wdio/jasmine-framework": "^7.20.7",
         "@wdio/local-runner": "^7.20.9",
         "@wdio/spec-reporter": "^7.20.8",
-        "chromedriver": "^103.0.0",
+        "chromedriver": "^104.0.0",
         "dotenv": "^16.0.1",
-        "eslint": "^8.21.0",
+        "eslint": "^8.22.0",
         "eslint-plugin-import": "^2.26.0",
-        "eslint-plugin-jest": "^26.7.0",
+        "eslint-plugin-jest": "^26.8.3",
         "husky": "^8.0.1",
         "lint-staged": "^13.0.3",
         "prettier": "^2.7.1",
         "prettier-plugin-apex": "^1.10.0",
         "salesforce-pageobjects": "^2.0.0",
-        "utam": "^1.0.7",
+        "utam": "^1.0.8",
         "wdio-chromedriver-service": "^7.3.2",
-        "wdio-utam-service": "^1.0.7"
+        "wdio-utam-service": "^1.0.8"
     },
     "workspaces": [
         "./"
