@@ -10,6 +10,6 @@ const DEFAULT_OPTIONS = {
 
 require('@babel/register')(DEFAULT_OPTIONS);
 
-module.exports = function _jasminRegister() {
+module.exports = function _jasmineRegister() {
     require('@babel/register')(DEFAULT_OPTIONS);
 };
