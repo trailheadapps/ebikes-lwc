@@ -14,7 +14,7 @@ on:
 # Jobs to be executed
 jobs:
     format-lint-lwc-tests:
-        runs-on: ubuntu-latest
+        runs-on: trailheadapps-Ubuntu
         steps:
             # Checkout the source code
             - name: 'Checkout source code'
@@ -64,7 +64,7 @@ jobs:
     dependabot-auto-merge:
         # Only run for Dependabot PRs
         if: ${{ github.actor == 'dependabot[bot]' }}
-        runs-on: ubuntu-latest
+        runs-on: trailheadapps-Ubuntu
         needs: format-lint-lwc-tests
         permissions:
             pull-requests: write
@@ -96,7 +96,7 @@ jobs:
                   PR_URL: ${{ github.event.pull_request.html_url }}
 
     scratch-org-test:
-        runs-on: ubuntu-latest
+        runs-on: trailheadapps-Ubuntu
         needs: format-lint-lwc-tests
         if: ${{ github.actor != 'dependabot[bot]' }}
         steps:
