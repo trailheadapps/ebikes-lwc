@@ -49,7 +49,9 @@ describe('ProductExplorer', () => {
         await domDocument.waitFor(async () =>
             (await domDocument.getUrl()).endsWith('/home')
         );
+    });
 
+    it('displays, filters and selects product from list', async () => {
         // Wait for home page to load
         page = await utam.load(ProductExplorerPage);
 
@@ -59,6 +61,9 @@ describe('ProductExplorer', () => {
         const navItem = await appNavBar.getNavItem('Product Explorer');
         await navItem.clickAndWaitForUrl('lightning/n/Product_Explorer');
 
+        // Wait for flexipage to load
+        await page.waitForFlexipage();
+
         // Get page components from page template regions
         const leftComponent = await page.getLeftComponent();
         productFilter = await leftComponent.getContent(ProductFilter);
@@ -66,9 +71,7 @@ describe('ProductExplorer', () => {
         productTileList = await centerComponent.getContent(ProductTileList);
         const rightComponent = await page.getRightComponent();
         productCard = await rightComponent.getContent(ProductCard);
-    });
 
-    it('displays, filters and selects product from list', async () => {
         // Check default pagination info in product tile list
         const pageInfo = await productTileList.getPaginationInfo();
         expect(pageInfo).toBe(PAGINATION_ALL_ITEMS);

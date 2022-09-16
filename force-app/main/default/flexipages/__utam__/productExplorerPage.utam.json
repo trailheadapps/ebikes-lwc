@@ -22,6 +22,24 @@
     ],
     "methods": [
         {
+            "name": "waitForFlexipage",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "activeFlexiPage"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "name": "getLeftComponent",
             "compose": [
                 {
