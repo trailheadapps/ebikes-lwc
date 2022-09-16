@@ -21,7 +21,7 @@ public class TestProductController {
                 Product_Family__c = family.Id
             ),
             new Product__c(
-                Name = 'Sample Bike 2',
+                Name = PRODUCT_NAME2,
                 MSRP__c = 1200,
                 Category__c = 'Mountain',
                 Level__c = 'Racer',
@@ -32,7 +32,7 @@ public class TestProductController {
     }
 
     @isTest
-    static void testGetProducts() {
+    static void getProducts_works() {
         ProductController.Filters filters = new ProductController.Filters();
         filters.searchKey = 'Sample';
         filters.maxPrice = 2000;
@@ -50,7 +50,7 @@ public class TestProductController {
     }
 
     @isTest
-    static void testGetSimilarProducts() {
+    static void getSimilarProducts_works() {
         Product__c baseProduct = [
             SELECT Id, Name, Product_Family__c
             FROM Product__c
