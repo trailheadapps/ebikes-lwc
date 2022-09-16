@@ -15,7 +15,7 @@
         {
             "name": "activeFlexiPage",
             "selector": {
-                "css": ".oneContent.active app_flexipage-lwc-app-flexipage"
+                "css": "app_flexipage-lwc-app-flexipage"
             },
             "type": "utam-sfdx/pageObjects/threeRegionsTemplate"
         }
