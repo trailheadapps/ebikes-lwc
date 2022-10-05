@@ -213,6 +213,9 @@ For reference, the full list scripts and dependencies and can be found in [packa
 
 [Prettier](https://prettier.io/) is a code formatter used to ensure consistent formatting across your code base. The [.prettierignore](/.prettierignore) and [.prettierrc](/.prettierrc) files provided as part of this repository control the behavior of the Prettier formatter.
 
+> **Warning**
+> The current Apex Prettier plugin version requires that you install Java 11 or above.
+
 To run Prettier from the command line, run `npm run prettier`.
 
 To use Prettier with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) from the Visual Studio Code Marketplace.
