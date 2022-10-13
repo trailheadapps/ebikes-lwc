@@ -42,11 +42,8 @@ public class TestProductController {
 
         PagedResult result = ProductController.getProducts(filters, 1);
 
-        System.assertEquals(1, result.records.size());
-        System.assertEquals(
-            PRODUCT_NAME1,
-            ((Product__c) result.records[0]).Name
-        );
+        Assert.areEqual(1, result.records.size());
+        Assert.areEqual(PRODUCT_NAME1, ((Product__c) result.records[0]).Name);
     }
 
     @isTest
@@ -62,7 +59,7 @@ public class TestProductController {
             baseProduct.Product_Family__c
         );
 
-        System.assertEquals(1, similarProducts.size());
-        System.assertEquals(PRODUCT_NAME2, similarProducts[0].Name);
+        Assert.areEqual(1, similarProducts.size());
+        Assert.areEqual(PRODUCT_NAME2, similarProducts[0].Name);
     }
 }

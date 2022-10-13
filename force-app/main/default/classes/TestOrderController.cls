@@ -24,6 +24,6 @@ public class TestOrderController {
         List<Order_Item__c> orderItems = OrderController.getOrderItems(
             testOrder.Id
         );
-        System.assertEquals(orderItems.size(), 1);
+        Assert.areEqual(1, orderItems.size());
     }
 }
