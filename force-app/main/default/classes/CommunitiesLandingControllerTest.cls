@@ -12,7 +12,7 @@ public with sharing class CommunitiesLandingControllerTest {
         if (pageRef != null) {
             String url = pageRef.getUrl();
             if (url != null) {
-                System.assertEquals(true, String.isEmpty(url));
+                Assert.isTrue(String.isEmpty(url));
             }
         }
     }
