@@ -13,7 +13,6 @@ package.xml
 **/profiles/**
 **/profilePasswordPolicy/**
 **/profileSessionSetting/**
-**/settings/**
 **/sharingRules/**
 
 # LWC configuration files
