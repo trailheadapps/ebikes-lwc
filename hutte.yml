@@ -1,0 +1,21 @@
+version: 1.0
+
+# Shell script to run when pushing the source code to the scratch orgs.
+# It's a great place to automate tasks like permission set assignments or data loading.
+push_script: |
+  sfdx force:source:push -f --loglevel fatal 1>/dev/null
+  sfdx force:user:permset:assign -n swagstore
+  sfdx force:user:permset:assign -n Walkthroughs
+  sfdx force:source:deploy -p post-deploy
+# Shell script to run when pulling the source code from the scratch org.
+# Adding the "| hutte_track_changes" to the end of the pull command is important in order for
+# hutte to track which metadata was changed.
+pull_script: |
+  sfdx force:source:pull --loglevel fatal --json -f | hutte_track_changes
+custom_scripts:
+  # This scripts will be displayed on the scratch org's page
+  scratch_org:
+    'Import seed data':
+      description: Import seed data into the scratch org
+      #run: sfdx force:data:tree:import -p ./data/sample-data-plan.json
+      run: echo 'y' | sfdx plugins:install texei-sfdx-plugin && sfdx texei:data:import --inputdir ./data-texei
