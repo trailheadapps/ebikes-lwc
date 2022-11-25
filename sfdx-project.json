@@ -2,9 +2,15 @@
     "packageDirectories": [
         {
             "path": "force-app",
-            "default": true
+            "default": true,
+            "package": "HutteSwagStore",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
         }
     ],
     "namespace": "",
-    "sourceApiVersion": "56.0"
+    "sourceApiVersion": "56.0",
+    "packageAliases": {
+        "HutteSwagStore": "0Ho7Q000000wkFwSAI"
+    }
 }
