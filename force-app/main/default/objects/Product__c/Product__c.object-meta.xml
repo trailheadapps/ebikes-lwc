@@ -56,12 +56,12 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <label>Product</label>
+    <label>Swag</label>
     <nameField>
         <label>Product Name</label>
         <type>Text</type>
     </nameField>
-    <pluralLabel>Products</pluralLabel>
+    <pluralLabel>Swag</pluralLabel>
     <searchLayouts />
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>

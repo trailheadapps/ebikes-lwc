@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
-        <application>EBikes</application>
+        <application>HutteSwagStore</application>
         <visible>true</visible>
     </applicationVisibilities>
     <fieldPermissions>
@@ -46,12 +46,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Product_Family__c.Description__c</field>
+        <field>Product__c.Color__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Product__c.Battery__c</field>
+        <field>Product_Family__c.Description__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -61,22 +61,7 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Product__c.Charger__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Product__c.Description__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Product__c.Fork__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Product__c.Front_Brakes__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -96,11 +81,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Product__c.Motor__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Product__c.Picture_URL__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -109,33 +89,8 @@
         <field>Product__c.Product_Family__c</field>
         <readable>true</readable>
     </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Product__c.Rear_Brakes__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Product__c.Frame_Color__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Product__c.Seat_Color__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Product__c.Handlebar_Color__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Product__c.Waterbottle_Color__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
-    <label>ebikes</label>
+    <label>swagstore</label>
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>

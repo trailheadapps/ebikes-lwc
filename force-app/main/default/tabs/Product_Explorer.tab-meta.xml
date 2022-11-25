@@ -2,6 +2,6 @@
 <CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Created by Lightning App Builder</description>
     <flexiPage>Product_Explorer</flexiPage>
-    <label>Product Explorer</label>
+    <label>Swag Explorer</label>
     <motif>Custom3: Sun</motif>
 </CustomTab>

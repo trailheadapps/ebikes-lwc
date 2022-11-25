@@ -17,7 +17,7 @@
         <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
         <startDate>2020-10-09</startDate>
         <stepNumber>1</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
+        <targetAppDeveloperName>HutteSwagStore</targetAppDeveloperName>
         <targetPageKey1>Product__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>
@@ -38,7 +38,7 @@
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
         <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
         <stepNumber>2</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
+        <targetAppDeveloperName>HutteSwagStore</targetAppDeveloperName>
         <targetPageKey1>Product__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>
@@ -58,7 +58,7 @@
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
         <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
         <stepNumber>3</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
+        <targetAppDeveloperName>HutteSwagStore</targetAppDeveloperName>
         <targetPageKey1>Product__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>

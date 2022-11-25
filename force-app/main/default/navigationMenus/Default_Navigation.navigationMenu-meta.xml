@@ -4,7 +4,7 @@
     <containerType>Network</containerType>
     <label>Default Navigation</label>
     <navigationMenuItem>
-        <label>Product Explorer</label>
+        <label>Swag Explorer</label>
         <position>1</position>
         <publiclyAvailable>true</publiclyAvailable>
         <target>/product-explorer</target>

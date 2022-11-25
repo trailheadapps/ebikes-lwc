@@ -30,7 +30,7 @@
         <name>right</name>
         <type>Region</type>
     </flexiPageRegions>
-    <masterLabel>Product Explorer</masterLabel>
+    <masterLabel>Swag Explorer</masterLabel>
     <template>
         <name>pageTemplate_2_7_3</name>
     </template>

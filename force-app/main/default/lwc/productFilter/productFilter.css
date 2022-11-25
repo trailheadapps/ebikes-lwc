@@ -6,3 +6,8 @@ section > h1 {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+:host {
+    --slds-c-icon-color-foreground: white;
+    --slds-c-icon-color-background: #8E84FF;
+}

@@ -1,5 +1,5 @@
 /**
- * This file holds end-to-end tests for the Product Explorer page.
+ * This file holds end-to-end tests for the Swag Explorer page.
  * We use UTAM and WebdriverIO to run UI tests.
  */
 import ProductFilter from '../../../pageObjects/productFilter';
@@ -55,10 +55,10 @@ describe('ProductExplorer', () => {
         // Wait for home page to load
         page = await utam.load(ProductExplorerPage);
 
-        // Click 'Product Explorer' in app navigation menu and wait for URL navigation
+        // Click 'Swag Explorer' in app navigation menu and wait for URL navigation
         const appNav = await page.getNavigationBar();
         const appNavBar = await appNav.getAppNavBar();
-        const navItem = await appNavBar.getNavItem('Product Explorer');
+        const navItem = await appNavBar.getNavItem('Swag Explorer');
         await navItem.clickAndWaitForUrl('lightning/n/Product_Explorer');
 
         // Wait for flexipage to load

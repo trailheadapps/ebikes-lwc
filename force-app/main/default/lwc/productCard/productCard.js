@@ -15,13 +15,7 @@ import PICTURE_URL_FIELD from '@salesforce/schema/Product__c.Picture_URL__c';
 import CATEGORY_FIELD from '@salesforce/schema/Product__c.Category__c';
 import LEVEL_FIELD from '@salesforce/schema/Product__c.Level__c';
 import MSRP_FIELD from '@salesforce/schema/Product__c.MSRP__c';
-import BATTERY_FIELD from '@salesforce/schema/Product__c.Battery__c';
-import CHARGER_FIELD from '@salesforce/schema/Product__c.Charger__c';
-import MOTOR_FIELD from '@salesforce/schema/Product__c.Motor__c';
 import MATERIAL_FIELD from '@salesforce/schema/Product__c.Material__c';
-import FOPK_FIELD from '@salesforce/schema/Product__c.Fork__c';
-import FRONT_BRAKES_FIELD from '@salesforce/schema/Product__c.Front_Brakes__c';
-import REAR_BRAKES_FIELD from '@salesforce/schema/Product__c.Rear_Brakes__c';
 
 /**
  * Component to display details of a Product__c.
@@ -31,13 +25,7 @@ export default class ProductCard extends NavigationMixin(LightningElement) {
     categoryField = CATEGORY_FIELD;
     levelField = LEVEL_FIELD;
     msrpField = MSRP_FIELD;
-    batteryField = BATTERY_FIELD;
-    chargerField = CHARGER_FIELD;
-    motorField = MOTOR_FIELD;
     materialField = MATERIAL_FIELD;
-    forkField = FOPK_FIELD;
-    frontBrakesField = FRONT_BRAKES_FIELD;
-    rearBrakesField = REAR_BRAKES_FIELD;
 
     // Id of Product__c to display
     recordId;

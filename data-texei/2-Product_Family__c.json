@@ -1,0 +1,16 @@
+{
+  "attributes": {
+    "type": "Product_Family__c"
+  },
+  "records": [
+    {
+      "attributes": {
+        "type": "Product_Family__c",
+        "referenceId": "ProductFamilyRef1"
+      },
+      "Name": "🇫🇷 French Touch Dreamin",
+      "Category__c": null,
+      "Description__c": null
+    }
+  ]
+}

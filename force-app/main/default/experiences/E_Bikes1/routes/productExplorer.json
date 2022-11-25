@@ -3,7 +3,7 @@
     "appPageId": "591ae89d-97d7-4f5d-b93f-ce618e5d48f1",
     "configurationTags": [],
     "id": "8a0ce10b-80be-4463-8a0b-81bf50a70be3",
-    "label": "Product Explorer",
+    "label": "Swag Explorer",
     "pageAccess": "UseParent",
     "routeType": "custom-product-explorer",
     "type": "route",

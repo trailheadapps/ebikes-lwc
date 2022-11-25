@@ -1,11 +1,11 @@
 import { LightningElement, api } from 'lwc';
 
 /** Static Resources. */
-import BIKE_ASSETS_URL from '@salesforce/resourceUrl/bike_assets';
+import SWAG_ASSETS_URL from '@salesforce/resourceUrl/swag_assets';
 
 export default class Placeholder extends LightningElement {
     @api message;
 
     /** Url for bike logo. */
-    logoUrl = `${BIKE_ASSETS_URL}/logo.svg`;
+    logoUrl = `${SWAG_ASSETS_URL}/bear_sunglasses.svg`;
 }
