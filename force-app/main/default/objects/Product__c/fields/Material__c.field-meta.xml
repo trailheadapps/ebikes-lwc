@@ -11,14 +11,19 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Aluminum</fullName>
+                <fullName>Metal</fullName>
                 <default>false</default>
-                <label>Aluminum</label>
+                <label>Metal</label>
             </value>
             <value>
-                <fullName>Carbon</fullName>
+                <fullName>Cotton</fullName>
                 <default>false</default>
-                <label>Carbon</label>
+                <label>Cotton</label>
+            </value>
+            <value>
+                <fullName>Enamel</fullName>
+                <default>false</default>
+                <label>Enamel</label>
             </value>
         </valueSetDefinition>
     </valueSet>

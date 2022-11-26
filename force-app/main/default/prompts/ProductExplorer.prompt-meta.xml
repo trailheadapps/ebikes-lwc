@@ -3,7 +3,7 @@
     <masterLabel>Swag Explorer</masterLabel>
     <promptVersions>
         <body
-        >The Swag Explorer lets you browse thought E-Bikes products.</body>
+        >The Swag Explorer lets you browse Hutte Swag</body>
         <delayDays>1</delayDays>
         <dismissButtonLabel>Close</dismissButtonLabel>
         <displayPosition>TopCenter</displayPosition>
@@ -19,7 +19,7 @@
         <targetPageKey1>Product_Explorer</targetPageKey1>
         <targetPageType>standard__navItemPage</targetPageType>
         <timesToDisplay>1</timesToDisplay>
-        <title>Welcome to E-Bikes Swag Explorer</title>
+        <title>Welcome to Swag Explorer</title>
         <userAccess>Everyone</userAccess>
         <userProfileAccess>Everyone</userProfileAccess>
         <versionNumber>1</versionNumber>
@@ -45,7 +45,7 @@
     </promptVersions>
     <promptVersions>
         <body
-        >E-Bikes products are shown in this paginated list.&lt;br/&gt;Click on one of the tiles to view product details.</body>
+        >Swag is shown in this paginated list.&lt;br/&gt;Click on one of the tiles to view product details.</body>
         <dismissButtonLabel>Close</dismissButtonLabel>
         <displayPosition>BottomCenter</displayPosition>
         <displayType>FloatingPanel</displayType>

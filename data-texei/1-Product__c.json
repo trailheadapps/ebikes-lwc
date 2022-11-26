@@ -12,9 +12,9 @@
       "Category__c": "Mountain",
       "Description__c": null,
       "Color__c": null,
-      "Level__c": "Racer",
+      "Level__c": "Ranger",
       "MSRP__c": 0,
-      "Material__c": "Aluminum",
+      "Material__c": "Metal",
       "Picture_URL__c": "https://lh3.googleusercontent.com/pw/AL9nZEWq43sAJrqLFAz64wS0cSAC_4QMF8fuowXj00S0safMuTaMcJSDSY1tY8i4T7x0q0a-d10QwzE0r3hXjj8n-MjSdrrjcddPtxA8K1DOcFRSq6RAHJrz7jFkOA2nQe8ovH4UR3i7X5hIdWTHW2Ru2T9h=w393-h380-no?authuser=0"
     },
     {
@@ -26,9 +26,9 @@
       "Category__c": "Mountain",
       "Description__c": null,
       "Color__c": null,
-      "Level__c": "Beginner",
+      "Level__c": "Scout",
       "MSRP__c": 0,
-      "Material__c": "Aluminum",
+      "Material__c": "Metal",
       "Picture_URL__c": "https://lh3.googleusercontent.com/pw/AL9nZEW4kSDydb6O6igL-BeDsxkV8kv6R4iSwxJSHo1Do4mBIHwatYOqpWTriZk-glRBESISy-CpmLrMRo6OLqqLQCNmdAnz3vetpBTsp23ZgnpF7uuMRDyEVwTZdnrLkeHhbIH2lJADfparcEAmrLIqGiaQ=w1061-h857-no?authuser=0"
     },
     {
@@ -40,10 +40,38 @@
       "Category__c": "Mountain",
       "Description__c": null,
       "Color__c": null,
-      "Level__c": "Beginner",
+      "Level__c": "Scout",
       "MSRP__c": 0,
-      "Material__c": "Aluminum",
+      "Material__c": "Metal",
       "Picture_URL__c": "https://lh3.googleusercontent.com/pw/AL9nZEXZcItE-Fb7tUODFPcHXCkNuUvQTvW0sjYYqta0VfvZ-Tsc-BSk-NpUU4gcjUi-JJpUkxvfiFb2ZmpPvujFL3i4VxKidbuxqbc5j5Ab8L173ENTln8fg4UnkFVb3Ud54wC43pNI0Qo_3_wE5GHBUzLp=w1001-h857-no?authuser=0"
+    },
+    {
+      "attributes": {
+        "type": "Product__c",
+        "referenceId": "ProductRef4"
+      },
+      "Name": "Beanie",
+      "Category__c": "Mountain",
+      "Description__c": null,
+      "Color__c": null,
+      "Level__c": "Scout",
+      "MSRP__c": 0,
+      "Material__c": "Cotton",
+      "Picture_URL__c": "https://lh3.googleusercontent.com/pw/AL9nZEVVfjYOAJSYf8iLXBN16VgvWdxeGfm7e46mBH6kD5P6k5sAje629sA8ulvp-XcoSzXdtgXtVFIh0gxHwLj88FXDdo9Ew6s0glVcD5CsR1MifL2k27PBhG00dBV2nuJtVD_BZTHTM6QdG7ojlXkFqUU7=w890-h656-no?authuser=0"
+    },
+    {
+      "attributes": {
+        "type": "Product__c",
+        "referenceId": "ProductRef5"
+      },
+      "Name": "Enamel Mug",
+      "Category__c": "Mountain",
+      "Description__c": null,
+      "Color__c": null,
+      "Level__c": "Scout",
+      "MSRP__c": 0,
+      "Material__c": "Enamel",
+      "Picture_URL__c": "https://lh3.googleusercontent.com/pw/AL9nZEUWTBINhWC-ZfHqoRc796ceQ2grW5OhMaGFEraaekg-eUcJhDap2ipGeXb1lMSvBtwKJ3yn9jterUtMpcqsbgRCx9X2Ti5ZDuGOaGAVz2PjpBMPkUiG6AdpaeT-dDgh2_nui3LJ69aWwuJV8Lv_uXmi=w670-h543-no?authuser=0"
     }
   ]
 }

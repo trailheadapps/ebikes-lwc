@@ -9,7 +9,7 @@
             "MSRP__c": 7000,
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
-            "Level__c": "Racer",
+            "Level__c": "Ranger",
             "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox1.jpg",
             "Material__c": "Carbon"
         },
@@ -19,7 +19,7 @@
             "MSRP__c": 7200,
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
-            "Level__c": "Racer",
+            "Level__c": "Ranger",
             "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox2.jpg",
             "Material__c": "Carbon"
         },
@@ -29,7 +29,7 @@
             "MSRP__c": 7400,
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
-            "Level__c": "Racer",
+            "Level__c": "Ranger",
             "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox3.jpg",
             "Material__c": "Carbon"
         },
@@ -39,7 +39,7 @@
             "MSRP__c": 7800,
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
-            "Level__c": "Racer",
+            "Level__c": "Ranger",
             "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox4.jpg",
             "Material__c": "Carbon"
         },
@@ -49,9 +49,9 @@
             "MSRP__c": 4000,
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
-            "Level__c": "Enthusiast",
+            "Level__c": "Adventurer",
             "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax1.jpg",
-            "Material__c": "Aluminum"
+            "Material__c": "Metal"
         },
         {
             "Id": "a039A000000lqLgQAI",
@@ -59,9 +59,9 @@
             "MSRP__c": 4300,
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
-            "Level__c": "Enthusiast",
+            "Level__c": "Adventurer",
             "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax2.jpg",
-            "Material__c": "Aluminum"
+            "Material__c": "Metal"
         },
         {
             "Id": "a039A000000lqLhQAI",
@@ -69,9 +69,9 @@
             "MSRP__c": 4600,
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
-            "Level__c": "Enthusiast",
+            "Level__c": "Adventurer",
             "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax3.jpg",
-            "Material__c": "Aluminum"
+            "Material__c": "Metal"
         },
         {
             "Id": "a039A000000lqLiQAI",
@@ -79,9 +79,9 @@
             "MSRP__c": 4900,
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
-            "Level__c": "Enthusiast",
+            "Level__c": "Adventurer",
             "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax4.jpg",
-            "Material__c": "Aluminum"
+            "Material__c": "Metal"
         },
         {
             "Id": "a039A000000lqLXQAY",
@@ -89,9 +89,9 @@
             "MSRP__c": 2500,
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Commuter",
-            "Level__c": "Beginner",
+            "Level__c": "Scout",
             "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex1.jpg",
-            "Material__c": "Aluminum"
+            "Material__c": "Metal"
         }
     ]
 }

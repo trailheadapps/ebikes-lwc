@@ -11,19 +11,39 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Beginner</fullName>
+                <fullName>Scout</fullName>
                 <default>false</default>
-                <label>Beginner</label>
+                <label>Scout</label>
             </value>
             <value>
-                <fullName>Enthusiast</fullName>
+                <fullName>Hiker</fullName>
                 <default>false</default>
-                <label>Enthusiast</label>
+                <label>Hiker</label>
             </value>
             <value>
-                <fullName>Racer</fullName>
+                <fullName>Adventurer</fullName>
                 <default>false</default>
-                <label>Racer</label>
+                <label>Adventurer</label>
+            </value>
+            <value>
+                <fullName>Explorer</fullName>
+                <default>false</default>
+                <label>Explorer</label>
+            </value>
+            <value>
+                <fullName>Adventurer</fullName>
+                <default>false</default>
+                <label>Adventurer</label>
+            </value>
+            <value>
+                <fullName>Mountaineer</fullName>
+                <default>false</default>
+                <label>Mountaineer</label>
+            </value>
+            <value>
+                <fullName>Ranger</fullName>
+                <default>false</default>
+                <label>Ranger</label>
             </value>
         </valueSetDefinition>
     </valueSet>
