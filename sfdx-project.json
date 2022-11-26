@@ -11,6 +11,7 @@
     "namespace": "",
     "sourceApiVersion": "56.0",
     "packageAliases": {
-        "HutteSwagStore": "0Ho7Q000000wkFwSAI"
+        "HutteSwagStore": "0Ho7Q000000wkFwSAI",
+        "HutteSwagStore@0.1.0-2": "04t7Q000000tw2dQAA"
     }
 }

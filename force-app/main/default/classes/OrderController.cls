@@ -13,7 +13,7 @@ public with sharing class OrderController {
                 Product__r.Picture_URL__c
             FROM Order_Item__c
             WHERE Order__c = :orderId
-            WITH SECURITY_ENFORCED
+            //WITH SECURITY_ENFORCED
         ];
     }
 }
