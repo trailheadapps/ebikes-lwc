@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <SlackApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
     <appKey>A04C4U64F5Z</appKey>
-    <appToken>{APP_TOKEN}</appToken>
-    <botScopes>
-        chat:write,chat:write.public,incoming-webhook,channels:history,groups:history,groups:write,channels:read,reactions:read,commands
-    </botScopes>
-    <clientKey>4412897733795.4412958151203</clientKey>
-    <clientSecret>{APP_SECRET}</clientSecret>
+    <appToken>*</appToken>
+    <botScopes
+    >chat:write,chat:write.public,incoming-webhook,channels:history,groups:history,groups:write,channels:read,reactions:read,commands</botScopes>
+    <clientKey>*</clientKey>
+    <clientSecret>*</clientSecret>
     <isProtected>false</isProtected>
     <masterLabel>Ebikes Slack App</masterLabel>
-    <signingSecret>{APP_SIGNING_SECRET}</signingSecret>
-    <userScopes>
-        im:read,im:write,channels:read,channels:write,chat:write,groups:read,mpim:read,mpim:write,users:read,groups:write
-    </userScopes>
+    <signingSecret>*</signingSecret>
+    <userScopes
+    >im:read,im:write,channels:read,channels:write,chat:write,groups:read,mpim:read,mpim:write,users:read,groups:write</userScopes>
 </SlackApp>
