@@ -1,0 +1,13 @@
+description: Hello World Example App
+commands:
+  /apex-hello:
+    action:
+      definition: apex__action__SayHello
+    title: Say Hello
+    description: A command to say Hello
+globalShortcuts:
+    get-latest-inventory:
+        action:
+            definition: apex__action__ActionDispatcher_GetInventory
+        title: Show current inventory
+        description: Use a shortcut to return a modal showing latest inventory

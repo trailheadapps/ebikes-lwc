@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ViewDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <isProtected>false</isProtected>
+    <masterLabel>Hello World Example</masterLabel>
+    <targetType>slack</targetType>
+</ViewDefinition>

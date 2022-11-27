@@ -1,0 +1,14 @@
+description: "Say Hello Example"
+schema:
+  properties:
+    name:
+      type: string
+      required: true
+components:
+  - definition: modal
+    properties:
+      title: "Hello {!view.properties.name}"
+    components:
+      - definition: section
+        properties:
+          text: "You did it!"

@@ -1,0 +1,29 @@
+description: "This simple view contains an Apex single custom object data provider"
+dataproviders:
+  inventories:
+    definition: "apex__DataProvider_Inventory.getInventoryData"
+components:
+  - definition: modal
+    properties:
+      title: "Current Inventory"
+      closeLabel: "Cancel"
+    components:
+      - definition: iteration
+        properties:
+          foreach: "{!inventories}"
+          foritem: "inventory"
+        components:
+          - definition: section
+            properties:
+              fields:
+                - text: "*Bike Name*: {!inventory.Name}"
+                  type: "mrkdwn"
+                - text: "*MSRP*: ${!inventory.MSRP__c}"
+                  type: "mrkdwn"
+                - text: "*Stock on Hand*: {!inventory.Stock_on_Hand__c}"
+                  type: "mrkdwn"
+            components:
+             - definition: image
+               properties:
+                url: "{!inventory.Slack_Image_URL__c}"
+                altText: "{!inventory.Name}"
