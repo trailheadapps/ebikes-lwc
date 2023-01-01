@@ -60,7 +60,7 @@
         "prettier": "^2.7.1",
         "prettier-plugin-apex": "^1.12.0",
         "salesforce-pageobjects": "^2.2.0",
-        "utam": "^1.2.1",
+        "utam": "^1.2.2",
         "wdio-chromedriver-service": "^7.3.2",
         "wdio-utam-service": "^1.2.1"
     },
