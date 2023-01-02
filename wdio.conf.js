@@ -28,7 +28,18 @@ exports.config = {
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
     automationProtocol: 'webdriver',
-    services: ['chromedriver', [UtamWdioService, { implicitTimeout: 0 }]],
+    services: [
+        'chromedriver',
+        [
+            UtamWdioService,
+            {
+                implicitTimeout: 0,
+                injectionConfigs: [
+                    'salesforce-pageobjects/ui-utam-pageobjects.config.json'
+                ]
+            }
+        ]
+    ],
     framework: 'jasmine',
     reporters: ['spec'],
     jasmineNodeOpts: {
