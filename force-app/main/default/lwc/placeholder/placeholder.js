@@ -7,5 +7,5 @@ export default class Placeholder extends LightningElement {
     @api message;
 
     /** Url for bike logo. */
-    logoUrl = `${BIKE_ASSETS_URL}/logo.svg`;
+    logoUrl = `${BIKE_ASSETS_URL}/logo.png`;
 }
