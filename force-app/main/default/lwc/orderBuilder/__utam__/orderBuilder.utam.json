@@ -1,0 +1,65 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "totalItems",
+                "selector": {
+                    "css": "header .right"
+                }
+            },
+            {
+                "name": "dropZone",
+                "selector": {
+                    "css": ".drop-zone"
+                },
+                "public": true
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "getTotalItemsText",
+            "compose": [
+                {
+                    "element": "totalItems",
+                    "apply": "getText",
+                    "returnType": "string"
+                }
+            ]
+        },
+        {
+            "name": "waitForTotalItemsText",
+            "args": [
+                {
+                    "name": "stringValue",
+                    "type": "string"
+                }
+            ],
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "totalItems",
+                                    "apply": "getText",
+                                    "matcher": {
+                                        "type": "stringEquals",
+                                        "args": [
+                                            {
+                                                "name": "stringValue",
+                                                "type": "argumentReference"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

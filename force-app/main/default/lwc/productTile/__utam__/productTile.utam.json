@@ -13,6 +13,14 @@
                     "css": "a"
                 },
                 "type": "clickable"
+            },
+            {
+                "name": "draggable",
+                "selector": {
+                    "css": "div[draggable]"
+                },
+                "type": ["clickable", "draggable"],
+                "public": true
             }
         ]
     },
