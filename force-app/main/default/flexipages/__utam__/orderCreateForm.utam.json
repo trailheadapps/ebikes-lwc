@@ -1,0 +1,34 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "section",
+                "selector": {
+                    "css": "flexipage-field-section2"
+                },
+                "shadow": {
+                    "elements": [
+                        {
+                            "name": "column",
+                            "selector": {
+                                "css": "flexipage-column2"
+                            },
+                            "shadow": {
+                                "elements": [
+                                    {
+                                        "name": "accountField",
+                                        "type": "salesforce-pageobjects/flexipage/pageObjects/field",
+                                        "selector": {
+                                            "css": "flexipage-field[data-field-id='RecordAccount_cField']"
+                                        },
+                                        "public": true
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

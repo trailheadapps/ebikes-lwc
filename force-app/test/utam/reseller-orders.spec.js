@@ -18,6 +18,14 @@ import OrderCreateForm from '../../../pageObjects/orderCreateForm';
 
 const RECORD_PAGE_URL = /lightning\/r\/Order__c\/[a-z0-9]{18}\/view/i;
 
+async function sleep(duration) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, duration);
+    });
+}
+
 describe('ResellerOrders', () => {
     let domDocument;
 
@@ -46,12 +54,40 @@ describe('ResellerOrders', () => {
         //await browser.debug();
 
         // Get create record modal
+        /*
         const recActionWrapper = await utam.load(RecordActionWrapper);
         const recFormTemplate =
             await recActionWrapper.waitForRecordHomeSingleColNoHeaderTemplateDesktop2();
         let flexipageComponent = await recFormTemplate.getComponent2(
             'flexipage_fieldSection'
         );
+        */
+        const columns = await (
+            await (
+                await (
+                    await (
+                        await utam.load(RecordActionWrapper)
+                    ).waitForRecordHomeSingleColNoHeaderTemplateDesktop2()
+                ).getComponent2('flexipage_fieldSection')
+            ).getContent(FieldSection2)
+        ).getContent(Column2);
+
+        console.log(`
+        COLS: ${columns.length}
+        `);
+
+        await sleep(4000);
+
+        await (
+            await (
+                await (
+                    await (
+                        await columns[0].getFieldByID('RecordAccount_cField')
+                    ).getRecordFieldContent(RecordField)
+                ).getFieldContentEditMode(RecordLayoutLookup)
+            ).getLookup()
+        ).getBaseCombobox();
+
         /*
         const createForm = await flexipageComponent.getContent(OrderCreateForm);
         
@@ -61,7 +97,7 @@ describe('ResellerOrders', () => {
         await createForm.getAccountField();
         
         //const accountField = await createForm.getAccountField();
-        */
+        
 
         const section = await flexipageComponent.getContent(FieldSection2);
         const columns = await section.getContent(Column2);
@@ -76,6 +112,8 @@ describe('ResellerOrders', () => {
         const recFieldContent = await recField.getRecordFieldContent(
             RecordField
         );
+        */
+
         /*
         //const recField = await genericComponent.getContent(RecordField);
         const recLookupLayout = await recFieldContent.getFieldContentEditMode(
