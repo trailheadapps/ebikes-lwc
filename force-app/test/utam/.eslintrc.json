@@ -1,0 +1,18 @@
+{
+    "extends": "eslint:recommended",
+    "plugins": ["jasmine"],
+    "env": {
+        "node": true,
+        "es2021": true,
+        "jasmine": true
+    },
+    "globals": {
+        "utam": "readonly",
+        "browser": "readonly"
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": "latest"
+    },
+    "rules": {}
+}

@@ -1,0 +1,14 @@
+{
+    "plugins": ["jest"],
+    "extends": "eslint:recommended",
+    "env": {
+        "node": true,
+        "es2021": true,
+        "jest/globals": true
+    },
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": "latest"
+    },
+    "rules": {}
+}
