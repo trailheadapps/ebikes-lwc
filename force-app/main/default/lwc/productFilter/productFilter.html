@@ -18,7 +18,7 @@
             </section>
             <section>
                 <h1>Category</h1>
-                <template if:true={categories.data}>
+                <template lwc:if={categories.data}>
                     <template
                         for:each={categories.data.values}
                         for:item="category"
@@ -34,7 +34,7 @@
                         ></lightning-input>
                     </template>
                 </template>
-                <template if:true={categories.error}>
+                <template lwc:if={categories.error}>
                     <c-error-panel
                         type="inlineMessage"
                         friendly-message="Error loading categories"
@@ -44,7 +44,7 @@
             </section>
             <section>
                 <h1>Material</h1>
-                <template if:true={materials.data}>
+                <template lwc:if={materials.data}>
                     <template
                         for:each={materials.data.values}
                         for:item="material"
@@ -60,7 +60,7 @@
                         ></lightning-input>
                     </template>
                 </template>
-                <template if:true={materials.error}>
+                <template lwc:if={materials.error}>
                     <c-error-panel
                         type="inlineMessage"
                         friendly-message="Error loading materials"
@@ -70,7 +70,7 @@
             </section>
             <section>
                 <h1>Level</h1>
-                <template if:true={levels.data}>
+                <template lwc:if={levels.data}>
                     <template for:each={levels.data.values} for:item="level">
                         <lightning-input
                             key={level.value}
@@ -83,7 +83,7 @@
                         ></lightning-input>
                     </template>
                 </template>
-                <template if:true={levels.error}>
+                <template lwc:if={levels.error}>
                     <c-error-panel
                         type="inlineMessage"
                         friendly-message="Error loading levels"

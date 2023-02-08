@@ -27,4 +27,8 @@ export default class SimilarProducts extends LightningElement {
         );
         return errors.length ? errors : undefined;
     }
+
+    get hasNoSimilarProducts() {
+        return this.similarProducts.data.length === 0;
+    }
 }
