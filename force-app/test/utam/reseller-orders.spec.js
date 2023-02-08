@@ -18,14 +18,6 @@ import OrderCreateForm from '../../../pageObjects/orderCreateForm';
 
 const RECORD_PAGE_URL = /lightning\/r\/Order__c\/[a-z0-9]{18}\/view/i;
 
-async function sleep(duration) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve();
-        }, duration);
-    });
-}
-
 describe('ResellerOrders', () => {
     let domDocument;
 
@@ -75,8 +67,6 @@ describe('ResellerOrders', () => {
         console.log(`
         COLS: ${columns.length}
         `);
-
-        await sleep(4000);
 
         await (
             await (
