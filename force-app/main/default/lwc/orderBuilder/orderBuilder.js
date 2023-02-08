@@ -207,4 +207,8 @@ export default class OrderBuilder extends LightningElement {
                 );
             });
     }
+
+    get hasNoOrderItems() {
+        return this.orderItems.length === 0;
+    }
 }

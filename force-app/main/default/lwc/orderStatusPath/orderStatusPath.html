@@ -1,13 +1,13 @@
 <template>
     <article class="slds-card">
         <div class="slds-card__body slds-card__body_inner">
-            <template if:true={errorMessage}>
+            <template lwc:if={errorMessage}>
                 <div class="slds-text-heading_medium slds-text-color_error">
                     {errorMessage}
                 </div>
             </template>
 
-            <template if:false={errorMessage}>
+            <template lwc:else>
                 <div class="slds-path">
                     <div class="slds-grid slds-path__track">
                         <div class="slds-grid slds-path__scroller-container">

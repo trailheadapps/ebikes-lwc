@@ -1,6 +1,6 @@
 <template>
     <div class="content">
-        <template if:true={orderItems}>
+        <template lwc:if={orderItems}>
             <header class="slds-text-heading_small">
                 <div>
                     Order Total:
@@ -28,14 +28,14 @@
                     >
                     </c-order-item-tile>
                 </template>
-                <template if:false={orderItems.length}>
+                <template lwc:if={hasNoOrderItems}>
                     <c-placeholder
                         message="Drag products here to add items to the order"
                     ></c-placeholder>
                 </template>
             </div>
         </template>
-        <template if:true={error}>
+        <template lwc:if={error}>
             <c-error-panel errors={error}></c-error-panel>
         </template>
     </div>

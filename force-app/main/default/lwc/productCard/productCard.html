@@ -1,6 +1,6 @@
 <template>
     <lightning-card icon-name="standard:apex_plugin">
-        <template if:true={recordId}>
+        <template lwc:if={recordId}>
             <span slot="title">{productName}</span>
             <lightning-button-icon
                 icon-name="utility:expand_alt"
@@ -10,7 +10,7 @@
             >
             <div class="slds-var-m-horizontal_medium">
                 <img
-                    if:true={productPictureUrl}
+                    lwc:if={productPictureUrl}
                     src={productPictureUrl}
                     class="product"
                     alt="Product picture"
@@ -74,7 +74,7 @@
             </div>
         </template>
 
-        <template if:false={recordId}>
+        <template lwc:else>
             <c-placeholder
                 message="Select a product to see details"
             ></c-placeholder>
