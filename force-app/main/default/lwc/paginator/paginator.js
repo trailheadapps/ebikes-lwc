@@ -22,12 +22,12 @@ export default class Paginator extends LightningElement {
         return this.totalItemCount === 0 ? 0 : this.pageNumber;
     }
 
-    get isFirstPage() {
-        return this.pageNumber === 1;
+    get isNotFirstPage() {
+        return this.pageNumber !== 1;
     }
 
-    get isLastPage() {
-        return this.pageNumber >= this.totalPages;
+    get isNotLastPage() {
+        return this.pageNumber !== this.totalPages;
     }
 
     get totalPages() {
