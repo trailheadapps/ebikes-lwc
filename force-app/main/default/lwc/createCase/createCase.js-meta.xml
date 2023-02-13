@@ -3,7 +3,7 @@
     xmlns="http://soap.sforce.com/2006/04/metadata"
     fqn="createCase"
 >
-    <apiVersion>56.0</apiVersion>
+    <apiVersion>57.0</apiVersion>
     <isExposed>true</isExposed>
     <masterLabel>Create Case</masterLabel>
     <targets>

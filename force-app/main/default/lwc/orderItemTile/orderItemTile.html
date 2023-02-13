@@ -62,7 +62,7 @@
                 size="large"
                 class="delete-button"
             ></lightning-button-icon>
-            <template if:true={isModified}>
+            <template lwc:if={isModified}>
                 <lightning-button-icon
                     onclick={saveOrderItem}
                     icon-name="utility:check"

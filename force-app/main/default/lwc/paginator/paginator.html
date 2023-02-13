@@ -4,7 +4,7 @@
     >
         <div class="slds-col slds-size_2-of-12">
             <lightning-button-icon
-                if:false={isFirstPage}
+                lwc:if={isNotFirstPage}
                 class="previous"
                 icon-name="utility:chevronleft"
                 onclick={handlePrevious}
@@ -16,7 +16,7 @@
         </div>
         <div class="slds-col slds-size_2-of-12 slds-text-align_right">
             <lightning-button-icon
-                if:false={isLastPage}
+                lwc:if={isNotLastPage}
                 class="next"
                 icon-name="utility:chevronright"
                 onclick={handleNext}
