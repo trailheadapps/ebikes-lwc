@@ -23,10 +23,10 @@
     <referrerPolicyOriginWhenCrossOrigin
     >true</referrerPolicyOriginWhenCrossOrigin>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>test-yypfaowt42yo@example.com</siteAdmin>
+    <siteAdmin>sudha.splunk@resourceful-narwhal-ewbwna.com</siteAdmin>
     <siteGuestRecordDefaultOwner
-    >test-yypfaowt42yo@example.com</siteGuestRecordDefaultOwner>
+    >sudha.splunk@resourceful-narwhal-ewbwna.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>efficiency-connect-1801-dev--1701a0bb7eb</subdomain>
+    <subdomain>resourceful-narwhal-ewbwna-dev-ed</subdomain>
     <urlPathPrefix>ebikes</urlPathPrefix>
 </CustomSite>
