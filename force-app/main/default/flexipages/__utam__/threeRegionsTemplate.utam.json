@@ -67,7 +67,7 @@
                                                             {
                                                                 "name": "leftRegion",
                                                                 "selector": {
-                                                                    "css": "forcegenerated-flexipageregion_product_explorer_left__js"
+                                                                    "css": ".left>.forcegenerated-flexipage-region"
                                                                 },
                                                                 "shadow": {
                                                                     "elements": [
@@ -85,7 +85,7 @@
                                                             {
                                                                 "name": "centerRegion",
                                                                 "selector": {
-                                                                    "css": "forcegenerated-flexipageregion_product_explorer_center__js"
+                                                                    "css": ".center>.forcegenerated-flexipage-region"
                                                                 },
                                                                 "shadow": {
                                                                     "elements": [
@@ -103,7 +103,7 @@
                                                             {
                                                                 "name": "rightRegion",
                                                                 "selector": {
-                                                                    "css": "forcegenerated-flexipageregion_product_explorer_right__js"
+                                                                    "css": ".right>.forcegenerated-flexipage-region"
                                                                 },
                                                                 "shadow": {
                                                                     "elements": [

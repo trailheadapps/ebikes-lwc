@@ -7,21 +7,9 @@
     <aura:attribute name="center" type="Aura.Component[]" access="global" />
     <aura:attribute name="right" type="Aura.Component[]" access="global" />
 
-    <div aura:id="container">
-        <lightning:layout>
-            <lightning:layoutItem aura:id="leftColumn" size="2">
-                {!v.left}
-            </lightning:layoutItem>
-            <lightning:layoutItem
-                aura:id="centerColumn"
-                size="7"
-                class="center"
-            >
-                {!v.center}
-            </lightning:layoutItem>
-            <lightning:layoutItem aura:id="rightColumn" size="3">
-                {!v.right}
-            </lightning:layoutItem>
-        </lightning:layout>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_2-of-12 left">{!v.left}</div>
+        <div class="slds-col slds-size_7-of-12 center">{!v.center}</div>
+        <div class="slds-col slds-size_3-of-12 right">{!v.right}</div>
     </div>
 </aura:component>

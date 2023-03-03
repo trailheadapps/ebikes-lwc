@@ -1,6 +1,5 @@
 require('dotenv').config();
 
-const path = require('path');
 const { UtamWdioService } = require('wdio-utam-service');
 // use prefix 'DEBUG=true' to run test in debug mode
 const { DEBUG } = process.env;
