@@ -15,9 +15,7 @@ const SELECTION_EMPTY = 'Select a product to see details';
 const RECORD_PAGE_URL = /lightning\/r\/Product__c\/[a-z0-9]{18}\/view/i;
 
 describe('ProductExplorer', () => {
-    let page;
     let domDocument;
-    let productFilter, productTileList, productCard;
 
     beforeAll(async () => {
         domDocument = await logInSalesforce();
@@ -25,7 +23,7 @@ describe('ProductExplorer', () => {
 
     it('displays, filters and selects product from list', async () => {
         // Wait for home page to load
-        page = await utam.load(ProductExplorerPage);
+        const page = await utam.load(ProductExplorerPage);
 
         // Click 'Product Explorer' in app navigation menu and wait for URL navigation
         const appNav = await page.getAppNav();
@@ -38,11 +36,13 @@ describe('ProductExplorer', () => {
 
         // Get page components from page template regions
         const leftComponent = await page.getLeftComponent();
-        productFilter = await leftComponent.getContent(ProductFilter);
+        const productFilter = await leftComponent.getContent(ProductFilter);
         const centerComponent = await page.getCenterComponent();
-        productTileList = await centerComponent.getContent(ProductTileList);
+        const productTileList = await centerComponent.getContent(
+            ProductTileList
+        );
         const rightComponent = await page.getRightComponent();
-        productCard = await rightComponent.getContent(ProductCard);
+        const productCard = await rightComponent.getContent(ProductCard);
 
         // Check default pagination info in product tile list
         const pageInfo = await productTileList.getPaginationInfo();
