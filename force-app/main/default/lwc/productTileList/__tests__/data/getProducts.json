@@ -10,7 +10,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
             "Level__c": "Racer",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox1.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/dynamox1.jpg",
             "Material__c": "Carbon"
         },
         {
@@ -20,7 +20,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
             "Level__c": "Racer",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox2.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/dynamox2.jpg",
             "Material__c": "Carbon"
         },
         {
@@ -30,7 +30,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
             "Level__c": "Racer",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox3.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/dynamox3.jpg",
             "Material__c": "Carbon"
         },
         {
@@ -40,7 +40,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
             "Level__c": "Racer",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox4.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/dynamox4.jpg",
             "Material__c": "Carbon"
         },
         {
@@ -50,7 +50,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
             "Level__c": "Enthusiast",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax1.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/electrax1.jpg",
             "Material__c": "Aluminum"
         },
         {
@@ -60,7 +60,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
             "Level__c": "Enthusiast",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax2.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/electrax2.jpg",
             "Material__c": "Aluminum"
         },
         {
@@ -70,7 +70,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
             "Level__c": "Enthusiast",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax3.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/electrax3.jpg",
             "Material__c": "Aluminum"
         },
         {
@@ -80,7 +80,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Mountain",
             "Level__c": "Enthusiast",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/electrax4.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/electrax4.jpg",
             "Material__c": "Aluminum"
         },
         {
@@ -90,7 +90,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "Category__c": "Commuter",
             "Level__c": "Beginner",
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/fusex1.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/fusex1.jpg",
             "Material__c": "Aluminum"
         }
     ]

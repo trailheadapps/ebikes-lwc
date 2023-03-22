@@ -9,7 +9,7 @@
         "Product__r": {
             "Name": "DYNAMO X1",
             "MSRP__c": 7000,
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox1.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/dynamox1.jpg",
             "Id": "a033B00000381hNQAQ",
             "$serId$": 343
         },
@@ -25,7 +25,7 @@
         "Product__r": {
             "Name": "DYNAMO X2",
             "MSRP__c": 7200,
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox2.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/dynamox2.jpg",
             "Id": "a033B00000381hOQAQ",
             "$serId$": 345
         },
@@ -41,7 +41,7 @@
         "Product__r": {
             "Name": "DYNAMO X3",
             "MSRP__c": 7400,
-            "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/dynamox3.jpg",
+            "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/dynamox3.jpg",
             "Id": "a033B00000381hPQAQ",
             "$serId$": 347
         },

@@ -6,7 +6,7 @@
         "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "Category__c": "Commuter",
         "Level__c": "Beginner",
-        "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx1.jpg",
+        "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/voltx1.jpg",
         "Material__c": "Aluminum",
         "$serId$": 1602
     },
@@ -17,7 +17,7 @@
         "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "Category__c": "Commuter",
         "Level__c": "Beginner",
-        "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx2.jpg",
+        "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/voltx2.jpg",
         "Material__c": "Aluminum",
         "$serId$": 1603
     },
@@ -28,7 +28,7 @@
         "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "Category__c": "Commuter",
         "Level__c": "Beginner",
-        "Picture_URL__c": "https://s3-us-west-1.amazonaws.com/sfdc-demo/ebikes/voltx3.jpg",
+        "Picture_URL__c": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/voltx3.jpg",
         "Material__c": "Aluminum",
         "$serId$": 1604
     }
