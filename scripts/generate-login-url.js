@@ -10,7 +10,7 @@ const DOTENV_FILEPATH = join(__dirname, '../.env');
  */
 async function getScratchOrgLoginUrl() {
     try {
-        const getUrlCmd = 'sfdx force:org:open -p /lightning -r --json';
+        const getUrlCmd = 'sf org open -p /lightning -r --json';
         console.log('Executing the following command: ', getUrlCmd);
         const { stderr, stdout } = await exec(getUrlCmd, { cwd: __dirname });
         if (stderr) throw new Error(stderr);
