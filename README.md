@@ -42,7 +42,7 @@ E-Bikes is a sample application that demonstrates how to build applications with
 1. If you haven't already done so, authorize your hub org and provide it with an alias (**myhuborg** in the command below):
 
     ```
-    sfdx auth:web:login -d -a myhuborg
+    sf org login web -d -a myhuborg
     ```
 
 1. Clone the repository:
@@ -55,49 +55,49 @@ E-Bikes is a sample application that demonstrates how to build applications with
 1. Create a scratch org and provide it with an alias (**ebikes** in the command below):
 
     ```
-    sfdx force:org:create -s -f config/project-scratch-def.json -a ebikes
+    sf org create scratch -d -f config/project-scratch-def.json -a ebikes
     ```
 
 1. Push the app to your scratch org:
 
     ```
-    sfdx force:source:push
+    sf project deploy start
     ```
 
 1. Assign the **ebikes** permission set to the default user:
 
     ```
-    sfdx force:user:permset:assign -n ebikes
+    sf org assign permset -n ebikes
     ```
 
 1. Assign the **Walkthroughs** permission set to the default user:
 
     ```
-    sfdx force:user:permset:assign -n Walkthroughs
+    sf org assign permset -n Walkthroughs
     ```
 
 1. Import sample data:
 
     ```
-    sfdx force:data:tree:import -p ./data/sample-data-plan.json
+    sf data tree import -p ./data/sample-data-plan.json
     ```
 
 1. Publish the Experience Cloud site:
 
     ```
-    sfdx force:community:publish -n E-Bikes
+    sf community publish -n E-Bikes
     ```
 
 1. Deploy metadata for the Experience Cloud guest user profile:
 
     ```
-    sfdx force:mdapi:deploy -d guest-profile-metadata -w 10
+    sf project deploy start --metadata-dir=guest-profile-metadata -w 10
     ```
 
 1. Open the scratch org:
 
     ```
-    sfdx force:org:open
+    sf org open
     ```
 
 1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
@@ -121,7 +121,7 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
 1. Authorize your Trailhead Playground or Developer org and provide it with an alias (**mydevorg** in the command below):
 
     ```
-    sfdx auth:web:login -s -a mydevorg
+    sf org login web -s -a mydevorg
     ```
 
 1. Enable Experiences with the following steps:
@@ -155,37 +155,37 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     1. Run this command in a terminal to deploy the app.
 
         ```
-        sfdx force:source:deploy -p force-app
+        sf project deploy start -d force-app
         ```
 
     1. Assign the **ebikes** permission set to the default user.
 
         ```
-        sfdx force:user:permset:assign -n ebikes
+        sf org assign permset -n ebikes
         ```
 
     1. Import some sample data.
 
         ```
-        sfdx force:data:tree:import -p ./data/sample-data-plan.json
+        sf data tree import -p ./data/sample-data-plan.json
         ```
 
     1. Publish the Experience Cloud site.
 
         ```
-        sfdx force:community:publish -n E-Bikes
+        sf community publish -n E-Bikes
         ```
 
     1. Deploy metadata for the Experience Cloud guest user profile:
 
         ```
-        sfdx force:mdapi:deploy -d guest-profile-metadata -w 10
+        sf project deploy start --metadata-dir=guest-profile-metadata -w 10
         ```
 
     1. If your org isn't already open, open it now:
 
         ```
-        sfdx force:org:open
+        sf org open
         ```
 
     1. In **Setup**, under **Themes and Branding**, activate the **Lightning Lite** theme.
@@ -250,7 +250,7 @@ Follow these steps to run the UI tests manually:
 
 1. Make sure that the Salesforce CLI is connected to an active org by running:
     ```sh
-    sfdx force:org:open
+    sf org open
     ```
 1. Compile the UTAM page objects with this command:
     ```sh

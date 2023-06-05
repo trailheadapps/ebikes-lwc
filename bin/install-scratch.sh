@@ -11,23 +11,23 @@ echo ""
 
 # Install script
 echo "Cleaning previous scratch org..."
-sfdx force:org:delete -p -u $ORG_ALIAS &> /dev/null
+sf org delete scratch -p -o $ORG_ALIAS &> /dev/null
 echo ""
 
 echo "Creating scratch org..." && \
-sfdx force:org:create -s -f config/project-scratch-def.json -d 30 -a $ORG_ALIAS && \
+sf org create scratch -f config/project-scratch-def.json -a $ORG_ALIAS -d -y 30 && \
 echo "" && \
 
 echo "Pushing source..." && \
-sfdx force:source:push && \
+sf project deploy start && \
 echo "" && \
 
 echo "Assigning permission sets..." && \
-sfdx force:user:permset:assign -n ebikes && \
+sf org assign permset -n ebikes && \
 echo "" && \
 
 echo "Importing sample data..." && \
-sfdx force:data:tree:import -p data/sample-data-plan.json && \
+sf data tree import -p data/sample-data-plan.json && \
 echo "" && \
 
 echo "Sleeping 30s for XP Cloud deployment..." && \
@@ -35,15 +35,15 @@ sleep 30 && \
 echo "" && \
 
 echo "Publishing XP Cloud site..." && \
-sfdx force:community:publish -n E-Bikes && \
+sf community publish -n E-Bikes && \
 echo "" && \
 
 echo "Deploying guest profile for XP Cloud site..." && \
-sfdx force:mdapi:deploy -d guest-profile-metadata -w 10 && \
+sf project deploy start --metadata-dir=guest-profile-metadata -w 10 && \
 echo "" && \
 
 echo "Opening org..." && \
-sfdx force:org:open -p lightning/n/Product_Explorer && \
+sf org open -p lightning/n/Product_Explorer && \
 echo ""
 
 EXIT_CODE="$?"
