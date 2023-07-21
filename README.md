@@ -128,11 +128,10 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
 
     1. In your org, in **Setup**, select **Settings**, under **Digital Experiences**.
     1. Click the **Enable Digital Experiences** checkbox
-    1. Enter a domain name for your experience site. Remember this value as you’ll use it later in this step.
-    1. Make sure that your domain name is available by clicking **Check Availability**.
     1. Click **Save** then **Ok**.
     1. Navigate back to **Settings** in Setup.
     1. Under **Experience Management Settings**, enable **Enable ExperienceBundle Metadata API**.
+    1. Click **Save**
 
 1. Configure the Experience Cloud site metadata file with the following steps:
 
