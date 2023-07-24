@@ -138,7 +138,7 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     1. Edit the `force-app/main/default/sites/E_Bikes.site-meta.xml` file.
     1. Replace the value between the `<siteAdmin>` tags with your Playground username.
     1. Replace the value between the `<siteGuestRecordDefaultOwner>` tags with your Playground username.
-    1. Replace the value between the `<subdomain>` tags with your domain.
+    1. Replace the value between the `<subdomain>` tags with your domain name (not the full URL).
     1. Save the file.
 
 1. Remove the `Product` custom field from the `Case` object with the following steps:
