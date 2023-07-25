@@ -61,7 +61,7 @@ jobs:
     scratch-org-test:
         runs-on: trailheadapps-Ubuntu
         needs: format-lint-lwc-tests
-        if: ${{ github.actor != 'dependabot[bot]' }}
+        if: github.actor != 'dependabot[bot]'
         steps:
             # Install Salesforce CLI
             - name: 'Install Salesforce CLI'
