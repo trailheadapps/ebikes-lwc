@@ -6,10 +6,11 @@ on:
     workflow_dispatch:
     pull_request:
         types: [opened, edited, synchronize, reopened]
-        branches-ignore:
-            - prerelease/spring[2-9][0-9]
-            - prerelease/summer[2-9][0-9]
-            - prerelease/winter[2-9][0-9]
+
+# Workflow environment variables
+env:
+    # Is the PR base branch a prerelease branch
+    IS_PRERELEASE: ${{ startsWith(github.event.pull_request.base.ref, 'prerelease/') }}
 
 # Jobs to be executed
 jobs:
@@ -128,8 +129,14 @@ jobs:
             - name: 'Authenticate Dev Hub'
               run: sf org login sfdx-url -f ./DEVHUB_SFDX_URL.txt -a devhub -d
 
+            # Create prerelease scratch org
+            - name: 'Create prerelease scratch org'
+              if: env.IS_PRERELEASE
+              run: sf org create scratch -f config/project-scratch-def.json -a scratch-org -d -y 1 --release=preview
+
             # Create scratch org
             - name: 'Create scratch org'
+              if: !env.IS_PRERELEASE
               run: sf org create scratch -f config/project-scratch-def.json -a scratch-org -d -y 1
 
             # Deploy source to scratch org
@@ -146,9 +153,7 @@ jobs:
 
             # Wait for XP Cloud activation
             - name: 'Wait for two min for XP Cloud activation'
-              uses: maddox/actions/sleep@master
-              with:
-                  args: 120
+              run: sleep 120s
 
             # Publish XP Cloud site
             - name: 'Publish XP Cloud site'

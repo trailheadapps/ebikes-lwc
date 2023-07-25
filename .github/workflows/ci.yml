@@ -108,9 +108,7 @@ jobs:
 
             # Wait for XP Cloud activation
             - name: 'Wait for two min for XP Cloud activation'
-              uses: maddox/actions/sleep@master
-              with:
-                  args: 120
+              run: sleep 120s
 
             # Publish XP Cloud site
             - name: 'Publish XP Cloud site'
