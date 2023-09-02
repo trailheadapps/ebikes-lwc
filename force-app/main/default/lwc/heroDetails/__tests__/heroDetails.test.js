@@ -83,7 +83,7 @@ describe('c-hero-details', () => {
             const anchorEl = element.shadowRoot.querySelector('a');
             expect(anchorEl).not.toBeNull();
             expect(anchorEl.href).toBe(
-                `http://localhost/product-family/${mockGetRecordInfoProduct[0]}`
+                `http://localhost/detail/${mockGetRecordInfoProduct[0]}`
             );
         });
     });
