@@ -20,7 +20,7 @@ export default class HeroDetails extends LightningElement {
             if (data[1] === 'Product__c') {
                 this.hrefUrl = `product/${data[0]}`;
             } else {
-                this.hrefUrl = `product-family/${data[0]}`;
+                this.hrefUrl = `detail/${data[0]}`;
             }
         }
     }
