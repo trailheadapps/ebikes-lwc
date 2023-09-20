@@ -8,8 +8,7 @@ export async function logInSalesforce() {
     // Check environment variables
     ['SALESFORCE_LOGIN_URL', 'SALESFORCE_LOGIN_TIME'].forEach((varName) => {
         if (!process.env[varName]) {
-            console.error(`Missing ${varName} environment variable`);
-            process.exit(-1);
+            throw new Error(`Missing ${varName} environment variable`);
         }
     });
     const { SALESFORCE_LOGIN_URL, SALESFORCE_LOGIN_TIME } = process.env;
@@ -19,10 +18,9 @@ export async function logInSalesforce() {
         new Date().getTime() - parseInt(SALESFORCE_LOGIN_TIME, 10) >
         SESSION_TIMEOUT
     ) {
-        console.error(
-            `ERROR: Salesforce session timed out. Re-authenticate before running tests.`
+        throw new Error(
+            `Salesforce session timed out. Re-authenticate before running tests.`
         );
-        process.exit(-1);
     }
 
     // Navigate to login URL
