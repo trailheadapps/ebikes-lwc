@@ -21,4 +21,7 @@ public with sharing class OrderController {
             WITH SECURITY_ENFORCED
         ];
     }
+    public static void testMethod1(){
+        System.debug('This a additional Method');
+    }
 }
