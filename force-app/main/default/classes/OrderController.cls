@@ -24,4 +24,7 @@ public with sharing class OrderController {
     public static void testMethod1(){
         System.debug('This a additional Method');
     }
+    public static void testMethod3(){
+        System.debug('This a third Method');
+    }    
 }
