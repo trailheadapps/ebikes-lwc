@@ -25,10 +25,10 @@
     <referrerPolicyOriginWhenCrossOrigin
     >true</referrerPolicyOriginWhenCrossOrigin>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>ankit556.verma@resilient-unicorn-fac2yv.com</siteAdmin>
+    <siteAdmin>ankit556.verma@cunning-badger-cqju92.com</siteAdmin>
     <siteGuestRecordDefaultOwner
-    >ankit556.verma@resilient-unicorn-fac2yv.com</siteGuestRecordDefaultOwner>
+    >ankit556.verma@cunning-badger-cqju92.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>resilient-unicorn-fac2yv-dev-ed</subdomain>
+    <subdomain>cunning-badger-cqju92-dev-ed</subdomain>
     <urlPathPrefix>ebikes</urlPathPrefix>
 </CustomSite>

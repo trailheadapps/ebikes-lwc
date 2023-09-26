@@ -36,3 +36,8 @@ jobs:
       - name: Deployment - run all tests
         run: >
           sfdx force:source:deploy -p "force-app"  --testlevel RunLocalTests --json
+          sf org assign permset -n ebikes
+          sf data tree import -p ./data/sample-data-plan.json
+          sf community publish -n E-Bikes
+          sf project deploy start --metadata-dir=guest-profile-metadata -w 10
+          sf org open
