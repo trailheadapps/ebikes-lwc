@@ -1,9 +1,6 @@
 name: Deployment to Sandbox
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
+  push:
     paths:
       - force-app/**
     branches:
@@ -36,30 +33,6 @@ jobs:
           echo ${{ secrets.DEV1_URL}} > ./DEV1_URL.txt
       - name: Authenticate to target Org
         run: sfdx auth:sfdxurl:store -f ./DEV1_URL.txt -s -a targetOrg
-      - name: Read PR Body
-        env:
-          PR_BODY: ${{github.event.pull_request.body}}
-        run: |
-          
-          FILE=./parsePR.js 
-          if test -f "$FILE"; then
-              echo $PR_BODY > ./pr_body.txt
-              node ./parsePR.js              
-              TESTS=$(cat testsToRun.txt)
-              echo "APEX_TESTS=$TESTS" >> $GITHUB_ENV     
-          else
-              TESTS=all
-              echo "APEX_TESTS=$TESTS" >> $GITHUB_ENV 
-          fi
-      - name: Deployment - run specified tests
-        if: ${{ env.APEX_TESTS != 'all' }}
-        run: >
-          echo ${{env.APEX_TESTS}}
-
-          sfdx force:source:deploy -p "force-app"  --testlevel RunSpecifiedTests --runtests ${{env.APEX_TESTS}} --json
       - name: Deployment - run all tests
-        if: ${{ env.APEX_TESTS == 'all' }}
         run: >
-          echo ${{env.APEX_TESTS}}
-
           sfdx force:source:deploy -p "force-app"  --testlevel RunLocalTests --json
