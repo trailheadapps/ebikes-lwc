@@ -58,11 +58,10 @@ jobs:
         if: ${{ env.APEX_TESTS == 'all' }}
         run: >
           echo ${{env.APEX_TESTS}}
-
           sfdx force:source:deploy -p "force-app"  --testlevel RunLocalTests --json
-          - name: Assign Permission Sets
-          run: >
-            sf org assign permset -n ebikes
+      - name: Assign Permission Sets
+        run: >
+          sf org assign permset -n ebikes
       - name: Import Sample Data
         run: >
           sf data tree import -p ./data/sample-data-plan.json
