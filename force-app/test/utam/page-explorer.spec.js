@@ -38,9 +38,8 @@ describe('ProductExplorer', () => {
         const leftComponent = await page.getLeftComponent();
         const productFilter = await leftComponent.getContent(ProductFilter);
         const centerComponent = await page.getCenterComponent();
-        const productTileList = await centerComponent.getContent(
-            ProductTileList
-        );
+        const productTileList =
+            await centerComponent.getContent(ProductTileList);
         const rightComponent = await page.getRightComponent();
         const productCard = await rightComponent.getContent(ProductCard);
 
