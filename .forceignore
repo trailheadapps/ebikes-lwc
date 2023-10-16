@@ -128,3 +128,12 @@ force-app/test/**
 **/pages/UnderConstruction.page-meta.xml
 **/staticresources/SiteSamples
 **/staticresources/SiteSamples.resource-meta.xml
+
+# Default dashboard and report
+**/dashboards/prm_channel_dashboard_folder.dashboardFolder-meta.xml
+**/dashboards/prm_channel_dashboard_folder/**
+**/reports/prm_channel_reports_folder.reportFolder-meta.xml
+**/reports/prm_channel_reports_folder/**
+
+# Default permission set
+**/permissionsets/sfdcInternalInt__sfdc_scrt2.permissionset-meta.xml
