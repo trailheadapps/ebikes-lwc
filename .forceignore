@@ -11,8 +11,8 @@ package.xml
 **/fieldRestrictionRules/**
 **/objectTranslations/**
 **/profiles/**
-**/profilePasswordPolicy/**
-**/profileSessionSetting/**
+**/profilePasswordPolicies/**
+**/profileSessionSettings/**
 **/settings/**
 **/sharingRules/**
 
