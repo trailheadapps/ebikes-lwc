@@ -307,6 +307,12 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>orderStatusPath</componentName>
+                <identifier>c_orderStatusPath</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>tabs</name>
                     <value>maintabs</value>

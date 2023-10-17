@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>All_Product_Families</fullName>
+    <fullName>All_Orders</fullName>
     <columns>NAME</columns>
-    <columns>Category__c</columns>
-    <columns>Description__c</columns>
+    <columns>Account__c</columns>
+    <columns>Status__c</columns>
     <filterScope>Everything</filterScope>
-    <label>All  Product Families</label>
+    <label>All Reseller Orders</label>
 </ListView>
