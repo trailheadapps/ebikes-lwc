@@ -14,13 +14,11 @@ import getProducts from '@salesforce/apex/ProductController.getProducts';
 export default class ProductTileList extends LightningElement {
     /**
      * Whether to display the search bar.
-     * TODO - normalize value because it may come as a boolean, string or otherwise.
      */
     @api searchBarIsVisible = false;
 
     /**
      * Whether the product tiles are draggable.
-     * TODO - normalize value because it may come as a boolean, string or otherwise.
      */
     @api tilesAreDraggable = false;
 
