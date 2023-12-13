@@ -37,6 +37,12 @@
                 type="Boolean"
                 label="Product tiles are draggable"
             />
+            <property
+                type="Integer"
+                name="minPictureWidth"
+                label="Min Picture Width"
+                editor="c/sliderEditor"
+            />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>

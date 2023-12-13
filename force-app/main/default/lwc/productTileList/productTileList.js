@@ -22,6 +22,18 @@ export default class ProductTileList extends LightningElement {
      */
     @api tilesAreDraggable = false;
 
+    /**
+     * min-size of the pictures shown
+     */
+    @api minPictureWidth;
+
+    renderedCallback() {
+        const productTiles = this.template.querySelectorAll('c-product-tile');
+        productTiles.forEach((tile) => {
+            tile.style.minWidth = `${this.minPictureWidth}px`;
+        });
+    }
+
     /** Current page in the product list. */
     pageNumber = 1;
 
