@@ -1,5 +1,7 @@
 import { LightningElement } from 'lwc';
-import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+//import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import ToastContainer from 'lightning/toastContainer';
+import Toast from 'lightning/toast';
 
 import CASE_OBJECT from '@salesforce/schema/Case';
 import SUBJECT from '@salesforce/schema/Case.Subject';
@@ -21,14 +23,30 @@ export default class CreateCase extends LightningElement {
     reasonField = REASON;
     categoryField = CASE_CATEGORY;
 
+    connectedCallback() {
+        const toastContainer = ToastContainer.instance();
+        toastContainer.maxToasts = 5;
+        toastContainer.toastPosition = 'top-right';
+    }
+
+    showToast() {
+        Toast.show(
+            {
+                label: TITLE_SUCCESS,
+                message: MESSAGE_SUCCESS,
+                mode: 'dismissible',
+                variant: 'info',
+                onclose: () => {
+                    // Do something after the toast is closed
+                }
+            },
+            this
+        );
+    }
+
     handleCaseCreated() {
         // Fire event for Toast to appear that Order was created
-        const evt = new ShowToastEvent({
-            title: TITLE_SUCCESS,
-            message: MESSAGE_SUCCESS,
-            variant: 'success'
-        });
-        this.dispatchEvent(evt);
+        this.showToast();
 
         const refreshEvt = new CustomEvent('refresh');
         // Fire the custom event
