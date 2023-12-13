@@ -3,5 +3,8 @@
 console.log('ANALYTICS LIB: LOADED!');
 const elements = document.querySelectorAll('a.inspect');
 elements.forEach((element) => {
-   element.innerText = 'ELEMENT ACCESSED!';
+    element.addEventListener('click', () => {
+        console.log('ANALYTICS LIB: Element was clicked!');
+    });
+    //element.innerText = 'ELEMENT ACCESSED!';
 });
