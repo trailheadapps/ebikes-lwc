@@ -5,17 +5,17 @@ export default class SliderEditor extends LightningElement {
     _width = 200; // Default width
 
     @api
-    get width() {
+    get value() {
         return this._width;
     }
 
-    set width(value) {
-        this._width = value;
+    set value(width) {
+        this._width = width;
     }
 
-    connectedCallback() {
-        this.fireWidthChangedEvent();
-    }
+    // connectedCallback() {
+    //     this.fireWidthChangedEvent();
+    // }
 
     handleChange(event) {
         this._width = event.target.value;
@@ -24,7 +24,7 @@ export default class SliderEditor extends LightningElement {
 
     fireWidthChangedEvent() {
         this.dispatchEvent(
-            new CustomEvent('valuechange', { detail: { value: this._width } })
+            new CustomEvent('valuechange', { detail: { value: this.value } })
         );
     }
 }
