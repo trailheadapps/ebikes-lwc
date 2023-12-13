@@ -1,4 +1,6 @@
 import { LightningElement, api, wire } from 'lwc';
+import { loadScript } from 'c/resourceLoader';
+import analyticsLib from '@salesforce/resourceUrl/myAnalyticsLibResource';
 
 // Lightning Message Service and message channels
 import { publish, subscribe, MessageContext } from 'lightning/messageService';
@@ -12,6 +14,8 @@ import getProducts from '@salesforce/apex/ProductController.getProducts';
  * Container component that loads and displays a list of Product__c records.
  */
 export default class ProductTileList extends LightningElement {
+    static renderMode = 'light'; // the default is 'shadow'
+
     /**
      * Whether to display the search bar.
      */
@@ -27,12 +31,7 @@ export default class ProductTileList extends LightningElement {
      */
     @api minPictureWidth;
 
-    renderedCallback() {
-        const productTiles = this.template.querySelectorAll('c-product-tile');
-        productTiles.forEach((tile) => {
-            tile.style.minWidth = `${this.minPictureWidth}px`;
-        });
-    }
+    analyticsLibLoaded = false;
 
     /** Current page in the product list. */
     pageNumber = 1;
@@ -65,6 +64,18 @@ export default class ProductTileList extends LightningElement {
             PRODUCTS_FILTERED_MESSAGE,
             (message) => this.handleFilterChange(message)
         );
+    }
+
+    renderedCallback() {
+        const productTiles = this.querySelectorAll('c-product-tile');
+        productTiles.forEach((tile) => {
+            tile.style.minWidth = `${this.minPictureWidth}px`;
+        });
+
+        if (productTiles.length > 0 && !this.analyticsLibLoaded) {
+            loadScript(analyticsLib);
+            this.analyticsLibLoaded = true;
+        }
     }
 
     handleProductSelected(event) {

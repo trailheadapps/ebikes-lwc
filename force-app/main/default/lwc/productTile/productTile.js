@@ -1,10 +1,11 @@
 import { LightningElement, api } from 'lwc';
-
 /**
  * A presentation component to display a Product__c sObject. The provided
  * Product__c data must contain all fields used by this component.
  */
 export default class ProductTile extends LightningElement {
+    static renderMode = 'light'; // the default is 'shadow'
+
     /** Whether the tile is draggable. */
     @api draggable;
 

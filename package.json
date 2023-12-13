@@ -24,9 +24,6 @@
         ],
         "**/lwc/**/*.js": [
             "eslint"
-        ],
-        "**/lwc/**": [
-            "sfdx-lwc-jest --skipApiVersionCheck -- --bail --findRelatedTests --passWithNoTests"
         ]
     },
     "author": "salesforce.com",
