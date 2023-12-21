@@ -5,6 +5,7 @@ import { LightningElement, api } from 'lwc';
  */
 export default class ProductTile extends LightningElement {
     static renderMode = 'light'; // the default is 'shadow'
+    static shadowSupportMode = 'native';
 
     /** Whether the tile is draggable. */
     @api draggable;

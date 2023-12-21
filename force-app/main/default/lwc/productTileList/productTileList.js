@@ -1,6 +1,8 @@
 import { LightningElement, api, wire } from 'lwc';
 import { loadScript } from 'c/resourceLoader';
+import { loadStyle } from 'lightning/platformResourceLoader';
 import analyticsLib from '@salesforce/resourceUrl/myAnalyticsLibResource';
+import globalStyling from '@salesforce/resourceUrl/globalStyling';
 
 // Lightning Message Service and message channels
 import { publish, subscribe, MessageContext } from 'lightning/messageService';
@@ -31,7 +33,7 @@ export default class ProductTileList extends LightningElement {
      */
     @api minPictureWidth;
 
-    analyticsLibLoaded = false;
+    libsLoaded = false;
 
     /** Current page in the product list. */
     pageNumber = 1;
@@ -72,9 +74,10 @@ export default class ProductTileList extends LightningElement {
             tile.style.minWidth = `${this.minPictureWidth}px`;
         });
 
-        if (productTiles.length > 0 && !this.analyticsLibLoaded) {
+        if (productTiles.length > 0 && !this.libsLoaded) {
             loadScript(analyticsLib);
-            this.analyticsLibLoaded = true;
+            loadStyle(this, globalStyling);
+            this.libsLoaded = true;
         }
     }
 
