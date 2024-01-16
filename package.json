@@ -70,7 +70,11 @@
         "prettier": "^3.2.5",
         "prettier-plugin-apex": "^2.0.1",
         "salesforce-pageobjects": "^6.0.0",
+<<<<<<< HEAD
         "utam": "^3.0.0",
+=======
+        "utam": "^2.2.0",
+>>>>>>> 7fba9eab2 (build: bump dependencies)
         "wdio-chromedriver-service": "^8.1.1",
         "wdio-utam-service": "^3.0.0"
     },
