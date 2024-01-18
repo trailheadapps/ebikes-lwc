@@ -8,8 +8,7 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 <div>
     <img src="https://res.cloudinary.com/hy4kyit2a/f_auto,fl_lossy,q_70,w_50/learn/projects/quick-start-ebikes-sample-app/a11bf85d136053cdb4745123c4d0ae61_badge.png" align="left" alt="Trailhead Badge"/>
-    Learn more about this app by completing the <a href="https://trailhead.salesforce.com/en/content/learn/projects/quick-start-ebikes-sample-app">Quick Start: Explore the E-Bikes Sample App</a> Trailhead project.
-    <br/>
+    Learn more about this app by completing the <a href="https://trailhead.salesforce.com/en/content/learn/projects/quick-start-ebikes-sample-app">Quick Start: Explore the E-Bikes Sample App</a> Trailhead project or by watching this <a href="https://www.youtube.com/watch?v=8iE-1q4N0P8&list=PLgIMQe2PKPSJcuCwM61dEc4jFG_jHqV2t&index=2">short presentation video</a>.
     <br/>
     <br/>
 </div>
