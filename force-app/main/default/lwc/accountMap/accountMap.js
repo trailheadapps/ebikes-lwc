@@ -1,12 +1,12 @@
 import { LightningElement, api, wire } from 'lwc';
 import { getRecord, getFieldValue } from 'lightning/uiRecordApi';
-//test git branch
+//test git branch 
 import BILLING_CITY from '@salesforce/schema/Account.BillingCity';
 import BILLING_COUNTRY from '@salesforce/schema/Account.BillingCountry';
 import BILLING_POSTAL_CODE from '@salesforce/schema/Account.BillingPostalCode';
 import BILLING_STATE from '@salesforce/schema/Account.BillingState';
 import BILLING_STREET from '@salesforce/schema/Account.BillingStreet';
-
+// now testing from branch repo 
 const fields = [
     BILLING_CITY,
     BILLING_COUNTRY,
