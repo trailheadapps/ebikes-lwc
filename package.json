@@ -45,7 +45,7 @@
         "@sa11y/jest": "^6.3.1",
         "@salesforce/eslint-config-lwc": "^3.5.2",
         "@salesforce/eslint-plugin-lightning": "^1.0.0",
-        "@salesforce/sfdx-lwc-jest": "^3.1.0",
+        "@salesforce/sfdx-lwc-jest": "^3.1.1",
         "@wdio/cli": "^8.29.3",
         "@wdio/jasmine-framework": "^8.27.0",
         "@wdio/local-runner": "^8.27.0",
