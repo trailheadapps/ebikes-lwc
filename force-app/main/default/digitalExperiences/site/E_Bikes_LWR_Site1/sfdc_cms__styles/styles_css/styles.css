@@ -1,0 +1,15 @@
+/*
+ * Your global styles here
+ */
+html,
+body {
+    height: 100%;
+}
+
+html {
+    background: white;
+}
+
+body {
+    margin: 0;
+}

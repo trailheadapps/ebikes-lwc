@@ -1,0 +1,36 @@
+@media print {
+    /* Hide href for all links */
+    /* a[href]:after { 
+        content: none !important; 
+    } */
+
+    /* Example: hides header and footer for Customer Service template */
+    /* #header, #footer {
+        display: none !important
+    } */
+
+    /* Example: hides header for Customer Account and Partner Central template */
+    /* .cHeaderWrapper, .cFooterPanel {
+        display: none !important;
+    } */
+
+    /* Example: hides header and footer for Help Center template */
+    /* .header, .footer {
+        display: none !important;
+    } */
+
+    /* Example: hides header and footer for Build Your Own (Aura) template */
+    /* .comm-content-header, .comm-content-footer {
+        display: none !important;
+    } */
+
+    /* Example: hides header and footer for LWR templates */
+    /* header, footer {
+        display: none !important;
+    } */
+
+    /* Example: hides the aura Navigation Menu component */
+    /* .forceCommunityGlobalNavigation {
+        display: none !important;
+    } */
+}

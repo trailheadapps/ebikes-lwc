@@ -1,0 +1,12 @@
+a.menu-item,
+a.menu-item:visited {
+    color: #3c3c3c;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 550;
+}
+
+a.menu-item:hover {
+    color: rgb(194 51 53);
+    text-decoration: underline;
+}

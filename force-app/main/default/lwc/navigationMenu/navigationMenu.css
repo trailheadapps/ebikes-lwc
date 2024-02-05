@@ -1,0 +1,45 @@
+:host {
+    --dxp-c-link-text-color: #3c3c3c;
+    --dxp-c-link-text-color-hover: rgb(194 51 53);
+}
+
+.navbar {
+    padding-bottom: 0.625rem;
+    background-color: var(--dxp-g-root);
+}
+
+.navbar-items {
+    font-family: var(--dxp-g-root-font-family);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hamburger-menu-container {
+    background: rgba(45, 57, 48, 0.3);
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 15;
+    --dxp-c-link-text-color: #ffffff;
+}
+
+.hamburger-menu {
+    background: var(--dxp-g-neutral-contrast);
+    min-height: 100%;
+}
+
+img.hamburger-menu-icon {
+    max-width: 2rem;
+    height: auto;
+}
+
+@media (max-width: 480px) {
+    .navbar-items {
+        font-size: 1.6rem;
+    }
+}
+
+a.menu-item {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 550;
+}

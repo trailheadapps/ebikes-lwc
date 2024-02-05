@@ -1,0 +1,11 @@
+{
+    "type": "sfdc_cms__route",
+    "title": "Product List",
+    "contentBody": {
+        "activeViewId": "Product_List",
+        "configurationTags": [],
+        "pageAccess": "UseParent",
+        "routeType": "list-a03",
+        "urlPrefix": "product"
+    }
+}

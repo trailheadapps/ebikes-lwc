@@ -1,0 +1,11 @@
+{
+    "type": "sfdc_cms__route",
+    "title": "Product Explorer",
+    "contentBody": {
+        "activeViewId": "Product_Explorer",
+        "configurationTags": [],
+        "pageAccess": "UseParent",
+        "routeType": "custom-product-explorer",
+        "urlPrefix": "product-explorer"
+    }
+}

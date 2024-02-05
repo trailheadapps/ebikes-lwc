@@ -1,0 +1,156 @@
+{
+    "type": "sfdc_cms__view",
+    "title": "Case List",
+    "contentBody": {
+        "component": {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "backgroundImageConfig": "",
+                                "backgroundImageOverlay": "rgba(0,0,0,0)",
+                                "componentSpacerSize": "",
+                                "maxContentWidth": "1440px",
+                                "sectionColumnGutterWidth": "1rem",
+                                "sectionConfig": "{\"UUID\":\"c650a466-b71b-4218-ae23-dde89232b81f\",\"columns\":[{\"UUID\":\"e446d3a6-c317-4238-9de2-431b5e68367f\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+                            },
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "attributes": {
+                                                "autoScrollToMostRecent": false,
+                                                "backgroundColor": "",
+                                                "borderColor": "",
+                                                "borderRadius": 0,
+                                                "borderWidth": 0,
+                                                "isOrderReversed": false,
+                                                "itemSpacing": "medium",
+                                                "listType": "unformatted",
+                                                "orderedMarkerAlignment": "middle",
+                                                "orderedMarkerColor": "",
+                                                "orderedMarkerSize": "body-regular",
+                                                "orderedMarkerStartValue": 1,
+                                                "orderedMarkerStyle": "numbers",
+                                                "showPagination": true,
+                                                "unorderedMarkerAlignment": "middle",
+                                                "unorderedMarkerColor": "",
+                                                "unorderedMarkerSize": "body-regular",
+                                                "unorderedMarkerStyle": "filled-dots",
+                                                "width": 100
+                                            },
+                                            "children": [
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "attributes": {
+                                                                "fieldNames": "CaseNumber,Subject,Status,CreatedDate,Priority,Reason,Description",
+                                                                "iconName": "standard:case",
+                                                                "isReadonly": true,
+                                                                "objectApiName": "Case",
+                                                                "recordId": "{!Item.Id}",
+                                                                "title": "Case"
+                                                            },
+                                                            "definition": "c:recordOverview",
+                                                            "id": "be7962c5-11c7-4241-8f18-f9f77cf56646",
+                                                            "type": "component"
+                                                        }
+                                                    ],
+                                                    "id": "17491c69-cd0f-4800-aab6-31b565e3c5f8",
+                                                    "name": "sfdcRepeaterItem",
+                                                    "title": "sfdcRepeaterItem",
+                                                    "type": "region"
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "attributes": {
+                                                                "paginatorAttributes": "{\"nested\":{\"componentName\":\"dxp_content_layout:paginatorShowMore\",\"attributes\":{\"label\":\"Show More\",\"textDecoration\":\"{}\",\"buttonStyle\":\"secondary\",\"size\":\"standard\",\"width\":\"standard\",\"verticalPadding\":\"none\",\"horizontalAlignment\":\"center\"}}}",
+                                                                "variant": "showmore"
+                                                            },
+                                                            "children": [
+                                                                {
+                                                                    "children": [
+                                                                        {
+                                                                            "attributes": {},
+                                                                            "definition": "dxp_page_layout:placeHolder",
+                                                                            "id": "1a0c7507-76b3-47f7-bbaa-366f87fdb556",
+                                                                            "type": "component"
+                                                                        }
+                                                                    ],
+                                                                    "id": "1cabe0e7-fce7-4085-80fe-0ef81c307b15",
+                                                                    "name": "placeholder",
+                                                                    "title": "placeholder",
+                                                                    "type": "region"
+                                                                }
+                                                            ],
+                                                            "definition": "dxp_content_layout:paginator2",
+                                                            "id": "77b32f94-1278-4964-a84b-8424903d3cea",
+                                                            "type": "component"
+                                                        }
+                                                    ],
+                                                    "id": "40dccc4d-4fe6-43ef-8976-ae02740a90f5",
+                                                    "name": "pagination",
+                                                    "title": "pagination",
+                                                    "type": "region"
+                                                }
+                                            ],
+                                            "definition": "dxp_content_layout:list",
+                                            "id": "1533442b-0d5c-4c21-9b24-d5755f8e9d46",
+                                            "type": "component",
+                                            "dataProviders": [
+                                                {
+                                                    "definition": "sfdc_cms__recordListViewDataProvider",
+                                                    "sfdcExpressionKey": "Item",
+                                                    "attributes": {
+                                                        "listViewApiName": "My_Cases",
+                                                        "objectApiName": "Case",
+                                                        "pageSize": 5
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "id": "e446d3a6-c317-4238-9de2-431b5e68367f",
+                                    "name": "col1",
+                                    "title": "Column 1",
+                                    "type": "region"
+                                }
+                            ],
+                            "definition": "community_layout:section",
+                            "id": "c650a466-b71b-4218-ae23-dde89232b81f",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "2d981066-a4f9-4e79-a50a-acc96120b217",
+                    "name": "content",
+                    "title": "Content",
+                    "type": "region"
+                },
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "recordId": "{!recordId}"
+                            },
+                            "definition": "community_builder:seoAssistant",
+                            "id": "b25c7433-f62a-49dd-97bd-91e62689333c",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "888db168-108a-4d20-b34c-9e8dff342f74",
+                    "name": "sfdcHiddenRegion",
+                    "title": "sfdcHiddenRegion",
+                    "type": "region"
+                }
+            ],
+            "definition": "community_layout:sldsFlexibleLayout",
+            "id": "852a8fa2-2f2d-4c91-afc1-7a48e6bacace",
+            "type": "component"
+        },
+        "dataProviders": [],
+        "themeLayoutType": "Inner",
+        "viewType": "list-500"
+    }
+}

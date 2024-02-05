@@ -1,0 +1,5 @@
+{
+    "apiName": "Product_Family_Related_List",
+    "type": "sfdc_cms__view",
+    "path": "views"
+}

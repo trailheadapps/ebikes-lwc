@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-box slds-box_x-small slds-media">
+        <div
+            class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small"
+        >
+            <span class="slds-icon_container">
+                <img lwc:if={category} src={imageSrc} alt={category} />
+            </span>
+        </div>
+        <div class="slds-media__body slds-p-around_small">
+            <h2 class="slds-truncate title" title={name}>{name}</h2>
+            <p class="slds-m-top_small">{description}</p>
+        </div>
+    </div>
+</template>
