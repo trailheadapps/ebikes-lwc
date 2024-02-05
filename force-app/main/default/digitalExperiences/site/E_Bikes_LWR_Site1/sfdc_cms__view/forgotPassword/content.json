@@ -1,0 +1,89 @@
+{
+    "type": "sfdc_cms__view",
+    "title": "Forgot Password",
+    "contentBody": {
+        "component": {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "backgroundImageConfig": "",
+                                "backgroundImageOverlay": "rgba(0,0,0,0)",
+                                "componentSpacerSize": "",
+                                "maxContentWidth": "",
+                                "sectionColumnGutterWidth": "",
+                                "sectionConfig": "{\"UUID\":\"7efd36be-051f-492f-90af-857e00d8054e\",\"columns\":[{\"UUID\":\"66c5b53a-3e4d-400f-949d-0d0d9ebd1f56\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+                            },
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "attributes": {
+                                                "alignment": "left",
+                                                "imageInfo": "",
+                                                "logoWidth": 250
+                                            },
+                                            "definition": "dxp_content_layout:siteLogo",
+                                            "id": "c62a017a-7981-4875-80d5-c6d61a507d2c",
+                                            "type": "component"
+                                        },
+                                        {
+                                            "attributes": {
+                                                "cancelButtonLabel": "Cancel",
+                                                "checkEmailUrl": "./CheckPasswordResetEmail",
+                                                "instructionsLabel": "To reset your password, enter your username. We'll send a reset-password link to the email address associated with your account.",
+                                                "submitButtonLabel": "Reset",
+                                                "titleLabel": "Forgot your password?",
+                                                "usernameLabel": "Username"
+                                            },
+                                            "definition": "community_login:forgotPassword",
+                                            "id": "6c4b44b6-8183-4207-a262-e3746763a64e",
+                                            "type": "component"
+                                        }
+                                    ],
+                                    "id": "66c5b53a-3e4d-400f-949d-0d0d9ebd1f56",
+                                    "name": "col1",
+                                    "title": "Column 1",
+                                    "type": "region"
+                                }
+                            ],
+                            "definition": "community_layout:section",
+                            "id": "7efd36be-051f-492f-90af-857e00d8054e",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "515a7b7e-376f-4cf6-82b6-53621b7a04e0",
+                    "name": "content",
+                    "title": "Content",
+                    "type": "region"
+                },
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "customHeadTags": "",
+                                "description": "",
+                                "pageTitle": "Forgot Password",
+                                "recordId": "{!recordId}"
+                            },
+                            "definition": "community_builder:seoAssistant",
+                            "id": "8480d5f5-9016-49a4-8c50-a29ddbc3a907",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "8965ca38-d125-4b64-a276-297f7b2d569c",
+                    "name": "sfdcHiddenRegion",
+                    "title": "sfdcHiddenRegion",
+                    "type": "region"
+                }
+            ],
+            "definition": "community_layout:sldsFlexibleLayout",
+            "id": "1f794fbb-56c2-48f8-9f67-9faafdd008df",
+            "type": "component"
+        },
+        "dataProviders": [],
+        "themeLayoutType": "Inner",
+        "viewType": "forgot-password"
+    }
+}

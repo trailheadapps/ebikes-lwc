@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle
+    xmlns="http://soap.sforce.com/2006/04/metadata"
+    fqn="productFamilyTile"
+>
+    <apiVersion>60.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Product Family Tile</masterLabel>
+    <description>A tile that represents a Product Family record</description>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property
+                name="name"
+                type="String"
+                label="Name"
+                description="Product Family record name"
+            />
+            <property
+                name="description"
+                type="String"
+                label="Description"
+                description="Product Family record description"
+            />
+            <property
+                name="category"
+                type="String"
+                label="Category"
+                description="Product Family record category"
+            />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

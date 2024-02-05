@@ -1,5 +1,5 @@
 import { LightningElement } from 'lwc';
-import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import Toast from 'lightning/toast';
 
 import CASE_OBJECT from '@salesforce/schema/Case';
 import SUBJECT from '@salesforce/schema/Case.Subject';
@@ -9,8 +9,8 @@ import PRIORITY from '@salesforce/schema/Case.Priority';
 import CASE_CATEGORY from '@salesforce/schema/Case.Case_Category__c';
 import REASON from '@salesforce/schema/Case.Reason';
 
-const TITLE_SUCCESS = 'Case Created!';
-const MESSAGE_SUCCESS = 'You have successfully created a Case';
+const STATE_INITIAL = 'initial';
+const STATE_SUCCESS = 'success';
 
 export default class CreateCase extends LightningElement {
     caseObject = CASE_OBJECT;
@@ -21,17 +21,21 @@ export default class CreateCase extends LightningElement {
     reasonField = REASON;
     categoryField = CASE_CATEGORY;
 
+    state = STATE_INITIAL;
+
     handleCaseCreated() {
-        // Fire event for Toast to appear that Order was created
-        const evt = new ShowToastEvent({
-            title: TITLE_SUCCESS,
-            message: MESSAGE_SUCCESS,
+        this.state = STATE_SUCCESS;
+        Toast.show({
+            label: 'Case Created',
+            message: 'You have successfully created a case.',
             variant: 'success'
         });
-        this.dispatchEvent(evt);
+    }
 
-        const refreshEvt = new CustomEvent('refresh');
-        // Fire the custom event
-        this.dispatchEvent(refreshEvt);
+    get isInitialState() {
+        return this.state === STATE_INITIAL;
+    }
+    get isSuccessState() {
+        return this.state === STATE_SUCCESS;
     }
 }

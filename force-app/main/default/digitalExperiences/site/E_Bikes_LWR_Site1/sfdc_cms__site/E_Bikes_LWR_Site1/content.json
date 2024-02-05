@@ -1,0 +1,7 @@
+{
+    "type": "sfdc_cms__site",
+    "title": "E-Bikes LWR Site",
+    "contentBody": {
+        "authenticationType": "AUTHENTICATED_WITH_PUBLIC_ACCESS_ENABLED"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "type": "sfdc_cms__route",
+    "title": "Create Case",
+    "contentBody": {
+        "activeViewId": "Create_Case",
+        "configurationTags": [],
+        "pageAccess": "UseParent",
+        "routeType": "custom-create-case",
+        "urlPrefix": "create-case"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "type": "sfdc_cms__route",
+    "title": "Case List",
+    "contentBody": {
+        "activeViewId": "Case_List",
+        "configurationTags": [],
+        "pageAccess": "UseParent",
+        "routeType": "list-500",
+        "urlPrefix": "case"
+    }
+}

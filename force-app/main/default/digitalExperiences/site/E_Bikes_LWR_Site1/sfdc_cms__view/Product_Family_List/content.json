@@ -1,0 +1,144 @@
+{
+    "type": "sfdc_cms__view",
+    "title": "Product Family List",
+    "contentBody": {
+        "component": {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "backgroundImageConfig": "",
+                                "backgroundImageOverlay": "rgba(0,0,0,0)",
+                                "componentSpacerSize": "",
+                                "maxContentWidth": "1440px",
+                                "sectionColumnGutterWidth": "",
+                                "sectionConfig": "{\"UUID\":\"4f19e38d-88b5-4f4e-bb6b-533d2992fbac\",\"columns\":[{\"UUID\":\"963ea7b9-c924-4903-bbe0-0389dd189581\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+                            },
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "attributes": {
+                                                "autoScrollToMostRecent": false,
+                                                "backgroundColor": "",
+                                                "borderColor": "",
+                                                "borderRadius": 0,
+                                                "borderWidth": 0,
+                                                "horizontalAlignment": "center",
+                                                "itemSpacing": "medium",
+                                                "numberOfColumns": 3,
+                                                "showPagination": false,
+                                                "width": 100
+                                            },
+                                            "children": [
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "attributes": {
+                                                                "category": "{!Item.Category__c}",
+                                                                "description": "{!Item.Description__c}",
+                                                                "name": "{!Item.Name}"
+                                                            },
+                                                            "definition": "c:productFamilyTile",
+                                                            "id": "8dca2f75-49ab-4552-93df-7dfd42286c77",
+                                                            "type": "component"
+                                                        }
+                                                    ],
+                                                    "id": "52534af7-fb6a-4e03-a075-000c34fd2673",
+                                                    "name": "sfdcRepeaterItem",
+                                                    "title": "sfdcRepeaterItem",
+                                                    "type": "region"
+                                                },
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "attributes": {
+                                                                "paginatorAttributes": "{\"nested\":{\"componentName\":\"dxp_content_layout:paginatorShowMore\",\"attributes\":{\"label\":\"Show More\",\"textDecoration\":\"{}\",\"buttonStyle\":\"secondary\",\"size\":\"standard\",\"width\":\"standard\",\"verticalPadding\":\"none\",\"horizontalAlignment\":\"center\"}}}",
+                                                                "variant": "showmore"
+                                                            },
+                                                            "children": [
+                                                                {
+                                                                    "children": [
+                                                                        {
+                                                                            "attributes": {},
+                                                                            "definition": "dxp_page_layout:placeHolder",
+                                                                            "id": "c5a1333c-badd-42e2-a947-5246403255a6",
+                                                                            "type": "component"
+                                                                        }
+                                                                    ],
+                                                                    "id": "7b2ab50d-2a91-4864-aefd-ebb523f3cbcc",
+                                                                    "name": "placeholder",
+                                                                    "title": "placeholder",
+                                                                    "type": "region"
+                                                                }
+                                                            ],
+                                                            "definition": "dxp_content_layout:paginator2",
+                                                            "id": "b35b6a8c-6049-46b5-b12d-b43a4ca64cac",
+                                                            "type": "component"
+                                                        }
+                                                    ],
+                                                    "id": "382d0eff-8fc6-4ce0-8cb4-d4aa82c78a77",
+                                                    "name": "pagination",
+                                                    "title": "pagination",
+                                                    "type": "region"
+                                                }
+                                            ],
+                                            "definition": "dxp_content_layout:grid",
+                                            "id": "8e24ad68-7147-488c-a69e-5f4a6cebe543",
+                                            "type": "component",
+                                            "dataProviders": [
+                                                {
+                                                    "definition": "sfdc_cms__recordListViewDataProvider",
+                                                    "sfdcExpressionKey": "Item",
+                                                    "attributes": {
+                                                        "listViewApiName": "All_Product_Families",
+                                                        "objectApiName": "Product_Family__c",
+                                                        "pageSize": 5
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "id": "963ea7b9-c924-4903-bbe0-0389dd189581",
+                                    "name": "col1",
+                                    "title": "Column 1",
+                                    "type": "region"
+                                }
+                            ],
+                            "definition": "community_layout:section",
+                            "id": "4f19e38d-88b5-4f4e-bb6b-533d2992fbac",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "4ef47f69-41a9-45b6-9136-e27d16f9a4f5",
+                    "name": "content",
+                    "title": "Content",
+                    "type": "region"
+                },
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "recordId": "{!recordId}"
+                            },
+                            "definition": "community_builder:seoAssistant",
+                            "id": "c9a179f1-bd96-4a59-8231-e37b1779c8ef",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "a8939238-ad95-4199-bf50-0ea1bf737b8a",
+                    "name": "sfdcHiddenRegion",
+                    "title": "sfdcHiddenRegion",
+                    "type": "region"
+                }
+            ],
+            "definition": "community_layout:sldsFlexibleLayout",
+            "id": "2b888ba9-0770-4da9-808e-380fd1d5e61e",
+            "type": "component"
+        },
+        "dataProviders": [],
+        "themeLayoutType": "Inner",
+        "viewType": "list-a02"
+    }
+}

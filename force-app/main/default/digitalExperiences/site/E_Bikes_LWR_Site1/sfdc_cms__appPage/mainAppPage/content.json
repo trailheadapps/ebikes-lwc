@@ -1,0 +1,11 @@
+{
+    "type": "sfdc_cms__appPage",
+    "title": "main",
+    "contentBody": {
+        "currentThemeId": "Build_Your_Own_LWR",
+        "headMarkup": "<meta charset=\"UTF-8\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n<title>Welcome to LWC Communities!</title>\n\n<!-- branding stylesheets -->\n\r\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/salesforce-lightning-design-system.min.css?{ versionKey }\" />\n\r\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-site-spacing-styling-hooks.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-styling-hooks.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-slds-extensions.min.css?{ versionKey }\" />\n\n\n\n<!-- branding stylesheets-->\n\n<link rel=\"stylesheet\" href=\"{ styles/styles.css }\" />\n<link rel=\"stylesheet\" href=\"{ styles/print.css }\" media=\"print\"/>\n",
+        "isLockerServiceEnabled": true,
+        "isRelaxedCSPLevel": false,
+        "templateName": "talon-template-byo"
+    }
+}
