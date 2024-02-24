@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Customer Reviews" icon-name="custom:custom14">
+        <template if:true={reviews}>
+            <template for:each={reviews} for:item="review">
+                <div
+                    key={review.id}
+                    class="slds-m-around_medium slds-grid slds-grid_align-spread"
+                >
+                    <div>
+                        <p>{review.Review__c}</p>
+                        <div>
+                            <template for:each={review.stars} for:item="star">
+                                <lightning-icon
+                                    key={star.key}
+                                    icon-name="utility:favorite"
+                                    size="x-small"
+                                    class={star.class}
+                                ></lightning-icon>
+                            </template>
+                        </div>
+                    </div>
+                    <lightning-button
+                        label="Open Review"
+                        data-id={review.id}
+                        onclick={handleOpenReview}
+                        variant="brand"
+                    ></lightning-button>
+                </div>
+            </template>
+        </template>
+        <template if:false={reviews}>
+            <p>No reviews available.</p>
+        </template>
+    </lightning-card>
+</template>

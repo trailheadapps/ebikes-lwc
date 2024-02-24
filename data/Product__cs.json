@@ -18,7 +18,83 @@
             "Motor__c": "251 watt, 75Nm",
             "Fork__c": "Air spring",
             "Front_Brakes__c": "Dual-pivot caliper brake",
-            "Rear_Brakes__c": "Dual-pivot caliper brake"
+            "Rear_Brakes__c": "Dual-pivot caliper brake",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef0_0"
+                        },
+                        "Review__c": "Adequate but not particularly impressive or innovative.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef0_1"
+                        },
+                        "Review__c": "Not bad, but it doesn't stand out from competitors.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef0_2"
+                        },
+                        "Review__c": "Remarkable quality and performance, worth every penny!",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef0_3"
+                        },
+                        "Review__c": "Passable performance, but I had hoped for more.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef0_4"
+                        },
+                        "Review__c": "Issues keep cropping up, it's more hassle than it's worth.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef0_5"
+                        },
+                        "Review__c": "Mediocre, I'm indifferent about recommending it.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef0_6"
+                        },
+                        "Review__c": "Not bad, but not standout. Serves its purpose.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef0_7"
+                        },
+                        "Review__c": "Remarkable quality and performance, worth every penny!",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef0_8"
+                        },
+                        "Review__c": "Fairly good, though I had higher expectations.",
+                        "Rating__c": 3
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -38,7 +114,83 @@
             "Motor__c": "252 watt, 75Nm",
             "Fork__c": "Air spring",
             "Front_Brakes__c": "Dual-pivot caliper brake",
-            "Rear_Brakes__c": "Dual-pivot caliper brake"
+            "Rear_Brakes__c": "Dual-pivot caliper brake",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef1_0"
+                        },
+                        "Review__c": "Not at all what I was promised, I'm very disappointed.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef1_1"
+                        },
+                        "Review__c": "Love the design and functionality, works perfectly.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef1_2"
+                        },
+                        "Review__c": "Regret buying it, would not recommend to others.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef1_3"
+                        },
+                        "Review__c": "It's decent, but I was expecting a bit more in terms of performance.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef1_4"
+                        },
+                        "Review__c": "Functional, yet I was hoping for something a bit more exciting.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef1_5"
+                        },
+                        "Review__c": "A good product, though it lacks some features I hoped for.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef1_6"
+                        },
+                        "Review__c": "It's okay, does the job but nothing to write home about.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef1_7"
+                        },
+                        "Review__c": "Not bad, but not standout. Serves its purpose.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef1_8"
+                        },
+                        "Review__c": "Average experience, nothing particularly special.",
+                        "Rating__c": 3
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -58,7 +210,83 @@
             "Motor__c": "253 watt, 75Nm",
             "Fork__c": "Air spring",
             "Front_Brakes__c": "Dual-pivot caliper brake",
-            "Rear_Brakes__c": "Dual-pivot caliper brake"
+            "Rear_Brakes__c": "Dual-pivot caliper brake",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef2_0"
+                        },
+                        "Review__c": "This has been a game-changer for me. Absolutely love it!",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef2_1"
+                        },
+                        "Review__c": "Functional, yet I was hoping for something a bit more exciting.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef2_2"
+                        },
+                        "Review__c": "Meets some expectations, but not a standout product.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef2_3"
+                        },
+                        "Review__c": "Okay for everyday use, but nothing that excites me.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef2_4"
+                        },
+                        "Review__c": "Superb product, it has all the features I wanted and more.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef2_5"
+                        },
+                        "Review__c": "Not reliable, had to return it.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef2_6"
+                        },
+                        "Review__c": "A total miss, I wish I had spent my money elsewhere.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef2_7"
+                        },
+                        "Review__c": "Exemplary performance, this product is a clear winner.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef2_8"
+                        },
+                        "Review__c": "A total miss, I wish I had spent my money elsewhere.",
+                        "Rating__c": 1
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -78,7 +306,83 @@
             "Motor__c": "254 watt, 75Nm",
             "Fork__c": "Air spring",
             "Front_Brakes__c": "Dual-pivot caliper brake",
-            "Rear_Brakes__c": "Dual-pivot caliper brake"
+            "Rear_Brakes__c": "Dual-pivot caliper brake",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef3_0"
+                        },
+                        "Review__c": "Decent quality, though there are some areas for improvement.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef3_1"
+                        },
+                        "Review__c": "Impressive performance, I'm thrilled with my purchase.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef3_2"
+                        },
+                        "Review__c": "Functional, yet I was hoping for something a bit more exciting.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef3_3"
+                        },
+                        "Review__c": "This product has been a source of constant frustration.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef3_4"
+                        },
+                        "Review__c": "Disappointed with the purchase, not what I expected.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef3_5"
+                        },
+                        "Review__c": "Not satisfied at all, the product failed to meet my needs.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef3_6"
+                        },
+                        "Review__c": "Good product, but didn't quite meet all my expectations.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef3_7"
+                        },
+                        "Review__c": "Does its job, but I'm not sure it's the best value out there.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef3_8"
+                        },
+                        "Review__c": "Not bad, but it doesn't stand out from competitors.",
+                        "Rating__c": 3
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -98,7 +402,83 @@
             "Motor__c": "281 watt, 75Nm",
             "Fork__c": "Air spring, adjustable rebound",
             "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Rear_Brakes__c": "Hydraulic disc, 200mm",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef4_0"
+                        },
+                        "Review__c": "Problems from day one, not a reliable product.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef4_1"
+                        },
+                        "Review__c": "Meets the basic requirements, but lacks wow factor.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef4_2"
+                        },
+                        "Review__c": "Not satisfied at all, the product failed to meet my needs.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef4_3"
+                        },
+                        "Review__c": "Quality is top-notch, couldn't be happier.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef4_4"
+                        },
+                        "Review__c": "Good product, but didn't quite meet all my expectations.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef4_5"
+                        },
+                        "Review__c": "This product has been a source of constant frustration.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef4_6"
+                        },
+                        "Review__c": "Below average, the product did not live up to the hype.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef4_7"
+                        },
+                        "Review__c": "A solid product, but there's room for enhancement.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef4_8"
+                        },
+                        "Review__c": "This product has been a source of constant frustration.",
+                        "Rating__c": 1
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -118,7 +498,83 @@
             "Motor__c": "282 watt, 75Nm",
             "Fork__c": "Air spring, adjustable rebound",
             "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Rear_Brakes__c": "Hydraulic disc, 200mm",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef5_0"
+                        },
+                        "Review__c": "Meets the basic requirements, but lacks wow factor.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef5_1"
+                        },
+                        "Review__c": "Not worth the price, very dissatisfied.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef5_2"
+                        },
+                        "Review__c": "Adequate but not particularly impressive or innovative.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef5_3"
+                        },
+                        "Review__c": "The product is lacking in quality and durability.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef5_4"
+                        },
+                        "Review__c": "Meets the basic requirements, but lacks wow factor.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef5_5"
+                        },
+                        "Review__c": "Incredible results! I've never been happier with a purchase.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef5_6"
+                        },
+                        "Review__c": "Very unhappy, it's not what was advertised.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef5_7"
+                        },
+                        "Review__c": "Encountered several problems, very frustrating.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef5_8"
+                        },
+                        "Review__c": "A game changer for my daily routine, so glad I bought it.",
+                        "Rating__c": 5
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -138,7 +594,83 @@
             "Motor__c": "283 watt, 75Nm",
             "Fork__c": "Air spring, adjustable rebound",
             "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Rear_Brakes__c": "Hydraulic disc, 200mm",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef6_0"
+                        },
+                        "Review__c": "Fairly good, though I had higher expectations.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef6_1"
+                        },
+                        "Review__c": "I'm amazed by the efficiency and effectiveness of this product.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef6_2"
+                        },
+                        "Review__c": "Below average, the product did not live up to the hype.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef6_3"
+                        },
+                        "Review__c": "Does its job, but I'm not sure it's the best value out there.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef6_4"
+                        },
+                        "Review__c": "Passable performance, but I had hoped for more.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef6_5"
+                        },
+                        "Review__c": "Quality is top-notch, couldn't be happier.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef6_6"
+                        },
+                        "Review__c": "I regret this purchase, it's not up to the standard I wanted.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef6_7"
+                        },
+                        "Review__c": "Exemplary performance, this product is a clear winner.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef6_8"
+                        },
+                        "Review__c": "A standout product that has truly enhanced my daily life.",
+                        "Rating__c": 5
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -158,7 +690,83 @@
             "Motor__c": "284 watt, 75Nm",
             "Fork__c": "Air spring, adjustable rebound",
             "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Rear_Brakes__c": "Hydraulic disc, 200mm",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef7_0"
+                        },
+                        "Review__c": "Not reliable, had to return it.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef7_1"
+                        },
+                        "Review__c": "Regret buying it, would not recommend to others.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef7_2"
+                        },
+                        "Review__c": "Disappointed with the purchase, not what I expected.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef7_3"
+                        },
+                        "Review__c": "A standout product that has truly enhanced my daily life.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef7_4"
+                        },
+                        "Review__c": "Mediocre, I'm indifferent about recommending it.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef7_5"
+                        },
+                        "Review__c": "I'm beyond satisfied with this purchase, it's been fantastic.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef7_6"
+                        },
+                        "Review__c": "Fairly good, though I had higher expectations.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef7_7"
+                        },
+                        "Review__c": "Not worth the price, very dissatisfied.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef7_8"
+                        },
+                        "Review__c": "A standout product that has truly enhanced my daily life.",
+                        "Rating__c": 5
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -178,7 +786,83 @@
             "Motor__c": "251 watt, 75Nm",
             "Fork__c": "Air spring, adjustable rebound",
             "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Rear_Brakes__c": "Hydraulic disc, 200mm",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef8_0"
+                        },
+                        "Review__c": "Great value for the price, very satisfied.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef8_1"
+                        },
+                        "Review__c": "It's fine, but I have mixed feelings about its overall value.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef8_2"
+                        },
+                        "Review__c": "It's decent, but I was expecting a bit more in terms of performance.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef8_3"
+                        },
+                        "Review__c": "Underwhelming, to say the least, it didn't live up to my expectations.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef8_4"
+                        },
+                        "Review__c": "Fantastic product, great quality and easy to use.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef8_5"
+                        },
+                        "Review__c": "It's fine, but I have mixed feelings about its overall value.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef8_6"
+                        },
+                        "Review__c": "This has been a game-changer for me. Absolutely love it!",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef8_7"
+                        },
+                        "Review__c": "Encountered several problems, very frustrating.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef8_8"
+                        },
+                        "Review__c": "Adequate but not particularly impressive or innovative.",
+                        "Rating__c": 3
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -198,7 +882,83 @@
             "Motor__c": "252 watt, 75Nm",
             "Fork__c": "Air spring, adjustable rebound",
             "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Rear_Brakes__c": "Hydraulic disc, 200mm",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef9_0"
+                        },
+                        "Review__c": "Absolutely love it! Best purchase I've made.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef9_1"
+                        },
+                        "Review__c": "This product has exceeded all my expectations, truly a marvel!",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef9_2"
+                        },
+                        "Review__c": "A solid product, but there's room for enhancement.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef9_3"
+                        },
+                        "Review__c": "Underwhelming, to say the least, it didn't live up to my expectations.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef9_4"
+                        },
+                        "Review__c": "Impressive performance, I'm thrilled with my purchase.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef9_5"
+                        },
+                        "Review__c": "Poor quality, started having issues within a week.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef9_6"
+                        },
+                        "Review__c": "Not at all what I was promised, I'm very disappointed.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef9_7"
+                        },
+                        "Review__c": "Love the design and functionality, works perfectly.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef9_8"
+                        },
+                        "Review__c": "Disappointing performance, I expected much better.",
+                        "Rating__c": 1
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -218,7 +978,83 @@
             "Motor__c": "253 watt, 75Nm",
             "Fork__c": "Air spring, adjustable rebound",
             "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Rear_Brakes__c": "Hydraulic disc, 200mm",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef10_0"
+                        },
+                        "Review__c": "Love the design and functionality, works perfectly.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef10_1"
+                        },
+                        "Review__c": "Quality is top-notch, couldn't be happier.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef10_2"
+                        },
+                        "Review__c": "It's okay, does the job but nothing to write home about.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef10_3"
+                        },
+                        "Review__c": "Poor quality, started having issues within a week.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef10_4"
+                        },
+                        "Review__c": "A solid product, but there's room for enhancement.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef10_5"
+                        },
+                        "Review__c": "Not satisfied at all, the product failed to meet my needs.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef10_6"
+                        },
+                        "Review__c": "Satisfactory, but I believe it could be better with a few tweaks.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef10_7"
+                        },
+                        "Review__c": "Incredible results! I've never been happier with a purchase.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef10_8"
+                        },
+                        "Review__c": "This product has exceeded all my expectations, truly a marvel!",
+                        "Rating__c": 5
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -238,7 +1074,83 @@
             "Motor__c": "254 watt, 75Nm",
             "Fork__c": "Air spring, adjustable rebound",
             "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Rear_Brakes__c": "Hydraulic disc, 200mm",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef11_0"
+                        },
+                        "Review__c": "I'm amazed by the efficiency and effectiveness of this product.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef11_1"
+                        },
+                        "Review__c": "Very unhappy, it's not what was advertised.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef11_2"
+                        },
+                        "Review__c": "Mediocre, I'm indifferent about recommending it.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef11_3"
+                        },
+                        "Review__c": "I wouldn't recommend this, it's been a letdown.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef11_4"
+                        },
+                        "Review__c": "The product is lacking in quality and durability.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef11_5"
+                        },
+                        "Review__c": "Had high hopes, but it fell short in many areas.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef11_6"
+                        },
+                        "Review__c": "This product has exceeded all my expectations, truly a marvel!",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef11_7"
+                        },
+                        "Review__c": "I'm amazed by the efficiency and effectiveness of this product.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef11_8"
+                        },
+                        "Review__c": "The best in its class, I would buy it again without hesitation.",
+                        "Rating__c": 5
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -258,7 +1170,83 @@
             "Motor__c": "251 watt, 75Nm",
             "Fork__c": "Foldable",
             "Front_Brakes__c": "Centre-pull caliper brake",
-            "Rear_Brakes__c": "Centre-pull caliper brake"
+            "Rear_Brakes__c": "Centre-pull caliper brake",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef12_0"
+                        },
+                        "Review__c": "The best in its class, I would buy it again without hesitation.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef12_1"
+                        },
+                        "Review__c": "Passable performance, but I had hoped for more.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef12_2"
+                        },
+                        "Review__c": "Absolutely love it! Best purchase I've made.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef12_3"
+                        },
+                        "Review__c": "Disappointed with the purchase, not what I expected.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef12_4"
+                        },
+                        "Review__c": "A game changer for my daily routine, so glad I bought it.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef12_5"
+                        },
+                        "Review__c": "A superior product that delivers on all its promises.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef12_6"
+                        },
+                        "Review__c": "Absolutely love it! Best purchase I've made.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef12_7"
+                        },
+                        "Review__c": "Superb product, it has all the features I wanted and more.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef12_8"
+                        },
+                        "Review__c": "Meets some expectations, but not a standout product.",
+                        "Rating__c": 3
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -278,7 +1266,83 @@
             "Motor__c": "252 watt, 75Nm",
             "Fork__c": "Foldable",
             "Front_Brakes__c": "Centre-pull caliper brake",
-            "Rear_Brakes__c": "Centre-pull caliper brake"
+            "Rear_Brakes__c": "Centre-pull caliper brake",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef13_0"
+                        },
+                        "Review__c": "Meets some expectations, but not a standout product.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef13_1"
+                        },
+                        "Review__c": "The product is lacking in quality and durability.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef13_2"
+                        },
+                        "Review__c": "Fantastic product, great quality and easy to use.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef13_3"
+                        },
+                        "Review__c": "Issues keep cropping up, it's more hassle than it's worth.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef13_4"
+                        },
+                        "Review__c": "Remarkable quality and performance, worth every penny!",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef13_5"
+                        },
+                        "Review__c": "A good product, though it lacks some features I hoped for.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef13_6"
+                        },
+                        "Review__c": "A total miss, I wish I had spent my money elsewhere.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef13_7"
+                        },
+                        "Review__c": "ReviewText",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef13_8"
+                        },
+                        "Review__c": "A good product, though it lacks some features I hoped for.",
+                        "Rating__c": 3
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -298,7 +1362,83 @@
             "Motor__c": "253 watt, 75Nm",
             "Fork__c": "Foldable",
             "Front_Brakes__c": "Centre-pull caliper brake",
-            "Rear_Brakes__c": "Centre-pull caliper brake"
+            "Rear_Brakes__c": "Centre-pull caliper brake",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef14_0"
+                        },
+                        "Review__c": "Problems from day one, not a reliable product.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef14_1"
+                        },
+                        "Review__c": "Satisfactory, but I believe it could be better with a few tweaks.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef14_2"
+                        },
+                        "Review__c": "Decent quality, though there are some areas for improvement.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef14_3"
+                        },
+                        "Review__c": "Satisfactory, but I believe it could be better with a few tweaks.",
+                        "Rating__c": 3
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef14_4"
+                        },
+                        "Review__c": "Very unhappy, it's not what was advertised.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef14_5"
+                        },
+                        "Review__c": "Exemplary performance, this product is a clear winner.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef14_6"
+                        },
+                        "Review__c": "Excellent craftsmanship, it's clearly built to last.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef14_7"
+                        },
+                        "Review__c": "A superior product that delivers on all its promises.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef14_8"
+                        },
+                        "Review__c": "Average experience, nothing particularly special.",
+                        "Rating__c": 3
+                    }
+                ]
+            }
         },
         {
             "attributes": {
@@ -318,7 +1458,83 @@
             "Motor__c": "254 watt, 75Nm",
             "Fork__c": "Foldable",
             "Front_Brakes__c": "Centre-pull caliper brake",
-            "Rear_Brakes__c": "Centre-pull caliper brake"
+            "Rear_Brakes__c": "Centre-pull caliper brake",
+            "Customer_Reviews__r": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef15_0"
+                        },
+                        "Review__c": "Encountered several problems, very frustrating.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef15_1"
+                        },
+                        "Review__c": "Great value for the price, very satisfied.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef15_2"
+                        },
+                        "Review__c": "Poor quality, started having issues within a week.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef15_3"
+                        },
+                        "Review__c": "Exceeded my expectations in every way, highly recommend!",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef15_4"
+                        },
+                        "Review__c": "Excellent craftsmanship, it's clearly built to last.",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef15_5"
+                        },
+                        "Review__c": "Problems from day one, not a reliable product.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef15_6"
+                        },
+                        "Review__c": "Disappointing performance, I expected much better.",
+                        "Rating__c": 1
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef15_7"
+                        },
+                        "Review__c": "Exceeded my expectations in every way, highly recommend!",
+                        "Rating__c": 5
+                    },
+                    {
+                        "attributes": {
+                            "type": "Customer_Review__c",
+                            "referenceId": "CustomerReviewRef15_8"
+                        },
+                        "Review__c": "Underwhelming, to say the least, it didn't live up to my expectations.",
+                        "Rating__c": 1
+                    }
+                ]
+            }
         }
     ]
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <description
+    >This field represents the master in a master-detail relationship, and is the associated product for the customer review.</description>
+    <externalId>false</externalId>
+    <label>Product</label>
+    <referenceTo>Product__c</referenceTo>
+    <relationshipLabel>Customer Reviews</relationshipLabel>
+    <relationshipName>Customer_Reviews</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

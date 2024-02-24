@@ -30,16 +30,6 @@ echo "Importing sample data..." && \
 sf data tree import -p data/sample-data-plan.json && \
 echo "" && \
 
-echo "Sleeping 30s for XP Cloud deployment..." && \
-sleep 30 && \
-echo "" && \
-
-echo "Publishing XP Cloud site..." && \
-sf community publish -n E-Bikes && \
-echo "" && \
-
-echo "Deploying guest profile for XP Cloud site..." && \
-sf project deploy start --metadata-dir=guest-profile-metadata -w 10 && \
 echo "" && \
 
 echo "Opening org..." && \
