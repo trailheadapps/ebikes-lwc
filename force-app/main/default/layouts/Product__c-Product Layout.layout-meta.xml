@@ -123,6 +123,8 @@
     </layoutSections>
     <relatedLists>
         <fields>NAME</fields>
+        <fields>Review__c</fields>
+        <fields>Rating__c</fields>
         <relatedList>Customer_Review__c.Product__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
