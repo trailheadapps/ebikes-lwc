@@ -6,4 +6,5 @@
 # sf community publish -n E-Bikes
 # sf project deploy start --metadata-dir=guest-profile-metadata -w 10
 # sf org open
+#push scripting
 git pull
