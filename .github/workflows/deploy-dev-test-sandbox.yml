@@ -1,0 +1,70 @@
+name: Salesforce Deployment Dev and Test Sandboxes
+
+on:
+  pull_request_review:
+    types: [submitted]
+  workflow_dispatch:
+
+jobs:
+  deploy-salesforce-sandbox:
+    name: Salesforce Deployment Dev and Test Sandboxes
+    if: github.event_name == 'workflow_dispatch' || github.event.review.state == 'APPROVED'
+    runs-on: self-hosted
+    strategy:
+      fail-fast: false
+      matrix:
+        sandbox: [Dev, Test]
+    environment: ${{matrix.sandbox}}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Salesforce DX
+        run: npm install --location=global sfdx-cli@${{secrets.SFDX_CLI_VERSION}}
+
+      - name: Start Full Salesforce Deployment
+        id: start-sf-fulldeploy
+        uses: ./.github/actions/start-salesforce-deployment
+        with:
+          server-key: ${{secrets.SFDX_SERVER_KEY}}
+          consumer-key: ${{secrets.SFDX_CONSUMER_KEY}}
+          username: ${{secrets.SFDX_USER}}
+          instance-url: ${{secrets.SFDX_INSTANCE_URL}}
+          full-deploy: true
+
+      - name: Monitor Salesforce Deployment
+        run: sfdx force:mdapi:deploy:report --targetusername buildserver --jobid $( cat deploymentId ) --wait -1
+
+      - name: Full Salesforce Deployment Report
+        if: failure()
+        run: sfdx force:mdapi:deploy:report --targetusername buildserver --jobid ${{steps.start-sf-fulldeploy.outputs.deployment-id}} --verbose
+
+      - name: Cancel Handler
+        if: ${{cancelled()}}
+        run: sfdx force:mdapi:deploy:cancel --targetusername buildserver --jobid ${{steps.start-sf-fulldeploy.outputs.deployment-id}} --wait 2
+
+      - name: Retrieve Pull Request Number
+        id: pr-number
+        if: success()
+        run: echo "::set-output name=pr_number::${{ github.event.pull_request.number }}"
+
+      - name: Add Success Label to Pull Request
+        if: steps.pr-number.outputs.pr_number != null
+        run: |
+          PR_NUMBER=${{ steps.pr-number.outputs.pr_number }}
+          OWNER=${{ github.repository_owner }}
+          REPO=${{ github.event.repository.name }}
+          TOKEN="${{ secrets.GIT_HUB_TOKEN }}"
+
+          # Use GitHub REST API to add a label to the pull request
+          curl -X POST \
+            -H "Authorization: token $TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$OWNER/$REPO/issues/$PR_NUMBER/labels" \
+            -d '{"labels":["deployed-to-dev-and-test"]}'
