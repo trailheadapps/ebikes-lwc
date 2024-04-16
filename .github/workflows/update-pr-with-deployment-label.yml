@@ -1,0 +1,48 @@
+name: Update PR with Deployment Label
+
+on:
+  workflow_dispatch:
+  # You might want to trigger this workflow on deployment completion event
+  # deployment_status
+
+jobs:
+  update-pr-label:
+    name: Update PR with Deployment Label
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # Authenticate with GitHub to access the repository and perform actions
+      - name: Authenticate with GitHub
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GIT_TOKEN }}
+
+      # Get the branch name where the deployment occurred
+      - name: Get Branch Name
+        id: branch-name
+        run: echo "::set-output name=branch::$(echo $GITHUB_REF | awk -F'/' '{print $3}')"
+
+      # Get the pull request number associated with the branch
+      - name: Get PR Number
+        id: pr-number
+        run: |
+          pr_number=$(curl -s -H "Authorization: Bearer ${{ secrets.GIT_TOKEN }}" \
+                      "https://api.github.com/repos/${{ github.repository }}/pulls?head=${{ github.repository_owner }}:${{ steps.branch-name.outputs.branch }}" \
+                      | jq -r '.[0].number')
+          echo "::set-output name=pr_number::$pr_number"
+          echo $pr_number
+          echo ${{ steps.pr-number.outputs.pr_number }}
+          echo ${{ steps.branch-name.outputs.branch }}
+
+      # Add a label to the pull request indicating deployment to dev
+      - name: Add Label to PR
+        if: steps.pr-number.outputs.pr_number != 'null'
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.GIT_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"labels":["deployment-to-dev-test"]}' \
+            "https://api.github.com/repos/${{ github.repository }}/issues/${{ steps.pr-number.outputs.pr_number }}/labels"

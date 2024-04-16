@@ -1,14 +1,14 @@
-name: Salesforce Deployment Dev and Test Sandboxes
+name: Salesforce Deploy (Dev, Test)
 
-on:
-  pull_request_review:
-    types: [submitted]
-  workflow_dispatch:
+# on:
+#   pull_request_review:
+#     types: [submitted]
+#   workflow_dispatch:
 
 jobs:
-  deploy-salesforce-sandbox:
-    name: Salesforce Deployment Dev and Test Sandboxes
-    if: github.event_name == 'workflow_dispatch' || github.event.review.state == 'APPROVED'
+  Deploy:
+    name: Salesforce Deploy (Dev, Test)
+    if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -49,15 +49,10 @@ jobs:
         if: ${{cancelled()}}
         run: sfdx force:mdapi:deploy:cancel --targetusername buildserver --jobid ${{steps.start-sf-fulldeploy.outputs.deployment-id}} --wait 2
 
-      - name: Retrieve Pull Request Number
-        id: pr-number
-        if: success()
-        run: echo "::set-output name=pr_number::${{ github.event.pull_request.number }}"
-
       - name: Add Success Label to Pull Request
-        if: steps.pr-number.outputs.pr_number != null
+        if: success()
         run: |
-          PR_NUMBER=${{ steps.pr-number.outputs.pr_number }}
+          PR_NUMBER=${{ github.event.pull_request.number }}
           OWNER=${{ github.repository_owner }}
           REPO=${{ github.event.repository.name }}
           TOKEN="${{ secrets.GIT_HUB_TOKEN }}"
@@ -65,10 +60,33 @@ jobs:
           echo $OWNER
           echo $REPO
           echo $TOKEN
-
+          
           # Use GitHub REST API to add a label to the pull request
           curl -X POST \
             -H "Authorization: token $TOKEN" \
             -H "Accept: application/vnd.github.v3+json" \
             "https://api.github.com/repos/$OWNER/$REPO/issues/$PR_NUMBER/labels" \
             -d '{"labels":["deployed-to-dev-and-test"]}'  
+
+  Approval:
+    name: Approval
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Request Approval
+        id: approval
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GIT_HUB_TOKEN }}
+          script: |
+            const { data: approvals } = await github.request('GET /repos/:owner/:repo/pulls/:pull_number/reviews', {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number
+            });
+
+            const hasApproved = approvals.some(review => review.state === 'APPROVED');
+
+            return { approved: hasApproved };
+      - name: Check Approval Status
+        run: echo Approval status ${{ steps.approval.outputs.approved }}
