@@ -1,0 +1,61 @@
+# Fully deploy source code to all CIBUILD sandboxes as well as the Dev and Test sandboxes once feature has been merged to main branch
+name: Update Salesforce Validation Sandboxes
+
+on:
+# All pushes to main branch
+  push:
+     branches:
+      - main
+
+  # Allows manual run from the Actions tab once this workflow is in default branch
+  workflow_dispatch:
+
+# Cancel any subsequent runs of the same branch as they will need to be redeployed with newer config
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  # Performs a deployment against each CIBUILD salesforce sandbox
+  salesforce-deploy:
+    name: Salesforce Deploy
+    strategy:
+      fail-fast: false
+      matrix:
+        sandbox: [CIBUILD1, CIBUILD2, Dev, Test]
+    runs-on: self-hosted
+    environment: ${{matrix.sandbox}}
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Salesforce DX
+        run: npm install --location=global sfdx-cli@${{secrets.SFDX_CLI_VERSION}}
+
+      - name: Start Full Salesforce Deployment
+        id: start-sf-fulldeploy
+        uses: ./.github/actions/start-salesforce-deployment
+        with:
+          server-key: ${{secrets.SFDX_SERVER_KEY}}
+          consumer-key: ${{secrets.SFDX_CONSUMER_KEY}}
+          username: ${{secrets.SFDX_USER}}
+          instance-url: ${{secrets.SFDX_INSTANCE_URL}}
+          full-deploy: true
+
+      - name: Monitor Salesforce Deployment
+        run: sfdx force:mdapi:deploy:report --targetusername buildserver --jobid $( cat deploymentId ) --wait -1
+
+        # If the deployment failed, then request the report again but with verbose flag set so that full details are returned
+      - name: Full Salesforce Deployment Report
+        if: failure()
+        run: sfdx force:mdapi:deploy:report --targetusername buildserver --jobid ${{steps.start-sf-fulldeploy.outputs.deployment-id}} --verbose
+
+        # If the deployment is canceled either manually or by a newer build being started, cancel the in progress build
+      - name: Cancel Handler
+        if: ${{cancelled()}}
+        run: sfdx force:mdapi:deploy:cancel --targetusername buildserver --jobid ${{steps.start-sf-fulldeploy.outputs.deployment-id}} --wait 2

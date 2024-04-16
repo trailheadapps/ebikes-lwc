@@ -1,0 +1,92 @@
+name: Salesforce Deploy (Dev, Test)
+
+# on:
+#   pull_request_review:
+#     types: [submitted]
+#   workflow_dispatch:
+
+jobs:
+  Deploy:
+    name: Salesforce Deploy (Dev, Test)
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        sandbox: [Dev]
+    environment: ${{matrix.sandbox}}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Salesforce DX
+        run: npm install --location=global sfdx-cli@${{secrets.SFDX_CLI_VERSION}}
+
+      - name: Start Full Salesforce Deployment
+        id: start-sf-fulldeploy
+        uses: ./.github/actions/start-salesforce-deployment
+        with:
+          server-key: ${{secrets.SFDX_SERVER_KEY}}
+          consumer-key: ${{secrets.SFDX_CONSUMER_KEY}}
+          username: ${{secrets.SFDX_USER}}
+          instance-url: ${{secrets.SFDX_INSTANCE_URL}}
+          full-deploy: true
+
+      - name: Monitor Salesforce Deployment
+        run: sfdx force:mdapi:deploy:report --targetusername buildserver --jobid $( cat deploymentId ) --wait -1
+
+      - name: Full Salesforce Deployment Report
+        if: failure()
+        run: sfdx force:mdapi:deploy:report --targetusername buildserver --jobid ${{steps.start-sf-fulldeploy.outputs.deployment-id}} --verbose
+
+      - name: Cancel Handler
+        if: ${{cancelled()}}
+        run: sfdx force:mdapi:deploy:cancel --targetusername buildserver --jobid ${{steps.start-sf-fulldeploy.outputs.deployment-id}} --wait 2
+
+      - name: Add Success Label to Pull Request
+        if: success()
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          OWNER=${{ github.repository_owner }}
+          REPO=${{ github.event.repository.name }}
+          TOKEN="${{ secrets.GIT_HUB_TOKEN }}"
+          echo $PR_NUMBER
+          echo $OWNER
+          echo $REPO
+          echo $TOKEN
+          
+          # Use GitHub REST API to add a label to the pull request
+          curl -X POST \
+            -H "Authorization: token $TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/$OWNER/$REPO/issues/$PR_NUMBER/labels" \
+            -d '{"labels":["deployed-to-dev-and-test"]}'  
+
+  Approval:
+    name: Approval
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Request Approval
+        id: approval
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GIT_HUB_TOKEN }}
+          script: |
+            const { data: approvals } = await github.request('GET /repos/:owner/:repo/pulls/:pull_number/reviews', {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number
+            });
+
+            const hasApproved = approvals.some(review => review.state === 'APPROVED');
+
+            return { approved: hasApproved };
+      - name: Check Approval Status
+        run: echo Approval status ${{ steps.approval.outputs.approved }}

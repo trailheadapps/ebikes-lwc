@@ -1,0 +1,93 @@
+# Build all feature branches against one of the CIBUILD sandboxes
+name: Validate Feature Branch
+
+on:
+# All pull requests to the Main branch
+  pull_request:
+     branches:
+      - main
+
+  # Allows manual run from the Actions tab once this workflow is in default branch
+  workflow_dispatch:
+
+# Cancel any subsequent runs of the same branch as they will need to be revalidated with newer config
+concurrency:
+  group: ${{github.workflow}}-${{github.ref}}
+  cancel-in-progress: true
+
+jobs:
+  eslint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install NPM Dependencies
+        run: npm install --yes --no-progress
+
+      - name: Run ESLint
+        run: ./node_modules/.bin/eslint src
+
+  jest:
+    name: JEST Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install NPM Dependencies
+        run: npm install --yes --no-progress
+
+      - name: Run Jest Tests
+        run: ./node_modules/.bin/lwc-jest --coverage -- --silent --passWithNoTests
+
+  # Applies a round robin mechanism to dynamically determine the CIBUILD sandbox to use for this run. This is based on the workflows run number
+  setup:
+    name: Deployment Setup
+    runs-on: ubuntu-latest
+    needs: [eslint, jest]
+    env:
+      NUM_BUILD_SANDBOXES: 2
+    steps:
+      - name: Determine Target Sandbox
+        id: determine-sandbox
+        run: echo "::set-output name=targetsandbox::CIBUILD$((($GITHUB_RUN_NUMBER % $NUM_BUILD_SANDBOXES)+1))"
+      - name: Print Target Sandbox
+        run: echo ${{steps.determine-sandbox.outputs.targetsandbox}}
+    outputs:
+      target-sandbox: ${{steps.determine-sandbox.outputs.targetsandbox}}
+
+  # Performs a checkonly deployment against the target salesforce sandbox
+  salesforce-validate:
+    name: Salesforce Validate
+    runs-on: self-hosted
+    needs: [setup]
+    environment: ${{needs.setup.outputs.target-sandbox}}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Salesforce DX
+        run: npm install --location=global sfdx-cli@${{secrets.SFDX_CLI_VERSION}}
+
+      - name: Start Check Only Salesforce Deployment
+        id: start-sf-validate
+        uses: ./.github/actions/start-salesforce-deployment
+        with:
+          server-key: ${{secrets.SFDX_SERVER_KEY}}
+          consumer-key: ${{secrets.SFDX_CONSUMER_KEY}}
+          username: ${{secrets.SFDX_USER}}
+          instance-url: ${{secrets.SFDX_INSTANCE_URL}}
+
+      - name: Monitor Salesforce Deployment
+        run: sfdx force:mdapi:deploy:report --targetusername buildserver --jobid ${{steps.start-sf-validate.outputs.deployment-id}} --wait -1 --verbose
+
+        # If the deployment is canceled either manually or by a newer build being started, cancel the in progress build
+      - name: Cancel Handler
+        if: ${{cancelled()}}
+        run: sfdx force:mdapi:deploy:cancel --targetusername buildserver --jobid ${{steps.start-sf-validate.outputs.deployment-id}} --wait 2

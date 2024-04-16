@@ -1,0 +1,71 @@
+name: "Start Salesforce Deployment"
+description: "Connects to the Target Salesforce Instance and then starts a deployment against the target environment, returning the resulting jobid"
+
+inputs:
+  server-key:
+    description: "SFDX Server Key encoded as base64"
+    required: true
+  consumer-key:
+    description: "SFDX Consumer Key of connected app to use for authorisation"
+    required: true
+  username:
+    description: "SFDX Username to connect as"
+    required: true
+  instance-url:
+    description: "URL of the Salesforce instance to connect to"
+    required: true
+  full-deploy:
+    description: "Perform a full deployment. If this is not set as true then a validation will be done by default"
+    required: false
+  validation-job-id:
+    description: "Perform a Quick Deployment by providing a validation Id"
+    required: false
+
+outputs:
+  deployment-id:
+    description: "Id of the deployment job in Salesforce"
+    value: ${{steps.output-job-id.outputs.deployment-id}}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Connect to Salesforce
+      shell: bash
+      run: |
+        mkdir keys
+        echo "${{inputs.server-key}}" | base64 -d > ./keys/build.key
+        sfdx force:auth:jwt:grant --clientid ${{inputs.consumer-key}} --jwtkeyfile ./keys/build.key --username ${{inputs.username}} --instanceurl ${{inputs.instance-url}} --setdefaultdevhubusername --setalias buildserver
+
+    - name: Start Salesforce Validation
+      id: start-validation
+      if: ${{inputs.full-deploy != 'true'}}
+      shell: bash
+      run: |
+        echo Starting Validation
+        sfdx force:source:deploy --checkonly -p force-app/main/default --targetusername buildserver --testlevel NoTestRun --ignorewarnings --wait 0 --json | jq -r '.result.id' > deploymentId
+
+    - name: Start Salesforce Full Deploy
+      id: start-full-deploy
+      if: ${{inputs.full-deploy == 'true' && inputs.validation-job-id == null}}
+      shell: bash
+      run: |
+        echo Starting Full Deployment
+        sfdx force:source:deploy -p force-app/main/default --targetusername buildserver --testlevel NoTestRun --ignoreerrors --ignorewarnings --json | jq -r '.result.id' > deploymentId 
+        echo sfdx force:source:deploy --sourcepath src --targetusername buildserver --testlevel NoTestRun --ignoreerrors --ignorewarnings --json
+
+    - name: Start Salesforce Quick Deployment
+      id: start-quick-deployment
+      if: ${{inputs.full-deploy == 'true' && inputs.validation-job-id != null}}
+      shell: bash
+      run: |
+        VAL_JOB_ID=${{inputs.validation-job-id}}
+        echo Starting Quick Deployment of validation $VAL_JOB_ID
+        sfdx force:source:deploy --validateddeployrequestid $VAL_JOB_ID --targetusername buildserver --wait 0 --json | jq -r '.result.id' > deploymentId
+
+    - name: Output Job Id
+      id: output-job-id
+      shell: bash
+      run: |
+        JOBID=$( cat deploymentId )
+        echo "Started with Job Id: $JOBID"
+        echo "::set-output name=deployment-id::$JOBID"

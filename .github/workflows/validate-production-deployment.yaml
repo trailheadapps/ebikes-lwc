@@ -1,0 +1,40 @@
+# Pipeline for Production Deployment / Release
+name: Validate Production Deployment
+
+on:
+  # Trigger when a release is published
+  release:
+    types: [published]
+
+jobs:
+  production-validate:
+    name: Validate Production Deploy (Production)
+    runs-on: self-hosted
+    environment: PRODUCTION
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Salesforce DX
+        run: npm install --location=global sfdx-cli@${{secrets.SFDX_CLI_VERSION}}
+
+      - name: Start Check Only Salesforce Deployment
+        id: start-sf-validate
+        uses: ./.github/actions/start-salesforce-deployment
+        with:
+          server-key: ${{secrets.SFDX_SERVER_KEY}}
+          consumer-key: ${{secrets.SFDX_CONSUMER_KEY}}
+          username: ${{secrets.SFDX_USER}}
+          instance-url: ${{secrets.SFDX_INSTANCE_URL}}
+
+      - name: Monitor Salesforce Deployment
+        run: sfdx force:mdapi:deploy:report --targetusername buildserver --jobid ${{steps.start-sf-validate.outputs.deployment-id}} --wait -1 --verbose
+
+      - name: Print Validate Job ID
+        run: echo ${{steps.start-sf-validate.outputs.deployment-id}}
