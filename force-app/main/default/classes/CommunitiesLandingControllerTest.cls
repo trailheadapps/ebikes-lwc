@@ -8,6 +8,7 @@ public with sharing class CommunitiesLandingControllerTest {
         // Instantiate a new controller with all parameters in the page
         CommunitiesLandingController controller = new CommunitiesLandingController();
         PageReference pageRef = controller.forwardToStartPage();
+        System.debug(pageRef);
         //PageRef is either null or an empty object in test context
         if (pageRef != null) {
             String url = pageRef.getUrl();
