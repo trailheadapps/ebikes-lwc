@@ -1,0 +1,8 @@
+sf sfCodeOrg create scratch -d -f config/project-scratch-def.json -a ebikes
+sf project deploy start
+sf sfCodeOrg assign permset -n ebikes
+sf sfCodeOrg assign permset -n Walkthroughs
+sf data tree import -p ./data/sample-data-plan.json
+sf community publish -n E-Bikes
+sf project deploy start --metadata-dir=guest-profile-metadata -w 10
+sf sfCodeOrg open 

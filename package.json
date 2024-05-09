@@ -16,7 +16,8 @@
         "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "prettier:verify": "prettier --check \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
         "postinstall": "husky install",
-        "precommit": "lint-staged"
+        "precommit": "lint-staged",
+        "deployApex" : "sf project deploy start --metadata ApexClass:CommunitiesLandingController --ignore-conflicts  "
     },
     "lint-staged": {
         "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
