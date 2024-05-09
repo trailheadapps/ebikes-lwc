@@ -7,6 +7,8 @@ public with sharing class CommunitiesLandingController { // changes by me
         return Network.communitiesLanding();
     }
 
-    public CommunitiesLandingController() {
+    public CommunitiesLandingController()
+     {
+        //Empty method
     }
 }
