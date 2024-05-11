@@ -6,7 +6,7 @@ public with sharing class CommunitiesLandingController { // changes by me
     public PageReference forwardToStartPage() {
         return Network.communitiesLanding();
     }
-
+//Empty method down here
     public CommunitiesLandingController()
      {
         //Empty method
