@@ -11,4 +11,15 @@ public with sharing class CommunitiesLandingController { // changes by me
      {
         //Empty method
     }
+    public static void Comm1()
+    {
+        //Empty Comm1 Method 
+    }
+
+    public static void Comm2()
+    {
+        //Empty Comm2 Method
+    } 
+
+   
 }
