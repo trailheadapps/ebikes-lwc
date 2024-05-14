@@ -18,7 +18,7 @@ jobs:
         steps:
             # Checkout the source code
             - name: 'Checkout source code'
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             # Install Volta to enforce proper node and package manager versions
             - name: 'Install Volta'
@@ -27,7 +27,7 @@ jobs:
             # Cache node_modules to speed up the process
             - name: 'Restore node_modules cache'
               id: cache-npm
-              uses: actions/cache@v3
+              uses: actions/cache@v4
               with:
                   path: node_modules
                   key: npm-${{ hashFiles('**/package-lock.json') }}
@@ -54,8 +54,9 @@ jobs:
 
             # Upload code coverage data
             - name: 'Upload code coverage for LWC to Codecov.io'
-              uses: codecov/codecov-action@v3
+              uses: codecov/codecov-action@v4
               with:
+                  token: ${{ secrets.CODECOV_TOKEN }}
                   flags: LWC
 
     scratch-org-test:
@@ -73,7 +74,7 @@ jobs:
 
             # Checkout the source code
             - name: 'Checkout source code'
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             # Store secret for dev hub
             - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
@@ -124,8 +125,9 @@ jobs:
 
             # Upload code coverage data
             - name: 'Upload code coverage for Apex to Codecov.io'
-              uses: codecov/codecov-action@v3
+              uses: codecov/codecov-action@v4
               with:
+                  token: ${{ secrets.CODECOV_TOKEN }}
                   flags: Apex
 
             # Housekeeping
