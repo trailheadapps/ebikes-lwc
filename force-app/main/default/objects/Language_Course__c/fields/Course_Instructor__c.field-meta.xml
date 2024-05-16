@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Course_Instructor__c</fullName>
+    <description>Teacher for the language course</description>
+    <externalId>false</externalId>
+    <label>Course Instructor</label>
+    <referenceTo>Language_Course_Instructor__c</referenceTo>
+    <relationshipLabel>Language Courses</relationshipLabel>
+    <relationshipName>Language_Courses</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>
