@@ -1,5 +1,6 @@
 trigger AccAnnualRev on Account (before insert,before update)
 {
+    //if conditions for trigger
     if((Trigger.isBefore && Trigger.isInsert) || (Trigger.isUpdate)) 
     {
         for(Account acc : Trigger.New)
