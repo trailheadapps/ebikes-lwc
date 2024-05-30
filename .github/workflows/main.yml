@@ -1,0 +1,36 @@
+name: deploy to prod
+on:
+  push:
+    paths:
+      - force-app/**
+jobs:
+  deploy-to-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+      - name: Checkout source code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install Salesforce CLI
+        run: >
+          wget
+          https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
+
+          mkdir ~/sfdx
+
+          tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
+
+          echo "$HOME/sfdx/bin" >> $GITHUB_PATH
+
+          ~/sfdx/bin/sfdx version
+      - name: Populate auth file with SFDX_URL secret of target org
+        run: |
+          echo ${{ secrets.PROD_URL}} > ./PROD_URL.txt
+      - name: Authenticate to target Org
+        run: sfdx auth:sfdxurl:store -f ./PROD_URL.txt -s -a targetOrg
+      - name: Deployment - run all tests
+        run: >
+          sfdx force:source:deploy -p "force-app"  --testlevel RunLocalTests --json
