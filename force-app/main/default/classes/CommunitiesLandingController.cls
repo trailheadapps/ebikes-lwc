@@ -20,6 +20,7 @@ public with sharing class CommunitiesLandingController { // changes by me
     {
         //Empty Comm2 Method
     } 
+    //end of code
 
    
 }
