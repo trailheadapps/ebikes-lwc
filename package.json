@@ -39,7 +39,7 @@
         "@babel/cli": "^7.24.6",
         "@babel/core": "^7.24.6",
         "@babel/preset-env": "^7.24.5",
-        "@babel/register": "^7.23.7",
+        "@babel/register": "^7.24.6",
         "@lwc/eslint-plugin-lwc": "^1.8.1",
         "@prettier/plugin-xml": "^3.4.1",
         "@sa11y/jest": "^6.9.4",
