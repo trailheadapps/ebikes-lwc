@@ -3,6 +3,6 @@ module.exports = {
     pageObjectsFileMask: ['force-app/**/__utam__/**/*.utam.json'],
     // remap custom elements imports
     alias: {
-        'utam-sfdx/': 'ebikes-lwc/'
+        'utam-sfdx/': '../'
     }
 };
