@@ -15,6 +15,7 @@ package.xml
 **/profileSessionSettings/**
 **/settings/**
 **/sharingRules/**
+**/reportTypes/**
 
 # LWC configuration files
 **/jsconfig.json
