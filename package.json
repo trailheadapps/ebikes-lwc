@@ -6,10 +6,10 @@
     "scripts": {
         "lint": "eslint **/lwc/**/*.js force-app/test/**",
         "test": "npm run test:unit",
-        "test:unit": "sfdx-lwc-jest --skipApiVersionCheck",
-        "test:unit:watch": "sfdx-lwc-jest --watch --skipApiVersionCheck",
-        "test:unit:debug": "sfdx-lwc-jest --debug --skipApiVersionCheck",
-        "test:unit:coverage": "sfdx-lwc-jest --coverage --skipApiVersionCheck",
+        "test:unit": "sfdx-lwc-jest",
+        "test:unit:watch": "sfdx-lwc-jest --watch ",
+        "test:unit:debug": "sfdx-lwc-jest --debug ",
+        "test:unit:coverage": "sfdx-lwc-jest --coverage ",
         "test:ui": "wdio",
         "test:ui:compile": "utam -c utam.config.js",
         "test:ui:generate:login": "node scripts/generate-login-url.js",
@@ -26,7 +26,7 @@
             "eslint"
         ],
         "**/lwc/**": [
-            "sfdx-lwc-jest --skipApiVersionCheck -- --bail --findRelatedTests --passWithNoTests"
+            "sfdx-lwc-jest -- --bail --findRelatedTests --passWithNoTests"
         ]
     },
     "author": "salesforce.com",
@@ -56,9 +56,9 @@
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-jasmine": "^4.2.0",
         "eslint-plugin-jest": "^28.6.0",
-        "husky": "^9.0.11",
+        "husky": "^9.1.0",
         "lint-staged": "^15.2.7",
-        "prettier": "^3.3.2",
+        "prettier": "^3.3.3",
         "prettier-plugin-apex": "^2.1.4",
         "salesforce-pageobjects": "^7.0.1",
         "utam": "^3.1.2",
@@ -69,6 +69,6 @@
         "./"
     ],
     "volta": {
-        "node": "20.13.1"
+        "node": "20.15.0"
     }
 }
