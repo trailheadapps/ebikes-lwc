@@ -1,0 +1,5 @@
+{
+    "apiName": "Product_Explorer",
+    "type": "sfdc_cms__view",
+    "path": "views"
+}

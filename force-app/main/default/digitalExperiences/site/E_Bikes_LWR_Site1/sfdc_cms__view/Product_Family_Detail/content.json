@@ -1,0 +1,66 @@
+{
+    "type": "sfdc_cms__view",
+    "title": "Product Family Detail",
+    "contentBody": {
+        "component": {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "backgroundImageConfig": "",
+                                "backgroundImageOverlay": "rgba(0,0,0,0)",
+                                "componentSpacerSize": "",
+                                "dxpStyle": {},
+                                "maxContentWidth": "",
+                                "sectionColumnGutterWidth": "",
+                                "sectionConfig": "{\"UUID\":\"9a76bde3-5322-4dc7-b6af-8eb6a5f797eb\",\"columns\":[{\"UUID\":\"bb69fb0d-632b-4560-ab6c-2ccdc04899ce\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+                            },
+                            "children": [
+                                {
+                                    "id": "bb69fb0d-632b-4560-ab6c-2ccdc04899ce",
+                                    "name": "col1",
+                                    "title": "Column 1",
+                                    "type": "region"
+                                }
+                            ],
+                            "definition": "community_layout:section",
+                            "id": "9a76bde3-5322-4dc7-b6af-8eb6a5f797eb",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "37d5aade-f259-4b27-b29c-1c5f8107d309",
+                    "name": "content",
+                    "title": "Content",
+                    "type": "region"
+                },
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "customHeadTags": "",
+                                "description": "",
+                                "dxpStyle": {},
+                                "pageTitle": "{!Record._Object}: {!Record._Title}",
+                                "recordId": "{!recordId}"
+                            },
+                            "definition": "community_builder:seoAssistant",
+                            "id": "5d24026a-7cb3-4def-b96f-16f799ea4ec2",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "ac5e5093-6a24-4277-8b28-6c62c4c44a97",
+                    "name": "sfdcHiddenRegion",
+                    "title": "sfdcHiddenRegion",
+                    "type": "region"
+                }
+            ],
+            "definition": "community_layout:sldsFlexibleLayout",
+            "id": "d65c4133-8826-494c-8cba-13a90e9d5308",
+            "type": "component"
+        },
+        "dataProviders": [],
+        "themeLayoutType": "Inner",
+        "viewType": "detail-Product_Family__c"
+    }
+}

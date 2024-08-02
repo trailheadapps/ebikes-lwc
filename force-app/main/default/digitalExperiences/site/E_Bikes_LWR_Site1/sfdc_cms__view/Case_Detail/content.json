@@ -1,0 +1,103 @@
+{
+    "type": "sfdc_cms__view",
+    "title": "Case Detail",
+    "contentBody": {
+        "component": {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "backgroundImageConfig": "",
+                                "backgroundImageOverlay": "rgba(0,0,0,0)",
+                                "componentSpacerSize": "",
+                                "dxpStyle": {},
+                                "maxContentWidth": "",
+                                "sectionColumnGutterWidth": "",
+                                "sectionConfig": "{\"UUID\":\"72278947-a903-4756-9118-a92408e9c512\",\"columns\":[{\"UUID\":\"0d5572cb-90cc-4fd3-817c-a52194159731\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+                            },
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "attributes": {
+                                                "backgroundColor": "",
+                                                "dxpStyle": {},
+                                                "layout": "{!Item._layout}",
+                                                "mainTitlePaddingHorizontal": "none",
+                                                "mainTitlePaddingVertical": "none",
+                                                "mainTitleText": "Details for Case #{!Item.CaseNumber}",
+                                                "mainTitleTextDisplayInfo": "{}",
+                                                "metadata": "{!Item._metadata._context}",
+                                                "recordIdFromDataProvider": "{!Item.Id}",
+                                                "showTitle": true
+                                            },
+                                            "children": [
+                                                {
+                                                    "children": [
+                                                        {
+                                                            "attributes": {
+                                                                "dxpStyle": {}
+                                                            },
+                                                            "definition": "dxp_page_layout:placeHolder",
+                                                            "id": "5314133d-1ce7-47db-a570-4aeb87b377f9",
+                                                            "type": "component"
+                                                        }
+                                                    ],
+                                                    "id": "21586ec4-fd90-4d5f-920a-02e00efd46e9",
+                                                    "name": "placeholder",
+                                                    "title": "placeholder",
+                                                    "type": "region"
+                                                }
+                                            ],
+                                            "definition": "dxp_records:detailPanel",
+                                            "id": "a4067a2f-c07d-43d2-bff4-fcf7c5889e13",
+                                            "type": "component"
+                                        }
+                                    ],
+                                    "id": "0d5572cb-90cc-4fd3-817c-a52194159731",
+                                    "name": "col1",
+                                    "title": "Column 1",
+                                    "type": "region"
+                                }
+                            ],
+                            "definition": "community_layout:section",
+                            "id": "72278947-a903-4756-9118-a92408e9c512",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "85eaf3d7-af87-4c5c-89c8-2961cac4ff94",
+                    "name": "content",
+                    "title": "Content",
+                    "type": "region"
+                },
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "customHeadTags": "",
+                                "description": "",
+                                "dxpStyle": {},
+                                "pageTitle": "{!Record._Object}: {!Record._Title}",
+                                "recordId": "{!recordId}"
+                            },
+                            "definition": "community_builder:seoAssistant",
+                            "id": "cef825d3-77f9-41b8-bd8c-b2e68ecf9808",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "b01bf512-e38e-48d0-a13f-9a4e6448f09c",
+                    "name": "sfdcHiddenRegion",
+                    "title": "sfdcHiddenRegion",
+                    "type": "region"
+                }
+            ],
+            "definition": "community_layout:sldsFlexibleLayout",
+            "id": "de833ab7-4a37-46cf-8b2f-a5822e8b1d6f",
+            "type": "component"
+        },
+        "dataProviders": [],
+        "themeLayoutType": "Inner",
+        "viewType": "detail-500"
+    }
+}

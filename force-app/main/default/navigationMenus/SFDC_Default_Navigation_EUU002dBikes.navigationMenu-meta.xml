@@ -11,7 +11,6 @@
         <type>InternalLink</type>
     </navigationMenuItem>
     <navigationMenuItem>
-        <defaultListViewId>All_Product_Families</defaultListViewId>
         <label>Product Families</label>
         <position>2</position>
         <publiclyAvailable>true</publiclyAvailable>
@@ -26,7 +25,6 @@
         <type>InternalLink</type>
     </navigationMenuItem>
     <navigationMenuItem>
-        <defaultListViewId>My_Cases</defaultListViewId>
         <label>Cases</label>
         <position>4</position>
         <publiclyAvailable>true</publiclyAvailable>

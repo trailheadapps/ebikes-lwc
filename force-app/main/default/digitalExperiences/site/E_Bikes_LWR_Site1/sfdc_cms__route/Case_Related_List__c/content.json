@@ -1,0 +1,11 @@
+{
+    "type": "sfdc_cms__route",
+    "title": "Case Related List",
+    "contentBody": {
+        "activeViewId": "Case_Related_List",
+        "configurationTags": [],
+        "pageAccess": "UseParent",
+        "routeType": "relatedlist-500",
+        "urlPrefix": "case"
+    }
+}

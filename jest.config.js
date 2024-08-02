@@ -8,6 +8,8 @@ module.exports = {
     testRegex: '/__tests__/.*.test.js$',
     moduleNameMapper: {
         '^@salesforce/apex$': '<rootDir>/force-app/test/jest-mocks/apex',
+        '^@salesforce/community/basePath$':
+            '<rootDir>/force-app/test/jest-mocks/community/basePath',
         '^lightning/navigation$':
             '<rootDir>/force-app/test/jest-mocks/lightning/navigation',
         '^lightning/messageService$':

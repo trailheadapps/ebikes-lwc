@@ -1,0 +1,90 @@
+{
+    "type": "sfdc_cms__view",
+    "title": "Check Password",
+    "contentBody": {
+        "component": {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "backgroundImageConfig": "",
+                                "backgroundImageOverlay": "rgba(0,0,0,0)",
+                                "componentSpacerSize": "",
+                                "dxpStyle": {},
+                                "maxContentWidth": "",
+                                "sectionColumnGutterWidth": "",
+                                "sectionConfig": "{\"UUID\":\"c01122b2-7ca1-46e3-b915-7b22b0555b57\",\"columns\":[{\"UUID\":\"562d5b89-44fc-42d8-97f3-ce16c6c55581\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+                            },
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "attributes": {
+                                                "alignment": "left",
+                                                "dxpStyle": {},
+                                                "imageInfo": "",
+                                                "logoWidth": 250
+                                            },
+                                            "definition": "dxp_content_layout:siteLogo",
+                                            "id": "a08dfc7c-02a2-48fe-9b3d-e71d360e8c0b",
+                                            "type": "component"
+                                        },
+                                        {
+                                            "attributes": {
+                                                "checkEmailMessage": "Check the email account associated with your username for the link to reset your password. If you didn't get an email, check your Spam folder. Or contact your administrator.",
+                                                "dxpStyle": {},
+                                                "returnButtonLabel": "Back to login",
+                                                "titleLabel": "Now check your email"
+                                            },
+                                            "definition": "community_login:checkEmail",
+                                            "id": "45247607-ee85-4ca5-8c51-daaae01b351a",
+                                            "type": "component"
+                                        }
+                                    ],
+                                    "id": "562d5b89-44fc-42d8-97f3-ce16c6c55581",
+                                    "name": "col1",
+                                    "title": "Column 1",
+                                    "type": "region"
+                                }
+                            ],
+                            "definition": "community_layout:section",
+                            "id": "c01122b2-7ca1-46e3-b915-7b22b0555b57",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "391a54c5-3aa2-4480-8598-0c6b8657be4e",
+                    "name": "content",
+                    "title": "Content",
+                    "type": "region"
+                },
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "customHeadTags": "",
+                                "description": "",
+                                "dxpStyle": {},
+                                "pageTitle": "Check Password",
+                                "recordId": "{!recordId}"
+                            },
+                            "definition": "community_builder:seoAssistant",
+                            "id": "50280316-c670-4139-bc2c-e77860ef671b",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "776c49c0-c390-439c-9217-6bb330b776fe",
+                    "name": "sfdcHiddenRegion",
+                    "title": "sfdcHiddenRegion",
+                    "type": "region"
+                }
+            ],
+            "definition": "community_layout:sldsFlexibleLayout",
+            "id": "563d9162-6bbd-4b40-b827-360b14f19ed5",
+            "type": "component"
+        },
+        "dataProviders": [],
+        "themeLayoutType": "Inner",
+        "viewType": "check-password"
+    }
+}

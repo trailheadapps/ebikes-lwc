@@ -1,0 +1,125 @@
+<template>
+    <!-- Vertical Navigation List for Mobile -->
+    <template lwc:if={showHamburgerMenu}>
+        <div class="slds-is-fixed slds-grid hamburger-menu-container">
+            <div class="slds-col slds-size_5-of-6">
+                <div
+                    class="slds-grid slds-var-p-left_small slds-var-p-top_small slds-grid_vertical hamburger-menu"
+                >
+                    <div
+                        class="slds-col slds-var-p-left_medium slds-size_1-of-4"
+                    >
+                        <c-navigation-menu-logo
+                            formfactor="hamburger"
+                        ></c-navigation-menu-logo>
+                    </div>
+                    <div class="slds-col">
+                        <span>
+                            <nav role="navigation" class="slds-nav-vertical">
+                                <ul class="slds-has-block-links_space">
+                                    <template
+                                        for:each={menuItems}
+                                        for:item="item"
+                                    >
+                                        <li key={item.id} class="navbar-items">
+                                            <c-navigation-menu-item
+                                                item={item}
+                                            ></c-navigation-menu-item>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </nav>
+                        </span>
+                    </div>
+                    <div class="slds-col slds-col_bump-bottom">
+                        <span>
+                            <lightning-button
+                                variant="brand"
+                                label={buttonLabel}
+                                title="Primary action"
+                                onclick={handleClick}
+                                class="slds-var-p-left_small"
+                            ></lightning-button>
+                        </span>
+                    </div>
+                    <div class="slds-col">
+                        <span>
+                            <a
+                                href="/customer/s"
+                                class="navbar-items slds-var-p-left_small"
+                                >My Account</a
+                            >
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-6">
+                <a href={href} onclick={handleHamburgerMenuToggle}
+                    ><img
+                        class="hamburger-menu-icon slds-var-p-left_small slds-var-p-top_small"
+                        src={xIcon}
+                /></a>
+            </div>
+        </div>
+    </template>
+    <div
+        class="slds-grid slds-grid_vertical-align-center slds-var-p-horizontal_medium"
+    >
+        <div class="slds-col slds-size_3-of-4 slds-large-size_1-of-5">
+            <span>
+                <c-navigation-menu-logo
+                    formfactor="desktop"
+                ></c-navigation-menu-logo>
+            </span>
+        </div>
+        <div class="slds-col slds-var-p-horizontal_large slds-show_large">
+            <span>
+                <nav role="navigation">
+                    <ul class="slds-list_horizontal slds-has-block-links_space">
+                        <template for:each={menuItems} for:item="item">
+                            <li
+                                key={item.id}
+                                class="navbar-items slds-var-p-horizontal_large"
+                            >
+                                <c-navigation-menu-item
+                                    item={item}
+                                ></c-navigation-menu-item>
+                            </li>
+                        </template>
+                    </ul>
+                </nav>
+            </span>
+        </div>
+        <div
+            class="slds-col slds-col_bump-left slds-grid_align-end slds-show_large slds-var-p-right_small"
+        >
+            <div
+                class="slds-grid slds-grid_align-end slds-gutters_medium slds-grid_vertical-align-center"
+            >
+                <div class="slds-col">
+                    <span>
+                        <a
+                            lwc:if={showLoginLink}
+                            href={loginUrl}
+                            class="menu-item"
+                            >Log In</a
+                        >
+                        <a lwc:else href={logoutUrl} class="menu-item"
+                            >Log Out</a
+                        >
+                    </span>
+                </div>
+            </div>
+        </div>
+        <template lwc:if={hideHamburgerMenu}>
+            <div class="slds-col slds-var-p-right_small slds-hide_large">
+                <a
+                    class="slds-float_right"
+                    href={href}
+                    onclick={handleHamburgerMenuToggle}
+                    ><img class="hamburger-menu-icon" src={hamburgerIcon}
+                /></a>
+            </div>
+        </template>
+    </div>
+</template>

@@ -70,6 +70,10 @@ force-app/test/**
 **/classes/LightningSelfRegisterController.cls-meta.xml
 **/classes/LightningSelfRegisterControllerTest.cls
 **/classes/LightningSelfRegisterControllerTest.cls-meta.xml
+**/classes/MicrobatchSelfRegController.cls
+**/classes/MicrobatchSelfRegController.cls-meta.xml
+**/classes/MicrobatchSelfRegControllerTest.cls
+**/classes/MicrobatchSelfRegControllerTest.cls-meta.xml
 **/classes/MyProfilePageController.cls
 **/classes/MyProfilePageController.cls-meta.xml
 **/classes/MyProfilePageControllerTest.cls
@@ -116,6 +120,8 @@ force-app/test/**
 **/pages/IdeasHome.page-meta.xml
 **/pages/InMaintenance.page
 **/pages/InMaintenance.page-meta.xml
+**/pages/MicrobatchSelfReg.page
+**/pages/MicrobatchSelfReg.page-meta.xml
 **/pages/MyProfilePage.page
 **/pages/MyProfilePage.page-meta.xml
 **/pages/SiteLogin.page
@@ -132,6 +138,11 @@ force-app/test/**
 **/pages/Unauthorized.page-meta.xml
 **/pages/UnderConstruction.page
 **/pages/UnderConstruction.page-meta.xml
+**/reportType/MDF_Claim_Request_Crt.reportType-meta.xml
+**/reportType/prm_total_portal_login_crt.reportType-meta.xml
+**/reportType/prm_partner_fund_request_crt.reportType-meta.xml
+**/reportType/prm_unique_portal_crt.reportType-meta.xml
+**/reportType/prm_partner_marketing_budget_crt.reportType-meta.xml
 **/staticresources/SiteSamples
 **/staticresources/SiteSamples.resource-meta.xml
 

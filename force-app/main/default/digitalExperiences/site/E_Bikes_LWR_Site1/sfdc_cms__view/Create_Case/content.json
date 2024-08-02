@@ -1,0 +1,76 @@
+{
+    "type": "sfdc_cms__view",
+    "title": "Create Case",
+    "contentBody": {
+        "component": {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "backgroundImageConfig": "",
+                                "backgroundImageOverlay": "rgba(0,0,0,0)",
+                                "componentSpacerSize": "",
+                                "dxpStyle": {},
+                                "maxContentWidth": "",
+                                "sectionColumnGutterWidth": "",
+                                "sectionConfig": "{\"UUID\":\"47a5e0e4-ddfd-4bea-812c-5e597d150548\",\"columns\":[{\"UUID\":\"65f76c7e-d629-4000-bfb1-0785413b7f01\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+                            },
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "attributes": {
+                                                "dxpStyle": {}
+                                            },
+                                            "definition": "c:createCase",
+                                            "id": "c74a59fd-c4e1-47ad-82e6-acb5502513a6",
+                                            "type": "component"
+                                        }
+                                    ],
+                                    "id": "65f76c7e-d629-4000-bfb1-0785413b7f01",
+                                    "name": "col1",
+                                    "title": "Column 1",
+                                    "type": "region"
+                                }
+                            ],
+                            "definition": "community_layout:section",
+                            "id": "47a5e0e4-ddfd-4bea-812c-5e597d150548",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "a253158e-68a1-498b-be64-a3c32b444aea",
+                    "name": "content",
+                    "title": "Content",
+                    "type": "region"
+                },
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "customHeadTags": "",
+                                "description": "",
+                                "dxpStyle": {},
+                                "pageTitle": "Create Case",
+                                "recordId": "{!recordId}"
+                            },
+                            "definition": "community_builder:seoAssistant",
+                            "id": "d5a2d18f-945c-4555-a8c7-e9ec035fc0f8",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "ad61546c-8cae-4e83-b2a1-da7282160e29",
+                    "name": "sfdcHiddenRegion",
+                    "title": "sfdcHiddenRegion",
+                    "type": "region"
+                }
+            ],
+            "definition": "community_layout:sldsFlexibleLayout",
+            "id": "455dad7c-7735-4e44-af6d-f08cfdaf1630",
+            "type": "component"
+        },
+        "dataProviders": [],
+        "themeLayoutType": "Inner",
+        "viewType": "custom-create-case"
+    }
+}

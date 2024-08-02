@@ -1,5 +1,6 @@
 <template>
     <lightning-record-edit-form
+        lwc:if={isInitialState}
         object-api-name={caseObject}
         onsuccess={handleCaseCreated}
     >
@@ -51,4 +52,8 @@
             ></lightning-button>
         </div>
     </lightning-record-edit-form>
+    <template lwc:elseif={isSuccessState}>
+        <div>Case Created</div>
+        <div>You have successfully created a Case.</div>
+    </template>
 </template>

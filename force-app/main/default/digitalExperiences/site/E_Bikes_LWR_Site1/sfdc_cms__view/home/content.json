@@ -1,0 +1,143 @@
+{
+    "type": "sfdc_cms__view",
+    "title": "Home",
+    "contentBody": {
+        "component": {
+            "children": [
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "backgroundImageConfig": "",
+                                "backgroundImageOverlay": "rgba(0,0,0,0)",
+                                "componentSpacerSize": "0rem",
+                                "dxpStyle": {
+                                    "margin": {
+                                        "bottom": "0px",
+                                        "left": "0px",
+                                        "right": "0px",
+                                        "top": "0px"
+                                    },
+                                    "padding": {
+                                        "bottom": "0px",
+                                        "left": "0px",
+                                        "right": "0px",
+                                        "top": "0px"
+                                    }
+                                },
+                                "maxContentWidth": "none",
+                                "sectionColumnGutterWidth": "0rem",
+                                "sectionConfig": "{\"UUID\":\"4b37fb5a-6c62-4d84-9adf-2f9006fc1f67\",\"columns\":[{\"UUID\":\"eec3c878-fb01-43dc-8a1d-d8aa7b9d4772\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+                            },
+                            "children": [
+                                {
+                                    "children": [
+                                        {
+                                            "attributes": {
+                                                "buttonClickProductOrFamilyName": "Dynamo X2",
+                                                "buttonText": "Explore More",
+                                                "dxpStyle": {
+                                                    "margin": {
+                                                        "bottom": "0px",
+                                                        "left": "0px",
+                                                        "right": "0px",
+                                                        "top": "0px"
+                                                    },
+                                                    "padding": {
+                                                        "bottom": "0px",
+                                                        "left": "0px",
+                                                        "right": "0px",
+                                                        "top": "0px"
+                                                    }
+                                                },
+                                                "heroDetailsPosition": "left",
+                                                "imgOrVideo": "Video",
+                                                "internalResource": true,
+                                                "opacity": 5,
+                                                "overlay": true,
+                                                "resourceUrl": "https://s3-us-west-2.amazonaws.com/dev-or-devrl-s3-bucket/sample-apps/ebikes/ebikes.mp4",
+                                                "slogan": "CONQUER THE IMPOSSIBLE",
+                                                "title": "DYNAMO X2"
+                                            },
+                                            "definition": "c:hero",
+                                            "id": "0bd67a5e-cc3e-4fc1-8bf7-38240ddb65c7",
+                                            "type": "component"
+                                        },
+                                        {
+                                            "attributes": {
+                                                "buttonClickProductOrFamilyName": "Electra",
+                                                "buttonText": "See Electra Bikes",
+                                                "dxpStyle": {
+                                                    "margin": {
+                                                        "bottom": "0px",
+                                                        "left": "0px",
+                                                        "right": "0px",
+                                                        "top": "0px"
+                                                    },
+                                                    "padding": {
+                                                        "bottom": "0px",
+                                                        "left": "0px",
+                                                        "right": "0px",
+                                                        "top": "0px"
+                                                    }
+                                                },
+                                                "heroDetailsPosition": "right",
+                                                "imgOrVideo": "Image",
+                                                "internalResource": true,
+                                                "opacity": 5,
+                                                "overlay": true,
+                                                "resourceUrl": "/cycling-grass.jpg",
+                                                "slogan": "Ride With Power",
+                                                "title": "Electra Series"
+                                            },
+                                            "definition": "c:hero",
+                                            "id": "f0811b95-adba-4616-92f2-275c4bf67ec9",
+                                            "type": "component"
+                                        }
+                                    ],
+                                    "id": "eec3c878-fb01-43dc-8a1d-d8aa7b9d4772",
+                                    "name": "col1",
+                                    "title": "Column 1",
+                                    "type": "region"
+                                }
+                            ],
+                            "definition": "community_layout:section",
+                            "id": "4b37fb5a-6c62-4d84-9adf-2f9006fc1f67",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "dd027211-7ea4-4c1b-a6f6-1cbe958980de",
+                    "name": "content",
+                    "title": "Content",
+                    "type": "region"
+                },
+                {
+                    "children": [
+                        {
+                            "attributes": {
+                                "customHeadTags": "",
+                                "description": "",
+                                "dxpStyle": {},
+                                "pageTitle": "Home",
+                                "recordId": "{!recordId}"
+                            },
+                            "definition": "community_builder:seoAssistant",
+                            "id": "d3ff0d07-ee4e-4a24-a30c-c42a27442b0f",
+                            "type": "component"
+                        }
+                    ],
+                    "id": "bcbe1b41-d9d3-4bc3-a6d7-6555d6ce1e3a",
+                    "name": "sfdcHiddenRegion",
+                    "title": "sfdcHiddenRegion",
+                    "type": "region"
+                }
+            ],
+            "definition": "community_layout:sldsFlexibleLayout",
+            "id": "00033a0a-5472-4d5d-8db5-4ad004427540",
+            "type": "component"
+        },
+        "dataProviders": [],
+        "themeLayoutType": "Inner",
+        "viewType": "home"
+    }
+}
