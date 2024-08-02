@@ -2,8 +2,8 @@ import { LightningElement, api, wire } from 'lwc';
 import { CurrentPageReference, NavigationMixin } from 'lightning/navigation';
 import HAMBURGER_ICON from '@salesforce/resourceUrl/hamburgerIcon';
 import X_ICON from '@salesforce/resourceUrl/xIcon';
-import getLoginUrl from '@salesforce/apex/system.Network.getLoginUrl';
 import getLogoutUrl from '@salesforce/apex/applauncher.IdentityHeaderController.getLogoutUrl';
+import getLoginUrl from '@salesforce/apex/NavigationController.getLoginUrl';
 import getNavigationMenuItems from '@salesforce/apex/NavigationController.getNavigationMenuItems';
 import isGuestUser from '@salesforce/user/isGuest';
 import basePath from '@salesforce/community/basePath';
@@ -33,12 +33,20 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
         toastContainer.maxShown = 3;
         toastContainer.toastPosition = 'top-right';
         // Get login and logout URLs in non-blocking async calls
-        getLoginUrl().then((url) => {
-            this.loginUrl = url;
-        });
-        getLogoutUrl().then((url) => {
-            this.logoutUrl = url;
-        });
+        getLoginUrl()
+            .then((url) => {
+                this.loginUrl = url;
+            })
+            .catch((error) => {
+                console.error('Failed to retrieve log in URL: ', error);
+            });
+        getLogoutUrl()
+            .then((url) => {
+                this.logoutUrl = url;
+            })
+            .catch((error) => {
+                console.error('Failed to retrieve log out URL: ', error);
+            });
     }
 
     @wire(getNavigationMenuItems, {

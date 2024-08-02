@@ -3,7 +3,7 @@
  */
 global with sharing class NavigationController {
     /**
-     * Retrieve the Experience Cloud navigation menu items
+     * Retrieve the navigation menu items
      */
     @AuraEnabled(cacheable=true)
     public static List<NavigationMenuItem> getNavigationMenuItems(
@@ -51,6 +51,15 @@ global with sharing class NavigationController {
             WITH SECURITY_ENFORCED
             ORDER BY Position
         ];
+    }
+
+    /**
+     * Retrieve the site login URL
+     */
+    @AuraEnabled(cacheable=true)
+    public static String getLoginUrl() {
+        String networkId = System.Network.getNetworkId();
+        return System.Network.getLoginUrl(networkId);
     }
 
     public class NavigationException extends Exception {
