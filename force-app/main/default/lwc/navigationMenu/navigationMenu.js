@@ -2,6 +2,8 @@ import { LightningElement, api, wire } from 'lwc';
 import { CurrentPageReference, NavigationMixin } from 'lightning/navigation';
 import HAMBURGER_ICON from '@salesforce/resourceUrl/hamburgerIcon';
 import X_ICON from '@salesforce/resourceUrl/xIcon';
+import getLoginUrl from '@salesforce/apex/system.Network.getLoginUrl';
+import getLogoutUrl from '@salesforce/apex/applauncher.IdentityHeaderController.getLogoutUrl';
 import getNavigationMenuItems from '@salesforce/apex/NavigationController.getNavigationMenuItems';
 import isGuestUser from '@salesforce/user/isGuest';
 import basePath from '@salesforce/community/basePath';
@@ -20,14 +22,23 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
     menuItems = [];
     publishedState;
     showHamburgerMenu;
+    loginUrl = '#';
+    logoutUrl = '#';
 
     hamburgerIcon = HAMBURGER_ICON;
     xIcon = X_ICON;
 
-    onnectedCallback() {
+    connectedCallback() {
         const toastContainer = ToastContainer.instance();
         toastContainer.maxShown = 3;
         toastContainer.toastPosition = 'top-right';
+        // Get login and logout URLs in non-blocking async calls
+        getLoginUrl().then((url) => {
+            this.loginUrl = url;
+        });
+        getLogoutUrl().then((url) => {
+            this.logoutUrl = url;
+        });
     }
 
     @wire(getNavigationMenuItems, {
@@ -86,5 +97,13 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
         } else {
             this.showHamburgerMenu = true;
         }
+    }
+
+    get hideHamburgerMenu() {
+        return !this.showHamburgerMenu;
+    }
+
+    get showLoginLink() {
+        return isGuestUser;
     }
 }
