@@ -38,14 +38,18 @@ export default class NavigationMenu extends NavigationMixin(LightningElement) {
                 this.loginUrl = url;
             })
             .catch((error) => {
-                console.error('Failed to retrieve log in URL: ', error);
+                console.error(
+                    `Failed to retrieve log in URL: ${JSON.stringify(error)}`
+                );
             });
         getLogoutUrl()
             .then((url) => {
                 this.logoutUrl = url;
             })
             .catch((error) => {
-                console.error('Failed to retrieve log out URL: ', error);
+                console.error(
+                    `Failed to retrieve log out URL: ${JSON.stringify(error)}`
+                );
             });
     }
 
