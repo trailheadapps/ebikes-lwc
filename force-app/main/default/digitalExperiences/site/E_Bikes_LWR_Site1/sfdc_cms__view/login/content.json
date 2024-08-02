@@ -11,6 +11,7 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
+                                "dxpStyle": {},
                                 "maxContentWidth": "",
                                 "sectionColumnGutterWidth": "",
                                 "sectionConfig": "{\"UUID\":\"5725c0a7-54ba-4fff-a0d2-ba78e327ae3f\",\"columns\":[{\"UUID\":\"b8e6b64b-c7ef-4100-a046-254ba0b72d95\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
@@ -21,6 +22,7 @@
                                         {
                                             "attributes": {
                                                 "alignment": "left",
+                                                "dxpStyle": {},
                                                 "imageInfo": "",
                                                 "logoWidth": 250
                                             },
@@ -30,6 +32,7 @@
                                         },
                                         {
                                             "attributes": {
+                                                "dxpStyle": {},
                                                 "forgotPasswordLabel": "Forgot your password?",
                                                 "forgotPasswordUrl": "/ForgotPassword",
                                                 "loginButtonLabel": "Log In",
@@ -45,6 +48,7 @@
                                         },
                                         {
                                             "attributes": {
+                                                "dxpStyle": {},
                                                 "employeeLoginLinkLabel": "Are you an employee? Log in"
                                             },
                                             "definition": "community_login:employeeLoginLink",
@@ -74,6 +78,7 @@
                             "attributes": {
                                 "customHeadTags": "",
                                 "description": "",
+                                "dxpStyle": {},
                                 "pageTitle": "Login",
                                 "recordId": "{!recordId}"
                             },

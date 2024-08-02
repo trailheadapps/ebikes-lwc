@@ -117,6 +117,7 @@
                             "attributes": {
                                 "customHeadTags": "",
                                 "description": "",
+                                "dxpStyle": {},
                                 "pageTitle": "Home",
                                 "recordId": "{!recordId}"
                             },

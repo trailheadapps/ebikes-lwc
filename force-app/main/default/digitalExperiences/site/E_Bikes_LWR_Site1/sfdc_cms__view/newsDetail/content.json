@@ -11,6 +11,7 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
+                                "dxpStyle": {},
                                 "maxContentWidth": "",
                                 "sectionColumnGutterWidth": "",
                                 "sectionConfig": "{\"UUID\":\"5a3ef7e1-9d48-4330-87ae-b1bc6b71280e\",\"columns\":[{\"UUID\":\"e6b920a8-9653-48ac-a163-e1b5a0b4e745\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
@@ -39,6 +40,7 @@
                             "attributes": {
                                 "customHeadTags": "",
                                 "description": "",
+                                "dxpStyle": {},
                                 "pageTitle": "{!Content.contentTypeLabel}.{!Content.title}",
                                 "recordId": "{!recordId}"
                             },

@@ -11,6 +11,7 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
+                                "dxpStyle": {},
                                 "maxContentWidth": "",
                                 "sectionColumnGutterWidth": "",
                                 "sectionConfig": "{\"UUID\":\"6f08ee48-0056-427d-b5e0-3905c0a0a8a1\",\"columns\":[{\"UUID\":\"68f5b18d-99e2-4b20-b12e-fbb6f8152e39\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"9\",\"seedComponents\":[]},{\"UUID\":\"fcb8ccd8-13b5-4d25-8a40-e50389909f44\",\"columnName\":\"Column 2\",\"columnKey\":\"19481\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
@@ -21,6 +22,7 @@
                                         {
                                             "attributes": {
                                                 "backgroundColor": "",
+                                                "dxpStyle": {},
                                                 "layout": "{!Item._layout}",
                                                 "mainTitlePaddingHorizontal": "none",
                                                 "mainTitlePaddingVertical": "none",
@@ -34,7 +36,9 @@
                                                 {
                                                     "children": [
                                                         {
-                                                            "attributes": {},
+                                                            "attributes": {
+                                                                "dxpStyle": {}
+                                                            },
                                                             "definition": "dxp_page_layout:placeHolder",
                                                             "id": "74e1fee1-8d48-40f4-97b0-e5b90826d526",
                                                             "type": "component"
@@ -60,6 +64,7 @@
                                     "children": [
                                         {
                                             "attributes": {
+                                                "dxpStyle": {},
                                                 "recordId": "{!recordId}"
                                             },
                                             "definition": "c:similarProducts",
@@ -89,6 +94,7 @@
                             "attributes": {
                                 "customHeadTags": "",
                                 "description": "",
+                                "dxpStyle": {},
                                 "pageTitle": "{!Record._Object}: {!Record._Title}",
                                 "recordId": "{!recordId}"
                             },
@@ -109,6 +115,6 @@
         },
         "dataProviders": [],
         "themeLayoutType": "Inner",
-        "viewType": "detail-a03"
+        "viewType": "detail-Product__c"
     }
 }

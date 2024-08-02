@@ -11,6 +11,7 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
+                                "dxpStyle": {},
                                 "maxContentWidth": "",
                                 "sectionColumnGutterWidth": "",
                                 "sectionConfig": "{\"UUID\":\"7391556d-69b9-48ad-9194-f001f444258e\",\"columns\":[{\"UUID\":\"ff4cc0fc-c8d4-426c-9a75-c10af08b316b\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
@@ -21,6 +22,7 @@
                                         {
                                             "attributes": {
                                                 "alignment": "left",
+                                                "dxpStyle": {},
                                                 "imageInfo": "",
                                                 "logoWidth": 250
                                             },
@@ -32,6 +34,7 @@
                                             "attributes": {
                                                 "cancelLinkLabel": "Already have an account?",
                                                 "confirmPasswordLabel": "Confirm Password",
+                                                "dxpStyle": {},
                                                 "emailLabel": "Email",
                                                 "firstnameLabel": "First Name",
                                                 "includePasswordField": true,
@@ -67,6 +70,7 @@
                             "attributes": {
                                 "customHeadTags": "",
                                 "description": "",
+                                "dxpStyle": {},
                                 "pageTitle": "Register",
                                 "recordId": "{!recordId}"
                             },

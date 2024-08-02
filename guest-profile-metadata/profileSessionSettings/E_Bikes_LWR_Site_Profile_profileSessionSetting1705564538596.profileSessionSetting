@@ -2,7 +2,7 @@
 <ProfileSessionSetting xmlns="http://soap.sforce.com/2006/04/metadata">
     <externalCommunityUserIdentityVerif>false</externalCommunityUserIdentityVerif>
     <forceLogout>false</forceLogout>
-    <profile>e-bikes lwr site profile</profile>
+    <profile>E-Bikes LWR Site Profile</profile>
     <sessionPersistence>false</sessionPersistence>
     <sessionTimeout>0</sessionTimeout>
     <sessionTimeoutWarning>false</sessionTimeoutWarning>

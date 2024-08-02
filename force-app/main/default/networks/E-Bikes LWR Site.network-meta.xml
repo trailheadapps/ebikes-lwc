@@ -11,6 +11,7 @@
     >false</disableReputationRecordConversations>
     <emailSenderAddress>some.sender@company.com</emailSenderAddress>
     <emailSenderName>E-Bikes LWR Site</emailSenderName>
+    <embeddedLoginEnabled>false</embeddedLoginEnabled>
     <enableApexCDNCaching>true</enableApexCDNCaching>
     <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
     <enableDirectMessages>false</enableDirectMessages>

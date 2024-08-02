@@ -11,6 +11,7 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
+                                "dxpStyle": {},
                                 "maxContentWidth": "1440px",
                                 "sectionColumnGutterWidth": "1rem",
                                 "sectionConfig": "{\"UUID\":\"c650a466-b71b-4218-ae23-dde89232b81f\",\"columns\":[{\"UUID\":\"e446d3a6-c317-4238-9de2-431b5e68367f\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
@@ -25,6 +26,7 @@
                                                 "borderColor": "",
                                                 "borderRadius": 0,
                                                 "borderWidth": 0,
+                                                "dxpStyle": {},
                                                 "isOrderReversed": false,
                                                 "itemSpacing": "medium",
                                                 "listType": "unformatted",
@@ -45,6 +47,7 @@
                                                     "children": [
                                                         {
                                                             "attributes": {
+                                                                "dxpStyle": {},
                                                                 "fieldNames": "CaseNumber,Subject,Status,CreatedDate,Priority,Reason,Description",
                                                                 "iconName": "standard:case",
                                                                 "isReadonly": true,
@@ -66,6 +69,7 @@
                                                     "children": [
                                                         {
                                                             "attributes": {
+                                                                "dxpStyle": {},
                                                                 "paginatorAttributes": "{\"nested\":{\"componentName\":\"dxp_content_layout:paginatorShowMore\",\"attributes\":{\"label\":\"Show More\",\"textDecoration\":\"{}\",\"buttonStyle\":\"secondary\",\"size\":\"standard\",\"width\":\"standard\",\"verticalPadding\":\"none\",\"horizontalAlignment\":\"center\"}}}",
                                                                 "variant": "showmore"
                                                             },
@@ -73,7 +77,9 @@
                                                                 {
                                                                     "children": [
                                                                         {
-                                                                            "attributes": {},
+                                                                            "attributes": {
+                                                                                "dxpStyle": {}
+                                                                            },
                                                                             "definition": "dxp_page_layout:placeHolder",
                                                                             "id": "1a0c7507-76b3-47f7-bbaa-366f87fdb556",
                                                                             "type": "component"
@@ -132,6 +138,7 @@
                     "children": [
                         {
                             "attributes": {
+                                "dxpStyle": {},
                                 "recordId": "{!recordId}"
                             },
                             "definition": "community_builder:seoAssistant",

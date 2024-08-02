@@ -11,6 +11,7 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
+                                "dxpStyle": {},
                                 "maxContentWidth": "",
                                 "sectionColumnGutterWidth": "",
                                 "sectionConfig": "{\"UUID\":\"47a5e0e4-ddfd-4bea-812c-5e597d150548\",\"columns\":[{\"UUID\":\"65f76c7e-d629-4000-bfb1-0785413b7f01\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
@@ -19,7 +20,9 @@
                                 {
                                     "children": [
                                         {
-                                            "attributes": {},
+                                            "attributes": {
+                                                "dxpStyle": {}
+                                            },
                                             "definition": "c:createCase",
                                             "id": "c74a59fd-c4e1-47ad-82e6-acb5502513a6",
                                             "type": "component"
@@ -47,6 +50,7 @@
                             "attributes": {
                                 "customHeadTags": "",
                                 "description": "",
+                                "dxpStyle": {},
                                 "pageTitle": "Create Case",
                                 "recordId": "{!recordId}"
                             },

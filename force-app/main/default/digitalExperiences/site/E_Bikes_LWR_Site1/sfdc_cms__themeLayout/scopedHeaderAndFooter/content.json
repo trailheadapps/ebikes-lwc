@@ -35,6 +35,7 @@
                                     "children": [
                                         {
                                             "attributes": {
+                                                "dxpStyle": {},
                                                 "menuName": "Default_Navigation1"
                                             },
                                             "definition": "c:navigationMenu",
