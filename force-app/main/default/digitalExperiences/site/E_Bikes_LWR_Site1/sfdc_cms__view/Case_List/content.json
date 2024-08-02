@@ -21,6 +21,22 @@
                                     "children": [
                                         {
                                             "attributes": {
+                                                "backgroundColor": "",
+                                                "isLinkable": false,
+                                                "linkAssistiveText": "",
+                                                "paddingHorizontal": "none",
+                                                "paddingVertical": "none",
+                                                "text": "My Cases",
+                                                "textAlign": "left",
+                                                "textDecoration": "{\"bold\":true}",
+                                                "textDisplayInfo": "{}"
+                                            },
+                                            "definition": "dxp_base:textBlock",
+                                            "id": "f73459cf-ba16-460d-8df6-0563c3528740",
+                                            "type": "component"
+                                        },
+                                        {
+                                            "attributes": {
                                                 "autoScrollToMostRecent": false,
                                                 "backgroundColor": "",
                                                 "borderColor": "",
