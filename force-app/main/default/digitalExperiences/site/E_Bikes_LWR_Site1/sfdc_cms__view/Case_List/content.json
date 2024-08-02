@@ -22,6 +22,7 @@
                                         {
                                             "attributes": {
                                                 "backgroundColor": "",
+                                                "dxpStyle": {},
                                                 "isLinkable": false,
                                                 "linkAssistiveText": "",
                                                 "paddingHorizontal": "none",
