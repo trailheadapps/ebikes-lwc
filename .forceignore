@@ -26,6 +26,11 @@ force-app/test/**
 **/__tests__/**
 **/__utam__/**
 
+# TS configuration files
+**/tsconfig.json
+**/*.ts
+
+
 # Default generated Experience Cloud metadata
 **/aura/createAndRefreshCase
 **/aura/forgotPassword
