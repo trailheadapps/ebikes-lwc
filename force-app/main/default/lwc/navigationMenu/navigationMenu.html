@@ -1,6 +1,6 @@
 <template>
     <!-- Vertical Navigation List for Mobile -->
-    <template if:true={showHamburgerMenu}>
+    <template lwc:if={showHamburgerMenu}>
         <div class="slds-is-fixed slds-grid hamburger-menu-container">
             <div class="slds-col slds-size_5-of-6">
                 <div
@@ -98,12 +98,20 @@
             >
                 <div class="slds-col">
                     <span>
-                        <a href="/customer/s" class="menu-item">My Account</a>
+                        <a
+                            lwc:if={showLoginLink}
+                            href={loginUrl}
+                            class="menu-item"
+                            >Log In</a
+                        >
+                        <a lwc:else href={logoutUrl} class="menu-item"
+                            >Log Out</a
+                        >
                     </span>
                 </div>
             </div>
         </div>
-        <template if:false={showHamburgerMenu}>
+        <template lwc:if={hideHamburgerMenu}>
             <div class="slds-col slds-var-p-right_small slds-hide_large">
                 <a
                     class="slds-float_right"
