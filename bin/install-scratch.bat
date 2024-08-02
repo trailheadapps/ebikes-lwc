@@ -39,6 +39,7 @@ timeout /T 30 /NOBREAK
 
 echo Publishing XP Cloud site...
 cmd.exe /c sf community publish -n E-Bikes
+cmd.exe /c sf community publish -n "E-Bikes LWR Site"
 call :checkForError
 @echo:
 
