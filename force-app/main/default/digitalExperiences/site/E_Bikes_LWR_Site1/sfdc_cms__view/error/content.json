@@ -11,6 +11,7 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
+                                "dxpStyle": {},
                                 "maxContentWidth": "",
                                 "sectionColumnGutterWidth": "",
                                 "sectionConfig": "{\"UUID\":\"8fb163ac-5bcb-4256-b6aa-8812d71523cb\",\"columns\":[{\"UUID\":\"31ac01f4-a7cb-46f9-bc25-baf0ad307151\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
@@ -20,6 +21,7 @@
                                     "children": [
                                         {
                                             "attributes": {
+                                                "dxpStyle": {},
                                                 "richTextValue": "<h1 style=\"text-align: center;\">Invalid Page</h1>"
                                             },
                                             "definition": "community_builder:richTextEditor",
@@ -49,6 +51,7 @@
                             "attributes": {
                                 "customHeadTags": "",
                                 "description": "",
+                                "dxpStyle": {},
                                 "pageTitle": "Error",
                                 "recordId": "{!recordId}"
                             },

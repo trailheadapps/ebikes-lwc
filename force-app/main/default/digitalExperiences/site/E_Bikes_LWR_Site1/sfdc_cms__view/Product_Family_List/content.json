@@ -11,6 +11,7 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
+                                "dxpStyle": {},
                                 "maxContentWidth": "1440px",
                                 "sectionColumnGutterWidth": "",
                                 "sectionConfig": "{\"UUID\":\"4f19e38d-88b5-4f4e-bb6b-533d2992fbac\",\"columns\":[{\"UUID\":\"963ea7b9-c924-4903-bbe0-0389dd189581\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
@@ -25,6 +26,7 @@
                                                 "borderColor": "",
                                                 "borderRadius": 0,
                                                 "borderWidth": 0,
+                                                "dxpStyle": {},
                                                 "horizontalAlignment": "center",
                                                 "itemSpacing": "medium",
                                                 "numberOfColumns": 3,
@@ -38,6 +40,7 @@
                                                             "attributes": {
                                                                 "category": "{!Item.Category__c}",
                                                                 "description": "{!Item.Description__c}",
+                                                                "dxpStyle": {},
                                                                 "name": "{!Item.Name}"
                                                             },
                                                             "definition": "c:productFamilyTile",
@@ -54,6 +57,7 @@
                                                     "children": [
                                                         {
                                                             "attributes": {
+                                                                "dxpStyle": {},
                                                                 "paginatorAttributes": "{\"nested\":{\"componentName\":\"dxp_content_layout:paginatorShowMore\",\"attributes\":{\"label\":\"Show More\",\"textDecoration\":\"{}\",\"buttonStyle\":\"secondary\",\"size\":\"standard\",\"width\":\"standard\",\"verticalPadding\":\"none\",\"horizontalAlignment\":\"center\"}}}",
                                                                 "variant": "showmore"
                                                             },
@@ -61,7 +65,9 @@
                                                                 {
                                                                     "children": [
                                                                         {
-                                                                            "attributes": {},
+                                                                            "attributes": {
+                                                                                "dxpStyle": {}
+                                                                            },
                                                                             "definition": "dxp_page_layout:placeHolder",
                                                                             "id": "c5a1333c-badd-42e2-a947-5246403255a6",
                                                                             "type": "component"
@@ -120,6 +126,7 @@
                     "children": [
                         {
                             "attributes": {
+                                "dxpStyle": {},
                                 "recordId": "{!recordId}"
                             },
                             "definition": "community_builder:seoAssistant",
@@ -139,6 +146,6 @@
         },
         "dataProviders": [],
         "themeLayoutType": "Inner",
-        "viewType": "list-a02"
+        "viewType": "list-Product_Family__c"
     }
 }

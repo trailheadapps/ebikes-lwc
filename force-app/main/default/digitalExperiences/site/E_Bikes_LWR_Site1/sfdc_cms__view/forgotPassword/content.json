@@ -11,6 +11,7 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
+                                "dxpStyle": {},
                                 "maxContentWidth": "",
                                 "sectionColumnGutterWidth": "",
                                 "sectionConfig": "{\"UUID\":\"7efd36be-051f-492f-90af-857e00d8054e\",\"columns\":[{\"UUID\":\"66c5b53a-3e4d-400f-949d-0d0d9ebd1f56\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
@@ -21,6 +22,7 @@
                                         {
                                             "attributes": {
                                                 "alignment": "left",
+                                                "dxpStyle": {},
                                                 "imageInfo": "",
                                                 "logoWidth": 250
                                             },
@@ -32,6 +34,7 @@
                                             "attributes": {
                                                 "cancelButtonLabel": "Cancel",
                                                 "checkEmailUrl": "./CheckPasswordResetEmail",
+                                                "dxpStyle": {},
                                                 "instructionsLabel": "To reset your password, enter your username. We'll send a reset-password link to the email address associated with your account.",
                                                 "submitButtonLabel": "Reset",
                                                 "titleLabel": "Forgot your password?",
@@ -64,6 +67,7 @@
                             "attributes": {
                                 "customHeadTags": "",
                                 "description": "",
+                                "dxpStyle": {},
                                 "pageTitle": "Forgot Password",
                                 "recordId": "{!recordId}"
                             },

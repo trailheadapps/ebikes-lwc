@@ -11,6 +11,7 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
+                                "dxpStyle": {},
                                 "maxContentWidth": "",
                                 "sectionColumnGutterWidth": "",
                                 "sectionConfig": "{\"UUID\":\"fb41aaf1-4125-4acc-b87e-52ea3f13ac7e\",\"columns\":[{\"UUID\":\"aae60ffc-f8b1-4815-955e-273c2a1b7d1b\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
@@ -37,6 +38,7 @@
                     "children": [
                         {
                             "attributes": {
+                                "dxpStyle": {},
                                 "recordId": "{!recordId}"
                             },
                             "definition": "community_builder:seoAssistant",
@@ -56,6 +58,6 @@
         },
         "dataProviders": [],
         "themeLayoutType": "Inner",
-        "viewType": "relatedlist-a02"
+        "viewType": "relatedlist-Product_Family__c"
     }
 }

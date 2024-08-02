@@ -11,6 +11,7 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
+                                "dxpStyle": {},
                                 "maxContentWidth": "",
                                 "sectionColumnGutterWidth": "",
                                 "sectionConfig": "{\"UUID\":\"4817b909-a134-4793-8470-fe54f75d1c94\",\"columns\":[{\"UUID\":\"97c80575-2e4f-4a77-adf1-b97d5bd714f0\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"3\",\"seedComponents\":[]},{\"UUID\":\"7807eea4-6152-4af4-b5a5-c9fef058bb28\",\"columnName\":\"Column 2\",\"columnKey\":\"55b45\",\"columnWidth\":\"6\",\"seedComponents\":[]},{\"UUID\":\"a03dfa77-4b75-4be2-9ffb-79e4c8ad5721\",\"columnName\":\"Column 3\",\"columnKey\":\"20808\",\"columnWidth\":\"3\",\"seedComponents\":[]}]}"
@@ -19,7 +20,9 @@
                                 {
                                     "children": [
                                         {
-                                            "attributes": {},
+                                            "attributes": {
+                                                "dxpStyle": {}
+                                            },
                                             "definition": "c:productFilter",
                                             "id": "e39ea547-e75a-4f27-be17-f88b3e1b4fb6",
                                             "type": "component"
@@ -34,6 +37,7 @@
                                     "children": [
                                         {
                                             "attributes": {
+                                                "dxpStyle": {},
                                                 "searchBarIsVisible": false,
                                                 "tilesAreDraggable": false
                                             },
@@ -50,7 +54,9 @@
                                 {
                                     "children": [
                                         {
-                                            "attributes": {},
+                                            "attributes": {
+                                                "dxpStyle": {}
+                                            },
                                             "definition": "c:productCard",
                                             "id": "c7601fad-ba58-4d74-8096-8f69ab9fc1de",
                                             "type": "component"
@@ -78,6 +84,7 @@
                             "attributes": {
                                 "customHeadTags": "",
                                 "description": "",
+                                "dxpStyle": {},
                                 "pageTitle": "Product Explorer",
                                 "recordId": "{!recordId}"
                             },
