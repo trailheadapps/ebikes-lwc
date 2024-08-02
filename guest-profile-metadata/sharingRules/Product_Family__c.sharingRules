@@ -14,4 +14,18 @@
         </criteriaItems>
         <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
     </sharingGuestRules>
+    <sharingGuestRules>
+        <fullName>Product_family_guest_visibility_for_LWR_Site</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Product family guest visibility for LWR Site</label>
+        <sharedTo>
+            <guestUser>E_Bikes_LWR_Site</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value/>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
 </SharingRules>
