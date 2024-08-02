@@ -34,8 +34,9 @@ echo "Sleeping 30s for XP Cloud deployment..." && \
 sleep 30 && \
 echo "" && \
 
-echo "Publishing XP Cloud site..." && \
+echo "Publishing XP Cloud sites..." && \
 sf community publish -n E-Bikes && \
+sf community publish -n "E-Bikes LWR Site" && \
 echo "" && \
 
 echo "Deploying guest profile for XP Cloud site..." && \
