@@ -25,10 +25,10 @@
     <referrerPolicyOriginWhenCrossOrigin
     >true</referrerPolicyOriginWhenCrossOrigin>
     <selfRegPage>CommunitiesSelfReg</selfRegPage>
-    <siteAdmin>test-yypfaowt42yo@example.com</siteAdmin>
+    <siteAdmin>prashanthmysore1997@curious-goat-dj7bzd.com</siteAdmin>
     <siteGuestRecordDefaultOwner
-    >test-yypfaowt42yo@example.com</siteGuestRecordDefaultOwner>
+    >prashanthmysore1997@curious-goat-dj7bzd.com</siteGuestRecordDefaultOwner>
     <siteType>ChatterNetwork</siteType>
-    <subdomain>efficiency-connect-1801-dev--1701a0bb7eb</subdomain>
+    <subdomain>curious-goat-dj7bzd-dev-ed</subdomain>
     <urlPathPrefix>ebikes</urlPathPrefix>
 </CustomSite>
