@@ -25,6 +25,10 @@
             <objects>
                 <object>Order__c</object>
             </objects>
+            <supportedFormFactors>
+                <supportedFormFactor type="Large" />
+                <supportedFormFactor type="Small" />
+            </supportedFormFactors>
         </targetConfig>
         <targetConfig targets="lightningCommunity__Default">
             <property
