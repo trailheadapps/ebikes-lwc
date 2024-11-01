@@ -59,7 +59,7 @@
         "husky": "^9.1.6",
         "lint-staged": "^15.2.10",
         "prettier": "^3.3.3",
-        "prettier-plugin-apex": "^2.1.4",
+        "prettier-plugin-apex": "^2.2.0",
         "salesforce-pageobjects": "^7.0.1",
         "utam": "^3.2.2",
         "wdio-chromedriver-service": "^8.1.1",
