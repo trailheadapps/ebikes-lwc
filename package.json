@@ -40,7 +40,7 @@
         "@babel/core": "^7.26.0",
         "@babel/preset-env": "^7.26.0",
         "@babel/register": "^7.25.9",
-        "@lwc/eslint-plugin-lwc": "^1.8.2",
+        "@lwc/eslint-plugin-lwc": "^1.9.0",
         "@prettier/plugin-xml": "^3.4.1",
         "@sa11y/jest": "^6.13.0",
         "@salesforce/eslint-config-lwc": "^3.6.0",
