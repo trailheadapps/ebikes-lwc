@@ -17,17 +17,17 @@ E-Bikes is a sample application that demonstrates how to build applications with
 
 ## Table of contents
 
--   [Installing E-Bikes using a scratch org](#installing-e-bikes-using-a-scratch-org)
--   [Installing E-Bikes using a Developer Edition Org or a Trailhead Playground](#installing-e-bikes-using-a-developer-edition-org-or-a-trailhead-playground)
--   [Optional demo installation](#optional-demo-installation)
-    -   [Pub Sub API demo](#pub-sub-api-demo)
--   [Optional tool installation](#optional-tool-installation)
-    -   [Code formatting](#code-formatting)
-    -   [Code linting](#code-linting)
-    -   [Pre-commit hook](#pre-commit-hook)
-    -   [Lightning Web Component tests](#lightning-web-component-tests)
-    -   [UI tests with UTAM](#ui-tests)
-    -   [Code Tours](#code-tours)
+- [Installing E-Bikes using a scratch org](#installing-e-bikes-using-a-scratch-org)
+- [Installing E-Bikes using a Developer Edition Org or a Trailhead Playground](#installing-e-bikes-using-a-developer-edition-org-or-a-trailhead-playground)
+- [Optional demo installation](#optional-demo-installation)
+    - [Pub Sub API demo](#pub-sub-api-demo)
+- [Optional tool installation](#optional-tool-installation)
+    - [Code formatting](#code-formatting)
+    - [Code linting](#code-linting)
+    - [Pre-commit hook](#pre-commit-hook)
+    - [Lightning Web Component tests](#lightning-web-component-tests)
+    - [UI tests with UTAM](#ui-tests)
+    - [Code Tours](#code-tours)
 
 ## Installing E-Bikes using a Scratch Org
 
