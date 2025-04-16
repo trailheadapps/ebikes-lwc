@@ -42,6 +42,7 @@ $RECYCLE.BIN/
 
 # Local environment variables
 .env
+.localdev
 
 # UTAM
 pageObjects

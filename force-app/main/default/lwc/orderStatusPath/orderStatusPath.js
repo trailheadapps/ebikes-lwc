@@ -2,7 +2,6 @@
  * Consider using the native path component in production
  * This custom component adds support for the streaming API for the sake of a demo, it may not scale.
  */
-/* eslint-disable no-console */
 import { LightningElement, api, wire } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { getRecord, updateRecord } from 'lightning/uiRecordApi';
