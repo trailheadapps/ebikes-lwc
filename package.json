@@ -37,7 +37,7 @@
     },
     "devDependencies": {
         "@babel/cli": "^7.27.1",
-        "@babel/core": "^7.26.10",
+        "@babel/core": "^7.27.4",
         "@babel/preset-env": "^7.27.1",
         "@babel/register": "^7.27.1",
         "@lwc/eslint-plugin-lwc": "^3.0.0",
