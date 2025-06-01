@@ -52,7 +52,7 @@
         "@wdio/spec-reporter": "^9.12.2",
         "chromedriver": "^134.0.5",
         "dotenv": "^16.5.0",
-        "eslint": "^9.24.0",
+        "eslint": "^9.28.0",
         "eslint-plugin-import": "^2.31.0",
         "eslint-plugin-jasmine": "^4.2.2",
         "eslint-plugin-jest": "^28.12.0",
