@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+import { createElement } from '@lwc/engine-dom';
 import Hero from 'c/hero';
 import IMAGE_URL from '@salesforce/resourceUrl/bike_assets';
 
