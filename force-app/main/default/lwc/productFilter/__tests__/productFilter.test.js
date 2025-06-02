@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+import { createElement } from '@lwc/engine-dom';
 import ProductFilter from 'c/productFilter';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
 import { publish } from 'lightning/messageService';

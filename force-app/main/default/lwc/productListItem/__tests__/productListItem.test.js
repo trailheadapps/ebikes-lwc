@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+import { createElement } from '@lwc/engine-dom';
 import ProductListItem from 'c/productListItem';
 import { getNavigateCalledWith } from 'lightning/navigation';
 

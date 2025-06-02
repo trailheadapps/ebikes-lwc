@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+import { createElement } from '@lwc/engine-dom';
 import OrderStatusPath from 'c/orderStatusPath';
 import { getObjectInfo, getPicklistValues } from 'lightning/uiObjectInfoApi';
 import { getRecord, updateRecord } from 'lightning/uiRecordApi';

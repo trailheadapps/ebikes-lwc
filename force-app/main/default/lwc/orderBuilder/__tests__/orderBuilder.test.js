@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+import { createElement } from '@lwc/engine-dom';
 import OrderBuilder from 'c/orderBuilder';
 import getOrderItems from '@salesforce/apex/OrderController.getOrderItems';
 
