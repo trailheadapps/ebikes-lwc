@@ -1,0 +1,86 @@
+<template>
+    <div class="slds-p-around_medium slds-box slds-theme_default">
+        <div
+            class="slds-grid slds-grid_align-spread slds-media_center slds-m-bottom_medium slds-p-bottom_x-small slds-border_bottom"
+        >
+            <h2 class="slds-text-heading_medium slds-m-around_none">
+                {chartTitle}
+            </h2>
+            <div class="slds-grid slds-list_horizontal">
+                <lightning-button-group>
+                    <lightning-button
+                        label="Bar Chart"
+                        variant="neutral"
+                        onclick={handleBarChart}
+                        class={barButtonClass}
+                    >
+                    </lightning-button>
+                    <lightning-button
+                        label="Pie Chart"
+                        variant="neutral"
+                        onclick={handlePieChart}
+                        class={pieButtonClass}
+                    >
+                    </lightning-button>
+                    <lightning-button
+                        label="Line Chart"
+                        variant="neutral"
+                        onclick={handleLineChart}
+                        class={lineButtonClass}
+                    >
+                    </lightning-button>
+                </lightning-button-group>
+            </div>
+        </div>
+
+        <div
+            class="chart-content slds-grid slds-grid_align-center slds-media_center"
+        >
+            <!-- Loading state -->
+            <template if:true={isLoading}>
+                <lightning-spinner
+                    alternative-text="Loading chart..."
+                    size="medium"
+                ></lightning-spinner>
+            </template>
+
+            <!-- Error state -->
+            <template if:true={error}>
+                <div class="slds-grid slds-media_center slds-list_horizontal">
+                    <lightning-icon
+                        icon-name="utility:error"
+                        size="small"
+                    ></lightning-icon>
+                    <span class="slds-text-color_error slds-text-body_regular"
+                        >{error}</span
+                    >
+                </div>
+            </template>
+
+            <template if:false={isLoading}>
+                <template if:false={error}>
+                    <!-- Dynamic component rendering using lwc:component -->
+                    <template if:true={isDynamicChartAvailable}>
+                        <lwc:component
+                            lwc:is={chartConstructor}
+                            lwc:spread={childProps}
+                            data-testid="dynamic-chart-component"
+                        >
+                        </lwc:component>
+                    </template>
+
+                    <!-- Static lightning-dynamic-chart component -->
+                    <template if:true={useStaticChart}>
+                        <lightning-dynamic-chart
+                            data={chartData}
+                            title={chartTitle}
+                            type={_currentChartType}
+                            data-testid="static-chart-component"
+                        >
+                        </lightning-dynamic-chart>
+                    </template>
+                </template>
+            </template>
+        </div>
+    </div>
+</template>
