@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig
+            targets="lightning__AppPage,lightning__RecordPage,lightning__HomePage"
+        >
+            <property
+                name="chartType"
+                type="String"
+                default="bar"
+                description="Type of chart to display (bar, pie, line)"
+            />
+            <property
+                name="chartTitle"
+                type="String"
+                default="Chart"
+                description="Title of the chart"
+            />
+            <property
+                name="chartData"
+                type="Object"
+                description="Data to display in the chart"
+            />
+            <property
+                name="useDynamicComponent"
+                type="Boolean"
+                default="false"
+                description="Whether to use dynamic component loading or static lightning-dynamic-chart"
+            />
+        </targetConfig>
+    </targetConfigs>
+    <capabilities>
+        <capability name="lightning__dynamicComponent" />
+    </capabilities>
+</LightningComponentBundle>

@@ -1,0 +1,40 @@
+.dynamic-chart-container {
+    /* Using SLDS utility classes in HTML instead of custom CSS */
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #dddbda;
+}
+
+.chart-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #16325c;
+}
+
+.chart-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chart-content {
+    min-height: 300px;
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #c23934;
+    font-weight: 500;
+}
+
+.error-message lightning-icon {
+    --sds-c-icon-color-foreground-default: #c23934;
+}
