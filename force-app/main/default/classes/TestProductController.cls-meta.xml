@@ -3,6 +3,6 @@
     xmlns="urn:metadata.tooling.soap.sforce.com"
     fqn="TestProductController"
 >
-    <apiVersion>63.0</apiVersion>
+    <apiVersion>64.0</apiVersion>
     <status>Active</status>
 </ApexClass>
