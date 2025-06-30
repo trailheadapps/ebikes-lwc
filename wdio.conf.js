@@ -13,6 +13,7 @@ exports.config = {
         {
             maxInstances: 1,
             browserName: 'chrome',
+            browserVersion: 'stable',
             'goog:chromeOptions': {
                 args: ['--disable-search-engine-choice-screen']
                 // to run chrome headless the following flags are required
@@ -29,7 +30,6 @@ exports.config = {
     connectionRetryCount: 3,
     automationProtocol: 'webdriver',
     services: [
-        'chromedriver',
         [
             UtamWdioService,
             {
