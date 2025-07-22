@@ -1,4 +1,4 @@
-public with sharing class OrderController {
+public class OrderController {
     @AuraEnabled(Cacheable=true)
     public static Order_Item__c[] getOrderItems(Id orderId) {
         return [
@@ -13,7 +13,6 @@ public with sharing class OrderController {
                 Product__r.Picture_URL__c
             FROM Order_Item__c
             WHERE Order__c = :orderId
-            WITH USER_MODE
         ];
     }
 }
