@@ -61,7 +61,7 @@
         "prettier-plugin-apex": "^2.2.6",
         "salesforce-pageobjects": "^10.0.2",
         "utam": "^3.2.2",
-        "wdio-utam-service": "^3.2.2"
+        "wdio-utam-service": "^3.3.0"
     },
     "workspaces": [
         "./"
