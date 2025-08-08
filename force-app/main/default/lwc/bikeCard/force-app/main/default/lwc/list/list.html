@@ -1,0 +1,11 @@
+<template>
+    <div class="container">
+        <template for:each={bikes} for:item="bike">
+            <c-tile 
+                key={bike.fields.Id.value} 
+                product={bike} 
+                ontileclick={handleTileClick}>
+            </c-tile>
+        </template>
+    </div>
+</template>

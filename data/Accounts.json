@@ -8,9 +8,9 @@
             "Name": "Wheelworks",
             "BillingStreet": "480 Trapelo Road",
             "BillingCity": "Belmont",
-            "BillingState": "MA",
+            "BillingState": "Massachusetts",
             "BillingPostalCode": "02478",
-            "BillingCountry": "USA"
+            "BillingCountry": "United States"
         },
         {
             "attributes": {
@@ -20,9 +20,9 @@
             "Name": "Northern Trail Cycling",
             "BillingStreet": "415 Mission St",
             "BillingCity": "San Francisco",
-            "BillingState": "CA",
+            "BillingState": "California",
             "BillingPostalCode": "94105",
-            "BillingCountry": "USA"
+            "BillingCountry": "United States"
         },
         {
             "attributes": {
@@ -32,9 +32,9 @@
             "Name": "Trailblazers",
             "BillingStreet": "1095 Avenue of the Americas",
             "BillingCity": "New York",
-            "BillingState": "NY",
+            "BillingState": "New York",
             "BillingPostalCode": "10036",
-            "BillingCountry": "USA"
+            "BillingCountry": "United States"
         }
     ]
 }
