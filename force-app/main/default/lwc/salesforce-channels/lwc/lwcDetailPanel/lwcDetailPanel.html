@@ -1,0 +1,41 @@
+<template>
+    <!-- Renders new feature conditionally based on feature flag that indicates channel enablement -->
+    <!--template lwc:if={isStringFeatureFlagEnabled}>
+        <records-new-feature subtext="Conditionally Rendered"></records-new-feature>
+    </template-->
+
+    <!-- Self-Renders new feature based on component metadata that indicates channel enablement -->
+    <records-new-feature subtext="Only Rendered in Early Release"></records-new-feature>
+
+    <div class="slds-is-relative" if:true={isRRHVersionIndicatorEnabled}>
+        <div  class="slds-badge slds-theme_success slds-is-absolute versionIndicator">mode={mode}, version=RRH, UAL={_isGeneratedWithElevatedPrivileges}</div>
+    </div>
+    <div if:true={shouldShowHeader} class="slds-modal__header">
+        <h2 id={pageHeaderId} class="slds-modal__title slds-hyphenate slds-text-heading--medium">
+            {pageTitle}
+        </h2>
+    </div>
+    <records-base-record-form
+        mode={mode}
+        fixed-footer={fixedFooter}
+        layout-type={LAYOUT_TYPE}
+        dynamic-component-type={DYNAMIC_COMPONENT_TYPE}
+        record-layout-template={recordLayoutTemplate}
+        record-layout-template-load-state={recordLayoutTemplateLoadState}
+        record-id={recordId}
+        record-type-id={recordTypeId}
+        default-field-values={defaultFieldValues}
+        draft-field-values={draftFieldValues}
+        object-api-name={objectApiName}
+        flexipage-region-width={flexipageRegionWidth}
+        variant={variant}
+        onbaserecordformrendered={handleBaseFormRenderCompleted}
+        errors={errors}
+        is-record-layout-lcs-compilation-enabled={isRecordLayoutLcsCompilationEnabled}
+        page-title={pageTitle}
+        show-header={showHeader}
+        flexipage-not-present={flexipageNotPresent}
+        should-hide-save-and-new={hideSaveAndNewOption}
+        in-modal={inModal}>
+    </records-base-record-form>
+</template>

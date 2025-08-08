@@ -1,0 +1,80 @@
+<aura:component
+    description="Aura component that composes the LWC dynamic chart component"
+    controller="DynamicChartController"
+>
+    <!-- Attributes -->
+    <aura:attribute
+        name="chartType"
+        type="String"
+        default="bar"
+        description="Type of chart to display"
+    />
+    <aura:attribute
+        name="chartTitle"
+        type="String"
+        default="Account Revenue Chart"
+        description="Title of the chart"
+    />
+    <aura:attribute
+        name="chartData"
+        type="Object"
+        description="Data to display in the chart"
+    />
+    <aura:attribute
+        name="isFeatureFlagEnabled"
+        type="Boolean"
+        default="false"
+        description="Whether the chart feature is enabled"
+    />
+    <aura:attribute
+        name="isLoading"
+        type="Boolean"
+        default="true"
+        description="Loading state"
+    />
+
+    <!-- Event handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+    <!-- LWC Component Composition -->
+    <div class="aura-container">
+        <h1 class="slds-text-heading_large slds-m-bottom_medium">
+            Dynamic Chart Demo
+        </h1>
+
+        <!-- Loading state -->
+        <aura:if isTrue="{!v.isLoading}">
+            <lightning:spinner
+                alternative-text="Loading..."
+                size="medium"
+            ></lightning:spinner>
+        </aura:if>
+
+        <!-- LWC Dynamic Chart Component - Guarded with aura:if -->
+        <aura:if isTrue="{!and(v.isFeatureFlagEnabled, v.isLoading == false)}">
+            <lightning:dynamicChart
+                chartType="{!v.chartType}"
+                chartTitle="{!v.chartTitle}"
+                chartData="{!v.chartData}"
+            >
+            </lightning:dynamicChart>
+        </aura:if>
+
+        <!-- Error state when chart is not shown -->
+        <aura:if
+            isTrue="{!and(v.isFeatureFlagEnabled == false, v.isLoading == false)}"
+        >
+            <div
+                class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning"
+                role="alert"
+            >
+                <span class="slds-assistive-text">warning</span>
+                <h2>Chart not available</h2>
+                <p>
+                    You don't have permission to view this chart or no data is
+                    available.
+                </p>
+            </div>
+        </aura:if>
+    </div>
+</aura:component>
