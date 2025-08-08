@@ -32,7 +32,6 @@ E-Bikes is a sample application that demonstrates how to build applications with
 ## Installing E-Bikes using a Scratch Org
 
 1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
-
     - Enable Dev Hub in your Trailhead Playground
     - Install Salesforce CLI
     - Install Visual Studio Code
@@ -124,7 +123,6 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     ```
 
 1. Enable Experiences with the following steps:
-
     1. In your org, in **Setup**, select **Settings**, under **Digital Experiences**.
     1. Click the **Enable Digital Experiences** checkbox
     1. Click **Save** then **Ok**.
@@ -133,7 +131,6 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     1. Click **Save**
 
 1. Configure the Experience Cloud site metadata file with the following steps:
-
     1. Edit the `force-app/main/default/sites/E_Bikes.site-meta.xml` file.
     1. Replace the value between the `<siteAdmin>` tags with your Playground username.
     1. Replace the value between the `<siteGuestRecordDefaultOwner>` tags with your Playground username.
@@ -141,7 +138,6 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     1. Save the file.
 
 1. Remove the `Product` custom field from the `Case` object with the following steps:
-
     1. In Setup, click the **Object Manager** tab.
     1. Click on the **Case** object.
     1. Click **Fields & Relationships**.
@@ -149,7 +145,6 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     1. Confirm deletion by clicking **Delete**.
 
 1. Deploy the App with these steps:
-
     1. Run this command in a terminal to deploy the app.
 
         ```
