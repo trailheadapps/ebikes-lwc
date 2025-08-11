@@ -2,11 +2,11 @@
  * This file holds end-to-end tests for the Product Explorer page.
  * We use UTAM and WebdriverIO to run UI tests.
  */
-import ProductFilter from '../../../pageObjects/productFilter';
-import ProductTileList from '../../../pageObjects/productTileList';
-import ProductCard from '../../../pageObjects/productCard';
-import ProductExplorerPage from '../../../pageObjects/productExplorerPage';
-import { logInSalesforce } from './utam-helper';
+import ProductFilter from '../../../pageObjects/productFilter.js';
+import ProductTileList from '../../../pageObjects/productTileList.js';
+import ProductCard from '../../../pageObjects/productCard.js';
+import ProductExplorerPage from '../../../pageObjects/productExplorerPage.js';
+import { logInSalesforce } from './utam-helper.js';
 
 const PAGINATION_ALL_ITEMS = '16 items • page 1 of 2';
 const PAGINATION_FILTERED_ITEMS = '4 items • page 1 of 1';
