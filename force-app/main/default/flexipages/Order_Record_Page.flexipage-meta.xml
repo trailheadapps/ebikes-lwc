@@ -149,6 +149,12 @@
                 <identifier>fieldSection</identifier>
             </componentInstance>
         </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>orderBuilder</componentName>
+                <identifier>c_orderBuilder</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>Facet-07a3ffa3-2ce8-4764-8215-3b56c7eb1aeb</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -318,6 +324,10 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>label</name>
+                    <value>Tabs</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>tabs</name>
                     <value>maintabs</value>
                 </componentInstanceProperties>
@@ -330,12 +340,6 @@
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentName>orderBuilder</componentName>
-                <identifier>c_orderBuilder</identifier>
-            </componentInstance>
-        </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
