@@ -3,8 +3,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <identifier>productFilter</identifier>
                 <componentName>productFilter</componentName>
+                <identifier>productFilter</identifier>
             </componentInstance>
         </itemInstances>
         <name>left</name>
@@ -13,8 +13,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-            <identifier>productTileList</identifier>
                 <componentName>productTileList</componentName>
+                <identifier>productTileList</identifier>
             </componentInstance>
         </itemInstances>
         <name>center</name>
@@ -23,8 +23,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-            <identifier>productCard</identifier>
                 <componentName>productCard</componentName>
+                <identifier>productCard</identifier>
             </componentInstance>
         </itemInstances>
         <name>right</name>
