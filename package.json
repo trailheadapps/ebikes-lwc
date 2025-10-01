@@ -36,7 +36,7 @@
         "url": "git+https://github.com/trailheadapps/ebikes-lwc"
     },
     "devDependencies": {
-        "@babel/cli": "^7.28.0",
+        "@babel/cli": "^7.28.3",
         "@babel/core": "^7.28.4",
         "@babel/preset-env": "^7.28.3",
         "@babel/register": "^7.28.3",
