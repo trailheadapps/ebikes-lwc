@@ -59,7 +59,7 @@
         "lint-staged": "^16.2.3",
         "prettier": "^3.6.2",
         "prettier-plugin-apex": "^2.2.6",
-        "salesforce-pageobjects": "^10.0.2",
+        "salesforce-pageobjects": "^11.0.0",
         "utam": "^3.3.0",
         "wdio-utam-service": "^3.3.0"
     },
