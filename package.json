@@ -42,7 +42,7 @@
         "@babel/register": "^7.28.3",
         "@lwc/eslint-plugin-lwc": "^3.3.0",
         "@prettier/plugin-xml": "^3.4.2",
-        "@sa11y/jest": "^7.4.0",
+        "@sa11y/jest": "^8.0.0",
         "@salesforce/eslint-config-lwc": "^4.0.0",
         "@salesforce/eslint-plugin-lightning": "^2.0.0",
         "@salesforce/sfdx-lwc-jest": "^7.1.2",
