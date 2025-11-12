@@ -1,0 +1,14 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "searchInput",
+                "selector": {
+                    "css": "lightning-input:first-child"
+                },
+                "type": "salesforce-pageobjects/lightning/pageObjects/input",
+                "public": true
+            }
+        ]
+    }
+}

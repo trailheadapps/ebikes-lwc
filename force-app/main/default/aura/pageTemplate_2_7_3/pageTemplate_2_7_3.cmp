@@ -6,22 +6,28 @@
     <aura:attribute name="left" type="Aura.Component[]" access="global" />
     <aura:attribute name="center" type="Aura.Component[]" access="global" />
     <aura:attribute name="right" type="Aura.Component[]" access="global" />
-
     <div aura:id="container">
-        <lightning:layout>
-            <lightning:layoutItem aura:id="leftColumn" size="2">
-                {!v.left}
-            </lightning:layoutItem>
-            <lightning:layoutItem
-                aura:id="centerColumn"
-                size="7"
-                class="center"
-            >
-                {!v.center}
-            </lightning:layoutItem>
-            <lightning:layoutItem aura:id="rightColumn" size="3">
-                {!v.right}
-            </lightning:layoutItem>
-        </lightning:layout>
+        <aura:if isTrue="{!not($Browser.isPhone)}">
+            <!-- If Tablet or Desktop, 2-7-3 regions -->
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col slds-size_2-of-12 layout-region-left">
+                    {!v.left}
+                </div>
+                <div class="slds-col slds-size_7-of-12 layout-region-center">
+                    {!v.center}
+                </div>
+                <div class="slds-col slds-size_3-of-12 layout-region-rigth">
+                    {!v.right}
+                </div>
+            </div>
+        </aura:if>
+        <aura:if isTrue="{!$Browser.isPhone}">
+            <!-- If Phone, single region -->
+            <div class="slds-grid">
+                <div class="slds-col slds-size_12-of-12 layout-region-center">
+                    {!v.left} {!v.center} {!v.right}
+                </div>
+            </div>
+        </aura:if>
     </div>
 </aura:component>

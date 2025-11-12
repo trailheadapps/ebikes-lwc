@@ -2,10 +2,13 @@
 # More information: https://prettier.io/docs/en/ignore.html
 #
 
-lcc-react-js-bike-model/
-**/staticresources/**
-.localdevserver
-.sfdx
-.vscode
-jsconfig.json
+**/staticresources/
+**/pageObjects/
+
+.localdevserver/
+.sf/
+.sfdx/
+.vscode/
 coverage/
+
+jsconfig.json

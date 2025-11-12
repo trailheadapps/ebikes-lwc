@@ -1,6 +1,7 @@
 {
     "appPageId": "99145371-a7c0-4ca6-bf2f-708461f8d821",
     "componentName": "siteforce:sldsOneColLayout",
+    "dataProviders": [],
     "id": "dec3d4ed-0782-494b-9242-94dafc6cba9a",
     "label": "Login Error",
     "regions": [
@@ -35,8 +36,8 @@
             "components": [
                 {
                     "componentAttributes": {
+                        "customHeadTags": "",
                         "description": "",
-                        "metaTags": "",
                         "title": "Login Error"
                     },
                     "componentName": "forceCommunity:seoAssistant",

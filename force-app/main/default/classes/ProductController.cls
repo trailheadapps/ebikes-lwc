@@ -14,7 +14,7 @@ public with sharing class ProductController {
         public String[] levels { get; set; }
     }
 
-    @AuraEnabled(Cacheable=true)
+    @AuraEnabled(Cacheable=true scope='global')
     public static PagedResult getProducts(Filters filters, Integer pageNumber) {
         String key, whereClause = '';
         Decimal maxPrice;
@@ -57,14 +57,14 @@ public with sharing class ProductController {
         );
         result.records = Database.query(
             'SELECT Id, Name, MSRP__c, Description__c, Category__c, Level__c, Picture_URL__c, Material__c FROM Product__c ' +
-            whereClause +
-            ' WITH SECURITY_ENFORCED' +
-            ' ORDER BY Name LIMIT :pageSize OFFSET :offset'
+                whereClause +
+                ' WITH USER_MODE' +
+                ' ORDER BY Name LIMIT :pageSize OFFSET :offset'
         );
         return result;
     }
 
-    @AuraEnabled(Cacheable=true)
+    @AuraEnabled(Cacheable=true scope='global')
     public static Product__c[] getSimilarProducts(Id productId, Id familyId) {
         return [
             SELECT
@@ -78,7 +78,7 @@ public with sharing class ProductController {
                 Material__c
             FROM Product__c
             WHERE Product_Family__c = :familyId AND Id != :productId
-            WITH SECURITY_ENFORCED
+            WITH USER_MODE
         ];
     }
 }

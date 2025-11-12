@@ -1,0 +1,144 @@
+{
+    "root": true,
+    "selector": {
+        "css": "body"
+    },
+    "elements": [
+        {
+            "name": "appNav",
+            "type": "salesforce-pageobjects/global/pageObjects/appNav",
+            "selector": {
+                "css": "one-appnav"
+            }
+        },
+        {
+            "name": "activeFlexiPage",
+            "selector": {
+                "css": "app_flexipage-lwc-app-flexipage"
+            },
+            "type": "utam-sfdx/pageObjects/threeRegionsTemplate"
+        }
+    ],
+    "methods": [
+        {
+            "name": "getAppNav",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "appNav"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "waitForFlexipage",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "activeFlexiPage"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "getLeftComponent",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "activeFlexiPage"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chain": true,
+                    "apply": "waitForLoad",
+                    "returnType": "utam-sfdx/pageObjects/threeRegionsTemplate"
+                },
+                {
+                    "chain": true,
+                    "element": "leftFlexipageComponent2",
+                    "returnType": "salesforce-pageobjects/flexipage/pageObjects/component2"
+                }
+            ]
+        },
+        {
+            "name": "getCenterComponent",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "activeFlexiPage"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chain": true,
+                    "apply": "waitForLoad",
+                    "returnType": "utam-sfdx/pageObjects/threeRegionsTemplate"
+                },
+                {
+                    "chain": true,
+                    "element": "centerFlexipageComponent2",
+                    "returnType": "salesforce-pageobjects/flexipage/pageObjects/component2"
+                }
+            ]
+        },
+        {
+            "name": "getRightComponent",
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "activeFlexiPage"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "chain": true,
+                    "apply": "waitForLoad",
+                    "returnType": "utam-sfdx/pageObjects/threeRegionsTemplate"
+                },
+                {
+                    "chain": true,
+                    "element": "rightFlexipageComponent2",
+                    "returnType": "salesforce-pageobjects/flexipage/pageObjects/component2"
+                }
+            ]
+        }
+    ]
+}

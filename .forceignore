@@ -8,18 +8,30 @@
 package.xml
 **/appMenus/**
 **/appSwitcher/**
+**/fieldRestrictionRules/**
 **/objectTranslations/**
 **/profiles/**
+**/profilePasswordPolicies/**
+**/profileSessionSettings/**
 **/settings/**
+**/sharingRules/**
+**/reportTypes/**
 
 # LWC configuration files
 **/jsconfig.json
 **/.eslintrc.json
 
-# LWC Jest
+# LWC and UTAM tests
+force-app/test/**
 **/__tests__/**
+**/__utam__/**
 
-# Default generated Community metadata
+# TS configuration files
+**/tsconfig.json
+**/*.ts
+
+
+# Default generated Experience Cloud metadata
 **/aura/createAndRefreshCase
 **/aura/forgotPassword
 **/aura/loginForm
@@ -30,10 +42,6 @@ package.xml
 **/classes/ChangePasswordController.cls-meta.xml
 **/classes/ChangePasswordControllerTest.cls
 **/classes/ChangePasswordControllerTest.cls-meta.xml
-**/classes/CommunitiesLandingController.cls
-**/classes/CommunitiesLandingController.cls-meta.xml
-**/classes/CommunitiesLandingControllerTest.cls
-**/classes/CommunitiesLandingControllerTest.cls-meta.xml
 **/classes/CommunitiesLoginController.cls
 **/classes/CommunitiesLoginController.cls-meta.xml
 **/classes/CommunitiesLoginControllerTest.cls
@@ -88,8 +96,6 @@ package.xml
 **/pages/BandwidthExceeded.page-meta.xml
 **/pages/ChangePassword.page
 **/pages/ChangePassword.page-meta.xml
-#**/pages/CommunitiesLanding.page
-#**/pages/CommunitiesLanding.page-meta.xml
 **/pages/CommunitiesLogin.page
 **/pages/CommunitiesLogin.page-meta.xml
 **/pages/CommunitiesSelfReg.page
@@ -128,3 +134,12 @@ package.xml
 **/pages/UnderConstruction.page-meta.xml
 **/staticresources/SiteSamples
 **/staticresources/SiteSamples.resource-meta.xml
+
+# Default dashboard and report
+**/dashboards/prm_channel_dashboard_folder.dashboardFolder-meta.xml
+**/dashboards/prm_channel_dashboard_folder/**
+**/reports/prm_channel_reports_folder.reportFolder-meta.xml
+**/reports/prm_channel_reports_folder/**
+
+# Default permission set
+**/permissionsets/sfdcInternalInt__sfdc_scrt2.permissionset-meta.xml

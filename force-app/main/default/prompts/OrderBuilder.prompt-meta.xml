@@ -17,7 +17,7 @@
         <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <startDate>2020-10-09</startDate>
         <stepNumber>1</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
+        <customApplication>EBikes</customApplication>
         <targetPageKey1>Order__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>
@@ -36,9 +36,9 @@
         <isPublished>false</isPublished>
         <masterLabel>Order Builder Step 2</masterLabel>
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
-        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <stepNumber>2</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
+        <customApplication>EBikes</customApplication>
         <targetPageKey1>Order__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>
@@ -56,9 +56,9 @@
         <isPublished>false</isPublished>
         <masterLabel>Order Builder Step 3</masterLabel>
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
-        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <stepNumber>3</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
+        <customApplication>EBikes</customApplication>
         <targetPageKey1>Order__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>
@@ -76,9 +76,9 @@
         <isPublished>false</isPublished>
         <masterLabel>Order Builder Step 4</masterLabel>
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
-        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <stepNumber>4</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
+        <customApplication>EBikes</customApplication>
         <targetPageKey1>Order__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>
@@ -96,9 +96,9 @@
         <isPublished>false</isPublished>
         <masterLabel>Order Builder Step 5</masterLabel>
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
-        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <stepNumber>5</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
+        <customApplication>EBikes</customApplication>
         <targetPageKey1>Order__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>

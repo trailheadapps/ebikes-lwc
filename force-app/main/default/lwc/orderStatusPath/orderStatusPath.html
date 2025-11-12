@@ -1,0 +1,73 @@
+<template>
+    <article class="slds-card">
+        <div class="slds-card__body slds-card__body_inner">
+            <template lwc:if={errorMessage}>
+                <div class="slds-text-heading_medium slds-text-color_error">
+                    {errorMessage}
+                </div>
+            </template>
+
+            <template lwc:else>
+                <div class="slds-path">
+                    <div class="slds-grid slds-path__track">
+                        <div class="slds-grid slds-path__scroller-container">
+                            <div class="slds-path__scroller" role="application">
+                                <div class="slds-path__scroller_inner">
+                                    <ul
+                                        class="slds-path__nav"
+                                        role="listbox"
+                                        aria-orientation="horizontal"
+                                        aria-label="Picklist values"
+                                    >
+                                        <template
+                                            for:each={pathItems}
+                                            for:item="pathItem"
+                                        >
+                                            <li
+                                                key={pathItem.value}
+                                                class={pathItem.cssClasses}
+                                                role="presentation"
+                                            >
+                                                <a
+                                                    aria-selected={pathItem.isCurrent}
+                                                    class="slds-path__link"
+                                                    href="#"
+                                                    onclick={handlePathItemClick}
+                                                    role="option"
+                                                    data-value={pathItem.value}
+                                                    tabindex="0"
+                                                >
+                                                    <span
+                                                        class="slds-path__stage"
+                                                    >
+                                                        <svg
+                                                            class="slds-icon slds-icon_x-small"
+                                                            aria-hidden="true"
+                                                        >
+                                                            <use
+                                                                xlink:href="/_slds/icons/utility-sprite/svg/symbols.svg#check"
+                                                            ></use>
+                                                        </svg>
+                                                        <span
+                                                            class="slds-assistive-text"
+                                                            >Current
+                                                            Stage:</span
+                                                        >
+                                                    </span>
+                                                    <span
+                                                        class="slds-path__title"
+                                                        >{pathItem.label}</span
+                                                    >
+                                                </a>
+                                            </li>
+                                        </template>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </article>
+</template>

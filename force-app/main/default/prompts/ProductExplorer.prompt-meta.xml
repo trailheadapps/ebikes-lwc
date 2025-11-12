@@ -3,19 +3,19 @@
     <masterLabel>Product Explorer</masterLabel>
     <promptVersions>
         <body
-        >The Product Explorer lets you browse thought E-Bikes products.</body>
+        >The Product Explorer lets you browse thought E-Bikes products. This page is built using custom Lightning Web Components.</body>
+        <customApplication>EBikes</customApplication>
         <delayDays>1</delayDays>
         <dismissButtonLabel>Close</dismissButtonLabel>
         <displayPosition>TopCenter</displayPosition>
         <displayType>FloatingPanel</displayType>
         <isPublished>true</isPublished>
         <masterLabel>Product Explorer Step 1</masterLabel>
-        <publishedDate>2020-10-09</publishedDate>
+        <publishedDate>2023-07-31</publishedDate>
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
-        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <startDate>2020-08-06</startDate>
         <stepNumber>1</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
         <targetPageKey1>Product_Explorer</targetPageKey1>
         <targetPageType>standard__navItemPage</targetPageType>
         <timesToDisplay>1</timesToDisplay>
@@ -27,15 +27,15 @@
     <promptVersions>
         <body
         >Filters control the list of displayed products with the &lt;a href=&quot;https://developer.salesforce.com/docs/component-library/bundle/lightning-message-service&quot;&gt;Lightning Message Service&lt;/a&gt; (LMS).</body>
+        <customApplication>EBikes</customApplication>
         <dismissButtonLabel>Close</dismissButtonLabel>
         <displayPosition>BottomLeft</displayPosition>
         <displayType>FloatingPanel</displayType>
         <isPublished>false</isPublished>
         <masterLabel>Product Explorer Step 2</masterLabel>
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
-        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <stepNumber>2</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
         <targetPageKey1>Product_Explorer</targetPageKey1>
         <targetPageType>standard__navItemPage</targetPageType>
         <title>Filters</title>
@@ -46,15 +46,15 @@
     <promptVersions>
         <body
         >E-Bikes products are shown in this paginated list.&lt;br/&gt;Click on one of the tiles to view product details.</body>
+        <customApplication>EBikes</customApplication>
         <dismissButtonLabel>Close</dismissButtonLabel>
         <displayPosition>BottomCenter</displayPosition>
         <displayType>FloatingPanel</displayType>
         <isPublished>false</isPublished>
         <masterLabel>Product Explorer Step 3</masterLabel>
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
-        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <stepNumber>3</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
         <targetPageKey1>Product_Explorer</targetPageKey1>
         <targetPageType>standard__navItemPage</targetPageType>
         <title>Product Tile List</title>
@@ -68,15 +68,15 @@
         >https://github.com/trailheadapps/ebikes-lwc</actionButtonLink>
         <body
         >Selected product&apos;s details are shown in this section.&lt;br/&gt;Click on the top right double arrow icon to navigate to the product record page.</body>
+        <customApplication>EBikes</customApplication>
         <dismissButtonLabel>Close</dismissButtonLabel>
         <displayPosition>BottomRight</displayPosition>
         <displayType>FloatingPanel</displayType>
         <isPublished>false</isPublished>
         <masterLabel>Product Explorer Step 4</masterLabel>
         <shouldDisplayActionButton>true</shouldDisplayActionButton>
-        <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <stepNumber>4</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
         <targetPageKey1>Product_Explorer</targetPageKey1>
         <targetPageType>standard__navItemPage</targetPageType>
         <title>Product Details</title>

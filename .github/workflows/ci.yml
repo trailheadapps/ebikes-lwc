@@ -7,20 +7,27 @@ on:
     push:
         branches:
             - main
+        paths-ignore:
+            - 'sfdx-project.json'
+            - 'README.md'
 
 # Jobs to be executed
 jobs:
     format-lint-lwc-tests:
-        runs-on: ubuntu-latest
+        runs-on: trailheadapps-Ubuntu
         steps:
             # Checkout the source code
             - name: 'Checkout source code'
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
+
+            # Install Volta to enforce proper node and package manager versions
+            - name: 'Install Volta'
+              uses: volta-cli/action@v4
 
             # Cache node_modules to speed up the process
             - name: 'Restore node_modules cache'
               id: cache-npm
-              uses: actions/cache@v1
+              uses: actions/cache@v4
               with:
                   path: node_modules
                   key: npm-${{ hashFiles('**/package-lock.json') }}
@@ -31,7 +38,7 @@ jobs:
             # Install npm dependencies for Prettier and Jest
             - name: 'Install npm dependencies'
               if: steps.cache-npm.outputs.cache-hit != 'true'
-              run: npm ci
+              run: HUSKY=0 npm ci
 
             # Prettier formatting
             - name: 'Code formatting verification with Prettier'
@@ -47,33 +54,33 @@ jobs:
 
             # Upload code coverage data
             - name: 'Upload code coverage for LWC to Codecov.io'
-              uses: codecov/codecov-action@v2.0.2
+              uses: codecov/codecov-action@v4
               with:
+                  token: ${{ secrets.CODECOV_TOKEN }}
                   flags: LWC
 
     scratch-org-test:
-        runs-on: ubuntu-latest
+        runs-on: trailheadapps-Ubuntu
         needs: format-lint-lwc-tests
-        if: ${{ github.actor != 'dependabot[bot]' }}
+        if: github.actor != 'dependabot[bot]'
         steps:
             # Install Salesforce CLI
             - name: 'Install Salesforce CLI'
               run: |
-                  wget https://developer.salesforce.com/media/salesforce-cli/sfdx/channels/stable/sfdx-linux-x64.tar.xz
-                  mkdir ~/sfdx
-                  tar xJf sfdx-linux-x64.tar.xz -C ~/sfdx --strip-components 1
-                  echo "$HOME/sfdx/bin" >> $GITHUB_PATH
-                  ~/sfdx/bin/sfdx version
+                  npm install @salesforce/cli --location=global
+                  nodeInstallPath=$(npm config get prefix)
+                  echo "$nodeInstallPath/bin" >> $GITHUB_PATH
+                  sf --version
 
             # Checkout the source code
             - name: 'Checkout source code'
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
 
             # Store secret for dev hub
             - name: 'Populate auth file with DEVHUB_SFDX_URL secret'
               shell: bash
               run: |
-                  echo ${{ secrets.DEVHUB_SFDX_URL}} > ./DEVHUB_SFDX_URL.txt
+                  echo ${{ secrets.DEVHUB_SFDX_URL }} > ./DEVHUB_SFDX_URL.txt
                   secretFileSize=$(wc -c "./DEVHUB_SFDX_URL.txt" | awk '{print $1}')
                   if [ $secretFileSize == 1 ]; then
                       echo "Missing DEVHUB_SFDX_URL secret. Is this workflow running on a fork?";
@@ -82,45 +89,48 @@ jobs:
 
             # Authenticate dev hub
             - name: 'Authenticate Dev Hub'
-              run: sfdx auth:sfdxurl:store -f ./DEVHUB_SFDX_URL.txt -a devhub -d
+              run: sf org login sfdx-url -f ./DEVHUB_SFDX_URL.txt -a devhub -d
 
             # Create scratch org
             - name: 'Create scratch org'
-              run: sfdx force:org:create -f config/project-scratch-def.json -a scratch-org -s -d 1
-
-            # Wait for package replication
-            - name: 'Wait for two min for Communities activation'
-              uses: maddox/actions/sleep@master
-              with:
-                  args: 120
+              run: sf org create scratch -f config/project-scratch-def.json -a scratch-org -d -y 1
 
             # Deploy source to scratch org
             - name: 'Push source to scratch org'
-              run: sfdx force:source:push
+              run: sf project deploy start
 
             # Assign permissionset
             - name: 'Assign permissionset to default user'
-              run: sfdx force:user:permset:assign -n ebikes
+              run: sf org assign permset -n ebikes
 
             # Import sample data
             - name: 'Import sample data'
-              run: sfdx force:data:tree:import -p ./data/sample-data-plan.json
+              run: sf data tree import -p ./data/sample-data-plan.json
+
+            # Wait for XP Cloud activation
+            - name: 'Wait for two min for XP Cloud activation'
+              run: sleep 120s
+
+            # Publish XP Cloud site
+            - name: 'Publish XP Cloud site'
+              run: sf community publish -n E-Bikes
+
+            # Deploy guest profile for XP Cloud site
+            - name: 'Deploy guest profile for XP Cloud site'
+              run: sf project deploy start --metadata-dir=guest-profile-metadata -w 10
 
             # Run Apex tests in scratch org
             - name: 'Run Apex tests'
-              run: sfdx force:apex:test:run -c -r human -d ./tests/apex -w 20
-
-            # Delete temporary test file that Codecov is unable to parse
-            - name: 'Delete coverage file (temporary step)'
-              run: rm ./tests/apex/test-result-707*-codecoverage.json
+              run: sf apex test run -c -r human -d ./tests/apex -w 20
 
             # Upload code coverage data
             - name: 'Upload code coverage for Apex to Codecov.io'
-              uses: codecov/codecov-action@v2.0.2
+              uses: codecov/codecov-action@v4
               with:
+                  token: ${{ secrets.CODECOV_TOKEN }}
                   flags: Apex
 
             # Housekeeping
             - name: 'Delete scratch org'
               if: always()
-              run: sfdx force:org:delete -p -u scratch-org
+              run: sf org delete scratch -p -o scratch-org

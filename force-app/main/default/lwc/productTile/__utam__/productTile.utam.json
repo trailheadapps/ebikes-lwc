@@ -1,0 +1,40 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "title",
+                "selector": {
+                    "css": ".title"
+                }
+            },
+            {
+                "name": "bodyLink",
+                "selector": {
+                    "css": "a"
+                },
+                "type": "clickable"
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "getTitleText",
+            "compose": [
+                {
+                    "element": "title",
+                    "apply": "getText",
+                    "returnType": "string"
+                }
+            ]
+        },
+        {
+            "name": "click",
+            "compose": [
+                {
+                    "element": "bodyLink",
+                    "apply": "click"
+                }
+            ]
+        }
+    ]
+}

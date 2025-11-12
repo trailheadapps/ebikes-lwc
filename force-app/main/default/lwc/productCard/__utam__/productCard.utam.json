@@ -1,0 +1,85 @@
+{
+    "shadow": {
+        "elements": [
+            {
+                "name": "card",
+                "selector": {
+                    "css": "lightning-card"
+                },
+                "type": "salesforce-pageobjects/lightning/pageObjects/card"
+            },
+            {
+                "name": "action",
+                "selector": {
+                    "css": "lightning-button-icon[slot='actions']"
+                },
+                "type": "salesforce-pageobjects/lightning/pageObjects/buttonIcon"
+            }
+        ]
+    },
+    "methods": [
+        {
+            "name": "getTitle",
+            "compose": [
+                {
+                    "element": "card",
+                    "apply": "getTitleText",
+                    "returnType": "string"
+                }
+            ]
+        },
+        {
+            "name": "getBodyText",
+            "compose": [
+                {
+                    "element": "card",
+                    "apply": "getBodyText",
+                    "returnType": "string"
+                }
+            ]
+        },
+        {
+            "name": "waitForSelectionUpdate",
+            "args": [
+                {
+                    "name": "expectedTitle",
+                    "type": "string"
+                }
+            ],
+            "compose": [
+                {
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "card",
+                                    "apply": "getTitleText",
+                                    "matcher": {
+                                        "type": "stringEquals",
+                                        "args": [
+                                            {
+                                                "name": "expectedTitle",
+                                                "type": "argumentReference"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "clickOpenRecord",
+            "compose": [
+                {
+                    "element": "action",
+                    "apply": "clickButton"
+                }
+            ]
+        }
+    ]
+}

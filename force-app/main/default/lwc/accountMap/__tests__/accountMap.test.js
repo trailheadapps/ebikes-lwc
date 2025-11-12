@@ -1,7 +1,6 @@
-import { createElement } from 'lwc';
+import { createElement } from '@lwc/engine-dom';
 import AccountMap from 'c/accountMap';
 import { getRecord } from 'lightning/uiRecordApi';
-import { registerLdsTestWireAdapter } from '@salesforce/sfdx-lwc-jest';
 
 // Realistic data with an accounts address details
 const mockGetRecordWithAddress = require('./data/getRecordWithAddress.json');
@@ -9,8 +8,6 @@ const mockGetRecordWithoutAddress = require('./data/getRecordWithoutAddress.json
 const mockRecordId = '0031700000pJRRSAA4';
 const mockWireErrorMessage = 'Error retrieving record';
 
-// Register as a LDS wire adapter. Some tests verify the provisioned values trigger desired behavior.
-const getRecordAdapter = registerLdsTestWireAdapter(getRecord);
 describe('c-account-map', () => {
     afterEach(() => {
         // The jsdom instance is shared across test cases in a single file so reset the DOM
@@ -29,7 +26,7 @@ describe('c-account-map', () => {
         document.body.appendChild(element);
 
         // Emit data from the get record adapter that includes billing street data
-        getRecordAdapter.emit(mockGetRecordWithAddress);
+        getRecord.emit(mockGetRecordWithAddress);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
@@ -64,7 +61,7 @@ describe('c-account-map', () => {
         document.body.appendChild(element);
 
         // Emit data from the get record adapter that does not include billing street data
-        getRecordAdapter.emit(mockGetRecordWithoutAddress);
+        getRecord.emit(mockGetRecordWithoutAddress);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
@@ -90,7 +87,7 @@ describe('c-account-map', () => {
         document.body.appendChild(element);
 
         // Emit an error from the getRecord adapter.
-        getRecordAdapter.error(mockWireErrorMessage);
+        getRecord.error(mockWireErrorMessage);
 
         // Return a promise to wait for any asynchronous DOM updates. Jest
         // will automatically wait for the Promise chain to complete before
@@ -119,7 +116,7 @@ describe('c-account-map', () => {
         document.body.appendChild(element);
 
         // Emit data from the get record adapter that includes billing street data
-        getRecordAdapter.emit(mockGetRecordWithAddress);
+        getRecord.emit(mockGetRecordWithAddress);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
@@ -133,7 +130,7 @@ describe('c-account-map', () => {
         document.body.appendChild(element);
 
         // Emit an error from the getRecord adapter.
-        getRecordAdapter.error(mockWireErrorMessage);
+        getRecord.error(mockWireErrorMessage);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());
     });

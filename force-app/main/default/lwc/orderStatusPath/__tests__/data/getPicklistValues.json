@@ -1,0 +1,32 @@
+{
+    "controllerValues": {},
+    "defaultValue": null,
+    "eTag": "8c7c1b7d2a22b6e10fe50bed9f0e9204",
+    "url": "/services/data/v56.0/ui-api/object-info/Order__c/picklist-values/012000000000000AAA/Type",
+    "values": [
+        {
+            "attributes": null,
+            "label": "A",
+            "validFor": [],
+            "value": "A"
+        },
+        {
+            "attributes": null,
+            "label": "B",
+            "validFor": [],
+            "value": "B"
+        },
+        {
+            "attributes": null,
+            "label": "C",
+            "validFor": [],
+            "value": "C"
+        },
+        {
+            "attributes": null,
+            "label": "D",
+            "validFor": [],
+            "value": "D"
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+import { createElement } from '@lwc/engine-dom';
 import ProductTile from 'c/productTile';
 
 describe('c-product-tile', () => {

@@ -7,6 +7,10 @@
         <label>Information</label>
         <layoutColumns>
             <layoutItems>
+                <behavior>Required</behavior>
+                <field>Status__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Name</field>
             </layoutItems>
@@ -46,6 +50,9 @@
         <layoutColumns />
         <style>CustomLinks</style>
     </layoutSections>
+    <miniLayout>
+        <fields>Status__c</fields>
+    </miniLayout>
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>Order_Item__c.Order__c</relatedList>

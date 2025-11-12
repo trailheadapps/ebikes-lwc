@@ -6,10 +6,10 @@ on:
 
 jobs:
     auto-assign:
-        runs-on: ubuntu-latest
+        runs-on: trailheadapps-Ubuntu
         steps:
             - name: 'Auto-assign issue'
-              uses: pozil/auto-assign-issue@v1
+              uses: pozil/auto-assign-issue@v2
               with:
                   repo-token: ${{ secrets.GITHUB_TOKEN }}
-                  assignees: ${{ secrets.DEFAULT_ISSUE_ASSIGNEE }}
+                  assignees: ${{ vars.DEFAULT_ISSUE_ASSIGNEE }}

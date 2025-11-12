@@ -1,9 +1,9 @@
 <template>
-    <img alt="" if:true={isImg} src={resUrl} />
-    <video if:true={isVideo} autoplay muted loop>
+    <img alt="" lwc:if={isImg} src={resUrl} />
+    <video lwc:if={isVideo} autoplay muted loop>
         <source src={resUrl} type="video/mp4" />
     </video>
-    <div if:true={isOverlay}></div>
+    <div lwc:if={isOverlay}></div>
     <c-hero-details
         class={heroDetailsPositionClass}
         title={title}

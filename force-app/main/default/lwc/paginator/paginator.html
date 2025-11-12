@@ -1,28 +1,27 @@
 <template>
-    <lightning-layout
-        vertical-align="center"
-        class="slds-var-m-horizontal_x-small"
+    <div
+        class="slds-grid slds-grid_vertical-align-center slds-var-m-horizontal_x-small"
     >
-        <lightning-layout-item size="2">
-            <template if:false={isFirstPage}>
-                <lightning-button-icon
-                    class="previous"
-                    icon-name="utility:chevronleft"
-                    onclick={handlePrevious}
-                ></lightning-button-icon>
-            </template>
-        </lightning-layout-item>
-        <lightning-layout-item size="8" class="nav-info">
+        <div class="slds-col slds-size_2-of-12">
+            <lightning-button-icon
+                lwc:if={isNotFirstPage}
+                class="previous"
+                icon-name="utility:chevronleft"
+                onclick={handlePrevious}
+                ><label>Previous</label></lightning-button-icon
+            >
+        </div>
+        <div class="slds-col slds-size_8-of-12 slds-text-align_center nav-info">
             {totalItemCount} items • page {currentPageNumber} of {totalPages}
-        </lightning-layout-item>
-        <lightning-layout-item size="2" class="nav-next">
-            <template if:false={isLastPage}>
-                <lightning-button-icon
-                    class="next"
-                    icon-name="utility:chevronright"
-                    onclick={handleNext}
-                ></lightning-button-icon>
-            </template>
-        </lightning-layout-item>
-    </lightning-layout>
+        </div>
+        <div class="slds-col slds-size_2-of-12 slds-text-align_right">
+            <lightning-button-icon
+                lwc:if={isNotLastPage}
+                class="next"
+                icon-name="utility:chevronright"
+                onclick={handleNext}
+                ><label>Next</label></lightning-button-icon
+            >
+        </div>
+    </div>
 </template>

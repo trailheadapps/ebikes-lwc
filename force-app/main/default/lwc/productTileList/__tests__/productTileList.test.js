@@ -1,10 +1,6 @@
-import { createElement } from 'lwc';
+import { createElement } from '@lwc/engine-dom';
 import ProductTileList from 'c/productTileList';
-import {
-    registerTestWireAdapter,
-    registerApexTestWireAdapter
-} from '@salesforce/sfdx-lwc-jest';
-import { publish, MessageContext } from 'lightning/messageService';
+import { publish } from 'lightning/messageService';
 import PRODUCTS_FILTERED_MESSAGE from '@salesforce/messageChannel/ProductsFiltered__c';
 import PRODUCT_SELECTED_MESSAGE from '@salesforce/messageChannel/ProductSelected__c';
 import getProducts from '@salesforce/apex/ProductController.getProducts';
@@ -15,12 +11,19 @@ const mockGetProducts = require('./data/getProducts.json');
 // when there is no data to display
 const mockGetProductsNoRecords = require('./data/getProductsNoRecords.json');
 
-// Register the Apex wire adapter. Some tests verify that provisioned values trigger desired behavior.
-const getProductsAdapter = registerApexTestWireAdapter(getProducts);
-
-// Register as a standard wire adapter because the component under test requires this adapter.
-// We don't exercise this wire adapter in the tests.
-registerTestWireAdapter(MessageContext);
+// Mock getContactList Apex wire adapter
+jest.mock(
+    '@salesforce/apex/ProductController.getProducts',
+    () => {
+        const {
+            createApexTestWireAdapter
+        } = require('@salesforce/sfdx-lwc-jest');
+        return {
+            default: createApexTestWireAdapter(jest.fn())
+        };
+    },
+    { virtual: true }
+);
 
 describe('c-product-tile-list', () => {
     afterEach(() => {
@@ -36,7 +39,7 @@ describe('c-product-tile-list', () => {
                 is: ProductTileList
             });
             document.body.appendChild(element);
-            getProductsAdapter.emit(mockGetProducts);
+            getProducts.emit(mockGetProducts);
 
             // Return a promise to wait for any asynchronous DOM updates.
             return Promise.resolve().then(() => {
@@ -63,7 +66,7 @@ describe('c-product-tile-list', () => {
                 is: ProductTileList
             });
             document.body.appendChild(element);
-            getProductsAdapter.emit(mockGetProducts);
+            getProducts.emit(mockGetProducts);
 
             return Promise.resolve()
                 .then(() => {
@@ -101,7 +104,7 @@ describe('c-product-tile-list', () => {
                 is: ProductTileList
             });
             document.body.appendChild(element);
-            getProductsAdapter.emit(mockGetProducts);
+            getProducts.emit(mockGetProducts);
 
             // Return a promise to wait for any asynchronous DOM updates.
             return Promise.resolve()
@@ -111,7 +114,7 @@ describe('c-product-tile-list', () => {
                     paginator.dispatchEvent(new CustomEvent('next'));
                 })
                 .then(() => {
-                    const { pageNumber } = getProductsAdapter.getLastConfig();
+                    const { pageNumber } = getProducts.getLastConfig();
                     // we've fired a single 'next' event so increment the original pageNumber
                     expect(pageNumber).toBe(mockGetProducts.pageNumber + 1);
                 });
@@ -123,7 +126,7 @@ describe('c-product-tile-list', () => {
                 is: ProductTileList
             });
             document.body.appendChild(element);
-            getProductsAdapter.emit(mockGetProducts);
+            getProducts.emit(mockGetProducts);
 
             return Promise.resolve().then(() => {
                 const productTiles =
@@ -137,7 +140,7 @@ describe('c-product-tile-list', () => {
                 is: ProductTileList
             });
             document.body.appendChild(element);
-            getProductsAdapter.emit(mockGetProducts);
+            getProducts.emit(mockGetProducts);
 
             return Promise.resolve().then(() => {
                 const productTile =
@@ -158,7 +161,7 @@ describe('c-product-tile-list', () => {
                 is: ProductTileList
             });
             document.body.appendChild(element);
-            getProductsAdapter.emit(mockGetProductsNoRecords);
+            getProducts.emit(mockGetProductsNoRecords);
 
             return Promise.resolve().then(() => {
                 const paginator =
@@ -174,7 +177,7 @@ describe('c-product-tile-list', () => {
                 is: ProductTileList
             });
             document.body.appendChild(element);
-            getProductsAdapter.emit(mockGetProductsNoRecords);
+            getProducts.emit(mockGetProductsNoRecords);
 
             return Promise.resolve().then(() => {
                 const placeholder =
@@ -193,7 +196,7 @@ describe('c-product-tile-list', () => {
                 is: ProductTileList
             });
             document.body.appendChild(element);
-            getProductsAdapter.error();
+            getProducts.error();
             return Promise.resolve()
                 .then(() => {
                     const errorPanel =
@@ -221,7 +224,7 @@ describe('c-product-tile-list', () => {
             });
             element.searchBarIsVisible = true;
             document.body.appendChild(element);
-            getProductsAdapter.emit(mockGetProducts);
+            getProducts.emit(mockGetProducts);
 
             return Promise.resolve()
                 .then(() => {
@@ -231,7 +234,7 @@ describe('c-product-tile-list', () => {
                     searchBar.dispatchEvent(new CustomEvent('change'));
                 })
                 .then(() => {
-                    const { filters } = getProductsAdapter.getLastConfig();
+                    const { filters } = getProducts.getLastConfig();
                     expect(filters).toEqual(expected);
                 });
         });
@@ -252,7 +255,7 @@ describe('c-product-tile-list', () => {
 
             // Check that wire gets called with new filters
             return Promise.resolve().then(() => {
-                const { filters } = getProductsAdapter.getLastConfig();
+                const { filters } = getProducts.getLastConfig();
                 expect(filters).toEqual(mockMessage.filters);
             });
         });
@@ -264,7 +267,7 @@ describe('c-product-tile-list', () => {
         });
 
         document.body.appendChild(element);
-        getProductsAdapter.emit(mockGetProducts);
+        getProducts.emit(mockGetProducts);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
@@ -275,7 +278,7 @@ describe('c-product-tile-list', () => {
         });
 
         document.body.appendChild(element);
-        getProductsAdapter.emit(mockGetProductsNoRecords);
+        getProducts.emit(mockGetProductsNoRecords);
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
@@ -286,7 +289,7 @@ describe('c-product-tile-list', () => {
         });
 
         document.body.appendChild(element);
-        getProductsAdapter.error();
+        getProducts.error();
 
         return Promise.resolve().then(() => expect(element).toBeAccessible());
     });
