@@ -1,5 +1,5 @@
 public with sharing class ProductController {
-    static Integer PAGE_SIZE = 9;
+    static Integer PAGE_SIZE = 6;
 
     public class Filters {
         @AuraEnabled
