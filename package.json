@@ -51,7 +51,7 @@
         "@wdio/local-runner": "^9.22.0",
         "@wdio/spec-reporter": "^9.20.0",
         "dotenv": "^17.2.3",
-        "eslint": "^9.39.1",
+        "eslint": "^9.39.2",
         "eslint-plugin-import": "^2.32.0",
         "eslint-plugin-jasmine": "^4.2.2",
         "eslint-plugin-jest": "^29.12.0",
