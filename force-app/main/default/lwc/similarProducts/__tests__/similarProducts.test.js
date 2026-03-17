@@ -1,4 +1,4 @@
-import { createElement } from 'lwc';
+import { createElement } from '@lwc/engine-dom';
 import SimilarProducts from 'c/similarProducts';
 import { getRecord } from 'lightning/uiRecordApi';
 import getSimilarProducts from '@salesforce/apex/ProductController.getSimilarProducts';

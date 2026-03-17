@@ -1,10 +1,10 @@
 {
-    "name": "ebikes-lwc",
+    "name": "@salesforce/ebikes-lwc",
     "private": true,
     "version": "1.0.0",
     "description": "EBikes Sample App - Lightning Web Components",
     "scripts": {
-        "lint": "eslint **/lwc/**/*.js force-app/test/**",
+        "lint": "eslint .",
         "test": "npm run test:unit",
         "test:unit": "sfdx-lwc-jest",
         "test:unit:watch": "sfdx-lwc-jest --watch ",
@@ -69,6 +69,6 @@
         "./"
     ],
     "volta": {
-        "node": "20.15.0"
+        "node": "22.18.0"
     }
 }

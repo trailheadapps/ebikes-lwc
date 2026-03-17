@@ -93,6 +93,16 @@
                 </visibilityRule>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Status__c</fieldItem>
+                <identifier>RecordStatus_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-24481a15-ff0a-486e-9b84-705cee2963d1</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -137,6 +147,12 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:fieldSection</componentName>
                 <identifier>fieldSection</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>orderBuilder</componentName>
+                <identifier>c_orderBuilder</identifier>
             </componentInstance>
         </itemInstances>
         <name>Facet-07a3ffa3-2ce8-4764-8215-3b56c7eb1aeb</name>
@@ -257,12 +273,6 @@
                 <identifier>forceMobileDetail</identifier>
             </componentInstance>
         </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>orderBuilder</componentName>
-                <identifier>orderBuilder</identifier>
-            </componentInstance>
-        </itemInstances>
         <mode>Replace</mode>
         <name>detailTabContent</name>
         <type>Facet</type>
@@ -313,6 +323,10 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
+                <componentInstanceProperties>
+                    <name>label</name>
+                    <value>Tabs</value>
+                </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>tabs</name>
                     <value>maintabs</value>

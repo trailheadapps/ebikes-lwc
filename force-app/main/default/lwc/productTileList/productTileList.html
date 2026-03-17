@@ -1,5 +1,5 @@
 <template>
-    <div class="slds-card slds-var-p-around_x-small">
+    <article class="product-tile-list slds-card slds-var-p-around_x-small">
         <template lwc:if={searchBarIsVisible}>
             <lightning-input
                 label="Search Key"
@@ -42,5 +42,5 @@
         <template lwc:if={products.error}>
             <c-error-panel errors={products.error}></c-error-panel>
         </template>
-    </div>
+    </article>
 </template>

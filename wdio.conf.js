@@ -13,10 +13,12 @@ exports.config = {
         {
             maxInstances: 1,
             browserName: 'chrome',
+            browserVersion: 'stable',
             'goog:chromeOptions': {
+                args: ['--disable-search-engine-choice-screen']
                 // to run chrome headless the following flags are required
                 // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
-                //args: ['--headless', '--disable-gpu', '--window-size=1920,1080']
+                //args: ['--headless', '--disable-gpu', '--window-size=1920,1080', '--disable-search-engine-choice-screen']
             }
         }
     ],
@@ -28,20 +30,19 @@ exports.config = {
     connectionRetryCount: 3,
     automationProtocol: 'webdriver',
     services: [
-        'chromedriver',
         [
             UtamWdioService,
             {
                 implicitTimeout: 0,
                 injectionConfigs: [
-                    'salesforce-pageobjects/ui-utam-pageobjects.config.json'
+                    'salesforce-pageobjects/ui-global-components.config.json'
                 ]
             }
         ]
     ],
     framework: 'jasmine',
     reporters: ['spec'],
-    jasmineNodeOpt: {
+    jasmineOpts: {
         // max execution time for a script, set to 5 min
         defaultTimeoutInterval: 1000 * 60 * 5
     }
