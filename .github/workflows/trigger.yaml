@@ -1,0 +1,22 @@
+name: Trigger Jataka Kamikaze Pods
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  trigger-jataka:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Jataka Kamikaze Pods
+        if: github.event_name == 'pull_request'
+        run: |
+          curl -X POST "${{ secrets.JATAKA_API_URL }}/api/integrations/github/trigger" \
+            -H "Authorization: Bearer ${{ secrets.JATAKA_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "installation_id": "${{ secrets.JATAKA_INSTALLATION_ID }}",
+              "repo_full_name": "${{ github.repository }}",
+              "branch": "${{ github.head_ref }}",
+              "pr_number": "${{ github.event.pull_request.number }}"
+            }'
