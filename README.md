@@ -235,7 +235,7 @@ To run LWC tests from the command line, run `npm test`.
 
 ### UI Tests
 
-We use [UTAM](utam.dev) with [WebdriverIO](https://webdriver.io/) to run UI tests on our app. Read [this blog post](https://developer.salesforce.com/blogs/2022/05/run-end-to-end-tests-with-the-ui-test-automation-model-utam) for a quick overview of this technology.
+We use [UTAM](https://utam.dev/) with [WebdriverIO](https://webdriver.io/) to run UI tests on our app. Read [this blog post](https://developer.salesforce.com/blogs/2022/05/run-end-to-end-tests-with-the-ui-test-automation-model-utam) for a quick overview of this technology.
 
 We run end-to-end tests on the Product Explorer page with `force-app/test/utam/page-explorer.spec.js`.
 
