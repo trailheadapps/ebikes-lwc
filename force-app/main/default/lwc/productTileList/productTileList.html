@@ -1,13 +1,20 @@
 <template>
     <article class="product-tile-list slds-card slds-var-p-around_x-small">
-        <template lwc:if={searchBarIsVisible}>
-            <lightning-input
-                label="Search Key"
-                type="text"
-                onchange={handleSearchKeyChange}
-                class="search-bar"
-            ></lightning-input>
-        </template>
+        <div class="slds-grid slds-grid_align-spread slds-var-m-bottom_small">
+            <template lwc:if={searchBarIsVisible}>
+                <lightning-input
+                    label="Search Key"
+                    type="text"
+                    onchange={handleSearchKeyChange}
+                    class="search-bar"
+                ></lightning-input>
+            </template>
+            <lightning-combobox
+                value={selectedSort}
+                options={sortOptions}
+                onchange={handleSortChange}
+            ></lightning-combobox>
+        </div>
         <template lwc:if={products.data}>
             <template lwc:if={products.data.records.length}>
                 <div class="content">

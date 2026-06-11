@@ -1,4 +1,4 @@
-public with sharing class ProductController {
+public without sharing class ProductController {
     static Integer PAGE_SIZE = 9;
 
     public class Filters {
@@ -12,6 +12,8 @@ public with sharing class ProductController {
         public String[] materials { get; set; }
         @AuraEnabled
         public String[] levels { get; set; }
+        @AuraEnabled
+        public String sortOrder { get; set; }
     }
 
     @AuraEnabled(Cacheable=true scope='global')
@@ -47,6 +49,11 @@ public with sharing class ProductController {
                 whereClause = 'WHERE ' + String.join(criteria, ' AND ');
             }
         }
+        String orderClause = 'Name';
+        if (filters != null && String.isNotBlank(filters.sortOrder)) {
+            orderClause = 'MSRP__c ' + filters.sortOrder;
+        }
+
         Integer pageSize = ProductController.PAGE_SIZE;
         Integer offset = (pageNumber - 1) * pageSize;
         PagedResult result = new PagedResult();
@@ -58,8 +65,9 @@ public with sharing class ProductController {
         result.records = Database.query(
             'SELECT Id, Name, MSRP__c, Description__c, Category__c, Level__c, Picture_URL__c, Material__c FROM Product__c ' +
                 whereClause +
-                ' WITH USER_MODE' +
-                ' ORDER BY Name LIMIT :pageSize OFFSET :offset'
+                ' ORDER BY ' +
+                orderClause +
+                ' LIMIT :pageSize OFFSET :offset'
         );
         return result;
     }

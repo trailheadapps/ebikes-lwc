@@ -34,6 +34,14 @@ export default class ProductTileList extends LightningElement {
     /** JSON.stringified version of filters to pass to apex */
     filters = {};
 
+    sortOptions = [
+        { label: 'Name', value: 'name' },
+        { label: 'Price: Low to High', value: 'ASC' },
+        { label: 'Price: High to Low', value: 'DESC' }
+    ];
+
+    selectedSort = 'name';
+
     /** Load context for Lightning Messaging Service */
     @wire(MessageContext) messageContext;
 
@@ -72,6 +80,17 @@ export default class ProductTileList extends LightningElement {
     handleFilterChange(message) {
         this.filters = { ...message.filters };
         this.pageNumber = 1;
+    }
+
+    handleSortChange(event) {
+        const value = event.detail.value;
+        this.selectedSort = value;
+        if (value === 'name') {
+            const { sortOrder, ...rest } = this.filters;
+            this.filters = rest;
+        } else {
+            this.filters = { ...this.filters, sortOrder: value };
+        }
     }
 
     handlePreviousPage() {

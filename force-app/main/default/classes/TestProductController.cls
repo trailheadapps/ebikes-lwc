@@ -47,6 +47,16 @@ public class TestProductController {
     }
 
     @isTest
+    static void getProducts_sortByPrice_returnsRecords() {
+        ProductController.Filters filters = new ProductController.Filters();
+        filters.sortOrder = 'ASC';
+
+        PagedResult result = ProductController.getProducts(filters, 1);
+
+        Assert.isTrue(result.records.size() > 0);
+    }
+
+    @isTest
     static void getSimilarProducts_works() {
         Product__c baseProduct = [
             SELECT Id, Name, Product_Family__c
