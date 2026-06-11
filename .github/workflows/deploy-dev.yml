@@ -1,0 +1,31 @@
+name: Deploy to Dev (new_feature)
+
+on:
+  push:
+    branches:
+      - new_feature
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Salesforce CLI
+        run: npm install -g @salesforce/cli
+
+      - name: Authenticate to Dev Scratch Org
+        run: |
+          echo "${{ secrets.SF_DEV_SFDX_URL }}" > /tmp/dev_auth_url.txt
+          sf org login sfdx-url --sfdx-url-file /tmp/dev_auth_url.txt --alias ebikes-dev
+          rm /tmp/dev_auth_url.txt
+
+      - name: Deploy Metadata
+        run: sf project deploy start --target-org ebikes-dev --ignore-conflicts
+
+      - name: Deploy Guest Profile Metadata
+        run: sf project deploy start --metadata-dir=guest-profile-metadata -w 10 --target-org ebikes-dev --ignore-conflicts
+
+      - name: Publish Experience Cloud Site
+        run: sf community publish -n E-Bikes --target-org ebikes-dev
