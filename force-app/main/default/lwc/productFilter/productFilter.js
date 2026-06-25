@@ -1,10 +1,9 @@
 import { LightningElement, wire } from 'lwc';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
+import { gql, graphql } from 'lightning/uiGraphQLApi';
 
 // Product schema
-import CATEGORY_FIELD from '@salesforce/schema/Product__c.Category__c';
 import LEVEL_FIELD from '@salesforce/schema/Product__c.Level__c';
-import MATERIAL_FIELD from '@salesforce/schema/Product__c.Material__c';
 
 // Lightning Message Service and a message channel
 import { publish, MessageContext } from 'lightning/messageService';
@@ -19,6 +18,8 @@ const DELAY = 350;
 export default class ProductFilter extends LightningElement {
     searchKey = '';
     maxPrice = 10000;
+    productFamilies = [];
+    productFamilyError;
 
     filters = {
         searchKey: '',
@@ -30,21 +31,52 @@ export default class ProductFilter extends LightningElement {
 
     @wire(getPicklistValues, {
         recordTypeId: '012000000000000AAA',
-        fieldApiName: CATEGORY_FIELD
-    })
-    categories;
-
-    @wire(getPicklistValues, {
-        recordTypeId: '012000000000000AAA',
         fieldApiName: LEVEL_FIELD
     })
     levels;
 
-    @wire(getPicklistValues, {
-        recordTypeId: '012000000000000AAA',
-        fieldApiName: MATERIAL_FIELD
+    @wire(graphql, {
+        query: gql`
+            query getProductFamilies {
+                uiapi {
+                    query {
+                        Product_Family__c(orderBy: { Name: { order: ASC } }) {
+                            edges {
+                                node {
+                                    Id
+                                    Name {
+                                        value
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        `
     })
-    materials;
+    wiredProductFamilies({ error, data }) {
+        if (data) {
+            this.productFamilies = data.uiapi.query.Product_Family__c.edges.map(
+                (edge) => ({
+                    Id: edge.node.Id,
+                    Name: edge.node.Name.value
+                })
+            );
+            this.productFamilyError = undefined;
+        } else if (error) {
+            this.productFamilyError = error;
+            this.productFamilies = [];
+        }
+    }
+
+    get productFamilyOptions() {
+        const options = [{ label: 'All', value: '' }];
+        this.productFamilies.forEach((family) => {
+            options.push({ label: family.Name, value: family.Id });
+        });
+        return options;
+    }
 
     handleSearchKeyChange(event) {
         this.filters.searchKey = event.target.value;
@@ -57,16 +89,15 @@ export default class ProductFilter extends LightningElement {
         this.delayedFireFilterChangeEvent();
     }
 
+    handleProductFamilyChange(event) {
+        this.filters.productFamily = event.target.value;
+        this.delayedFireFilterChangeEvent();
+    }
+
     handleCheckboxChange(event) {
-        if (!this.filters.categories) {
+        if (!this.filters.levels) {
             // Lazy initialize filters with all values initially set
-            this.filters.categories = this.categories.data.values.map(
-                (item) => item.value
-            );
             this.filters.levels = this.levels.data.values.map(
-                (item) => item.value
-            );
-            this.filters.materials = this.materials.data.values.map(
                 (item) => item.value
             );
         }

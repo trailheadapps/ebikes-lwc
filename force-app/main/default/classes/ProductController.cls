@@ -7,9 +7,7 @@ public with sharing class ProductController {
         @AuraEnabled
         public Decimal maxPrice { get; set; }
         @AuraEnabled
-        public String[] categories { get; set; }
-        @AuraEnabled
-        public String[] materials { get; set; }
+        public String productFamily { get; set; }
         @AuraEnabled
         public String[] levels { get; set; }
     }
@@ -18,10 +16,11 @@ public with sharing class ProductController {
     public static PagedResult getProducts(Filters filters, Integer pageNumber) {
         String key, whereClause = '';
         Decimal maxPrice;
-        String[] categories, materials, levels, criteria = new List<String>{};
+        String productFamily;
+        String[] levels, criteria = new List<String>{};
         if (filters != null) {
             maxPrice = filters.maxPrice;
-            materials = filters.materials;
+            productFamily = filters.productFamily;
             levels = filters.levels;
             if (!String.isEmpty(filters.searchKey)) {
                 key = '%' + filters.searchKey + '%';
@@ -31,17 +30,13 @@ public with sharing class ProductController {
                 maxPrice = filters.maxPrice;
                 criteria.add('MSRP__c <= :maxPrice');
             }
-            if (filters.categories != null) {
-                categories = filters.categories;
-                criteria.add('Category__c IN :categories');
+            if (!String.isEmpty(filters.productFamily)) {
+                productFamily = filters.productFamily;
+                criteria.add('Product_Family__c = :productFamily');
             }
             if (filters.levels != null) {
                 levels = filters.levels;
                 criteria.add('Level__c IN :levels');
-            }
-            if (filters.materials != null) {
-                materials = filters.materials;
-                criteria.add('Material__c IN :materials');
             }
             if (criteria.size() > 0) {
                 whereClause = 'WHERE ' + String.join(criteria, ' AND ');
