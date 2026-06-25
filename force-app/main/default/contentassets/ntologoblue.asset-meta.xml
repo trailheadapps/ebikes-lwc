@@ -2,7 +2,7 @@
 <ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
     <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
     <language>en_US</language>
-    <masterLabel>logo</masterLabel>
+    <masterLabel>ntologoblue</masterLabel>
     <relationships>
         <organization>
             <access>VIEWER</access>
@@ -11,7 +11,7 @@
     <versions>
         <version>
             <number>1</number>
-            <pathOnClient>logo.png</pathOnClient>
+            <pathOnClient>nto-logo-blue.png</pathOnClient>
         </version>
     </versions>
 </ContentAsset>
