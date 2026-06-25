@@ -1,6 +1,7 @@
 {
     "appPageId": "591ae89d-97d7-4f5d-b93f-ce618e5d48f1",
     "componentName": "siteforce:sldsOneColLayout",
+    "dataProviders": [],
     "id": "4febe178-894b-4426-8345-87a24eb8161d",
     "label": "Create Case",
     "regions": [

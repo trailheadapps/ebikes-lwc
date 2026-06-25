@@ -7,7 +7,7 @@ public with sharing class ProductRecordInfoController {
             SELECT ID
             FROM Product__c
             WHERE NAME = :productOrFamilyName
-            WITH SECURITY_ENFORCED
+            WITH USER_MODE
         ];
         if (cProductList.size() > 0) {
             recordInfo.add(cProductList[0].ID);
@@ -19,7 +19,7 @@ public with sharing class ProductRecordInfoController {
             SELECT ID
             FROM Product_Family__c
             WHERE NAME = :productOrFamilyName
-            WITH SECURITY_ENFORCED
+            WITH USER_MODE
         ];
         if (cProductFamilyList.size() > 0) {
             recordInfo.add(cProductFamilyList[0].ID);

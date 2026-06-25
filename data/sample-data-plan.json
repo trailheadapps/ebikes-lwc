@@ -1,6 +1,6 @@
 [
     {
-        "sobject": "Account__c",
+        "sobject": "Account",
         "saveRefs": false,
         "files": ["Accounts.json"]
     },
