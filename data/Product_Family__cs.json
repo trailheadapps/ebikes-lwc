@@ -3,7 +3,7 @@
         {
             "attributes": {
                 "type": "Product_Family__c",
-                "referenceId": "DynamoRef"
+                "referenceId": "TentsRef"
             },
             "Name": "Tents",
             "Description__c": "Durable and weather-resistant tents for all your outdoor adventures."
@@ -11,7 +11,7 @@
         {
             "attributes": {
                 "type": "Product_Family__c",
-                "referenceId": "FuseRef"
+                "referenceId": "BackpacksRef"
             },
             "Name": "Backpacks",
             "Description__c": "Versatile backpacks with ample storage and comfortable carrying systems."
@@ -19,7 +19,7 @@
         {
             "attributes": {
                 "type": "Product_Family__c",
-                "referenceId": "ElectraRef"
+                "referenceId": "Sleeping bagsRef"
             },
             "Name": "Sleeping bags",
             "Description__c": "Warm and comfortable sleeping bags for a great night's rest outdoors."
@@ -27,7 +27,7 @@
         {
             "attributes": {
                 "type": "Product_Family__c",
-                "referenceId": "VoltRef"
+                "referenceId": "ShoesRef"
             },
             "Name": "Shoes",
             "Description__c": "High-performance outdoor shoes built for comfort and durability."

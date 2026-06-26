@@ -6,7 +6,7 @@
                 "referenceId": "Product__cRef1"
             },
             "Name": "Griffin 75 Backpack",
-            "Product_Family__c": "@FuseRef",
+            "Product_Family__c": "@BackpacksRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 319,
             "Level__c": "Beginner",
@@ -26,7 +26,7 @@
                 "referenceId": "Product__cRef2"
             },
             "Name": "Terra 55 Backpack",
-            "Product_Family__c": "@FuseRef",
+            "Product_Family__c": "@BackpacksRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 169,
             "Level__c": "Beginner",
@@ -46,7 +46,7 @@
                 "referenceId": "Product__cRef3"
             },
             "Name": "Fovero 70",
-            "Product_Family__c": "@FuseRef",
+            "Product_Family__c": "@BackpacksRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 289,
             "Level__c": "Beginner",
@@ -66,7 +66,7 @@
                 "referenceId": "Product__cRef4"
             },
             "Name": "Griffin 65 Backpack",
-            "Product_Family__c": "@FuseRef",
+            "Product_Family__c": "@BackpacksRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 299,
             "Level__c": "Beginner",
@@ -86,7 +86,7 @@
                 "referenceId": "Product__cRef5"
             },
             "Name": "Homestead Roomy 2",
-            "Product_Family__c": "@DynamoRef",
+            "Product_Family__c": "@TentsRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 229,
             "Level__c": "Racer",
@@ -106,7 +106,7 @@
                 "referenceId": "Product__cRef6"
             },
             "Name": "Northstar 4",
-            "Product_Family__c": "@DynamoRef",
+            "Product_Family__c": "@TentsRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 549,
             "Level__c": "Racer",
@@ -126,7 +126,7 @@
                 "referenceId": "Product__cRef7"
             },
             "Name": "Homestead Domey 3",
-            "Product_Family__c": "@DynamoRef",
+            "Product_Family__c": "@TentsRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 249,
             "Level__c": "Racer",
@@ -146,7 +146,7 @@
                 "referenceId": "Product__cRef8"
             },
             "Name": "Talus 4",
-            "Product_Family__c": "@DynamoRef",
+            "Product_Family__c": "@TentsRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 299,
             "Level__c": "Racer",
@@ -166,7 +166,7 @@
                 "referenceId": "Product__cRef9"
             },
             "Name": "Aleutian 40/4",
-            "Product_Family__c": "@ElectraRef",
+            "Product_Family__c": "@Sleeping bagsRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 99,
             "Level__c": "Enthusiast",
@@ -186,7 +186,7 @@
                 "referenceId": "Product__cRef10"
             },
             "Name": "Aleutian 20/-7",
-            "Product_Family__c": "@ElectraRef",
+            "Product_Family__c": "@Sleeping bagsRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 109,
             "Level__c": "Enthusiast",
@@ -206,7 +206,7 @@
                 "referenceId": "Product__cRef11"
             },
             "Name": "Guide 20",
-            "Product_Family__c": "@ElectraRef",
+            "Product_Family__c": "@Sleeping bagsRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 179,
             "Level__c": "Enthusiast",
@@ -226,7 +226,7 @@
                 "referenceId": "Product__cRef12"
             },
             "Name": "Women's Guide 20",
-            "Product_Family__c": "@ElectraRef",
+            "Product_Family__c": "@Sleeping bagsRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 209,
             "Level__c": "Enthusiast",
@@ -246,7 +246,7 @@
                 "referenceId": "Product__cRef13"
             },
             "Name": "Men's Verto S6k Glacier Boots",
-            "Product_Family__c": "@VoltRef",
+            "Product_Family__c": "@ShoesRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 475,
             "Level__c": "Beginner",
@@ -266,7 +266,7 @@
                 "referenceId": "Product__cRef14"
             },
             "Name": "Women's Verto S4k Boots",
-            "Product_Family__c": "@VoltRef",
+            "Product_Family__c": "@ShoesRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 350,
             "Level__c": "Beginner",
@@ -286,7 +286,7 @@
                 "referenceId": "Product__cRef15"
             },
             "Name": "Men’s Rovereto Running Shoes",
-            "Product_Family__c": "@VoltRef",
+            "Product_Family__c": "@ShoesRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 90,
             "Level__c": "Beginner",
@@ -306,7 +306,7 @@
                 "referenceId": "Product__cRef16"
             },
             "Name": "Women's Endurus Tr",
-            "Product_Family__c": "@VoltRef",
+            "Product_Family__c": "@ShoesRef",
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 130,
             "Level__c": "Beginner",
