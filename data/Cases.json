@@ -1,0 +1,17 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef1"
+            },
+            "CaseNumber": "00001029",
+            "Subject": "Backpacks from last order are not of the right color",
+            "Status": "Escalated",
+            "Priority": "High",
+            "Origin": "Email",
+            "Description": "Customer ordered black backpacks but the shipment contained white ones.",
+            "AccountId": "@AccountRef3"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Opportunity",
+                "referenceId": "OpportunityRef1"
+            },
+            "Name": "50 Glacier Boots",
+            "StageName": "Value Proposition",
+            "Amount": 23000,
+            "CloseDate": "2026-08-31",
+            "Probability": 50,
+            "AccountId": "@AccountRef3"
+        }
+    ]
+}

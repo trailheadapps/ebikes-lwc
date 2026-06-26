@@ -1,8 +1,18 @@
 [
     {
         "sobject": "Account",
-        "saveRefs": false,
+        "saveRefs": true,
         "files": ["Accounts.json"]
+    },
+    {
+        "sobject": "Case",
+        "resolveRefs": true,
+        "files": ["Cases.json"]
+    },
+    {
+        "sobject": "Opportunity",
+        "resolveRefs": true,
+        "files": ["Opportunities.json"]
     },
     {
         "sobject": "Product_Family__c",
