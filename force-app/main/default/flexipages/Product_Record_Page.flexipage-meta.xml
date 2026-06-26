@@ -7,8 +7,8 @@
                     <name>collapsed</name>
                     <value>false</value>
                 </componentInstanceProperties>
-                <identifier>forceHighlights</identifier>
                 <componentName>force:highlightsPanel</componentName>
+                <identifier>forceHighlights</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -22,8 +22,8 @@
                     <name>relatedListComponentOverride</name>
                     <value>NONE</value>
                 </componentInstanceProperties>
-                <identifier>forceRelatedContainer</identifier>
                 <componentName>force:relatedListContainer</componentName>
+                <identifier>forceRelatedContainer</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -33,8 +33,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <identifier>forceDetail</identifier>
                 <componentName>force:detailPanel</componentName>
+                <identifier>forceDetail</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -52,8 +52,8 @@
                     <name>title</name>
                     <value>Standard.Tab.relatedLists</value>
                 </componentInstanceProperties>
-                <identifier>flexiTab</identifier>
                 <componentName>flexipage:tab</componentName>
+                <identifier>flexiTab</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -70,8 +70,8 @@
                     <name>title</name>
                     <value>Standard.Tab.detail</value>
                 </componentInstanceProperties>
-                <identifier>flexiTab2</identifier>
                 <componentName>flexipage:tab</componentName>
+                <identifier>flexiTab2</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -85,8 +85,8 @@
                     <name>tabs</name>
                     <value>maintabs</value>
                 </componentInstanceProperties>
-                <identifier>flexiTabset</identifier>
                 <componentName>flexipage:tabset</componentName>
+                <identifier>flexiTabset</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>
@@ -96,8 +96,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <identifier>similarProducts</identifier>
                 <componentName>similarProducts</componentName>
+                <identifier>similarProducts</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

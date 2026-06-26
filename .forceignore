@@ -11,10 +11,25 @@ package.xml
 **/fieldRestrictionRules/**
 **/objectTranslations/**
 **/profiles/**
-**/profilePasswordPolicy/**
-**/profileSessionSetting/**
+**/profilePasswordPolicies/**
+**/profileSessionSettings/**
 **/settings/**
 **/sharingRules/**
+**/dashboards/**
+**/reports/**
+**/reportTypes/**
+
+# Standard objects
+**/objects/Account/**
+**/objects/Contact/**
+
+# External client app metadata
+**/externalClientApps/**
+**/extlClntAppGlobalOauthSets/**
+**/extlClntAppOauthSecuritySettings/**
+**/extlClntAppPolicies/**
+**/extlClntAppOauthSettings/**
+**/extlClntAppOauthPolicies/**
 
 # LWC configuration files
 **/jsconfig.json

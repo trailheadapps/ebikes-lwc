@@ -5,10 +5,7 @@ public class TestProductController {
 
     @testSetup
     static void createProducts() {
-        Product_Family__c family = new Product_Family__c(
-            Name = 'TestFamily',
-            Category__c = 'Mountain'
-        );
+        Product_Family__c family = new Product_Family__c(Name = 'TestFamily');
         insert family;
 
         insert new List<Product__c>{
@@ -36,9 +33,7 @@ public class TestProductController {
         ProductController.Filters filters = new ProductController.Filters();
         filters.searchKey = 'Sample';
         filters.maxPrice = 2000;
-        filters.categories = new List<String>{ 'Mountain' };
         filters.levels = new List<String>{ 'Beginner' };
-        filters.materials = new List<String>{ 'Carbon' };
 
         PagedResult result = ProductController.getProducts(filters, 1);
 

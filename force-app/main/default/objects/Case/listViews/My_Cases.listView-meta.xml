@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>My_Cases</fullName>
-    <columns>CASES.CASE_NUMBER</columns>
-    <columns>CASES.STATUS</columns>
-    <columns>Product__c</columns>
-    <filterScope>Mine</filterScope>
-    <label>My Cases</label>
-</ListView>

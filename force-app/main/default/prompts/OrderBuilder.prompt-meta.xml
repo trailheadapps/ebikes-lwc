@@ -4,6 +4,7 @@
     <promptVersions>
         <body
         >The order builder allows you to drag products into the basket and construct an order for the customer.</body>
+        <customApplication>EBikes</customApplication>
         <delayDays>1</delayDays>
         <description
         >Use the Order Builder to learn more about component composition.</description>
@@ -12,12 +13,11 @@
         <displayType>FloatingPanel</displayType>
         <isPublished>true</isPublished>
         <masterLabel>Order Builder Step 1</masterLabel>
-        <publishedDate>2020-10-15</publishedDate>
+        <publishedDate>2026-06-25</publishedDate>
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
         <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
         <startDate>2020-10-09</startDate>
         <stepNumber>1</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
         <targetPageKey1>Order__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>
@@ -30,6 +30,7 @@
     <promptVersions>
         <body
         >Here you can see a list of available products to add to each order as well as search for products that might not be in the list. &lt;br&gt; &lt;br&gt; Try searching for an &quot;Electra X1&quot; and see the results as they&apos;re updated.</body>
+        <customApplication>EBikes</customApplication>
         <dismissButtonLabel>Close</dismissButtonLabel>
         <displayPosition>BottomRight</displayPosition>
         <displayType>FloatingPanel</displayType>
@@ -38,7 +39,6 @@
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
         <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
         <stepNumber>2</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
         <targetPageKey1>Order__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>
@@ -50,6 +50,7 @@
     <promptVersions>
         <body
         >You can drag products from the list into the basket. As you add products, the totals will update and relate the records to the order.</body>
+        <customApplication>EBikes</customApplication>
         <dismissButtonLabel>Close</dismissButtonLabel>
         <displayPosition>TopCenter</displayPosition>
         <displayType>FloatingPanel</displayType>
@@ -58,7 +59,6 @@
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
         <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
         <stepNumber>3</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
         <targetPageKey1>Order__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>
@@ -70,6 +70,7 @@
     <promptVersions>
         <body
         >You can now modify the price &amp; quantity of the product being ordered. Once modified the totals on the order will be updated.&lt;br&gt;&lt;br&gt;This is done using &lt;a href=&quot;https://sfdc.co/B8HXD&quot;&gt;Custom Events&lt;/a&gt; sent up from the Order Item Component.</body>
+        <customApplication>EBikes</customApplication>
         <dismissButtonLabel>Close</dismissButtonLabel>
         <displayPosition>TopCenter</displayPosition>
         <displayType>FloatingPanel</displayType>
@@ -78,7 +79,6 @@
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
         <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
         <stepNumber>4</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
         <targetPageKey1>Order__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>
@@ -90,6 +90,7 @@
     <promptVersions>
         <body
         >&lt;p&gt;Now that you have seen Lightning Web Components used to create an interactive ordering experience, you can learn how to build them yourself!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;As demonstrated, you can follow web standards like using Custom Events &amp;amp; The Drag &amp;amp; Drop API to communicate across components.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Make sure you check out the &lt;b&gt;Product Explorer &lt;/b&gt;Tab for more great ways you can innovate with Lightning Web Components.&lt;/p&gt;</body>
+        <customApplication>EBikes</customApplication>
         <displayPosition>BottomCenter</displayPosition>
         <displayType>DockedComposer</displayType>
         <header>Resources</header>
@@ -98,7 +99,6 @@
         <shouldDisplayActionButton>false</shouldDisplayActionButton>
         <shouldIgnoreGlobalDelay>false</shouldIgnoreGlobalDelay>
         <stepNumber>5</stepNumber>
-        <targetAppDeveloperName>EBikes</targetAppDeveloperName>
         <targetPageKey1>Order__c</targetPageKey1>
         <targetPageKey2>view</targetPageKey2>
         <targetPageType>standard__recordPage</targetPageType>

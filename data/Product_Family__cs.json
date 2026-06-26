@@ -6,8 +6,7 @@
                 "referenceId": "DynamoRef"
             },
             "Name": "Tents",
-            "Description__c": "Performance and reliability. The best choice for hobbyists and enthusiasts.",
-            "Category__c": "Mountain"
+            "Description__c": "Durable and weather-resistant tents for all your outdoor adventures."
         },
         {
             "attributes": {
@@ -15,8 +14,7 @@
                 "referenceId": "FuseRef"
             },
             "Name": "Backpacks",
-            "Description__c": "Commute and off-road? Do it all!",
-            "Category__c": "Hybrid"
+            "Description__c": "Versatile backpacks with ample storage and comfortable carrying systems."
         },
         {
             "attributes": {
@@ -24,8 +22,7 @@
                 "referenceId": "ElectraRef"
             },
             "Name": "Sleeping bags",
-            "Description__c": "Top of the line commuter bikes that can handle long and challenging commutes.",
-            "Category__c": "Commuter"
+            "Description__c": "Warm and comfortable sleeping bags for a great night's rest outdoors."
         },
         {
             "attributes": {
@@ -33,8 +30,7 @@
                 "referenceId": "VoltRef"
             },
             "Name": "Shoes",
-            "Description__c": "Fun and Foldable electric bicycles.",
-            "Category__c": "Commuter"
+            "Description__c": "High-performance outdoor shoes built for comfort and durability."
         }
     ]
 }
