@@ -1,10 +1,10 @@
-public with sharing class GetAccountOrdersInvocable {
+global with sharing class GetAccountOrdersAction {
     @InvocableMethod(
         label='Get Account Orders'
         description='Returns all orders for a given account'
         category='Order'
     )
-    public static List<Result> getAccountOrders(List<Request> requests) {
+    global static List<Result> getAccountOrders(List<Request> requests) {
         List<Result> results = new List<Result>();
 
         for (Request request : requests) {
@@ -35,7 +35,7 @@ public with sharing class GetAccountOrdersInvocable {
         return results;
     }
 
-    public class Request {
+    global class Request {
         @InvocableVariable(
             label='Account ID'
             description='The ID of the account to retrieve orders for'
@@ -44,7 +44,7 @@ public with sharing class GetAccountOrdersInvocable {
         public Id accountId;
     }
 
-    public class Result {
+    global class Result {
         @InvocableVariable(
             label='Orders'
             description='List of orders for the account'
