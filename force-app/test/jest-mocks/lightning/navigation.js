@@ -15,6 +15,7 @@ export const NavigationMixin = (Base) => {
             _pageReference = pageReference;
             _replace = replace;
         }
+        // eslint-disable-next-line no-unused-vars
         [GenerateUrl](pageReference) {}
     };
 };

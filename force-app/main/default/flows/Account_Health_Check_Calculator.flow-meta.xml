@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description
+        >Calculates Activity &amp; Engagement score (30% of total)</description>
+        <name>Calculate_Activity_Engagement_Score</name>
+        <label>Calculate Activity &amp; Engagement Score</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>ActivityEngagementScore</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference
+            >Calculate_Opportunity_Health_Score</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>accountId</name>
+            <value>
+                <elementReference>AccountId</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>ActivityEngagementScore</nameSegment>
+        <offset>0</offset>
+        <outputParameters>
+            <assignToReference>ActivityScore</assignToReference>
+            <name>score</name>
+        </outputParameters>
+        <outputParameters>
+            <assignToReference>ActivityDetails</assignToReference>
+            <name>details</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description
+        >Calculates Opportunity Health score (30% of total)</description>
+        <name>Calculate_Opportunity_Health_Score</name>
+        <label>Calculate Opportunity Health Score</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>OpportunityHealthScore</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Calculate_Support_Signals_Score</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>accountId</name>
+            <value>
+                <elementReference>AccountId</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>OpportunityHealthScore</nameSegment>
+        <offset>0</offset>
+        <outputParameters>
+            <assignToReference>OpportunityScore</assignToReference>
+            <name>score</name>
+        </outputParameters>
+        <outputParameters>
+            <assignToReference>OpportunityDetails</assignToReference>
+            <name>details</name>
+        </outputParameters>
+    </actionCalls>
+    <actionCalls>
+        <description
+        >Calculates Support Signals score (40% of total)</description>
+        <name>Calculate_Support_Signals_Score</name>
+        <label>Calculate Support Signals Score</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>SupportSignalsScore</actionName>
+        <actionType>apex</actionType>
+        <connector>
+            <targetReference>Calculate_Final_Score</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>accountId</name>
+            <value>
+                <elementReference>AccountId</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>SupportSignalsScore</nameSegment>
+        <offset>0</offset>
+        <outputParameters>
+            <assignToReference>SupportScore</assignToReference>
+            <name>score</name>
+        </outputParameters>
+        <outputParameters>
+            <assignToReference>SupportDetails</assignToReference>
+            <name>details</name>
+        </outputParameters>
+    </actionCalls>
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Build_Score_Details</name>
+        <label>Build Score Details</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>ScoreDetails</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>scoreDetailsTemplate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description
+        >Calculates the final health score by summing all subscores</description>
+        <name>Calculate_Final_Score</name>
+        <label>Calculate Final Score</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>FinalHealthScore</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>ActivityScore</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>FinalHealthScore</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>OpportunityScore</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>FinalHealthScore</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>SupportScore</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Build_Score_Details</targetReference>
+        </connector>
+    </assignments>
+    <description>Calculates the overall account health score</description>
+    <environments>Default</environments>
+    <interviewLabel
+    >Account Health Check Calculator {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Account Health Check Calculator</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference
+            >Calculate_Activity_Engagement_Score</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <description>Template used to provide score details</description>
+        <name>scoreDetailsTemplate</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text
+        >&lt;p&gt;FINAL HEALTH SCORE: {!FinalHealthScore} / 100&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;ACTIVITY &amp;amp; ENGAGEMENT: {!ActivityScore} / 30 (30%)&lt;/p&gt;&lt;p&gt;{!ActivityDetails}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;OPPORTUNITY HEALTH: {!OpportunityScore} / 30 (30%)&lt;/p&gt;&lt;p&gt;{!OpportunityDetails}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;SUPPORT SIGNALS: {!SupportScore} / 40 (40%)&lt;/p&gt;&lt;p&gt;{!SupportDetails}&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <description>The Account ID to calculate health score for</description>
+        <name>AccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Activity &amp; Engagement details</description>
+        <name>ActivityDetails</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Activity &amp; Engagement subscore (0-30)</description>
+        <name>ActivityScore</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <description>Final calculated health score (0-100)</description>
+        <name>FinalHealthScore</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <description>Opportunity Health details</description>
+        <name>OpportunityDetails</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Opportunity Health subscore (0-30)</description>
+        <name>OpportunityScore</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <description>Detailed breakdown of all scores and metrics</description>
+        <name>ScoreDetails</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Support Signals details</description>
+        <name>SupportDetails</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Support Signals subscore (0-40)</description>
+        <name>SupportScore</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+</Flow>
