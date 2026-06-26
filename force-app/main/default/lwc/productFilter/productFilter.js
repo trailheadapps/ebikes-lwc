@@ -1,6 +1,6 @@
 import { LightningElement, wire } from 'lwc';
 import { getPicklistValues } from 'lightning/uiObjectInfoApi';
-import { gql, graphql } from 'lightning/uiGraphQLApi';
+import { gql, graphql } from 'lightning/graphql';
 
 // Product schema
 import LEVEL_FIELD from '@salesforce/schema/Product__c.Level__c';
@@ -55,7 +55,7 @@ export default class ProductFilter extends LightningElement {
             }
         `
     })
-    wiredProductFamilies({ error, data }) {
+    wiredProductFamilies({ errors, data }) {
         if (data) {
             this.productFamilies = data.uiapi.query.Product_Family__c.edges.map(
                 (edge) => ({
@@ -64,8 +64,8 @@ export default class ProductFilter extends LightningElement {
                 })
             );
             this.productFamilyError = undefined;
-        } else if (error) {
-            this.productFamilyError = error;
+        } else if (errors?.length > 0) {
+            this.productFamilyError = errors.join(',');
             this.productFamilies = [];
         }
     }
