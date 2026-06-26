@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Account__c</fullName>
     <deleteConstraint>Restrict</deleteConstraint>
-    <externalId>false</externalId>
     <label>Account</label>
     <referenceTo>Account</referenceTo>
     <relationshipName>Orders</relationshipName>
