@@ -22,6 +22,7 @@ package.xml
 # Standard objects
 **/objects/Account/**
 **/objects/Contact/**
+**/objects/Case/**
 
 # External client app metadata
 **/externalClientApps/**
@@ -30,6 +31,9 @@ package.xml
 **/extlClntAppPolicies/**
 **/extlClntAppOauthSettings/**
 **/extlClntAppOauthPolicies/**
+
+# Internal permission sets
+**/permissionsets/sfdcInternalInt__*
 
 # LWC configuration files
 **/jsconfig.json
