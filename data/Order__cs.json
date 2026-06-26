@@ -1,0 +1,22 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Order__c",
+                "referenceId": "OrderRef1"
+            },
+            "Name": "O-00000",
+            "Account__c": "@AccountRef3",
+            "Status__c": "Delivered"
+        },
+        {
+            "attributes": {
+                "type": "Order__c",
+                "referenceId": "OrderRef2"
+            },
+            "Name": "O-00001",
+            "Account__c": "@AccountRef3",
+            "Status__c": "Out for delivery"
+        }
+    ]
+}

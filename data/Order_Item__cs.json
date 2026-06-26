@@ -1,0 +1,69 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Order_Item__c",
+                "referenceId": "OrderItemRef1"
+            },
+            "Name": "OI-000000",
+            "Order__c": "@OrderRef1",
+            "Product__c": "@Product__cRef10",
+            "Price__c": 65,
+            "Qty_S__c": 5,
+            "Qty_M__c": 10,
+            "Qty_L__c": 5
+        },
+        {
+            "attributes": {
+                "type": "Order_Item__c",
+                "referenceId": "OrderItemRef2"
+            },
+            "Name": "OI-000001",
+            "Order__c": "@OrderRef1",
+            "Product__c": "@Product__cRef11",
+            "Price__c": 107,
+            "Qty_S__c": 2,
+            "Qty_M__c": 6,
+            "Qty_L__c": 2
+        },
+        {
+            "attributes": {
+                "type": "Order_Item__c",
+                "referenceId": "OrderItemRef3"
+            },
+            "Name": "OI-000002",
+            "Order__c": "@OrderRef1",
+            "Product__c": "@Product__cRef9",
+            "Price__c": 59,
+            "Qty_S__c": 10,
+            "Qty_M__c": 20,
+            "Qty_L__c": 10
+        },
+        {
+            "attributes": {
+                "type": "Order_Item__c",
+                "referenceId": "OrderItemRef4"
+            },
+            "Name": "OI-000003",
+            "Order__c": "@OrderRef2",
+            "Product__c": "@Product__cRef3",
+            "Price__c": 173,
+            "Qty_S__c": 2,
+            "Qty_M__c": 5,
+            "Qty_L__c": 2
+        },
+        {
+            "attributes": {
+                "type": "Order_Item__c",
+                "referenceId": "OrderItemRef5"
+            },
+            "Name": "OI-000004",
+            "Order__c": "@OrderRef2",
+            "Product__c": "@Product__cRef4",
+            "Price__c": 179,
+            "Qty_S__c": 3,
+            "Qty_M__c": 6,
+            "Qty_L__c": 3
+        }
+    ]
+}

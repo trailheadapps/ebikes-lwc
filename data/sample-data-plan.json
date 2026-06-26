@@ -23,5 +23,16 @@
         "sobject": "Product__c",
         "resolveRefs": true,
         "files": ["Product__cs.json"]
+    },
+    {
+        "sobject": "Order__c",
+        "saveRefs": true,
+        "resolveRefs": true,
+        "files": ["Order__cs.json"]
+    },
+    {
+        "sobject": "Order_Item__c",
+        "resolveRefs": true,
+        "files": ["Order_Item__cs.json"]
     }
 ]
