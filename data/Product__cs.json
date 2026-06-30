@@ -11,14 +11,8 @@
             "MSRP__c": 319,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwda82dda0/images/large/4100811ABQ-0.jpg",
-            "Battery__c": "401Wh",
-            "Charger__c": "41V4A",
-            "Motor__c": "251 watt, 75Nm",
-            "Fork__c": "Air spring",
-            "Front_Brakes__c": "Dual-pivot caliper brake",
-            "Rear_Brakes__c": "Dual-pivot caliper brake"
+            "Material__c": "Nylon",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwda82dda0/images/large/4100811ABQ-0.jpg"
         },
         {
             "attributes": {
@@ -31,14 +25,8 @@
             "MSRP__c": 169,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwf7777a74/images/large/4100818ANU-0.jpg",
-            "Battery__c": "402Wh",
-            "Charger__c": "42V4A",
-            "Motor__c": "252 watt, 75Nm",
-            "Fork__c": "Air spring",
-            "Front_Brakes__c": "Dual-pivot caliper brake",
-            "Rear_Brakes__c": "Dual-pivot caliper brake"
+            "Material__c": "Nylon",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwf7777a74/images/large/4100818ANU-0.jpg"
         },
         {
             "attributes": {
@@ -51,14 +39,8 @@
             "MSRP__c": 289,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw7a04d6b9/images/large/4100106A98-0.jpg",
-            "Battery__c": "403Wh",
-            "Charger__c": "43V4A",
-            "Motor__c": "253 watt, 75Nm",
-            "Fork__c": "Air spring",
-            "Front_Brakes__c": "Dual-pivot caliper brake",
-            "Rear_Brakes__c": "Dual-pivot caliper brake"
+            "Material__c": "Nylon",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw7a04d6b9/images/large/4100106A98-0.jpg"
         },
         {
             "attributes": {
@@ -71,14 +53,8 @@
             "MSRP__c": 299,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw059dda42/images/large/4100844ABQ-0.jpg",
-            "Battery__c": "404Wh",
-            "Charger__c": "44V4A",
-            "Motor__c": "254 watt, 75Nm",
-            "Fork__c": "Air spring",
-            "Front_Brakes__c": "Dual-pivot caliper brake",
-            "Rear_Brakes__c": "Dual-pivot caliper brake"
+            "Material__c": "Nylon",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw059dda42/images/large/4100844ABQ-0.jpg"
         },
         {
             "attributes": {
@@ -91,14 +67,8 @@
             "MSRP__c": 229,
             "Level__c": "Expert",
             "Category__c": "Mountain",
-            "Material__c": "Carbon",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwdff95c24/images/large/4070101BGP-0.jpg",
-            "Battery__c": "501Wh",
-            "Charger__c": "41V4A",
-            "Motor__c": "281 watt, 75Nm",
-            "Fork__c": "Air spring, adjustable rebound",
-            "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Material__c": "Ripstop Polyester",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwdff95c24/images/large/4070101BGP-0.jpg"
         },
         {
             "attributes": {
@@ -111,14 +81,8 @@
             "MSRP__c": 549,
             "Level__c": "Expert",
             "Category__c": "Mountain",
-            "Material__c": "Carbon",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwdb3654e3/images/large/4070331ASB-0.jpg",
-            "Battery__c": "502Wh",
-            "Charger__c": "42V4A",
-            "Motor__c": "282 watt, 75Nm",
-            "Fork__c": "Air spring, adjustable rebound",
-            "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Material__c": "Ripstop Polyester",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwdb3654e3/images/large/4070331ASB-0.jpg"
         },
         {
             "attributes": {
@@ -131,14 +95,8 @@
             "MSRP__c": 249,
             "Level__c": "Expert",
             "Category__c": "Mountain",
-            "Material__c": "Carbon",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwab902127/images/large/4070162A8U-0.jpg",
-            "Battery__c": "503Wh",
-            "Charger__c": "43V4A",
-            "Motor__c": "283 watt, 75Nm",
-            "Fork__c": "Air spring, adjustable rebound",
-            "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Material__c": "Ripstop Polyester",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwab902127/images/large/4070162A8U-0.jpg"
         },
         {
             "attributes": {
@@ -151,14 +109,8 @@
             "MSRP__c": 299,
             "Level__c": "Expert",
             "Category__c": "Mountain",
-            "Material__c": "Carbon",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw9c367e3e/images/large/4070157ASC-0.jpg",
-            "Battery__c": "504Wh",
-            "Charger__c": "44V4A",
-            "Motor__c": "284 watt, 75Nm",
-            "Fork__c": "Air spring, adjustable rebound",
-            "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Material__c": "Ripstop Polyester",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw9c367e3e/images/large/4070157ASC-0.jpg"
         },
         {
             "attributes": {
@@ -171,14 +123,8 @@
             "MSRP__c": 99,
             "Level__c": "Enthusiast",
             "Category__c": "Mountain",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw72c6f82a/images/large/4090153A1H-0.jpg",
-            "Battery__c": "501Wh",
-            "Charger__c": "41V4A",
-            "Motor__c": "251 watt, 75Nm",
-            "Fork__c": "Air spring, adjustable rebound",
-            "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Material__c": "Synthetic Fill",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw72c6f82a/images/large/4090153A1H-0.jpg"
         },
         {
             "attributes": {
@@ -191,14 +137,8 @@
             "MSRP__c": 109,
             "Level__c": "Enthusiast",
             "Category__c": "Mountain",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw4108b0c8/images/large/4090149AMR-0.jpg",
-            "Battery__c": "502Wh",
-            "Charger__c": "42V4A",
-            "Motor__c": "252 watt, 75Nm",
-            "Fork__c": "Air spring, adjustable rebound",
-            "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Material__c": "Synthetic Fill",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw4108b0c8/images/large/4090149AMR-0.jpg"
         },
         {
             "attributes": {
@@ -211,14 +151,8 @@
             "MSRP__c": 179,
             "Level__c": "Enthusiast",
             "Category__c": "Mountain",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw3505878f/images/large/4090391ABH-0.jpg",
-            "Battery__c": "503Wh",
-            "Charger__c": "43V4A",
-            "Motor__c": "253 watt, 75Nm",
-            "Fork__c": "Air spring, adjustable rebound",
-            "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Material__c": "Synthetic Fill",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw3505878f/images/large/4090391ABH-0.jpg"
         },
         {
             "attributes": {
@@ -231,14 +165,8 @@
             "MSRP__c": 209,
             "Level__c": "Enthusiast",
             "Category__c": "Mountain",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw3dd5162c/images/large/4090392AUH-0.jpg",
-            "Battery__c": "504Wh",
-            "Charger__c": "44V4A",
-            "Motor__c": "254 watt, 75Nm",
-            "Fork__c": "Air spring, adjustable rebound",
-            "Front_Brakes__c": "Hydraulic disc, 200mm",
-            "Rear_Brakes__c": "Hydraulic disc, 200mm"
+            "Material__c": "Synthetic Fill",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw3dd5162c/images/large/4090392AUH-0.jpg"
         },
         {
             "attributes": {
@@ -251,14 +179,8 @@
             "MSRP__c": 475,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dw3d65c2a5/images/large/1050013AFI-0.jpg",
-            "Battery__c": "300Wh",
-            "Charger__c": "21V4A",
-            "Motor__c": "251 watt, 75Nm",
-            "Fork__c": "Foldable",
-            "Front_Brakes__c": "Centre-pull caliper brake",
-            "Rear_Brakes__c": "Centre-pull caliper brake"
+            "Material__c": "Leather & Mesh",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dw3d65c2a5/images/large/1050013AFI-0.jpg"
         },
         {
             "attributes": {
@@ -271,14 +193,8 @@
             "MSRP__c": 350,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dwe800b8ff/images/large/2050014AET-0.jpg",
-            "Battery__c": "300Wh",
-            "Charger__c": "42V4A",
-            "Motor__c": "252 watt, 75Nm",
-            "Fork__c": "Foldable",
-            "Front_Brakes__c": "Centre-pull caliper brake",
-            "Rear_Brakes__c": "Centre-pull caliper brake"
+            "Material__c": "Leather & Mesh",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dwe800b8ff/images/large/2050014AET-0.jpg"
         },
         {
             "attributes": {
@@ -291,14 +207,8 @@
             "MSRP__c": 90,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dw9ad30265/images/large/1050855A66-0.jpg",
-            "Battery__c": "300Wh",
-            "Charger__c": "23V4A",
-            "Motor__c": "253 watt, 75Nm",
-            "Fork__c": "Foldable",
-            "Front_Brakes__c": "Centre-pull caliper brake",
-            "Rear_Brakes__c": "Centre-pull caliper brake"
+            "Material__c": "Leather & Mesh",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dw9ad30265/images/large/1050855A66-0.jpg"
         },
         {
             "attributes": {
@@ -311,14 +221,8 @@
             "MSRP__c": 130,
             "Level__c": "Beginner",
             "Category__c": "Commuter",
-            "Material__c": "Aluminum",
-            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dwd3d63d6e/images/large/2050188AVW-0.jpg",
-            "Battery__c": "300Wh",
-            "Charger__c": "24V4A",
-            "Motor__c": "254 watt, 75Nm",
-            "Fork__c": "Foldable",
-            "Front_Brakes__c": "Centre-pull caliper brake",
-            "Rear_Brakes__c": "Centre-pull caliper brake"
+            "Material__c": "Leather & Mesh",
+            "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dwd3d63d6e/images/large/2050188AVW-0.jpg"
         }
     ]
 }
