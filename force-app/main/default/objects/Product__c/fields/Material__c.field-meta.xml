@@ -10,14 +10,24 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Aluminum</fullName>
+                <fullName>Nylon</fullName>
                 <default>false</default>
-                <label>Aluminum</label>
+                <label>Nylon</label>
             </value>
             <value>
-                <fullName>Carbon</fullName>
+                <fullName>Ripstop Polyester</fullName>
                 <default>false</default>
-                <label>Carbon</label>
+                <label>Ripstop Polyester</label>
+            </value>
+            <value>
+                <fullName>Synthetic Fill</fullName>
+                <default>false</default>
+                <label>Synthetic Fill</label>
+            </value>
+            <value>
+                <fullName>Leather &amp; Mesh</fullName>
+                <default>false</default>
+                <label>Leather &amp; Mesh</label>
             </value>
         </valueSetDefinition>
     </valueSet>

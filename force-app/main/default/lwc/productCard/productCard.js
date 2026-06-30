@@ -16,6 +16,8 @@ import CATEGORY_FIELD from '@salesforce/schema/Product__c.Category__c';
 import LEVEL_FIELD from '@salesforce/schema/Product__c.Level__c';
 import MSRP_FIELD from '@salesforce/schema/Product__c.MSRP__c';
 import MATERIAL_FIELD from '@salesforce/schema/Product__c.Material__c';
+import DESCRIPTION_FIELD from '@salesforce/schema/Product__c.Description__c';
+import FAMILY_FIELD from '@salesforce/schema/Product__c.Product_Family__c';
 
 /**
  * Component to display details of a Product__c.
@@ -26,6 +28,8 @@ export default class ProductCard extends NavigationMixin(LightningElement) {
     levelField = LEVEL_FIELD;
     msrpField = MSRP_FIELD;
     materialField = MATERIAL_FIELD;
+    familyField = FAMILY_FIELD;
+    descriptionField = DESCRIPTION_FIELD;
 
     // Id of Product__c to display
     recordId;

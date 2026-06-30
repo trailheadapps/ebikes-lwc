@@ -10,7 +10,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 319,
             "Level__c": "Beginner",
-            "Category__c": "Commuter",
+            "Category__c": "Backcountry",
             "Material__c": "Nylon",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwda82dda0/images/large/4100811ABQ-0.jpg"
         },
@@ -24,7 +24,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 169,
             "Level__c": "Beginner",
-            "Category__c": "Commuter",
+            "Category__c": "Backcountry",
             "Material__c": "Nylon",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwf7777a74/images/large/4100818ANU-0.jpg"
         },
@@ -38,7 +38,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 289,
             "Level__c": "Beginner",
-            "Category__c": "Commuter",
+            "Category__c": "Backcountry",
             "Material__c": "Nylon",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw7a04d6b9/images/large/4100106A98-0.jpg"
         },
@@ -52,7 +52,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 299,
             "Level__c": "Beginner",
-            "Category__c": "Commuter",
+            "Category__c": "Backcountry",
             "Material__c": "Nylon",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw059dda42/images/large/4100844ABQ-0.jpg"
         },
@@ -66,7 +66,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 229,
             "Level__c": "Expert",
-            "Category__c": "Mountain",
+            "Category__c": "Backcountry",
             "Material__c": "Ripstop Polyester",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwdff95c24/images/large/4070101BGP-0.jpg"
         },
@@ -80,7 +80,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 549,
             "Level__c": "Expert",
-            "Category__c": "Mountain",
+            "Category__c": "Backcountry",
             "Material__c": "Ripstop Polyester",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwdb3654e3/images/large/4070331ASB-0.jpg"
         },
@@ -94,7 +94,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 249,
             "Level__c": "Expert",
-            "Category__c": "Mountain",
+            "Category__c": "Backcountry",
             "Material__c": "Ripstop Polyester",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dwab902127/images/large/4070162A8U-0.jpg"
         },
@@ -108,7 +108,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 299,
             "Level__c": "Expert",
-            "Category__c": "Mountain",
+            "Category__c": "Backcountry",
             "Material__c": "Ripstop Polyester",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw9c367e3e/images/large/4070157ASC-0.jpg"
         },
@@ -122,7 +122,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 99,
             "Level__c": "Enthusiast",
-            "Category__c": "Mountain",
+            "Category__c": "Backcountry",
             "Material__c": "Synthetic Fill",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw72c6f82a/images/large/4090153A1H-0.jpg"
         },
@@ -136,7 +136,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 109,
             "Level__c": "Enthusiast",
-            "Category__c": "Mountain",
+            "Category__c": "Backcountry",
             "Material__c": "Synthetic Fill",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw4108b0c8/images/large/4090149AMR-0.jpg"
         },
@@ -150,7 +150,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 179,
             "Level__c": "Enthusiast",
-            "Category__c": "Mountain",
+            "Category__c": "Backcountry",
             "Material__c": "Synthetic Fill",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw3505878f/images/large/4090391ABH-0.jpg"
         },
@@ -164,7 +164,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 209,
             "Level__c": "Enthusiast",
-            "Category__c": "Mountain",
+            "Category__c": "Backcountry",
             "Material__c": "Synthetic Fill",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-gear/default/dw3dd5162c/images/large/4090392AUH-0.jpg"
         },
@@ -178,7 +178,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 475,
             "Level__c": "Beginner",
-            "Category__c": "Commuter",
+            "Category__c": "Backcountry",
             "Material__c": "Leather & Mesh",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dw3d65c2a5/images/large/1050013AFI-0.jpg"
         },
@@ -192,7 +192,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 350,
             "Level__c": "Beginner",
-            "Category__c": "Commuter",
+            "Category__c": "Backcountry",
             "Material__c": "Leather & Mesh",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dwe800b8ff/images/large/2050014AET-0.jpg"
         },
@@ -206,7 +206,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 90,
             "Level__c": "Beginner",
-            "Category__c": "Commuter",
+            "Category__c": "Backcountry",
             "Material__c": "Leather & Mesh",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dw9ad30265/images/large/1050855A66-0.jpg"
         },
@@ -220,7 +220,7 @@
             "Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             "MSRP__c": 130,
             "Level__c": "Beginner",
-            "Category__c": "Commuter",
+            "Category__c": "Backcountry",
             "Material__c": "Leather & Mesh",
             "Picture_URL__c": "https://www.northerntrailoutfitters.com/on/demandware.static/-/Sites-nto-apparel/default/dwd3d63d6e/images/large/2050188AVW-0.jpg"
         }

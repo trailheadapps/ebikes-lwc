@@ -20,9 +20,9 @@
                 <label>Enthusiast</label>
             </value>
             <value>
-                <fullName>Racer</fullName>
+                <fullName>Expert</fullName>
                 <default>false</default>
-                <label>Racer</label>
+                <label>Expert</label>
             </value>
         </valueSetDefinition>
     </valueSet>

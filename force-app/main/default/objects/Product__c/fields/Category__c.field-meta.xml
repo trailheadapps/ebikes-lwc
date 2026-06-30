@@ -10,14 +10,19 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Mountain</fullName>
+                <fullName>Casual</fullName>
                 <default>false</default>
-                <label>Mountain</label>
+                <label>Casual</label>
             </value>
             <value>
-                <fullName>Commuter</fullName>
+                <fullName>Backcountry</fullName>
                 <default>false</default>
-                <label>Commuter</label>
+                <label>Backcountry</label>
+            </value>
+            <value>
+                <fullName>Expedition</fullName>
+                <default>false</default>
+                <label>Expedition</label>
             </value>
         </valueSetDefinition>
     </valueSet>
