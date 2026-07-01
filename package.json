@@ -58,7 +58,7 @@
         "husky": "^9.1.7",
         "lint-staged": "^16.4.0",
         "prettier": "^3.9.4",
-        "prettier-plugin-apex": "^2.2.6",
+        "prettier-plugin-apex": "^2.3.0",
         "salesforce-pageobjects": "^11.0.0",
         "utam": "^3.3.0",
         "wdio-utam-service": "^3.3.0"
