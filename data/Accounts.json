@@ -10,7 +10,9 @@
             "BillingCity": "Belmont",
             "BillingState": "MA",
             "BillingPostalCode": "02478",
-            "BillingCountry": "USA"
+            "BillingCountry": "USA",
+            "Phone": "(617) 555-0123",
+            "Website": "www.hikenco.com"
         },
         {
             "attributes": {
@@ -22,7 +24,9 @@
             "BillingCity": "San Francisco",
             "BillingState": "CA",
             "BillingPostalCode": "94105",
-            "BillingCountry": "USA"
+            "BillingCountry": "USA",
+            "Phone": "(415) 555-0198",
+            "Website": "www.northerntrailmountaineers.com"
         },
         {
             "attributes": {
@@ -34,7 +38,9 @@
             "BillingCity": "New York",
             "BillingState": "NY",
             "BillingPostalCode": "10036",
-            "BillingCountry": "USA"
+            "BillingCountry": "USA",
+            "Phone": "(212) 555-0176",
+            "Website": "www.alpinetrekkers.com"
         }
     ]
 }
