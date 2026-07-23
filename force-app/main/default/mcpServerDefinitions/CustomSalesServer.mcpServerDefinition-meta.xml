@@ -1,6 +1,50 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <McpServerDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description
-    >An MCP server hosting a set of custom tools for Sales</description>
+    <description>An MCP server hosting a set of custom tools for Sales</description>
     <masterLabel>Custom Sales Server</masterLabel>
+    <tools>
+        <apiDefinition>
+            <apiIdentifier>aa:apex-CreateAccountSyncMeetingTask</apiIdentifier>
+            <apiSource>API_CATALOG</apiSource>
+            <operation>CreateAccountSyncMeetingTask</operation>
+        </apiDefinition>
+        <descriptionOverride>Creates a task to prepare for an account sync meeting</descriptionOverride>
+        <destructive>false</destructive>
+        <idempotent>false</idempotent>
+        <openWorld>false</openWorld>
+        <readOnly>false</readOnly>
+        <returnDirect>false</returnDirect>
+        <toolName>CreateAccountSyncMeetingTaskapex_CreateAccountSyncMeetingTask</toolName>
+        <toolTitle>CreateAccountSyncMeetingTask</toolTitle>
+    </tools>
+    <tools>
+        <apiDefinition>
+            <apiIdentifier>aa:apex-GetAccountOrdersAction</apiIdentifier>
+            <apiSource>API_CATALOG</apiSource>
+            <operation>GetAccountOrdersAction</operation>
+        </apiDefinition>
+        <descriptionOverride>Returns all orders for a given account</descriptionOverride>
+        <destructive>false</destructive>
+        <idempotent>false</idempotent>
+        <openWorld>false</openWorld>
+        <readOnly>false</readOnly>
+        <returnDirect>false</returnDirect>
+        <toolName>GetAccountOrdersActionapex_GetAccountOrdersAction</toolName>
+        <toolTitle>GetAccountOrdersAction</toolTitle>
+    </tools>
+    <tools>
+        <apiDefinition>
+            <apiIdentifier>fa:flow-Account_Health_Check_Calculator</apiIdentifier>
+            <apiSource>API_CATALOG</apiSource>
+            <operation>Account_Health_Check_Calculator</operation>
+        </apiDefinition>
+        <descriptionOverride>Calculates the overall account health score</descriptionOverride>
+        <destructive>false</destructive>
+        <idempotent>false</idempotent>
+        <openWorld>false</openWorld>
+        <readOnly>false</readOnly>
+        <returnDirect>false</returnDirect>
+        <toolName>Account_Health_Check_Calculatorflow_Account_Health_Check_Calcul</toolName>
+        <toolTitle>Account_Health_Check_Calculator</toolTitle>
+    </tools>
 </McpServerDefinition>
