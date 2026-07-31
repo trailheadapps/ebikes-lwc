@@ -15,7 +15,9 @@ package.xml
 **/profileSessionSettings/**
 **/settings/**
 **/sharingRules/**
+**/reports/**
 **/reportTypes/**
+**/dashboards/**
 
 # LWC configuration files
 **/jsconfig.json
@@ -138,19 +140,8 @@ force-app/test/**
 **/pages/Unauthorized.page-meta.xml
 **/pages/UnderConstruction.page
 **/pages/UnderConstruction.page-meta.xml
-**/reportType/MDF_Claim_Request_Crt.reportType-meta.xml
-**/reportType/prm_total_portal_login_crt.reportType-meta.xml
-**/reportType/prm_partner_fund_request_crt.reportType-meta.xml
-**/reportType/prm_unique_portal_crt.reportType-meta.xml
-**/reportType/prm_partner_marketing_budget_crt.reportType-meta.xml
 **/staticresources/SiteSamples
 **/staticresources/SiteSamples.resource-meta.xml
-
-# Default dashboard and report
-**/dashboards/prm_channel_dashboard_folder.dashboardFolder-meta.xml
-**/dashboards/prm_channel_dashboard_folder/**
-**/reports/prm_channel_reports_folder.reportFolder-meta.xml
-**/reports/prm_channel_reports_folder/**
 
 # Default permission set
 **/permissionsets/sfdcInternalInt__sfdc_scrt2.permissionset-meta.xml
