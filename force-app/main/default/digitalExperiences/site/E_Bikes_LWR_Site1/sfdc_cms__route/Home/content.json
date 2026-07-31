@@ -7,5 +7,6 @@
         "pageAccess": "UseParent",
         "routeType": "home",
         "urlPrefix": ""
-    }
+    },
+    "urlName": "home"
 }

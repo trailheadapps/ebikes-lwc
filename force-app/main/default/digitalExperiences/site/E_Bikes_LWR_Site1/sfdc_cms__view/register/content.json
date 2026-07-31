@@ -92,5 +92,6 @@
         "dataProviders": [],
         "themeLayoutType": "Inner",
         "viewType": "self-register"
-    }
+    },
+    "urlName": "register"
 }

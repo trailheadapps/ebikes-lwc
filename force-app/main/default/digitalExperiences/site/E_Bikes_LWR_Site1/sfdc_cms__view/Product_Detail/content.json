@@ -116,5 +116,6 @@
         "dataProviders": [],
         "themeLayoutType": "Inner",
         "viewType": "detail-Product__c"
-    }
+    },
+    "urlName": "product-detail"
 }

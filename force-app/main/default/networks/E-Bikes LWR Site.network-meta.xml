@@ -7,9 +7,10 @@
     <communityRoles />
     <description
     >A LWR Experience Cloud site for electric bikes enthusiasts</description>
+    <disablePvtPagesForPwdResetInLWR>false</disablePvtPagesForPwdResetInLWR>
     <disableReputationRecordConversations
     >false</disableReputationRecordConversations>
-    <emailSenderAddress>some.sender@company.com</emailSenderAddress>
+    <emailSenderAddress>some.sender@company.com.invalid</emailSenderAddress>
     <emailSenderName>E-Bikes LWR Site</emailSenderName>
     <embeddedLoginEnabled>false</embeddedLoginEnabled>
     <enableApexCDNCaching>true</enableApexCDNCaching>
@@ -43,7 +44,7 @@
     <headlessRegistrationTemplate
     >unfiled$public/CommunityHeadlessRegistrationTemplate</headlessRegistrationTemplate>
     <networkMemberGroups>
-        <profile>Admin</profile>
+        <profile>admin</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting
@@ -55,7 +56,9 @@
         <selfRegProfilePageOverrideSetting
         >Designer</selfRegProfilePageOverrideSetting>
     </networkPageOverrides>
+    <newSenderAddress>some.sender@company.com</newSenderAddress>
     <picassoSite>E_Bikes_LWR_Site1</picassoSite>
+    <secondaryEmailSenderEnabled>false</secondaryEmailSenderEnabled>
     <selfRegistration>false</selfRegistration>
     <sendWelcomeEmail>true</sendWelcomeEmail>
     <site>E_Bikes_LWR_Site</site>

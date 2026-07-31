@@ -7,5 +7,6 @@
         "isLockerServiceEnabled": true,
         "isRelaxedCSPLevel": false,
         "templateName": "talon-template-byo"
-    }
+    },
+    "urlName": "main"
 }

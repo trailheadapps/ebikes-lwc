@@ -99,5 +99,6 @@
         "dataProviders": [],
         "themeLayoutType": "Inner",
         "viewType": "detail-500"
-    }
+    },
+    "urlName": "case-detail"
 }

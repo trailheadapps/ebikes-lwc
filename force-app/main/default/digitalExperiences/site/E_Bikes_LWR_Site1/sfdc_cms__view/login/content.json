@@ -100,5 +100,6 @@
         "dataProviders": [],
         "themeLayoutType": "Inner",
         "viewType": "login-main"
-    }
+    },
+    "urlName": "login"
 }

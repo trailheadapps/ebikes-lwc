@@ -7,5 +7,6 @@
         "pageAccess": "UseParent",
         "routeType": "custom-create-case",
         "urlPrefix": "create-case"
-    }
+    },
+    "urlName": "create-case"
 }

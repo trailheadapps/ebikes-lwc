@@ -7,5 +7,6 @@
         "pageAccess": "UseParent",
         "routeType": "relatedlist-500",
         "urlPrefix": "case"
-    }
+    },
+    "urlName": "case-related-list"
 }

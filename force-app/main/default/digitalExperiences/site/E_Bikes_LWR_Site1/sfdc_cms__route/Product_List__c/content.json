@@ -5,7 +5,8 @@
         "activeViewId": "Product_List",
         "configurationTags": [],
         "pageAccess": "UseParent",
-        "routeType": "list-a03",
+        "routeType": "list-Product__c",
         "urlPrefix": "product"
-    }
+    },
+    "urlName": "product-list"
 }

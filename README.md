@@ -83,7 +83,7 @@ E-Bikes is a sample application that demonstrates how to build applications with
 1. Publish the Experience Cloud site:
 
     ```
-    sf community publish -n E-Bikes
+    sf community publish -n "E-Bikes LWR Site"
     ```
 
 1. Deploy metadata for the Experience Cloud guest user profile:
@@ -131,10 +131,9 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     1. Click **Save**
 
 1. Configure the Experience Cloud site metadata file with the following steps:
-    1. Edit the `force-app/main/default/sites/E_Bikes.site-meta.xml` file.
+    1. Edit the `force-app/main/default/sites/E_Bikes_LWR_Site.site-meta.xml` file.
     1. Replace the value between the `<siteAdmin>` tags with your Playground username.
     1. Replace the value between the `<siteGuestRecordDefaultOwner>` tags with your Playground username.
-    1. Replace the value between the `<subdomain>` tags with your domain name (not the full URL).
     1. Save the file.
 
 1. Remove the `Product` custom field from the `Case` object with the following steps:
@@ -166,7 +165,7 @@ Make sure to start from a brand-new environment to avoid conflicts with previous
     1. Publish the Experience Cloud site.
 
         ```
-        sf community publish -n E-Bikes
+        sf community publish -n "E-Bikes LWR Site"
         ```
 
     1. Deploy metadata for the Experience Cloud guest user profile:

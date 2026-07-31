@@ -106,5 +106,6 @@
         "dataProviders": [],
         "themeLayoutType": "Inner",
         "viewType": "custom-product-explorer"
-    }
+    },
+    "urlName": "product-explorer"
 }

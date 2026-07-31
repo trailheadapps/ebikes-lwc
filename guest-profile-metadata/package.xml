@@ -3,18 +3,15 @@
     <types>
         <members
         >E_Bikes_LWR_Site_Profile_profilePasswordPolicy1705564538465</members>
-        <members>E_Bikes_Profile_profilePasswordPolicy1641485806127</members>
         <name>ProfilePasswordPolicy</name>
     </types>
     <types>
         <members
         >E_Bikes_LWR_Site_Profile_profileSessionSetting1705564538596</members>
-        <members>E_Bikes_Profile_profileSessionSetting1641485806295</members>
         <name>ProfileSessionSetting</name>
     </types>
     <types>
         <members>E-Bikes LWR Site Profile</members>
-        <members>E-Bikes Profile</members>
         <name>Profile</name>
     </types>
     <types>

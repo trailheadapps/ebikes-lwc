@@ -113,7 +113,7 @@ jobs:
 
             # Publish XP Cloud site
             - name: 'Publish XP Cloud site'
-              run: sf community publish -n E-Bikes
+              run: sf community publish -n "E-Bikes LWR Site"
 
             # Deploy guest profile for XP Cloud site
             - name: 'Deploy guest profile for XP Cloud site'
