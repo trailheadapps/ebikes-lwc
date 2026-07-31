@@ -2,6 +2,10 @@
 # If you are not using git, you can delete this file. For more information see: https://git-scm.com/docs/gitignore
 # For useful gitignore templates see: https://github.com/github/gitignore
 
+# Dev tools config
+.claude
+.cursor
+
 # Salesforce cache
 .sf/
 .sfdx/
