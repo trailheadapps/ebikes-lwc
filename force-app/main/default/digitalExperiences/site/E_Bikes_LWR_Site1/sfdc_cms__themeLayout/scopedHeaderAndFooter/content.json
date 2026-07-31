@@ -36,7 +36,7 @@
                                         {
                                             "attributes": {
                                                 "dxpStyle": {},
-                                                "menuName": ""
+                                                "menuName": "Default_Navigation"
                                             },
                                             "definition": "c:navigationMenu",
                                             "id": "89b6abbe-7b83-4201-b1c8-21c70d0811e1",
@@ -96,5 +96,6 @@
             "id": "ad35d5f1-7d03-443a-a5ac-7583870499bb",
             "type": "component"
         }
-    }
+    },
+    "urlName": "scoped-header-and-footer"
 }

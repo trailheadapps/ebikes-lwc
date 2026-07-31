@@ -62,5 +62,6 @@
         "dataProviders": [],
         "themeLayoutType": "Inner",
         "viewType": "detail-Product_Family__c"
-    }
+    },
+    "urlName": "product-family-detail"
 }

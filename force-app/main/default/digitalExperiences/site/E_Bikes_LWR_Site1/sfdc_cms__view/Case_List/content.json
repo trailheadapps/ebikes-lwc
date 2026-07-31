@@ -176,5 +176,6 @@
         "dataProviders": [],
         "themeLayoutType": "Inner",
         "viewType": "list-500"
-    }
+    },
+    "urlName": "case-list"
 }

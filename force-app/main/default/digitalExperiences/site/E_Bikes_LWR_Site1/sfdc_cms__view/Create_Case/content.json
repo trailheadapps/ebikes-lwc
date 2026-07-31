@@ -72,5 +72,6 @@
         "dataProviders": [],
         "themeLayoutType": "Inner",
         "viewType": "custom-create-case"
-    }
+    },
+    "urlName": "create-case"
 }

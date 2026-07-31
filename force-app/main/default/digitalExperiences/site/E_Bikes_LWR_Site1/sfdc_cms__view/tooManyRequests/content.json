@@ -61,5 +61,6 @@
         "dataProviders": [],
         "themeLayoutType": "ServiceNotAvailable",
         "viewType": "too-many-requests"
-    }
+    },
+    "urlName": "too-many-requests"
 }

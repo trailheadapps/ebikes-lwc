@@ -1,6 +1,6 @@
 {
     "type": "sfdc_cms__view",
-    "title": "Case Related List",
+    "title": "News Detail",
     "contentBody": {
         "component": {
             "children": [
@@ -11,25 +11,29 @@
                                 "backgroundImageConfig": "",
                                 "backgroundImageOverlay": "rgba(0,0,0,0)",
                                 "componentSpacerSize": "",
-                                "dxpStyle": {},
+                                "layoutDirectionDesktop": "row",
+                                "layoutDirectionMobile": "column",
+                                "layoutDirectionTablet": "column",
                                 "maxContentWidth": "",
                                 "sectionColumnGutterWidth": "",
-                                "sectionConfig": "{\"UUID\":\"463bbd88-ca45-4670-a1ba-35046d10e3ee\",\"columns\":[{\"UUID\":\"8a84040b-c307-4b65-89c4-cb709b7863da\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+                                "sectionConfig": "{\"UUID\":\"4eebf765-3ebe-4f3c-aef0-1a22a8056058\",\"columns\":[{\"UUID\":\"ff6479c1-9df9-4e91-917a-b8e3551e0c30\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}",
+                                "sectionMinHeight": "",
+                                "sectionVerticalAlign": "flex-start"
                             },
                             "children": [
                                 {
-                                    "id": "8a84040b-c307-4b65-89c4-cb709b7863da",
+                                    "id": "ff6479c1-9df9-4e91-917a-b8e3551e0c30",
                                     "name": "col1",
                                     "title": "Column 1",
                                     "type": "region"
                                 }
                             ],
                             "definition": "community_layout:section",
-                            "id": "463bbd88-ca45-4670-a1ba-35046d10e3ee",
+                            "id": "4eebf765-3ebe-4f3c-aef0-1a22a8056058",
                             "type": "component"
                         }
                     ],
-                    "id": "be8282aa-4a5d-4e96-a48d-ebedbda05aed",
+                    "id": "a277c9b4-5b35-4d98-830d-13e3b90a6253",
                     "name": "content",
                     "title": "Content",
                     "type": "region"
@@ -38,27 +42,29 @@
                     "children": [
                         {
                             "attributes": {
-                                "dxpStyle": {},
+                                "customHeadTags": "",
+                                "description": "",
+                                "pageTitle": "{!Content.contentTypeLabel}.{!Content.title}",
                                 "recordId": "{!recordId}"
                             },
                             "definition": "community_builder:seoAssistant",
-                            "id": "6719707c-a448-4291-b5d9-df8b5d6d846c",
+                            "id": "403433f6-d734-429e-ab66-46b5812660fa",
                             "type": "component"
                         }
                     ],
-                    "id": "56526335-4eb4-4e62-96b0-9207a3e846c7",
+                    "id": "a2771357-a5b7-426e-8dd8-9d43f9b662eb",
                     "name": "sfdcHiddenRegion",
                     "title": "sfdcHiddenRegion",
                     "type": "region"
                 }
             ],
             "definition": "community_layout:sldsFlexibleLayout",
-            "id": "92dc7d54-6486-403c-8f12-f257e7bb3657",
+            "id": "d0a8c447-98ee-4ca0-959f-472cca1097c8",
             "type": "component"
         },
         "dataProviders": [],
         "themeLayoutType": "Inner",
-        "viewType": "relatedlist-500"
+        "viewType": "managed-content-sfdc_cms__news"
     },
-    "urlName": "case-related-list"
+    "urlName": "news-detail"
 }

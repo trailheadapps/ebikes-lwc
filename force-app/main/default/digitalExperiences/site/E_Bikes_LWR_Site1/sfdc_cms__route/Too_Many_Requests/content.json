@@ -7,5 +7,6 @@
         "pageAccess": "UseParent",
         "routeType": "too-many-requests",
         "urlPrefix": "too-many-requests"
-    }
+    },
+    "urlName": "too-many-requests"
 }

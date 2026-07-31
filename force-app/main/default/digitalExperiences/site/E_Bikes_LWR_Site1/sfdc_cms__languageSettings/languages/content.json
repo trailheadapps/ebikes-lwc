@@ -11,5 +11,6 @@
             }
         ],
         "defaultLocale": "en_US"
-    }
+    },
+    "urlName": "languagecontent"
 }

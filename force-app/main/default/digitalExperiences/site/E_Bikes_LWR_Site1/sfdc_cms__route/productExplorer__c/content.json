@@ -7,5 +7,6 @@
         "pageAccess": "UseParent",
         "routeType": "custom-product-explorer",
         "urlPrefix": "product-explorer"
-    }
+    },
+    "urlName": "product-explorer"
 }

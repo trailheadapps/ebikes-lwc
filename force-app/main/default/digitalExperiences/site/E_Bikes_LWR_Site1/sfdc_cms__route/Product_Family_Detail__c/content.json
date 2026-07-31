@@ -5,7 +5,8 @@
         "activeViewId": "Product_Family_Detail",
         "configurationTags": [],
         "pageAccess": "UseParent",
-        "routeType": "detail-a02",
+        "routeType": "detail-Product_Family__c",
         "urlPrefix": "product-family"
-    }
+    },
+    "urlName": "product-family-detail"
 }

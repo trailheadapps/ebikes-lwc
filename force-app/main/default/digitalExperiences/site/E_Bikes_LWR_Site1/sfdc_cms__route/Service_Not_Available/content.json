@@ -7,5 +7,6 @@
         "pageAccess": "UseParent",
         "routeType": "service-not-available",
         "urlPrefix": "service-not-available"
-    }
+    },
+    "urlName": "service-not-available"
 }

@@ -59,5 +59,6 @@
         "dataProviders": [],
         "themeLayoutType": "Inner",
         "viewType": "relatedlist-Product__c"
-    }
+    },
+    "urlName": "product-related-list"
 }

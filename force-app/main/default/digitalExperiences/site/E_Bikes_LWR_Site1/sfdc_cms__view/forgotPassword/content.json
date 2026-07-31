@@ -89,5 +89,6 @@
         "dataProviders": [],
         "themeLayoutType": "Inner",
         "viewType": "forgot-password"
-    }
+    },
+    "urlName": "forgot-password"
 }
