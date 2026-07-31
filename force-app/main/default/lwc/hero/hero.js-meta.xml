@@ -21,7 +21,7 @@
                 type="String"
                 label="Resource URL"
                 description="Where to get resource from"
-                default="/CyclingGrass.jpg"
+                default="/cycling-grass.jpg"
             />
             <property
                 name="imgOrVideo"

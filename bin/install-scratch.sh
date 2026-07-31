@@ -35,7 +35,7 @@ sleep 30 && \
 echo "" && \
 
 echo "Publishing XP Cloud site..." && \
-sf community publish -n E-Bikes && \
+sf community publish -n "E-Bikes LWR Site" && \
 echo "" && \
 
 echo "Deploying guest profile for XP Cloud site..." && \

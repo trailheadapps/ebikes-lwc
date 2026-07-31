@@ -1,0 +1,12 @@
+{
+    "type": "sfdc_cms__route",
+    "title": "Forgot Password",
+    "contentBody": {
+        "activeViewId": "forgotPassword",
+        "configurationTags": [],
+        "pageAccess": "UseParent",
+        "routeType": "forgot-password",
+        "urlPrefix": "ForgotPassword"
+    },
+    "urlName": "forgot-password"
+}

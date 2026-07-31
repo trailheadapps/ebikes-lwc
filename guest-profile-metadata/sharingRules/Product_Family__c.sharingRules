@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <sharingGuestRules>
-        <fullName>Product_family_guest_visibility</fullName>
+        <fullName>Product_family_guest_visibility_for_LWR_Site</fullName>
         <accessLevel>Read</accessLevel>
-        <label>Product family guest visibility</label>
+        <label>Product family guest visibility for LWR Site</label>
         <sharedTo>
-            <guestUser>E_Bikes</guestUser>
+            <guestUser>E_Bikes_LWR_Site</guestUser>
         </sharedTo>
         <criteriaItems>
             <field>Name</field>

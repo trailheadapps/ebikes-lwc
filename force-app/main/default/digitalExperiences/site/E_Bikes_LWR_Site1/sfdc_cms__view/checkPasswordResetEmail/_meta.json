@@ -1,0 +1,5 @@
+{
+    "apiName": "checkPasswordResetEmail",
+    "type": "sfdc_cms__view",
+    "path": "views"
+}

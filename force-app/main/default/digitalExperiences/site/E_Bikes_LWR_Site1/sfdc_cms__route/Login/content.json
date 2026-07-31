@@ -1,0 +1,12 @@
+{
+    "type": "sfdc_cms__route",
+    "title": "Login",
+    "contentBody": {
+        "activeViewId": "login",
+        "configurationTags": [],
+        "pageAccess": "UseParent",
+        "routeType": "login-main",
+        "urlPrefix": "login"
+    },
+    "urlName": "login"
+}

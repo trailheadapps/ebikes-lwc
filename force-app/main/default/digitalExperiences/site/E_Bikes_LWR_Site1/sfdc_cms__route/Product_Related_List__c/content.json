@@ -1,0 +1,12 @@
+{
+    "type": "sfdc_cms__route",
+    "title": "Product Related List",
+    "contentBody": {
+        "activeViewId": "Product_Related_List",
+        "configurationTags": [],
+        "pageAccess": "UseParent",
+        "routeType": "relatedlist-Product__c",
+        "urlPrefix": "product"
+    },
+    "urlName": "product-related-list"
+}
