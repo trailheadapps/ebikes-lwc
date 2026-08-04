@@ -53,7 +53,7 @@ public with sharing class ProductController {
         result.pageSize = pageSize;
         result.pageNumber = pageNumber;
         result.totalItemCount = Database.countQuery(
-            'SELECT count() FROM Product__c ' + whereClause
+            'SELECT count() FROM Product__c ' + whereClause + ' WITH USER_MODE'
         );
         result.records = Database.query(
             'SELECT Id, Name, MSRP__c, Description__c, Category__c, Level__c, Picture_URL__c, Material__c FROM Product__c ' +
