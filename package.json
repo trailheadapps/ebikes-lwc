@@ -57,7 +57,7 @@
         "eslint-plugin-jest": "^29.16.6",
         "husky": "^9.1.7",
         "lint-staged": "^17.4.1",
-        "prettier": "^3.9.4",
+        "prettier": "^3.9.9",
         "prettier-plugin-apex": "^2.3.0",
         "salesforce-pageobjects": "^11.0.0",
         "utam": "^3.3.0",
