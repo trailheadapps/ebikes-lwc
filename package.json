@@ -50,7 +50,7 @@
         "@wdio/jasmine-framework": "^9.32.0",
         "@wdio/local-runner": "^9.32.0",
         "@wdio/spec-reporter": "^9.32.0",
-        "dotenv": "^17.4.2",
+        "dotenv": "^18.0.4",
         "eslint": "^9.39.4",
         "eslint-plugin-import": "^2.32.0",
         "eslint-plugin-jasmine": "^4.2.2",
