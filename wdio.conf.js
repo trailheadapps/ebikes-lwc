@@ -14,6 +14,11 @@ exports.config = {
             maxInstances: 1,
             browserName: 'chrome',
             browserVersion: 'stable',
+            // WebdriverIO v9 opens a WebDriver BiDi session unless told otherwise.
+            // UTAM's element lookups expect classic WebDriver responses and fail
+            // with BiDi (TypeError: elements.map is not a function), so force
+            // the classic protocol.
+            'wdio:enforceWebDriverClassic': true,
             'goog:chromeOptions': {
                 args: ['--disable-search-engine-choice-screen']
                 // to run chrome headless the following flags are required
