@@ -248,16 +248,13 @@ Follow these steps to run the UI tests manually:
     ```sh
     npm run test:ui:compile
     ```
-1. Prepare login information for your UI tests with this command:
-    ```sh
-    npm run test:ui:generate:login
-    ```
 1. Run UI tests with this command:
     ```sh
     npm run test:ui
     ```
+    Each test file logs in to your default org with a fresh login URL from the Salesforce CLI, as such a URL works only once. Chrome opens visibly. To run it headless like in CI, use `CI=true npm run test:ui`.
 
-**Note:** if the test runner fails to open Chrome programmatically, update the `chromedriver` dependency to the latest version in `package.json` then, run `npm install` and `npm run test:ui` again.
+**Note:** WebdriverIO downloads the Chrome and ChromeDriver versions it needs. If you need a login URL outside of the tests, `npm run test:ui:generate:login` writes one to `.env`. It opens a session without a password, so never share or commit that file.
 
 ### Code Tours
 
