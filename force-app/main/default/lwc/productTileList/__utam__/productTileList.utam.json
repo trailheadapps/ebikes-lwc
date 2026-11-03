@@ -24,8 +24,19 @@
             "name": "getPaginationInfo",
             "compose": [
                 {
-                    "element": "paginator",
-                    "apply": "getNavInfoText",
+                    "apply": "waitFor",
+                    "args": [
+                        {
+                            "type": "function",
+                            "predicate": [
+                                {
+                                    "element": "paginator",
+                                    "apply": "getNavInfoText",
+                                    "returnType": "string"
+                                }
+                            ]
+                        }
+                    ],
                     "returnType": "string"
                 }
             ]
