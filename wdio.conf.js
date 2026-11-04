@@ -1,8 +1,10 @@
 require('dotenv').config();
 
 const { UtamWdioService } = require('wdio-utam-service');
+const { getScratchOrgLoginUrl } = require('./scripts/generate-login-url');
 // use prefix 'DEBUG=true' to run test in debug mode
-const { DEBUG } = process.env;
+// CI is set by GitHub Actions, where Chrome runs headless
+const { CI, DEBUG } = process.env;
 const TIMEOUT = DEBUG ? 60 * 1000 * 30 : 60 * 1000;
 
 exports.config = {
@@ -14,11 +16,17 @@ exports.config = {
             maxInstances: 1,
             browserName: 'chrome',
             browserVersion: 'stable',
+            // WebdriverIO v9 opens a WebDriver BiDi session unless told otherwise.
+            // UTAM's element lookups expect classic WebDriver responses and fail
+            // with BiDi (TypeError: elements.map is not a function), so force
+            // the classic protocol.
+            'wdio:enforceWebDriverClassic': true,
             'goog:chromeOptions': {
-                args: ['--disable-search-engine-choice-screen']
-                // to run chrome headless the following flags are required
-                // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
-                //args: ['--headless', '--disable-gpu', '--window-size=1920,1080', '--disable-search-engine-choice-screen']
+                args: [
+                    '--disable-search-engine-choice-screen',
+                    // run headless in CI, or locally with CI=true npm run test:ui
+                    ...(CI ? ['--headless=new', '--window-size=1920,1080'] : [])
+                ]
             }
         }
     ],
@@ -40,6 +48,12 @@ exports.config = {
             }
         ]
     ],
+    // The login url from the CLI works only once and every spec file runs in
+    // its own browser session, so each session gets a fresh url
+    beforeSession: async function () {
+        process.env.SALESFORCE_LOGIN_URL = await getScratchOrgLoginUrl();
+        process.env.SALESFORCE_LOGIN_TIME = `${new Date().getTime()}`;
+    },
     framework: 'jasmine',
     reporters: ['spec'],
     jasmineOpts: {

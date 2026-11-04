@@ -130,6 +130,22 @@ jobs:
                   token: ${{ secrets.CODECOV_TOKEN }}
                   flags: Apex
 
+            # Install Volta to enforce proper node and package manager versions
+            - name: 'Install Volta'
+              uses: volta-cli/action@v5.0.0
+
+            # Install npm dependencies for the UI tests
+            - name: 'Install npm dependencies'
+              run: HUSKY=0 npm ci
+
+            # Compile UTAM page objects
+            - name: 'Compile UTAM page objects'
+              run: npm run test:ui:compile
+
+            # Run UTAM UI tests in scratch org (headless, logs in with the default org)
+            - name: 'Run UI tests'
+              run: npm run test:ui
+
             # Housekeeping
             - name: 'Delete scratch org'
               if: always()
