@@ -25,7 +25,17 @@ exports.config = {
                 args: [
                     '--disable-search-engine-choice-screen',
                     // run headless in CI, or locally with CI=true npm run test:ui
-                    ...(CI ? ['--headless=new', '--window-size=1920,1080'] : [])
+                    // --no-sandbox: Chrome's sandbox can't start on CI runners
+                    // (restricted user namespaces); --disable-dev-shm-usage
+                    // avoids crashes from a small /dev/shm
+                    ...(CI
+                        ? [
+                              '--headless=new',
+                              '--window-size=1920,1080',
+                              '--no-sandbox',
+                              '--disable-dev-shm-usage'
+                          ]
+                        : [])
                 ]
             }
         }
